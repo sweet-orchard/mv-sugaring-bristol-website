@@ -669,7 +669,7 @@ function MobileFlashcards({ items, isPremium }) {
     return (
         <div className="md:hidden">
             {/* Card area */}
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden pt-5">
                 <AnimatePresence initial={false} custom={direction} mode="wait">
                     <motion.div
                         key={current}
