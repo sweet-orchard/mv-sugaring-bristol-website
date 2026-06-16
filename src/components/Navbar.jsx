@@ -117,13 +117,8 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* Right: Book Now button & Mobile Language */}
-                <div className="flex items-center gap-4">
-                    {/* Mobile Language Switcher */}
-                    <div className="xl:hidden">
-                        <LanguageToggle lang={lang} onChange={handleLangChange} />
-                    </div>
-
+                {/* Right: Book Now button (desktop only) */}
+                <div className="flex items-center">
                     <a
                         href="#contact"
                         className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 bg-primary text-primary-foreground text-[10px] tracking-[0.2em] uppercase font-bold rounded-full hover:bg-primary/90 active:scale-95 transition-all shadow-md"
@@ -155,8 +150,13 @@ export default function Navbar() {
                                 </a>
                             ))}
 
-                            {/* Mobile Book CTA */}
-                            <div className="flex flex-col gap-4 pt-4 mt-2">
+                            {/* Mobile Language + Book CTA */}
+                            <div className="flex flex-col gap-3 pt-4 mt-2">
+                                {/* Language toggle row */}
+                                <div className="flex items-center justify-between px-1">
+                                    <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-semibold">Language</span>
+                                    <LanguageToggle lang={lang} onChange={handleLangChange} />
+                                </div>
                                 <a
                                     href="#contact"
                                     onClick={() => setOpen(false)}
