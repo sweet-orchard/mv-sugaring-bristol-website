@@ -646,6 +646,94 @@ function FaceCareGuide() {
     );
 }
 
+// ─── MOBILE FLASHCARD CAROUSEL ──────────────────────────────────────────────
+
+function MobileFlashcards({ items, isPremium }) {
+    const [[current, direction], setPage] = useState([0, 0]);
+
+    const total = items.length;
+
+    const paginate = (dir) => {
+        setPage(([prev]) => [
+            (prev + dir + total) % total,
+            dir,
+        ]);
+    };
+
+    const variants = {
+        enter: (dir) => ({ x: dir > 0 ? '100%' : '-100%', opacity: 0 }),
+        center: { x: 0, opacity: 1 },
+        exit: (dir) => ({ x: dir > 0 ? '-100%' : '100%', opacity: 0 }),
+    };
+
+    return (
+        <div className="md:hidden">
+            {/* Card area */}
+            <div className="relative overflow-hidden">
+                <AnimatePresence initial={false} custom={direction} mode="wait">
+                    <motion.div
+                        key={current}
+                        custom={direction}
+                        variants={variants}
+                        initial="enter"
+                        animate="center"
+                        exit="exit"
+                        transition={{ type: 'tween', duration: 0.35, ease: 'easeInOut' }}
+                    >
+                        <ServiceCard item={items[current]} index={current} isPremium={isPremium} />
+                    </motion.div>
+                </AnimatePresence>
+            </div>
+
+            {/* Controls */}
+            <div className="flex items-center justify-between mt-5 px-1">
+                {/* Prev */}
+                <button
+                    onClick={() => paginate(-1)}
+                    className="w-9 h-9 rounded-full border border-border/50 flex items-center justify-center text-foreground/60 hover:border-primary hover:text-primary transition-all active:scale-95"
+                    aria-label="Previous"
+                >
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </button>
+
+                {/* Dots */}
+                <div className="flex items-center gap-2">
+                    {items.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setPage([i, i > current ? 1 : -1])}
+                            className={`rounded-full transition-all duration-300 ${
+                                i === current
+                                    ? 'w-5 h-1.5 bg-primary'
+                                    : 'w-1.5 h-1.5 bg-border hover:bg-primary/50'
+                            }`}
+                            aria-label={`Go to card ${i + 1}`}
+                        />
+                    ))}
+                </div>
+
+                {/* Next */}
+                <button
+                    onClick={() => paginate(1)}
+                    className="w-9 h-9 rounded-full border border-border/50 flex items-center justify-center text-foreground/60 hover:border-primary hover:text-primary transition-all active:scale-95"
+                    aria-label="Next"
+                >
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            {/* Counter */}
+            <p className="text-center text-[10px] tracking-[0.2em] uppercase text-muted-foreground/50 mt-3 font-body">
+                {current + 1} / {total}
+            </p>
+        </div>
+    );
+}
+
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 
 export default function ServicesSection() {
@@ -776,11 +864,17 @@ export default function ServicesSection() {
                                                 ))}
                                             </div>
                                         ) : (
-                                            <div className={`grid md:grid-cols-2 gap-6 ${group.isPremium ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}>
-                                                {group.items.map((item, i) => (
-                                                    <ServiceCard key={i} item={item} index={i} isPremium={group.isPremium} />
-                                                ))}
-                                            </div>
+                                            <>
+                                                {/* Mobile: flashcard carousel */}
+                                                <MobileFlashcards items={group.items} isPremium={group.isPremium} />
+
+                                                {/* Desktop: grid */}
+                                                <div className={`hidden md:grid md:grid-cols-2 gap-6 ${group.isPremium ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}>
+                                                    {group.items.map((item, i) => (
+                                                        <ServiceCard key={i} item={item} index={i} isPremium={group.isPremium} />
+                                                    ))}
+                                                </div>
+                                            </>
                                         )}
                                     </div>
                                 ))}
