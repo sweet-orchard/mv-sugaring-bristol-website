@@ -90,7 +90,7 @@ export default function TestimonialsSection() {
     const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
 
     return (
-        <section id="testimonials" className="py-24 lg:py-32 bg-secondary/30">
+        <section id="testimonials" className="py-16 lg:py-32 bg-secondary/30">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ export default function TestimonialsSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">Client Love</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">Reviews</span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">

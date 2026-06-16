@@ -4,7 +4,7 @@ import { MapPin, Mail, Clock, Instagram, Send } from 'lucide-react';
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="py-24 lg:py-32 bg-background">
+        <section id="contact" className="py-16 lg:py-32 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -81,13 +81,13 @@ export default function ContactSection() {
                         {/* Google Maps Embed */}
                         <div className="aspect-video rounded-sm overflow-hidden border border-border/30 relative">
                             {/* To change the map location, replace the 'src' link below with your own Google Maps embed link! */}
-                            <iframe 
-                                src="https://maps.google.com/maps?q=MV+SUGARING+BRISTOL&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                                width="100%" 
-                                height="100%" 
-                                style={{ border: 0 }} 
-                                allowFullScreen="" 
-                                loading="lazy" 
+                            <iframe
+                                src="https://maps.google.com/maps?q=MV+SUGARING+BRISTOL&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                                 className="absolute inset-0 grayscale contrast-125 opacity-80 mix-blend-multiply hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                             ></iframe>
@@ -106,31 +106,33 @@ export default function ContactSection() {
                             <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
                                 <div>
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">Your Name</label>
-                                    <input type="text" className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder="Jane Smith" />
+                                    <input type="text" className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder="Sophia Taylor" />
                                 </div>
                                 <div>
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">Email</label>
-                                    <input type="email" className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder="jane@example.com" />
+                                    <input type="email" className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder="sophia@example.com" />
                                 </div>
                                 <div>
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">Service of Interest</label>
                                     <select className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors">
                                         <option value="">Select a service...</option>
                                         <optgroup label="Bikini & Intimate Sugaring">
-                                            <option>Hollywood / Brazilian — £45</option>
-                                            <option>G-String / Extended Bikini — £35</option>
-                                            <option>Basic Bikini Line — £25</option>
-                                            <option>Extra Long Hair & Extended Intervals — +£5 to £20</option>
-                                            <option>Extra Patch — £5</option>
-                                            <option>Belly Line — £5</option>
+                                            <option>Hollywood / Brazilian</option>
+                                            <option>G-String / Extended Bikini</option>
+                                            <option>Basic Bikini Line</option>
                                         </optgroup>
-                                        <optgroup label="Down BODY">
-                                            <option>Full Legs (Includes Toes) — £60</option>
-                                            <option>Half Legs (Includes Toes) — £40</option>
-                                            <option>Butt Cheeks (Bum) — £25</option>
-                                            <option>Lower Back — £25</option>
-                                            <option>Lower Back + Butt Cheeks Combo — £40</option>
-                                            <option>Toes (Separate Treatment) — £10</option>
+                                        <optgroup label="Upper Body Sugaring">
+                                            <option>Underarms</option>
+                                            <option>Full or Half Arms</option>
+                                            <option>Stomach</option>
+                                        </optgroup>
+                                        <optgroup label="Down Body Sugaring">
+                                            <option>Full or Half Legs</option>
+                                            <option>Buttocks & Lower Back</option>
+                                        </optgroup>
+                                        <optgroup label="Face Sugaring">
+                                            <option>Individual Face Zones</option>
+                                            <option>Face Combos & Premium Packages</option>
                                         </optgroup>
                                         <optgroup label="Courses & Training">
                                             <option>Course: For Professionals</option>
@@ -138,6 +140,7 @@ export default function ContactSection() {
                                             <option>Online Course</option>
                                         </optgroup>
                                         <optgroup label="Other">
+                                            <option>Multiple Zones / Custom Package</option>
                                             <option>Other / General Enquiry</option>
                                         </optgroup>
                                     </select>

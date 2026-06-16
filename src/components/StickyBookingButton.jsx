@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar } from 'lucide-react';
+// removed Calendar import
 
 export default function StickyBookingButton() {
     const [visible, setVisible] = useState(false);
@@ -25,7 +25,6 @@ export default function StickyBookingButton() {
                         href="#contact"
                         className="flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-xs tracking-[0.2em] uppercase font-medium rounded-full shadow-xl hover:bg-primary/90 transition-all"
                     >
-                        <Calendar className="w-4 h-4" />
                         Book Now
                     </a>
                 </motion.div>

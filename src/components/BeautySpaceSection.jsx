@@ -22,7 +22,7 @@ export default function BeautySpaceSection() {
     ];
 
     return (
-        <section id="beauty-space" className="py-20 lg:py-28 bg-secondary/10 relative overflow-hidden">
+        <section id="beauty-space" className="py-12 lg:py-28 bg-secondary/10 relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-primary/5 blur-3xl -translate-y-1/2" />
             

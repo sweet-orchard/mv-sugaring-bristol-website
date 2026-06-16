@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Calendar } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const leftLinks = [
     { label: 'About',        href: '#about' },
     { label: 'Why Sugaring', href: '#why-sugaring' },
-    { label: 'Services',     href: '#services' },
+    { label: 'Prices',       href: '#services' },
     { label: 'Courses',      href: '#courses' },
 ];
 
@@ -17,6 +17,20 @@ const rightLinks = [
 ];
 
 const allLinks = [...leftLinks, ...rightLinks];
+
+const LanguageToggle = ({ lang, onChange }) => {
+    return (
+        <button
+            onClick={() => onChange(lang === 'en' ? 'ua' : 'en')}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/50 border border-border/50 transition-all active:scale-95 shadow-sm"
+            aria-label="Toggle Language"
+            title={lang === 'en' ? "Switch to Ukrainian" : "Switch to English"}
+        >
+            <span className={`text-[18px] leading-none transition-all duration-300 ${lang === 'en' ? 'opacity-100 scale-110' : 'opacity-40 grayscale scale-90'}`}>🇬🇧</span>
+            <span className={`text-[18px] leading-none transition-all duration-300 ${lang === 'ua' ? 'opacity-100 scale-110' : 'opacity-40 grayscale scale-90'}`}>🇺🇦</span>
+        </button>
+    );
+};
 
 export default function Navbar() {
     const [lang, setLangState] = useState('en');
@@ -37,8 +51,7 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    const flagActive   = 'text-[24px] xl:text-[16px] leading-none opacity-100 transition-all duration-200 hover:scale-115';
-    const flagInactive = 'text-[24px] xl:text-[16px] leading-none opacity-40 grayscale transition-all duration-200 hover:opacity-100 hover:grayscale-0 hover:scale-115';
+    // Removed unused flag classes
 
     return (
         <div className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
@@ -63,21 +76,8 @@ export default function Navbar() {
                 </button>
 
                 {/* Desktop Leftmost: Language Switcher */}
-                <div className="hidden xl:flex items-center gap-2.5 bg-secondary/50 px-3.5 py-1.5 rounded-full border border-border/40">
-                    <button
-                        onClick={() => handleLangChange('en')}
-                        className={lang === 'en' ? flagActive : flagInactive}
-                        title="English"
-                    >
-                        🇬🇧
-                    </button>
-                    <button
-                        onClick={() => handleLangChange('ua')}
-                        className={lang === 'ua' ? flagActive : flagInactive}
-                        title="Ukrainian — coming soon"
-                    >
-                        🇺🇦
-                    </button>
+                <div className="hidden xl:block">
+                    <LanguageToggle lang={lang} onChange={handleLangChange} />
                 </div>
 
                 {/* Left Side Links */}
@@ -117,13 +117,17 @@ export default function Navbar() {
                     ))}
                 </div>
 
-                {/* Right: Book Now button */}
-                <div className="hidden md:flex items-center gap-3">
+                {/* Right: Book Now button & Mobile Language */}
+                <div className="flex items-center gap-4">
+                    {/* Mobile Language Switcher */}
+                    <div className="xl:hidden">
+                        <LanguageToggle lang={lang} onChange={handleLangChange} />
+                    </div>
+
                     <a
                         href="#contact"
-                        className="inline-flex items-center gap-1.5 px-5 py-2 bg-primary text-primary-foreground text-[10px] tracking-[0.2em] uppercase font-bold rounded-full hover:bg-primary/90 active:scale-95 transition-all shadow-md"
+                        className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 bg-primary text-primary-foreground text-[10px] tracking-[0.2em] uppercase font-bold rounded-full hover:bg-primary/90 active:scale-95 transition-all shadow-md"
                     >
-                        <Calendar className="w-3.5 h-3.5" />
                         <span>Book Now</span>
                     </a>
                 </div>
@@ -151,21 +155,13 @@ export default function Navbar() {
                                 </a>
                             ))}
 
-                            {/* Mobile Language + Book CTA */}
-                            <div className="flex items-center justify-between pt-4 mt-2">
-                                <div className="flex items-center gap-3">
-                                    <span className="text-[13px] text-muted-foreground uppercase tracking-wider font-semibold">Language</span>
-                                    <div className="flex items-center gap-2">
-                                        <button onClick={() => handleLangChange('en')} className={lang === 'en' ? flagActive : flagInactive} title="English">🇬🇧</button>
-                                        <button onClick={() => handleLangChange('ua')} className={lang === 'ua' ? flagActive : flagInactive} title="Coming soon">🇺🇦</button>
-                                    </div>
-                                </div>
+                            {/* Mobile Book CTA */}
+                            <div className="flex flex-col gap-4 pt-4 mt-2">
                                 <a
                                     href="#contact"
                                     onClick={() => setOpen(false)}
-                                    className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-primary text-primary-foreground text-[10px] tracking-[0.2em] uppercase font-bold rounded-full hover:bg-primary/90 transition-all shadow-sm"
+                                    className="w-full flex items-center justify-center py-3.5 bg-primary text-primary-foreground text-[11px] tracking-[0.25em] uppercase font-bold rounded-sm shadow-sm hover:bg-primary/90 transition-all"
                                 >
-                                    <Calendar className="w-3.5 h-3.5" />
                                     Book Now
                                 </a>
                             </div>

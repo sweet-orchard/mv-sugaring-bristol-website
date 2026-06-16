@@ -29,7 +29,7 @@ const stats = [
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-24 lg:py-32 bg-background">
+        <section id="about" className="py-16 lg:py-32 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 {/* Section header */}
                 <motion.div
@@ -37,7 +37,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-20"
+                    className="text-center mb-12 lg:mb-20"
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
@@ -119,7 +119,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-24"
+                    className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12 lg:mt-24"
                 >
                     {stats.map((stat, i) => (
                         <div key={i} className="text-center p-8 bg-secondary/40 border border-border/30 rounded-sm hover:border-primary/30 transition-all duration-300">
@@ -136,7 +136,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="max-w-3xl mx-auto mt-24 text-center"
+                    className="max-w-3xl mx-auto mt-12 lg:mt-24 text-center"
                 >
                     <h3 className="font-display text-3xl md:text-4xl italic font-light text-foreground mb-8">
                         "I experience it myself, and I will teach your body to feel just as luxurious"

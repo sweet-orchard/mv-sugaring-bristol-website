@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Camera, X } from 'lucide-react';
+import { Camera, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const results = [
     { image: '/before-after-pictures/1.png' },
@@ -12,117 +12,23 @@ const results = [
     { image: '/before-after-pictures/7.png' },
 ];
 
-const doubledResults = [...results, ...results];
-
 export default function BeforeAfterSection() {
     const [activeItem, setActiveItem] = useState(null);
     const scrollContainerRef = useRef(null);
 
-    useEffect(() => {
-        const container = scrollContainerRef.current;
-        if (!container) return;
-
-        let animationFrameId;
-        let isPaused = false;
-        let isDragging = false;
-        let startX = 0;
-        let scrollLeftVal = 0;
-        const scrollSpeed = 0.5; // pixels per frame (very smooth and gentle)
-        let currentScroll = container.scrollLeft;
-
-        const step = () => {
-            if (!isPaused && !isDragging && container) {
-                currentScroll += scrollSpeed;
-                
-                // If we reach the end of the first half, wrap back to 0
-                const halfWidth = container.scrollWidth / 2;
-                if (currentScroll >= halfWidth) {
-                    currentScroll = 0;
-                }
-                
-                container.scrollLeft = currentScroll;
-            }
-            animationFrameId = requestAnimationFrame(step);
-        };
-
-        const handleMouseEnter = () => {
-            isPaused = true;
-        };
-
-        const handleMouseLeave = () => {
-            if (!isDragging) {
-                isPaused = false;
-                if (container) currentScroll = container.scrollLeft;
-            }
-        };
-
-        // Desktop Mouse Drag Scroll
-        const handleMouseDown = (e) => {
-            isDragging = true;
-            isPaused = true;
-            startX = e.pageX - container.offsetLeft;
-            scrollLeftVal = container.scrollLeft;
-        };
-
-        const handleMouseMove = (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const x = e.pageX - container.offsetLeft;
-            const walk = (x - startX) * 1.5; // scroll speed multiplier
-            container.scrollLeft = scrollLeftVal - walk;
-            currentScroll = container.scrollLeft;
-        };
-
-        const handleMouseUpOrLeave = () => {
-            if (isDragging) {
-                isDragging = false;
-                isPaused = false;
-                if (container) currentScroll = container.scrollLeft;
-            }
-        };
-
-        // Mobile Touch Gestures
-        const handleTouchStart = () => {
-            isPaused = true;
-        };
-
-        const handleTouchEnd = () => {
-            isPaused = false;
-            if (container) currentScroll = container.scrollLeft;
-        };
-
-        // Attach event listeners
-        container.addEventListener('mouseenter', handleMouseEnter);
-        container.addEventListener('mouseleave', handleMouseLeave);
-        
-        container.addEventListener('mousedown', handleMouseDown);
-        container.addEventListener('mousemove', handleMouseMove);
-        container.addEventListener('mouseup', handleMouseUpOrLeave);
-        container.addEventListener('mouseleave', handleMouseUpOrLeave);
-
-        container.addEventListener('touchstart', handleTouchStart, { passive: true });
-        container.addEventListener('touchend', handleTouchEnd, { passive: true });
-
-        // Start animation loop
-        animationFrameId = requestAnimationFrame(step);
-
-        return () => {
-            cancelAnimationFrame(animationFrameId);
-            if (container) {
-                container.removeEventListener('mouseenter', handleMouseEnter);
-                container.removeEventListener('mouseleave', handleMouseLeave);
-                container.removeEventListener('mousedown', handleMouseDown);
-                container.removeEventListener('mousemove', handleMouseMove);
-                container.removeEventListener('mouseup', handleMouseUpOrLeave);
-                container.removeEventListener('mouseleave', handleMouseUpOrLeave);
-                container.removeEventListener('touchstart', handleTouchStart);
-                container.removeEventListener('touchend', handleTouchEnd);
-            }
-        };
-    }, []);
+    const scroll = (direction) => {
+        if (scrollContainerRef.current) {
+            const { current } = scrollContainerRef;
+            const scrollAmount = current.clientWidth * 0.8; // Scroll by 80% of the container width
+            current.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     return (
-        <section id="results" className="py-24 lg:py-32 bg-background border-t border-border/20 overflow-hidden">
+        <section id="results" className="py-16 lg:py-32 bg-background border-t border-border/20 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 {/* Section Header */}
                 <motion.div
@@ -130,7 +36,7 @@ export default function BeforeAfterSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-12"
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
@@ -143,33 +49,40 @@ export default function BeforeAfterSection() {
                         Before & <span className="font-semibold italic">After</span>
                     </h2>
                     <p className="max-w-xl mx-auto text-sm text-muted-foreground mt-4 font-body leading-relaxed">
-                        Explore the transformative results of professional sugaring. Drag or swipe to scroll manually, hover to pause, and click any image to view details.
+                        Swipe or use the arrows to see the transformative results of professional sugaring. Click any image to view details.
                     </p>
                 </motion.div>
 
                 {/* Scrolling Gallery Container */}
-                <div className="relative w-full">
-                    {/* Fading Edge Overlays */}
-                    <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent pointer-events-none z-10 hidden md:block" />
-                    <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent pointer-events-none z-10 hidden md:block" />
-
-                    {/* Overflow container with native scrolling */}
+                <div className="relative w-full group">
+                    {/* Native scrolling container */}
                     <div
                         ref={scrollContainerRef}
-                        className="overflow-x-auto w-full no-scrollbar flex gap-6 snap-x snap-mandatory select-none cursor-grab active:cursor-grabbing pb-4"
+                        className="overflow-x-auto w-full flex gap-6 snap-x snap-mandatory pb-8 pt-4 scroll-smooth"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
-                        {doubledResults.map((item, index) => (
+                        {/* Hide scrollbar for webkit */}
+                        <style dangerouslySetInnerHTML={{__html: `
+                            .overflow-x-auto::-webkit-scrollbar { display: none; }
+                        `}} />
+                        
+                        {results.map((item, index) => (
                             <div
                                 key={index}
-                                className="w-[85vw] sm:w-[480px] md:w-[620px] shrink-0 snap-start"
+                                className="w-[85vw] sm:w-[400px] md:w-[500px] shrink-0 snap-center first:ml-[calc(50vw-42.5vw)] sm:first:ml-0"
                             >
                                 {/* Clickable Image Container */}
                                 <div
                                     onClick={() => setActiveItem(item)}
-                                    className="relative aspect-[16/9] rounded-sm overflow-hidden bg-gradient-to-br from-secondary/50 via-accent/25 to-secondary/50 flex items-center justify-center cursor-zoom-in"
+                                    className="relative aspect-[4/3] rounded-sm overflow-hidden bg-gradient-to-br from-secondary/50 via-accent/25 to-secondary/50 flex items-center justify-center cursor-zoom-in group/item shadow-sm"
                                 >
                                     {item.image ? (
-                                        <img src={item.image} alt="Before & After Result" className="w-full h-full object-cover" loading="lazy" />
+                                        <img 
+                                            src={item.image} 
+                                            alt={`Before & After Result ${index + 1}`} 
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover/item:scale-105" 
+                                            loading="lazy" 
+                                        />
                                     ) : (
                                         <div className="text-center p-4 flex flex-col items-center gap-2">
                                             <Camera className="w-6 h-6 text-primary/45" />
@@ -178,10 +91,27 @@ export default function BeforeAfterSection() {
                                             </span>
                                         </div>
                                     )}
+                                    <div className="absolute inset-0 bg-black/0 group-hover/item:bg-black/10 transition-colors duration-500" />
                                 </div>
                             </div>
                         ))}
                     </div>
+
+                    {/* Navigation Arrows */}
+                    <button 
+                        onClick={() => scroll('left')}
+                        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-background/80 backdrop-blur-md border border-border/50 text-primary rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background shadow-lg"
+                        aria-label="Scroll left"
+                    >
+                        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+                    </button>
+                    <button 
+                        onClick={() => scroll('right')}
+                        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-background/80 backdrop-blur-md border border-border/50 text-primary rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background shadow-lg"
+                        aria-label="Scroll right"
+                    >
+                        <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+                    </button>
                 </div>
             </div>
 
@@ -228,10 +158,7 @@ export default function BeforeAfterSection() {
                                         <Camera className="w-10 h-10 text-primary/45" />
                                     </div>
                                 )}
-
                             </div>
-
-                            
                         </motion.div>
                     </motion.div>
                 )}

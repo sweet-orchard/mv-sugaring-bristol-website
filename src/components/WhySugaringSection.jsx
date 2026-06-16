@@ -27,7 +27,7 @@ const benefits = [
 
 export default function WhySugaringSection() {
     return (
-        <section id="why-sugaring" className="py-24 lg:py-32 bg-secondary/30">
+        <section id="why-sugaring" className="py-16 lg:py-32 bg-secondary/30">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

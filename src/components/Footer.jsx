@@ -3,67 +3,71 @@ import { Instagram, Mail, Heart } from 'lucide-react';
 
 export default function Footer() {
     return (
-        <footer className="bg-foreground text-background py-16">
+        <footer className="bg-foreground text-background pt-12 pb-8">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
-                <div className="grid md:grid-cols-3 gap-12 mb-12">
+
+                {/* Main content */}
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 lg:gap-16 mb-10">
+
                     {/* Brand */}
-                    <div>
-                        <div className="mb-4">
-                            <img
-                                src="/logo.png"
-                                alt="Mariia Vatseba"
-                                className="h-20 w-auto object-contain"
-                            />
-                        </div>
-                        <p className="text-sm text-background/50 leading-relaxed mt-4 font-body">
+                    <div className="lg:w-[35%] flex flex-col items-center lg:items-start text-center lg:text-left">
+                        <img src="/logo.png" alt="Mariia Vatseba" className="h-24 w-auto object-contain mb-5" />
+                        <p className="text-[12px] text-background/55 leading-relaxed font-body tracking-wide max-w-xs lg:max-w-none">
                             With Love to Your Skin. Premium sugaring specialist delivering luxury self-care experiences in Bristol.
                         </p>
                     </div>
 
-                    {/* Quick Links */}
-                    <div>
-                        <h4 className="text-xs tracking-[0.2em] uppercase text-primary font-medium mb-4">Quick Links</h4>
-                        <div className="space-y-3">
-                            {[
-                                { label: 'About', href: '#about' },
-                                { label: 'Services & Prices', href: '#services' },
-                                { label: 'Courses', href: '#courses' },
-                                { label: 'FAQ', href: '#faq' },
-                                { label: 'Contact', href: '#contact' },
-                            ].map(link => (
-                                <a key={link.href} href={link.href} className="block text-sm text-background/50 hover:text-primary transition-colors font-body">
-                                    {link.label}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
+                    {/* Right side: social buttons + links grid */}
+                    <div className="lg:flex-1 flex flex-col items-center lg:items-start gap-8">
 
-                    {/* Connect */}
-                    <div>
-                        <h4 className="text-xs tracking-[0.2em] uppercase text-primary font-medium mb-4">Connect</h4>
-                        <div className="space-y-3">
-                            <a href="mailto:mariia.vatseba@gmail.com" className="flex items-center gap-3 text-sm text-background/50 hover:text-primary transition-colors font-body">
-                                <Mail className="w-4 h-4" />
-                                mariia.vatseba@gmail.com
+                        {/* Social buttons */}
+                        <div className="flex items-center justify-center lg:justify-start gap-3">
+                            <a href="mailto:mariia.vatseba@gmail.com" className="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-background/20 hover:border-primary hover:bg-primary/10 transition-all text-background/60 hover:text-primary">
+                                <Mail className="w-4 h-4 shrink-0" />
+                                <span className="text-[11px] font-body tracking-widest uppercase">Email</span>
                             </a>
-                            <a href="#" className="flex items-center gap-3 text-sm text-background/50 hover:text-primary transition-colors font-body">
-                                <Instagram className="w-4 h-4" />
-                                @mariia.vatseba
+                            <a href="https://www.instagram.com/mariia.vatseba" target="_blank" rel="noreferrer" className="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-background/20 hover:border-primary hover:bg-primary/10 transition-all text-background/60 hover:text-primary">
+                                <Instagram className="w-4 h-4 shrink-0" />
+                                <span className="text-[11px] font-body tracking-widest uppercase">Instagram</span>
                             </a>
                         </div>
+
+                        {/* Links grid */}
+                        <div className="grid grid-cols-2 gap-x-12 gap-y-6 text-center lg:text-left">
+                            {/* Explore */}
+                            <div className="flex flex-col items-center lg:items-start">
+                                <h4 className="text-[10px] tracking-[0.3em] uppercase text-primary font-bold mb-3">Explore</h4>
+                                <div className="flex flex-col gap-2.5">
+                                    <a href="#about" className="text-[13px] text-background/55 hover:text-primary transition-colors font-body">About</a>
+                                    <a href="#services" className="text-[13px] text-background/55 hover:text-primary transition-colors font-body">Services & Prices</a>
+                                    <a href="#courses" className="text-[13px] text-background/55 hover:text-primary transition-colors font-body">Courses</a>
+                                </div>
+                            </div>
+
+                            {/* Support */}
+                            <div className="flex flex-col items-center lg:items-start">
+                                <h4 className="text-[10px] tracking-[0.3em] uppercase text-primary font-bold mb-3">Support</h4>
+                                <div className="flex flex-col gap-2.5">
+                                    <a href="#faq" className="text-[13px] text-background/55 hover:text-primary transition-colors font-body">FAQ</a>
+                                    <a href="#care-guide" className="text-[13px] text-background/55 hover:text-primary transition-colors font-body">Care Guide</a>
+                                    <a href="#contact" className="text-[13px] text-background/55 hover:text-primary transition-colors font-body">Contact</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 {/* Divider */}
-                <div className="h-px bg-background/10 mb-8" />
+                <div className="h-px bg-background/15 mb-6" />
 
-                {/* Bottom */}
-                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-xs text-background/30 font-body">
+                {/* Bottom row */}
+                <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
+                    <p className="text-[10px] text-background/35 font-body tracking-widest uppercase">
                         © {new Date().getFullYear()} Mariia Vatseba. All rights reserved.
                     </p>
-                    <p className="text-xs text-background/30 font-body flex items-center gap-1">
-                        Made with <Heart className="w-3 h-3 text-primary" /> in Bristol
+                    <p className="text-[10px] text-background/35 font-body flex items-center justify-center gap-1.5 tracking-widest uppercase">
+                        Made with <Heart className="w-3 h-3 text-primary fill-primary animate-pulse" /> in Bristol
                     </p>
                 </div>
             </div>
