@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Clock, Instagram, Send } from 'lucide-react';
+import { MapPin, Mail, Clock, Send } from 'lucide-react';
 
 export default function ContactSection() {
     return (
@@ -67,15 +67,7 @@ export default function ContactSection() {
                                 </div>
                             </div>
 
-                            <div className="flex gap-4 items-start">
-                                <div className="w-10 h-10 shrink-0 rounded-sm bg-primary/10 flex items-center justify-center">
-                                    <Instagram className="w-4 h-4 text-primary" />
-                                </div>
-                                <div>
-                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1">Follow Me</h4>
-                                    <a href="#" className="text-sm text-primary hover:underline">@mariia.vatseba</a>
-                                </div>
-                            </div>
+
                         </div>
 
                         {/* Google Maps Embed */}
