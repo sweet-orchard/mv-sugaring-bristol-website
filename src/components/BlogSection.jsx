@@ -1,21 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ImageIcon } from 'lucide-react';
-
-const posts = [
-    {
-        title: 'What is Sugaring & Why Exactly Sugaring?',
-        excerpt: 'Sugaring is a 100% natural, organic hair removal method using sugar paste. To me, it is far more than just hair removal—it is a luxurious self-care spa ritual.',
-        tag: 'Education',
-    },
-    {
-        title: 'Arm Sugaring is Having a Moment!',
-        excerpt: "It's just as highly requested as the bikini line. The post-treatment feeling is second to none—lightness, silkiness, and femininity right down to your fingertips.",
-        tag: 'Trending',
-    },
-];
+import { useLang } from '../context/LangContext';
+import translations from '../translations';
 
 export default function BlogSection() {
+    const { lang } = useLang();
+    const t = translations[lang].blog;
+
+    const posts = [
+        { title: t.post1Title, excerpt: t.post1Excerpt, tag: t.post1Tag },
+        { title: t.post2Title, excerpt: t.post2Excerpt, tag: t.post2Tag },
+    ];
+
     return (
         <section id="blog" className="py-16 lg:py-32 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -28,11 +25,11 @@ export default function BlogSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">Journal</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
-                        Beauty <span className="font-semibold italic">Insights</span>
+                        {t.heading}
                     </h2>
                 </motion.div>
 
@@ -64,7 +61,7 @@ export default function BlogSection() {
                             </h3>
                             <p className="text-sm text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
                             <span className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-primary font-medium group-hover:gap-3 transition-all">
-                                Read More <ArrowRight className="w-3.5 h-3.5" />
+                                {t.readMore} <ArrowRight className="w-3.5 h-3.5" />
                             </span>
                         </motion.article>
                     ))}

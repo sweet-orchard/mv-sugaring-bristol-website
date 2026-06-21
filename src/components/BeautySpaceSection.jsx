@@ -1,24 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ShieldCheck, Heart } from 'lucide-react';
+import { useLang } from '../context/LangContext';
+import translations from '../translations';
 
 export default function BeautySpaceSection() {
+    const { lang } = useLang();
+    const t = translations[lang].space;
+
     const highlights = [
-        {
-            icon: ShieldCheck,
-            title: "Hospital-Grade Hygiene",
-            desc: "100% disposable materials, medical-grade sanitization of surfaces, and pristine sterile instruments."
-        },
-        {
-            icon: Heart,
-            title: "Cozy & Private Ambience",
-            desc: "A quiet, warm room with calming music, soft linens, and gentle lighting designed for your complete relaxation."
-        },
-        {
-            icon: Sparkles,
-            title: "Premium Natural Cosmetics",
-            desc: "Using only the finest organic sugar pastes and botanical skin care to pamper and nourish your skin."
-        }
+        { icon: ShieldCheck, title: t.highlight1Title, desc: t.highlight1Desc },
+        { icon: Heart,       title: t.highlight2Title, desc: t.highlight2Desc },
+        { icon: Sparkles,    title: t.highlight3Title, desc: t.highlight3Desc },
     ];
 
     return (
@@ -37,17 +30,12 @@ export default function BeautySpaceSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">The Studio</p>
+                            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">{t.eyebrow}</p>
                             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
-                                A Warm Welcome to <br />
-                                My <span className="font-semibold italic text-primary">Beauty Space</span>
+                                {t.heading}
                             </h2>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">
-                                I believe that a sugaring appointment should be a relaxing escape, not a chore. That is why I have created a serene, private space where comfort, absolute hygiene, and luxury meet.
-                            </p>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-8">
-                                Every single detail of my workspace is meticulously curated. From the warm ambient lighting and soft linen sheets to medical-grade sanitization, you can unwind knowing you are in safe, caring hands.
-                            </p>
+                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">{t.paragraph1}</p>
+                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-8">{t.paragraph2}</p>
                         </motion.div>
 
                         {/* Highlights list */}
@@ -87,12 +75,12 @@ export default function BeautySpaceSection() {
                             >
                                 <img 
                                     src="/room-pictures/cozy-room.jpg" 
-                                    alt="Clean and cozy treatment room" 
+                                    alt={t.imageAlt1} 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-xs text-white uppercase tracking-widest font-body">Cozy Treatment Room</span>
+                                    <span className="text-xs text-white uppercase tracking-widest font-body">{t.imageHover1}</span>
                                 </div>
                             </motion.div>
 
@@ -106,12 +94,12 @@ export default function BeautySpaceSection() {
                             >
                                 <img 
                                     src="/room-pictures/premium-products.jpg" 
-                                    alt="Good quality products" 
+                                    alt={t.imageAlt2} 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-xs text-white uppercase tracking-widest font-body">Good Quality Products</span>
+                                    <span className="text-xs text-white uppercase tracking-widest font-body">{t.imageHover2}</span>
                                 </div>
                             </motion.div>
 
@@ -125,12 +113,12 @@ export default function BeautySpaceSection() {
                             >
                                 <img 
                                     src="/room-pictures/clean-materials.jpg" 
-                                    alt="Clean materials" 
+                                    alt={t.imageAlt3} 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-xs text-white uppercase tracking-widest font-body">Clean Materials</span>
+                                    <span className="text-xs text-white uppercase tracking-widest font-body">{t.imageHover3}</span>
                                 </div>
                             </motion.div>
 

@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Flame, Hand, Droplets, Play, Pause } from 'lucide-react';
+import { useLang } from '../context/LangContext';
+import translations from '../translations';
 
 const features = [
     {
@@ -21,6 +23,15 @@ const features = [
 ];
 
 export default function WhatSetsApartSection() {
+    const { lang } = useLang();
+    const t = translations[lang].apart;
+
+    const features = [
+        { icon: Flame,    title: t.feature1Title, desc: t.feature1Desc },
+        { icon: Hand,     title: t.feature2Title, desc: t.feature2Desc },
+        { icon: Droplets, title: t.feature3Title, desc: t.feature3Desc },
+    ];
+
     const [isPlaying, setIsPlaying] = useState(true);
     const videoRef = useRef(null);
 
@@ -45,15 +56,15 @@ export default function WhatSetsApartSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">What Sets Me Apart</p>
+                        <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">{t.eyebrow}</p>
                         <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-6">
-                            A <span className="font-semibold italic">Different Level</span> of Care
+                            {t.heading.split(' ').slice(0,1).join(' ')} <span className="font-semibold italic">{t.heading.split(' ').slice(1).join(' ')}</span>
                         </h2>
                         <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4">
-                            I specialise in Sugaring—an ultra-safe, natural method that is incredibly kind to even the most sensitive skin.
+                            {t.paragraph1}
                         </p>
                         <p className="text-sm font-body text-muted-foreground leading-relaxed mb-8">
-                            Perfect for clients who value privacy, comfort, exceptional care, quality and a cosy atmosphere—choosing nothing less than the best for their skin.
+                            {t.paragraph2}
                         </p>
 
                         <div className="space-y-6">

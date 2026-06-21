@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLang } from '../context/LangContext';
+import translations from '../translations';
 
 const results = [
     { image: '/before-after-pictures/1.png' },
@@ -13,6 +15,8 @@ const results = [
 ];
 
 export default function BeforeAfterSection() {
+    const { lang } = useLang();
+    const t = translations[lang].beforeAfter;
     const [activeItem, setActiveItem] = useState(null);
     const scrollContainerRef = useRef(null);
 
@@ -41,15 +45,15 @@ export default function BeforeAfterSection() {
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">
-                            Real Results
+                            {t.eyebrow}
                         </span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
-                        Before & <span className="font-semibold italic">After</span>
+                        {t.heading}
                     </h2>
                     <p className="max-w-xl mx-auto text-sm text-muted-foreground mt-4 font-body leading-relaxed">
-                        Swipe or use the arrows to see the transformative results of professional sugaring. Click any image to view details.
+                        {t.subtext}
                     </p>
                 </motion.div>
 
@@ -87,7 +91,7 @@ export default function BeforeAfterSection() {
                                         <div className="text-center p-4 flex flex-col items-center gap-2">
                                             <Camera className="w-6 h-6 text-primary/45" />
                                             <span className="text-[10px] tracking-[0.1em] uppercase text-primary/60 font-body font-medium">
-                                                Before & After Photo
+                                                {t.placeholderLabel}
                                             </span>
                                         </div>
                                     )}
@@ -101,14 +105,14 @@ export default function BeforeAfterSection() {
                     <button 
                         onClick={() => scroll('left')}
                         className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-background/80 backdrop-blur-md border border-border/50 text-primary rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background shadow-lg"
-                        aria-label="Scroll left"
+                        aria-label={t.scrollLeft}
                     >
                         <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                     </button>
                     <button 
                         onClick={() => scroll('right')}
                         className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-background/80 backdrop-blur-md border border-border/50 text-primary rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background shadow-lg"
-                        aria-label="Scroll right"
+                        aria-label={t.scrollRight}
                     >
                         <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
                     </button>
@@ -130,7 +134,7 @@ export default function BeforeAfterSection() {
                         <button
                             onClick={() => setActiveItem(null)}
                             className="absolute top-6 right-6 text-white hover:text-primary transition-colors p-2 rounded-full hover:bg-white/10"
-                            aria-label="Close details"
+                            aria-label={t.closeDetails}
                         >
                             <X className="w-8 h-8" />
                         </button>

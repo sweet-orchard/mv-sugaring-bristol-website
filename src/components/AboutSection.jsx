@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Heart, Shield, Sparkles } from 'lucide-react';
+import { useLang } from '../context/LangContext';
+import translations from '../translations';
 import {
     Carousel,
     CarouselContent,
@@ -28,6 +30,15 @@ const stats = [
 ];
 
 export default function AboutSection() {
+    const { lang } = useLang();
+    const t = translations[lang].about;
+
+    const stats = [
+        { number: '8+', label: t.stat1Label, icon: Sparkles },
+        { number: '9x', label: t.stat2Label, icon: Award },
+        { number: '1000+', label: t.stat3Label, icon: Heart },
+        { number: '100%', label: t.stat4Label, icon: Shield },
+    ];
     return (
         <section id="about" className="py-16 lg:py-32 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -41,11 +52,11 @@ export default function AboutSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">About Me</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
-                        <span className="font-semibold italic">Mariia</span> Vasteba
+                        <span className="font-semibold italic">Mariia</span> Vatseba
                     </h2>
                 </motion.div>
 
@@ -96,20 +107,14 @@ export default function AboutSection() {
                         transition={{ duration: 0.7, delay: 0.1 }}
                     >
                         <p className="text-xs tracking-[0.25em] uppercase text-primary font-medium mb-6">
-                            Sugaring Specialist
+                            {t.subtitle}
                         </p>
 
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6">
-                            Hi, I'm Mariia 😃 — a sugaring specialist, ukrainian woman, and someone who truly loves what she does. I'm 31, and I'm raising my two beautiful girls, Yeva and Yana, on my own. They are my whole world and my biggest motivation every single day. Our story hasn't always been easy — I arrived in the UK with a one-month-old baby, born during the war in Ukraine. That journey taught me just how precious safety, peace, and taking care of yourself really are.
-                        </p>
+                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6">{t.paragraph1}</p>
 
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6">
-                            I found sugaring when my eldest was little and I needed a career that let me be there for her. What started as a practical choice quietly turned into the greatest love of my professional life. Eight years later, it is so much more than a job to me. With a background in Finance, Economics, and academic research, I've always cared deeply about doing things properly and explaining them clearly — and that shows in everything I create, from my treatments to my courses.
-                        </p>
+                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6">{t.paragraph2}</p>
 
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-8">
-                            I truly believe that sugaring is a beautiful act of self-care — a little ritual that's just for you. When you come to me, I want you to feel welcome, relaxed, and looked after from the very first moment. It makes me so happy to play even a small part in your confidence and your glow. I'm so glad you're here.
-                        </p>
+                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-8">{t.paragraph3}</p>
                     </motion.div>
                 </div>
 
@@ -139,20 +144,14 @@ export default function AboutSection() {
                     className="max-w-3xl mx-auto mt-12 lg:mt-24 text-center"
                 >
                     <h3 className="font-display text-3xl md:text-4xl italic font-light text-foreground mb-8">
-                        "I experience it myself, and I will teach your body to feel just as luxurious"
+                        {t.quoteHeading}
                     </h3>
 
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6">
-                        I have chosen this method for myself every single month for over 8 years. For me, it is all about feeling renewed, fresh, clean, luxurious, and immaculately groomed. It is the exact moment when the entire body resets, a new inner state clicks into place, and I feel ready to take on the world differently.
-                    </p>
+                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6">{t.secondParagraph1}</p>
 
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6">
-                        Furthermore, sugaring is a treatment that alters the structure and quantity of your hair. You lose 30–40% of the density after the very first time, and the hair grows back thinner, lighter, and softer. Over time, it stops growing altogether in certain areas, giving you a natural 'laser effect' without any machine intervention.
-                    </p>
+                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6">{t.secondParagraph2}</p>
 
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed">
-                        This is what I value most. Our bodies support us every single day, and I am so happy to give mine the gentle care it deserves. It is this exact feeling of self-love, lightness, and confidence that I share with my clients each and every day.
-                    </p>
+                    <p className="text-sm font-body text-foreground/70 leading-relaxed">{t.secondParagraph3}</p>
                 </motion.div>
             </div>
         </section>

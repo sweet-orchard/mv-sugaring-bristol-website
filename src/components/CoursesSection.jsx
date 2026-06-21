@@ -1,8 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Users, Globe, BookOpen } from 'lucide-react';
+import { useLang } from '../context/LangContext';
+import translations from '../translations';
 
 export default function CoursesSection() {
+    const { lang } = useLang();
+    const t = translations[lang].courses;
+
     return (
         <section id="courses" className="py-16 lg:py-32 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -15,15 +20,15 @@ export default function CoursesSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">Education & Courses</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">
-                        Want to do this yourself? <br className="hidden md:block" />
-                        <span className="font-semibold italic">I'll teach you everything.</span>
+                        {t.headingLine1} <br className="hidden md:block" />
+                        <span className="font-semibold italic">{t.headingLine2}</span>
                     </h2>
                     <p className="max-w-2xl mx-auto text-sm font-body text-muted-foreground leading-relaxed">
-                        My courses offer far more than just dry theory—they are a complete, carefully structured system designed to lead my students directly to success. Teaching is where I truly thrive and come alive.
+                        {t.subtext}
                     </p>
                 </motion.div>
 
@@ -41,20 +46,18 @@ export default function CoursesSection() {
                         </div>
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-2 h-2 bg-primary rounded-full" />
-                            <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">In-Person · Bristol</span>
+                            <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">{t.card1Badge}</span>
                         </div>
-                        <h3 className="font-display text-2xl font-semibold text-foreground mb-4">For Professionals</h3>
-                        <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">
-                            Heartfelt beginners' courses and advanced masterclasses for practicing therapists looking to elevate their skills to a premium level. Perfect for those starting from zero or experienced specialists who want to reach the next tier.
-                        </p>
+                        <h3 className="font-display text-2xl font-semibold text-foreground mb-4">{t.card1Title}</h3>
+                        <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">{t.card1Desc}</p>
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
                             <div className="flex items-center gap-1.5">
                                 <Users className="w-3.5 h-3.5" />
-                                <span>One-to-One</span>
+                                <span>{t.card1Tag1}</span>
                             </div>
                             <div className="flex items-center gap-1.5">
                                 <BookOpen className="w-3.5 h-3.5" />
-                                <span>Intensive Training</span>
+                                <span>{t.card1Tag2}</span>
                             </div>
                         </div>
                     </motion.div>
@@ -72,20 +75,18 @@ export default function CoursesSection() {
                         </div>
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-2 h-2 bg-primary rounded-full" />
-                            <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">In-Person · Bristol</span>
+                            <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">{t.card2Badge}</span>
                         </div>
-                        <h3 className="font-display text-2xl font-semibold text-foreground mb-4">For Yourself</h3>
-                        <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">
-                            Cosy training designed for women who want to master the skill of professional sugaring for their personal home care. Because I teach strictly on a one-to-one basis, you will immediately receive only the exact details and techniques that will work flawlessly for your specific skin and hair type.
-                        </p>
+                        <h3 className="font-display text-2xl font-semibold text-foreground mb-4">{t.card2Title}</h3>
+                        <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">{t.card2Desc}</p>
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
                             <div className="flex items-center gap-1.5">
                                 <Users className="w-3.5 h-3.5" />
-                                <span>One-to-One</span>
+                                <span>{t.card2Tag1}</span>
                             </div>
                             <div className="flex items-center gap-1.5">
                                 <BookOpen className="w-3.5 h-3.5" />
-                                <span>Personalised</span>
+                                <span>{t.card2Tag2}</span>
                             </div>
                         </div>
                     </motion.div>
@@ -103,26 +104,22 @@ export default function CoursesSection() {
                         <div>
                             <div className="flex items-center gap-2 mb-4">
                                 <Globe className="w-4 h-4 text-primary" />
-                                <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">Online Academy</span>
+                                <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">{t.onlineBadge}</span>
                             </div>
                             <h3 className="font-display text-3xl md:text-4xl font-light text-background mb-6">
-                                Personal Sugaring <span className="font-semibold italic">At Home</span>
+                                {t.onlineHeading}
                             </h3>
-                            <p className="text-sm font-body text-background/70 leading-relaxed mb-4">
-                                Two years ago, I launched my very first online course: "The Essentials of Personal Sugaring"—specifically created for those who want to master the exact nuances of professional hair removal at home.
-                            </p>
-                            <p className="text-sm font-body text-background/70 leading-relaxed mb-8">
-                                Today, over 19 successful students worldwide have graduated from this course. It is an incredible investment in oneself, and I am absolutely thrilled to see my dream of global education coming to life.
-                            </p>
+                            <p className="text-sm font-body text-background/70 leading-relaxed mb-4">{t.onlineParagraph1}</p>
+                            <p className="text-sm font-body text-background/70 leading-relaxed mb-8">{t.onlineParagraph2}</p>
 
                             <div className="flex gap-8">
                                 <div>
                                     <p className="font-display text-3xl font-semibold text-primary">19+</p>
-                                    <p className="text-[10px] tracking-[0.15em] uppercase text-background/50 mt-1">Global Students</p>
+                                    <p className="text-[10px] tracking-[0.15em] uppercase text-background/50 mt-1">{t.stat1Label}</p>
                                 </div>
                                 <div>
                                     <p className="font-display text-3xl font-semibold text-primary">100%</p>
-                                    <p className="text-[10px] tracking-[0.15em] uppercase text-background/50 mt-1">Success Rate</p>
+                                    <p className="text-[10px] tracking-[0.15em] uppercase text-background/50 mt-1">{t.stat2Label}</p>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +128,7 @@ export default function CoursesSection() {
                         <div className="aspect-video rounded-sm overflow-hidden border border-background/20 shadow-xl">
                             <img 
                                 src="/from-course-picture.jpg" 
-                                alt="Mariia Vatseba teaching a sugaring course" 
+                                alt={t.videoAlt} 
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                 loading="lazy"
                             />
