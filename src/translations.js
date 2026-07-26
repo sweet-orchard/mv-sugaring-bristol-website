@@ -116,7 +116,7 @@ const translations = {
       paragraph1:
         "I believe that a sugaring appointment should be a relaxing escape, not a chore. That is why I have created a serene, private space where comfort, absolute hygiene, and luxury meet.",
       paragraph2:
-        "Every single detail of my workspace is meticulously curated. From the warm ambient lighting and soft linen sheets to medical-grade sanitization, you can unwind knowing you are in safe, caring hands.",
+        "Every single detail of my workspace is meticulously curated. From the warm ambient lighting, relaxing music, and fresh disposable linens to medical-grade sanitisation, you can unwind knowing you are in safe, caring hands.",
       highlight1Title: "Hospital-Grade Hygiene",
       highlight1Desc:
         "100% disposable materials, medical-grade sanitization of surfaces, and pristine sterile instruments.",
@@ -456,7 +456,7 @@ const translations = {
         "For the most comfortable treatment, hair should be about 5-7 mm long (typically 2-3 weeks after your last shave).",
       before2Title: "Gentle Exfoliation",
       before2Desc:
-        "Exfoliate the area gently 24 hours before your session. This lifts flat hairs and removes dead skin cells for easier removal.",
+        "Exfoliate the area gently 3 days before your session. This lifts flat hairs and removes dead skin cells for easier removal.",
       before3Title: "Clean, Bare Skin",
       before3Desc:
         "Arrive with clean skin. Please do not apply rich body creams, lotions, or oils on the treatment day as they block the paste.",
@@ -533,7 +533,7 @@ const translations = {
         "Yes, you can. I regularly work with clients who have longer hair growth. Please note that the treatment may feel slightly more intense because more hairs will be removed at once. However, the result will exceed your expectations because we will catch a larger volume of hair, meaning your smooth results will last even longer!\n\nImportant Note: If your hair is significantly longer, please let me know in advance. I will need to allocate extra time for your appointment, and a surcharge of +£5 to £30 will apply depending on the time and complexity. Please do not trim the hair yourself at home, as it is very easy to cut it too short (especially in the bikini area). If you feel you must tidy it up, you can use a trimmer gently to leave a consistent length of 5–7mm.",
       cat1Q4: "What should I do before my appointment?",
       cat1A4:
-        "You can gently exfoliate the area 5 days before your scheduled appointment. On the day of your treatment, please make sure to take a shower. If you are coming straight from work, don't worry at all—intimate wet wipes will be available for you to use right before we begin.\n\nKey recommendations based on the area:\n\nFacial Sugaring: Please do not wear any makeup or cosmetic products on the day of your visit, as this directly impacts the overall quality of the treatment. If you do happen to be wearing makeup, please don't worry—I will thoroughly cleanse your skin before we start and do everything I can to ensure a beautiful result. However, these small details do make a difference, so it is always best to prepare in advance.\n\nGeneral Rule: Please avoid applying any thick lotions, body oils, or deodorants to the areas being treated on the day of your appointment.\n\nI also highly recommend wearing or bringing comfortable, loose-fitting clothing, preferably made from natural fabrics. This allows your skin to breathe and minimises any post-treatment friction or irritation.",
+        "You can gently exfoliate the area 3-5 days before your scheduled appointment. On the day of your treatment, please make sure to take a shower. If you are coming straight from work, don't worry at all—intimate wet wipes will be available for you to use right before we begin.\n\nKey recommendations based on the area:\n\nFacial Sugaring: Please do not wear any makeup or cosmetic products on the day of your visit, as this directly impacts the overall quality of the treatment. If you do happen to be wearing makeup, please don't worry—I will thoroughly cleanse your skin before we start and do everything I can to ensure a beautiful result. However, these small details do make a difference, so it is always best to prepare in advance.\n\nGeneral Rule: Please avoid applying any thick lotions, body oils, or deodorants to the areas being treated on the day of your appointment.\n\nI also highly recommend wearing or bringing comfortable, loose-fitting clothing, preferably made from natural fabrics. This allows your skin to breathe and minimises any post-treatment friction or irritation.",
       cat1Q5:
         "I'm going on holiday soon. When should I book my sugaring appointment?",
       cat1A5:
@@ -765,7 +765,7 @@ const translations = {
       paragraph1:
         "Я вважаю, що візит на шугаринг має бути приємною перервою для відпочинку, а не рутинним обов'язком. Тому я створила затишний приватний простір, де поєднуються комфорт, бездоганна гігієна та розкіш.",
       paragraph2:
-        "Кожна деталь мого кабінету ретельно продумана. Від теплого приглушеного освітлення та м'якої постільної білизни до медичного рівня дезінфекції — ви можете розслабитися, знаючи, що перебуваєте в надійних, дбайливих руках.",
+        "Кожна деталь мого кабінету ретельно продумана. Від теплого приглушеного освітлення, розслаблюючої музики та свіжої одноразової білизни до медичного рівня дезінфекції — ви можете розслабитися, знаючи, що перебуваєте в надійних, дбайливих руках.",
       highlight1Title: "Лікарняний рівень гігієни",
       highlight1Desc:
         "100% одноразові матеріали, дезінфекція поверхонь медичного рівня та бездоганно стерильні інструменти.",
@@ -1102,7 +1102,7 @@ const translations = {
         "Для максимально комфортної процедури волосся має бути приблизно 5–7 мм (зазвичай це 2–3 тижні після останнього гоління).",
       before2Title: "Легкий скраб",
       before2Desc:
-        "Зробіть легкий пілінг зони за 24 години до сеансу. Це допоможе підняти плоске волосся та видалити ороговілі клітини для кращого результату.",
+        "Зробіть легкий пілінг зони за 3 дні до сеансу. Це допоможе підняти плоске волосся та видалити ороговілі клітини для кращого результату.",
       before3Title: "Чиста, суха шкіра",
       before3Desc:
         "Прийдіть із чистою шкірою. Будь ласка, не наносьте жирні кремі, лосьйони або олії у день процедури, оскільки вони перешкоджають зчепленню пасти.",
@@ -1177,7 +1177,7 @@ const translations = {
         "Так, можна. Я регулярно працюю з клієнтками, у яких довге відрощування. Зверніть увагу, що процедура може бути трохи інтенсивнішою, оскільки ми видаляємо більше волосин за раз. Але результат перевершить ваші очікування — ми захопимо більший обсяг волосся, і гладкість триватиме довше!\n\nВажливо: Якщо волосся значно довше, будь ласка, попередьте мене заздалегідь. Мені знадобиться більше часу на ваш запис, і до вартості буде додана надбавка від +£5 до £30 залежно від складності. Будь ласка, не підрізайте волосся самостійно вдома — дуже легко зрізати занадто коротко (особливо в зоні бікіні). Якщо хочете трохи підрівняти — можна акуратно тримером до довжини 5–7 мм.",
       cat1Q4: "Що потрібно зробити перед записом?",
       cat1A4:
-        "Можна зробити легкий пілінг за 5 днів до запланованого сеансу. У день процедури обов'язково прийміть душ. Якщо ви приходите одразу після роботи — не переживайте, інтимні вологі серветки будуть доступні прямо перед початком.\n\nКлючові рекомендації залежно від зони:\n\nШугаринг обличчя: Будь ласка, не наносьте жодного макіяжу або косметичних засобів у день візиту, оскільки це безпосередньо впливає на якість процедури. Якщо ви все ж прийшли з макіяжем — не хвилюйтеся, я ретельно очищу шкіру перед початком і зроблю все можливе для гарного результату. Але ці дрібниці мають значення, тому краще підготуватися заздалегідь.\n\nЗагальне правило: Будь ласка, уникайте нанесення густих кремів, олій або дезодорантів на зони, де буде проводитися процедура, у день запису.\n\nТакож дуже рекомендую надягти або взяти з собою зручний, вільний одяг, бажано з натуральних тканин. Це дозволяє шкірі дихати та мінімізує тертя після процедури.",
+        "Можна зробити легкий пілінг за 3-5 днів до запланованого сеансу. У день процедури обов'язково прийміть душ. Якщо ви приходите одразу після роботи — не переживайте, інтимні вологі серветки будуть доступні прямо перед початком.\n\nКлючові рекомендації залежно від зони:\n\nШугаринг обличчя: Будь ласка, не наносьте жодного макіяжу або косметичних засобів у день візиту, оскільки це безпосередньо впливає на якість процедури. Якщо ви все ж прийшли з макіяжем — не хвилюйтеся, я ретельно очищу шкіру перед початком і зроблю все можливе для гарного результату. Але ці дрібниці мають значення, тому краще підготуватися заздалегідь.\n\nЗагальне правило: Будь ласка, уникайте нанесення густих кремів, олій або дезодорантів на зони, де буде проводитися процедура, у день запису.\n\nТакож дуже рекомендую надягти або взяти з собою зручний, вільний одяг, бажано з натуральних тканин. Це дозволяє шкірі дихати та мінімізує тертя після процедури.",
       cat1Q5: "Я скоро їду у відпустку. Коли краще записатися?",
       cat1A5:
         "Оптимально — за 2–3 дні до відльоту. Шкірі потрібно 24–48 годин для повного відновлення перед контактом із сонцем, купанням чи сауною.\n\nВажливо для депіляції обличчя: Обличчя — дуже делікатна зона, якій потрібно більше часу для відновлення. Якщо ви вперше робите депіляцію обличчя, дуже рекомендую записуватися за 5–7 днів до важливої події або відпустки. Для постійних клієнтів — за 3 дні буде ідеально!",
