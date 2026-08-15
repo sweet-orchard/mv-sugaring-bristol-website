@@ -56,10 +56,10 @@ export const getServicesData = (t) => ({
                 {
                     groupName: null,
                     items: [
-                        { name: t.upperService1Name, price: '£20', duration: t.upperService1Duration, desc: t.upperService1Desc, placeholderLabel: 'Underarms Graphic' },
-                        { name: t.upperService2Name, price: '£50', duration: t.upperService2Duration, desc: t.upperService2Desc, placeholderLabel: 'Full Arms Graphic' },
-                        { name: t.upperService3Name, price: '£40', duration: t.upperService3Duration, desc: t.upperService3Desc, placeholderLabel: 'Half Arms Graphic' },
-                        { name: t.upperService4Name, price: '£30', duration: t.upperService4Duration, desc: t.upperService4Desc, placeholderLabel: 'Stomach Graphic' },
+                        { name: t.upperService1Name, price: '£20', duration: t.upperService1Duration, desc: t.upperService1Desc, image: '/price-list/upper-body/underarms.png' },
+                        { name: t.upperService2Name, price: '£50', duration: t.upperService2Duration, desc: t.upperService2Desc, image: '/price-list/upper-body/full arms.png' },
+                        { name: t.upperService3Name, price: '£40', duration: t.upperService3Duration, desc: t.upperService3Desc, image: '/price-list/upper-body/half arms.png' },
+                        { name: t.upperService4Name, price: '£30', duration: t.upperService4Duration, desc: t.upperService4Desc, image: '/price-list/upper-body/stomach.png' },
                     ]
                 },
                 {
@@ -84,11 +84,11 @@ export const getServicesData = (t) => ({
                 {
                     groupName: null,
                     items: [
-                        { name: t.downService1Name, price: '£60', duration: t.downService1Duration, desc: t.downService1Desc, placeholderLabel: 'Full Legs Graphic' },
-                        { name: t.downService2Name, price: '£40', duration: t.downService2Duration, desc: t.downService2Desc, placeholderLabel: 'Half Legs Graphic' },
-                        { name: t.downService3Name, price: '£25', duration: t.downService3Duration, desc: t.downService3Desc, placeholderLabel: 'Buttocks Graphic' },
-                        { name: t.downService4Name, price: '£25', duration: t.downService4Duration, desc: t.downService4Desc, placeholderLabel: 'Lower Back Graphic' },
-                        { name: t.downService5Name, price: '£40', badge: t.downService5Badge, duration: t.downService5Duration, desc: t.downService5Desc, placeholderLabel: 'Lower Back & Buttocks Graphic' },
+                        { name: t.downService1Name, price: '£60', duration: t.downService1Duration, desc: t.downService1Desc, image: '/price-list/lower-body/full legs.png' },
+                        { name: t.downService2Name, price: '£40', duration: t.downService2Duration, desc: t.downService2Desc, image: '/price-list/lower-body/half legs.png' },
+                        { name: t.downService3Name, price: '£25', duration: t.downService3Duration, desc: t.downService3Desc, image: '/price-list/lower-body/buttocks.png' },
+                        { name: t.downService4Name, price: '£25', duration: t.downService4Duration, desc: t.downService4Desc, image: '/price-list/lower-body/lower back.png' },
+                        { name: t.downService5Name, price: '£40', badge: t.downService5Badge, duration: t.downService5Duration, desc: t.downService5Desc, image: '/price-list/lower-body/lower back and buttocks.png' },
                     ]
                 },
                 {
@@ -112,24 +112,24 @@ export const getServicesData = (t) => ({
                 {
                     groupName: t.faceGroupIndividual,
                     items: [
-                        { name: t.faceService1Name, price: '£15', duration: t.faceService1Duration, desc: t.faceService1Desc, placeholderLabel: 'Upper Lip Graphic' },
-                        { name: t.faceService2Name, price: '£15', duration: t.faceService2Duration, desc: t.faceService2Desc, placeholderLabel: 'Chin Graphic' },
-                        { name: t.faceService3Name, price: '£20', duration: t.faceService3Duration, desc: t.faceService3Desc, placeholderLabel: 'Nose Pores Graphic' },
-                        { name: t.faceService4Name, price: '£15', duration: t.faceService4Duration, desc: t.faceService4Desc, placeholderLabel: 'Nostrils Graphic' },
-                        { name: t.faceService5Name, price: '£30', duration: t.faceService5Duration, desc: t.faceService5Desc, placeholderLabel: 'Eyebrows Graphic' },
-                        { name: t.faceService6Name, price: '£20', duration: t.faceService6Duration, desc: t.faceService6Desc, placeholderLabel: 'Sideburns Graphic' },
-                        { name: t.faceService7Name, price: '£15', duration: t.faceService7Duration, desc: t.faceService7Desc, placeholderLabel: 'Neck Graphic' },
-                        { name: t.faceService8Name, price: '£15', duration: t.faceService8Duration, desc: t.faceService8Desc, placeholderLabel: 'Nape Area Graphic' },
+                        { name: t.faceService1Name, price: '£15', duration: t.faceService1Duration, desc: t.faceService1Desc, image: '/price-list/face/upper lip.png' },
+                        { name: t.faceService2Name, price: '£15', duration: t.faceService2Duration, desc: t.faceService2Desc, image: '/price-list/face/chin.png' },
+                        { name: t.faceService3Name, price: '£20', duration: t.faceService3Duration, desc: t.faceService3Desc, image: '/price-list/face/nose pores.png' },
+                        { name: t.faceService4Name, price: '£15', duration: t.faceService4Duration, desc: t.faceService4Desc, image: '/price-list/face/nostrils.png' },
+                        { name: t.faceService5Name, price: '£30', duration: t.faceService5Duration, desc: t.faceService5Desc, image: '/price-list/face/eyebrows.png' },
+                        { name: t.faceService6Name, price: '£20', duration: t.faceService6Duration, desc: t.faceService6Desc, image: '/price-list/face/sideburns.png' },
+                        { name: t.faceService7Name, price: '£15', duration: t.faceService7Duration, desc: t.faceService7Desc, image: '/price-list/face/neck.png' },
+                        { name: t.faceService8Name, price: '£15', duration: t.faceService8Duration, desc: t.faceService8Desc, image: '/price-list/face/nape.png' },
                     ]
                 },
                 {
                     groupName: t.faceGroupCombos,
                     isPackages: true,
                     items: [
-                        { name: t.faceCombo1Name, price: '£30', duration: t.faceCombo1Duration, badge: t.faceCombo1Badge, desc: t.faceCombo1Desc, placeholderLabel: 'Lower Face Care Graphic' },
-                        { name: t.faceCombo2Name, price: '£30', duration: t.faceCombo2Duration, desc: t.faceCombo2Desc, placeholderLabel: 'Complete Nose Care Graphic' },
-                        { name: t.faceCombo3Name, price: '£40', duration: t.faceCombo3Duration, desc: t.faceCombo3Desc, placeholderLabel: 'T-Zone Treatment Graphic' },
-                        { name: t.faceCombo4Name, price: '£40', duration: t.faceCombo4Duration, badge: t.faceCombo4Badge, desc: t.faceCombo4Desc, placeholderLabel: 'Perfect Facial Contour Graphic' },
+                        { name: t.faceCombo1Name, price: '£30', duration: t.faceCombo1Duration, badge: t.faceCombo1Badge, desc: t.faceCombo1Desc, image: '/price-list/face/combo1-lower face care.png' },
+                        { name: t.faceCombo2Name, price: '£30', duration: t.faceCombo2Duration, desc: t.faceCombo2Desc, image: '/price-list/face/combo2-complete nose care.png' },
+                        { name: t.faceCombo3Name, price: '£40', duration: t.faceCombo3Duration, desc: t.faceCombo3Desc, image: '/price-list/face/combo3-t xone tratment.png' },
+                        { name: t.faceCombo4Name, price: '£40', duration: t.faceCombo4Duration, badge: t.faceCombo4Badge, desc: t.faceCombo4Desc, image: '/price-list/face/combo4 - perfect facial contour.png' },
                     ]
                 },
                 {
@@ -137,9 +137,9 @@ export const getServicesData = (t) => ({
                     isPackages: true,
                     isPremium: true,
                     items: [
-                        { name: t.facePremium1Name, price: '£70', duration: t.facePremium1Duration, desc: t.facePremium1Desc, placeholderLabel: 'Full Facial Care Graphic' },
-                        { name: t.facePremium2Name, price: '£80', duration: t.facePremium2Duration, desc: t.facePremium2Desc, placeholderLabel: 'Ultimate Refresh Graphic' },
-                        { name: t.facePremium3Name, price: '£80', duration: t.facePremium3Duration, desc: t.facePremium3Desc, placeholderLabel: 'Royal Smoothness Graphic' },
+                        { name: t.facePremium1Name, price: '£70', duration: t.facePremium1Duration, desc: t.facePremium1Desc, image: '/price-list/face/premium 1.png' },
+                        { name: t.facePremium2Name, price: '£80', duration: t.facePremium2Duration, desc: t.facePremium2Desc, image: '/price-list/face/premium 2.png' },
+                        { name: t.facePremium3Name, price: '£80', duration: t.facePremium3Duration, desc: t.facePremium3Desc, image: '/price-list/face/premium 3.png' },
                     ]
                 }
             ]
