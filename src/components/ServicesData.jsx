@@ -16,30 +16,45 @@ export const getServicesData = (t) => ({
     ],
     categories: [
         {
-            id: 'bikini',
-            label: t.tabBikini,
-            fullLabel: t.bikiniFullLabel,
-            Icon: Heart,
+            id: 'face',
+            label: t.tabFace,
+            fullLabel: t.faceFullLabel,
+            Icon: Smile,
             beforeImage: null,
             afterImage: null,
-            tagline: t.bikiniTagline,
+            tagline: t.faceTagline,
             groups: [
                 {
-                    groupName: null,
+                    groupName: t.faceGroupIndividual,
                     items: [
-                        { name: t.bikiniService1Name, price: '£45', badge: t.bikiniService1Badge, duration: t.bikiniService1Duration, desc: t.bikiniService1Desc, image: '/price-list/bikini/hollywood-bikini.jpeg' },
-                        { name: t.bikiniService2Name, price: '£45', duration: t.bikiniService2Duration, desc: t.bikiniService2Desc, image: '/price-list/bikini/brazilian-bikini.jpeg' },
-                        { name: t.bikiniService3Name, price: '£35', duration: t.bikiniService3Duration, desc: t.bikiniService3Desc, image: '/price-list/bikini/g-string-bikini.jpeg' },
-                        { name: t.bikiniService4Name, price: '£25', duration: t.bikiniService4Duration, desc: t.bikiniService4Desc, image: '/price-list/bikini/basic-bikini.jpg' },
+                        { name: t.faceService1Name, price: '£15', duration: t.faceService1Duration, desc: t.faceService1Desc, image: '/price-list/face/upper lip.webp' },
+                        { name: t.faceService2Name, price: '£15', duration: t.faceService2Duration, desc: t.faceService2Desc, image: '/price-list/face/chin.webp' },
+                        { name: t.faceService3Name, price: '£20', duration: t.faceService3Duration, desc: t.faceService3Desc, image: '/price-list/face/nose pores.webp' },
+                        { name: t.faceService4Name, price: '£15', duration: t.faceService4Duration, desc: t.faceService4Desc, image: '/price-list/face/nostrils.webp' },
+                        { name: t.faceService5Name, price: '£30', duration: t.faceService5Duration, desc: t.faceService5Desc, image: '/price-list/face/eyebrows.webp' },
+                        { name: t.faceService6Name, price: '£20', duration: t.faceService6Duration, desc: t.faceService6Desc, image: '/price-list/face/sideburns.webp' },
+                        { name: t.faceService7Name, price: '£15', duration: t.faceService7Duration, desc: t.faceService7Desc, image: '/price-list/face/neck.webp' },
+                        { name: t.faceService8Name, price: '£15', duration: t.faceService8Duration, desc: t.faceService8Desc, image: '/price-list/face/nape.webp' },
                     ]
                 },
                 {
-                    groupName: t.bikiniAddonGroupName,
-                    isAddOn: true,
+                    groupName: t.faceGroupCombos,
+                    isPackages: true,
                     items: [
-                        { name: t.bikiniAddon1Name, price: '+£5 to £20', desc: t.bikiniAddon1Desc, extendedDesc: t.bikiniAddon1ExtendedDesc, isAddOn: true, placeholderLabel: 'Extra Long Hair Graphic' },
-                        { name: t.bikiniAddon2Name, price: '£5', desc: t.bikiniAddon2Desc, extendedDesc: t.bikiniAddon2ExtendedDesc, isAddOn: true, placeholderLabel: 'Extra Patch Graphic' },
-                        { name: t.bikiniAddon3Name, price: '£5', desc: t.bikiniAddon3Desc, isAddOn: true, placeholderLabel: 'Belly Line Graphic' },
+                        { name: t.faceCombo1Name, price: '£30', duration: t.faceCombo1Duration, badge: t.faceCombo1Badge, desc: t.faceCombo1Desc, image: '/price-list/face/combo1-lower face care.webp' },
+                        { name: t.faceCombo2Name, price: '£30', duration: t.faceCombo2Duration, desc: t.faceCombo2Desc, image: '/price-list/face/combo2-complete nose care.webp' },
+                        { name: t.faceCombo3Name, price: '£40', duration: t.faceCombo3Duration, desc: t.faceCombo3Desc, image: '/price-list/face/combo3-t xone tratment.webp' },
+                        { name: t.faceCombo4Name, price: '£40', duration: t.faceCombo4Duration, badge: t.faceCombo4Badge, desc: t.faceCombo4Desc, image: '/price-list/face/combo4 - perfect facial contour.webp' },
+                    ]
+                },
+                {
+                    groupName: t.faceGroupPremium,
+                    isPackages: true,
+                    isPremium: true,
+                    items: [
+                        { name: t.facePremium1Name, price: '£70', duration: t.facePremium1Duration, desc: t.facePremium1Desc, image: '/price-list/face/premium 1.webp' },
+                        { name: t.facePremium2Name, price: '£80', duration: t.facePremium2Duration, desc: t.facePremium2Desc, image: '/price-list/face/premium 2.webp' },
+                        { name: t.facePremium3Name, price: '£80', duration: t.facePremium3Duration, desc: t.facePremium3Desc, image: '/price-list/face/premium 3.webp' },
                     ]
                 }
             ]
@@ -101,45 +116,30 @@ export const getServicesData = (t) => ({
             ]
         },
         {
-            id: 'face',
-            label: t.tabFace,
-            fullLabel: t.faceFullLabel,
-            Icon: Smile,
+            id: 'bikini',
+            label: t.tabBikini,
+            fullLabel: t.bikiniFullLabel,
+            Icon: Heart,
             beforeImage: null,
             afterImage: null,
-            tagline: t.faceTagline,
+            tagline: t.bikiniTagline,
             groups: [
                 {
-                    groupName: t.faceGroupIndividual,
+                    groupName: null,
                     items: [
-                        { name: t.faceService1Name, price: '£15', duration: t.faceService1Duration, desc: t.faceService1Desc, image: '/price-list/face/upper lip.png' },
-                        { name: t.faceService2Name, price: '£15', duration: t.faceService2Duration, desc: t.faceService2Desc, image: '/price-list/face/chin.png' },
-                        { name: t.faceService3Name, price: '£20', duration: t.faceService3Duration, desc: t.faceService3Desc, image: '/price-list/face/nose pores.png' },
-                        { name: t.faceService4Name, price: '£15', duration: t.faceService4Duration, desc: t.faceService4Desc, image: '/price-list/face/nostrils.png' },
-                        { name: t.faceService5Name, price: '£30', duration: t.faceService5Duration, desc: t.faceService5Desc, image: '/price-list/face/eyebrows.png' },
-                        { name: t.faceService6Name, price: '£20', duration: t.faceService6Duration, desc: t.faceService6Desc, image: '/price-list/face/sideburns.png' },
-                        { name: t.faceService7Name, price: '£15', duration: t.faceService7Duration, desc: t.faceService7Desc, image: '/price-list/face/neck.png' },
-                        { name: t.faceService8Name, price: '£15', duration: t.faceService8Duration, desc: t.faceService8Desc, image: '/price-list/face/nape.png' },
+                        { name: t.bikiniService1Name, price: '£45', badge: t.bikiniService1Badge, duration: t.bikiniService1Duration, desc: t.bikiniService1Desc, image: '/price-list/bikini/hollywood-bikini.jpeg' },
+                        { name: t.bikiniService2Name, price: '£45', duration: t.bikiniService2Duration, desc: t.bikiniService2Desc, image: '/price-list/bikini/brazilian-bikini.jpeg' },
+                        { name: t.bikiniService3Name, price: '£35', duration: t.bikiniService3Duration, desc: t.bikiniService3Desc, image: '/price-list/bikini/g-string-bikini.jpeg' },
+                        { name: t.bikiniService4Name, price: '£25', duration: t.bikiniService4Duration, desc: t.bikiniService4Desc, image: '/price-list/bikini/basic-bikini.jpg' },
                     ]
                 },
                 {
-                    groupName: t.faceGroupCombos,
-                    isPackages: true,
+                    groupName: t.bikiniAddonGroupName,
+                    isAddOn: true,
                     items: [
-                        { name: t.faceCombo1Name, price: '£30', duration: t.faceCombo1Duration, badge: t.faceCombo1Badge, desc: t.faceCombo1Desc, image: '/price-list/face/combo1-lower face care.png' },
-                        { name: t.faceCombo2Name, price: '£30', duration: t.faceCombo2Duration, desc: t.faceCombo2Desc, image: '/price-list/face/combo2-complete nose care.png' },
-                        { name: t.faceCombo3Name, price: '£40', duration: t.faceCombo3Duration, desc: t.faceCombo3Desc, image: '/price-list/face/combo3-t xone tratment.png' },
-                        { name: t.faceCombo4Name, price: '£40', duration: t.faceCombo4Duration, badge: t.faceCombo4Badge, desc: t.faceCombo4Desc, image: '/price-list/face/combo4 - perfect facial contour.png' },
-                    ]
-                },
-                {
-                    groupName: t.faceGroupPremium,
-                    isPackages: true,
-                    isPremium: true,
-                    items: [
-                        { name: t.facePremium1Name, price: '£70', duration: t.facePremium1Duration, desc: t.facePremium1Desc, image: '/price-list/face/premium 1.png' },
-                        { name: t.facePremium2Name, price: '£80', duration: t.facePremium2Duration, desc: t.facePremium2Desc, image: '/price-list/face/premium 2.png' },
-                        { name: t.facePremium3Name, price: '£80', duration: t.facePremium3Duration, desc: t.facePremium3Desc, image: '/price-list/face/premium 3.png' },
+                        { name: t.bikiniAddon1Name, price: '+£5 to £20', desc: t.bikiniAddon1Desc, extendedDesc: t.bikiniAddon1ExtendedDesc, isAddOn: true, placeholderLabel: 'Extra Long Hair Graphic' },
+                        { name: t.bikiniAddon2Name, price: '£5', desc: t.bikiniAddon2Desc, extendedDesc: t.bikiniAddon2ExtendedDesc, isAddOn: true, placeholderLabel: 'Extra Patch Graphic' },
+                        { name: t.bikiniAddon3Name, price: '£5', desc: t.bikiniAddon3Desc, isAddOn: true, placeholderLabel: 'Belly Line Graphic' },
                     ]
                 }
             ]
