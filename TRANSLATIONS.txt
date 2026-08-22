@@ -1,0 +1,1945 @@
+================================================================================
+  MV SUGARING BRISTOL — ALL ENGLISH TEXT FOR UKRAINIAN TRANSLATION
+  Generated: 2026-06-21
+================================================================================
+  Instructions: Each section shows the SOURCE FILE and the TEXT KEY (label).
+  Translate the English text into Ukrainian and write it next to each entry.
+  Keep the same formatting (line breaks, punctuation, etc.) in the translation.
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: index.html
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[PAGE_TITLE]
+EN: Mariia Vatseba Sugaring Bristol
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/Navbar.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[NAV_LINK_ABOUT]
+EN: About
+UA: 
+
+[NAV_LINK_WHY_SUGARING]
+EN: Why Sugaring
+UA: 
+
+[NAV_LINK_PRICES]
+EN: Prices
+UA: 
+
+[NAV_LINK_COURSES]
+EN: Courses
+UA: 
+
+[NAV_LINK_CARE_GUIDE]
+EN: Care Guide
+UA: 
+
+[NAV_LINK_REVIEWS]
+EN: Reviews
+UA: 
+
+[NAV_LINK_FAQ]
+EN: FAQ
+UA: 
+
+[NAV_LINK_CONTACT]
+EN: Contact
+UA: 
+
+[NAV_BOOK_NOW_BUTTON]  — appears twice (desktop + mobile drawer)
+EN: Book Now
+UA: 
+
+[NAV_LANGUAGE_LABEL]  — shown above the language toggle in mobile drawer
+EN: Language
+UA: 
+
+[NAV_TOGGLE_ARIA_SWITCH_TO_UKRAINIAN]  — tooltip on language toggle
+EN: Switch to Ukrainian
+UA: 
+
+[NAV_TOGGLE_ARIA_SWITCH_TO_ENGLISH]  — tooltip on language toggle
+EN: Switch to English
+UA: 
+
+[NAV_HAMBURGER_CLOSE_ARIA]  — accessibility label for hamburger button
+EN: Close menu
+UA: 
+
+[NAV_HAMBURGER_OPEN_ARIA]  — accessibility label for hamburger button
+EN: Open menu
+UA: 
+
+[NAV_LOGO_ALT]  — alt text for logo image
+EN: Mariia Vatseba
+UA: 
+
+[NAV_ALERT_UKRAINIAN_COMING_SOON]  — alert() pop-up shown when UA is tapped
+EN: 🇺🇦 Ukrainian version coming soon!
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/HeroSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[HERO_EYEBROW]  — small label above the heading
+EN: Mariia Vatseba
+UA: 
+
+[HERO_HEADING_LINE_1]
+EN: Sugaring
+UA: 
+
+[HERO_HEADING_LINE_2]
+EN: Bristol
+UA: 
+
+[HERO_QUOTE]
+EN: A woman's body holds so much power and energy. I am the person who purifies the body, restoring its lightness, love, tenderness, and an incredible sense of confidence.
+UA: 
+
+[HERO_PARAGRAPH_1]
+EN: I invite you to experience my sugaring treatments — it is a true spa experience because, alongside hair removal, it provides a delicate skin exfoliation. For me, every treatment is all about the woman herself: her transformation, her sensations, her individuality, and the unique beauty of her body, which I enhance through my craft.
+UA: 
+
+[HERO_PARAGRAPH_2]
+EN: I truly love what I do, and I believe that true art can only be created out of love. If this approach resonates with you, I'd love to welcome you ❤️‍🔥
+UA: 
+
+[HERO_CTA_BOOK_SESSION]  — primary button
+EN: Book Your Session
+UA: 
+
+[HERO_CTA_ABOUT_ME]  — secondary button
+EN: About Me
+UA: 
+
+[HERO_SCROLL_LABEL]  — tiny scroll indicator text
+EN: Scroll
+UA: 
+
+[HERO_VIDEO_PAUSE_ARIA]  — accessibility label for video pause button
+EN: Pause video
+UA: 
+
+[HERO_VIDEO_PLAY_ARIA]  — accessibility label for video play button
+EN: Play video
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/AboutSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ABOUT_SECTION_EYEBROW]
+EN: About Me
+UA: 
+
+[ABOUT_SECTION_HEADING]
+EN: Mariia Vasteba   (note: "Vasteba" appears in code — confirm spelling with Mariia)
+UA: 
+
+[ABOUT_SUBTITLE]
+EN: Sugaring Specialist
+UA: 
+
+[ABOUT_PARAGRAPH_1]
+EN: Hi, I'm Mariia 😃 — a sugaring specialist, ukrainian woman, and someone who truly loves what she does. I'm 31, and I'm raising my two beautiful girls, Yeva and Yana, on my own. They are my whole world and my biggest motivation every single day. Our story hasn't always been easy — I arrived in the UK with a one-month-old baby, born during the war in Ukraine. That journey taught me just how precious safety, peace, and taking care of yourself really are.
+UA: 
+
+[ABOUT_PARAGRAPH_2]
+EN: I found sugaring when my eldest was little and I needed a career that let me be there for her. What started as a practical choice quietly turned into the greatest love of my professional life. Eight years later, it is so much more than a job to me. With a background in Finance, Economics, and academic research, I've always cared deeply about doing things properly and explaining them clearly — and that shows in everything I create, from my treatments to my courses.
+UA: 
+
+[ABOUT_PARAGRAPH_3]
+EN: I truly believe that sugaring is a beautiful act of self-care — a little ritual that's just for you. When you come to me, I want you to feel welcome, relaxed, and looked after from the very first moment. It makes me so happy to play even a small part in your confidence and your glow. I'm so glad you're here.
+UA: 
+
+[ABOUT_STAT_1_LABEL]
+EN: Years Of Experience
+UA: 
+
+[ABOUT_STAT_2_LABEL]
+EN: International Championship Winner
+UA: 
+
+[ABOUT_STAT_3_LABEL]
+EN: Happy Clients
+UA: 
+
+[ABOUT_STAT_4_LABEL]
+EN: Smooth Skin Guarantee
+UA: 
+
+[ABOUT_QUOTE_HEADING]
+EN: "I experience it myself, and I will teach your body to feel just as luxurious"
+UA: 
+
+[ABOUT_SECOND_PARAGRAPH_1]
+EN: I have chosen this method for myself every single month for over 8 years. For me, it is all about feeling renewed, fresh, clean, luxurious, and immaculately groomed. It is the exact moment when the entire body resets, a new inner state clicks into place, and I feel ready to take on the world differently.
+UA: 
+
+[ABOUT_SECOND_PARAGRAPH_2]
+EN: Furthermore, sugaring is a treatment that alters the structure and quantity of your hair. You lose 30–40% of the density after the very first time, and the hair grows back thinner, lighter, and softer. Over time, it stops growing altogether in certain areas, giving you a natural 'laser effect' without any machine intervention.
+UA: 
+
+[ABOUT_SECOND_PARAGRAPH_3]
+EN: This is what I value most. Our bodies support us every single day, and I am so happy to give mine the gentle care it deserves. It is this exact feeling of self-love, lightness, and confidence that I share with my clients each and every day.
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/WhySugaringSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[WHY_EYEBROW]
+EN: The Method
+UA: 
+
+[WHY_HEADING]
+EN: Why Sugaring?
+UA: 
+
+[WHY_SUBTEXT]
+EN: Sugaring is a 100% natural, organic hair removal method using sugar paste. To me, it is far more than just hair removal—it is a luxurious self-care spa ritual.
+UA: 
+
+[WHY_BENEFIT_1_TITLE]
+EN: Organic Spa Care
+UA: 
+
+[WHY_BENEFIT_1_DESC]
+EN: Our paste contains 0% chemicals and completely eliminates the risk of burns or damage. The treatment doubles as a delicate skin peel, gently exfoliating away dead skin cells to leave your skin feeling incredibly soft, smooth, and velvety to the touch.
+UA: 
+
+[WHY_BENEFIT_2_TITLE]
+EN: Natural 'Laser Effect'
+UA: 
+
+[WHY_BENEFIT_2_DESC]
+EN: You lose 30–40% of hair density after your very first session. Hair grows back thinner and lighter, eventually stopping altogether in certain areas. This timeline is completely unique to every individual—taking anywhere from one year to a few years.
+UA: 
+
+[WHY_BENEFIT_3_TITLE]
+EN: Absolute Safety
+UA: 
+
+[WHY_BENEFIT_3_DESC]
+EN: Applied at a comfortable body temperature, it is exceptionally gentle for sensitive skin, pregnancy, varicose veins, or stretch marks.
+UA: 
+
+[WHY_BENEFIT_4_TITLE]
+EN: An Inner Reset
+UA: 
+
+[WHY_BENEFIT_4_DESC]
+EN: It is that exact moment in your month when your entire body resets, leaving you with a beautiful sense of lightness, confidence, and self-love.
+UA: 
+
+[WHY_CLOSING_QUOTE]
+EN: "I experience it myself, and I will teach your body to feel just as luxurious"
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/WhatSetsApartSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[APART_EYEBROW]
+EN: What Sets Me Apart
+UA: 
+
+[APART_HEADING]
+EN: A Different Level of Care
+UA: 
+
+[APART_PARAGRAPH_1]
+EN: I specialise in Sugaring—an ultra-safe, natural method that is incredibly kind to even the most sensitive skin.
+UA: 
+
+[APART_PARAGRAPH_2]
+EN: Perfect for clients who value privacy, comfort, exceptional care, quality and a cosy atmosphere—choosing nothing less than the best for their skin.
+UA: 
+
+[APART_FEATURE_1_TITLE]
+EN: Zero Risk of Burns
+UA: 
+
+[APART_FEATURE_1_DESC]
+EN: Applied at a comfortable room temperature.
+UA: 
+
+[APART_FEATURE_2_TITLE]
+EN: A Gentle, Mindful Touch
+UA: 
+
+[APART_FEATURE_2_DESC]
+EN: My techniques are entirely tailored to you.
+UA: 
+
+[APART_FEATURE_3_TITLE]
+EN: More Than Hair Removal
+UA: 
+
+[APART_FEATURE_3_DESC]
+EN: It's a luxurious SPA-style exfoliation that leaves your skin feeling silky-soft and glowing.
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/BeautySpaceSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[SPACE_EYEBROW]
+EN: The Studio
+UA: 
+
+[SPACE_HEADING]
+EN: A Warm Welcome to My Beauty Space
+UA: 
+
+[SPACE_PARAGRAPH_1]
+EN: I believe that a sugaring appointment should be a relaxing escape, not a chore. That is why I have created a serene, private space where comfort, absolute hygiene, and luxury meet.
+UA: 
+
+[SPACE_PARAGRAPH_2]
+EN: Every single detail of my workspace is meticulously curated. From the warm ambient lighting and soft linen sheets to medical-grade sanitization, you can unwind knowing you are in safe, caring hands.
+UA: 
+
+[SPACE_HIGHLIGHT_1_TITLE]
+EN: Hospital-Grade Hygiene
+UA: 
+
+[SPACE_HIGHLIGHT_1_DESC]
+EN: 100% disposable materials, medical-grade sanitization of surfaces, and pristine sterile instruments.
+UA: 
+
+[SPACE_HIGHLIGHT_2_TITLE]
+EN: Cozy & Private Ambience
+UA: 
+
+[SPACE_HIGHLIGHT_2_DESC]
+EN: A quiet, warm room with calming music, soft linens, and gentle lighting designed for your complete relaxation.
+UA: 
+
+[SPACE_HIGHLIGHT_3_TITLE]
+EN: Premium Natural Cosmetics
+UA: 
+
+[SPACE_HIGHLIGHT_3_DESC]
+EN: Using only the finest organic sugar pastes and botanical skin care to pamper and nourish your skin.
+UA: 
+
+[SPACE_IMAGE_HOVER_1]  — caption shown on image hover
+EN: Cozy Treatment Room
+UA: 
+
+[SPACE_IMAGE_HOVER_2]
+EN: Good Quality Products
+UA: 
+
+[SPACE_IMAGE_HOVER_3]
+EN: Clean Materials
+UA: 
+
+[SPACE_IMAGE_ALT_1]  — alt text
+EN: Clean and cozy treatment room
+UA: 
+
+[SPACE_IMAGE_ALT_2]
+EN: Good quality products
+UA: 
+
+[SPACE_IMAGE_ALT_3]
+EN: Clean materials
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/BeforeAfterSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[BEFORE_AFTER_EYEBROW]
+EN: Real Results
+UA: 
+
+[BEFORE_AFTER_HEADING]
+EN: Before & After
+UA: 
+
+[BEFORE_AFTER_SUBTEXT]
+EN: Swipe or use the arrows to see the transformative results of professional sugaring. Click any image to view details.
+UA: 
+
+[BEFORE_AFTER_SCROLL_LEFT_ARIA]
+EN: Scroll left
+UA: 
+
+[BEFORE_AFTER_SCROLL_RIGHT_ARIA]
+EN: Scroll right
+UA: 
+
+[BEFORE_AFTER_PLACEHOLDER_LABEL]  — shown in placeholder card when no image
+EN: Before & After Photo
+UA: 
+
+[BEFORE_AFTER_CLOSE_ARIA]  — lightbox close button
+EN: Close details
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/ServicesSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+— — — SECTION HEADER — — —
+
+[SERVICES_EYEBROW]
+EN: Services & Prices
+UA: 
+
+[SERVICES_HEADING]
+EN: Price List
+UA: 
+
+— — — "INCLUDED IN EVERY VISIT" BOX — — —
+
+[SERVICES_INCLUSIONS_LABEL]
+EN: Included in every visit
+UA: 
+
+[SERVICES_INCLUSION_1_TITLE]
+EN: Professional Skin Consultation
+UA: 
+
+[SERVICES_INCLUSION_1_DESC]
+EN: A detailed analysis of your skin's current condition before we begin.
+UA: 
+
+[SERVICES_INCLUSION_2_TITLE]
+EN: Bespoke Expert Advice
+UA: 
+
+[SERVICES_INCLUSION_2_DESC]
+EN: Personalised home-care recommendations to keep your skin radiant between visits.
+UA: 
+
+[SERVICES_INCLUSION_3_TITLE]
+EN: Luxury Aftercare
+UA: 
+
+[SERVICES_INCLUSION_3_DESC]
+EN: Premium cosmeceuticals and delicate spa-exfoliation techniques applied during your session.
+UA: 
+
+— — — TAB LABELS — — —
+
+[SERVICES_TAB_BIKINI]
+EN: Bikini
+UA: 
+
+[SERVICES_TAB_UPPER]
+EN: Upper Body
+UA: 
+
+[SERVICES_TAB_DOWN]
+EN: Down Body
+UA: 
+
+[SERVICES_TAB_FACE]
+EN: Face
+UA: 
+
+— — — BIKINI TAB — — —
+
+[BIKINI_FULL_LABEL]
+EN: Bikini & Intimate Sugaring
+UA: 
+
+[BIKINI_TAGLINE]
+EN: My most-requested treatments — designed for total confidence and comfort.
+UA: 
+
+[BIKINI_SERVICE_1_NAME]
+EN: Hollywood
+UA: 
+
+[BIKINI_SERVICE_1_BADGE]
+EN: Most Popular
+UA: 
+
+[BIKINI_SERVICE_1_DURATION]
+EN: 40 min – 1 hour
+UA: 
+
+[BIKINI_SERVICE_1_DESC]
+EN: Complete hair removal from front to back for a perfectly smooth finish. Ideal if you prefer a fully bare, long-lasting result.
+UA: 
+
+[BIKINI_SERVICE_2_NAME]
+EN: Brazilian
+UA: 
+
+[BIKINI_SERVICE_2_DURATION]
+EN: 40 min – 1 hour
+UA: 
+
+[BIKINI_SERVICE_2_DESC]
+EN: Full hair removal but with a small strip or triangle on the front if you prefer to leave something. If you want a stylised and natural look choose this option.
+UA: 
+
+[BIKINI_SERVICE_3_NAME]
+EN: G-String / Extended Bikini
+UA: 
+
+[BIKINI_SERVICE_3_DURATION]
+EN: 30 – 40 min
+UA: 
+
+[BIKINI_SERVICE_3_DESC]
+EN: Targets hair outside the bikini line and slightly deeper for a neat, more defined shape. Perfect for higher-cut underwear or swimwear.
+UA: 
+
+[BIKINI_SERVICE_4_NAME]
+EN: Basic Bikini Line
+UA: 
+
+[BIKINI_SERVICE_4_DURATION]
+EN: 20 – 30 min
+UA: 
+
+[BIKINI_SERVICE_4_DESC]
+EN: Removes hair along the sides of the bikini line for a clean and tidy appearance. Quick, simple, and perfect for beginners.
+UA: 
+
+[BIKINI_ADDON_GROUP_NAME]
+EN: Add-ons
+UA: 
+
+[BIKINI_ADDON_1_NAME]
+EN: Extra Long Hair & Extended Intervals
+UA: 
+
+[BIKINI_ADDON_1_DESC]
+EN: Applies if it's been over 4 weeks since shaving or 7–8 weeks since your last professional treatment. The fee reflects the extra time and technique involved — but rewards you with a much longer-lasting result. Please let me know your hair length before your visit.
+UA: 
+
+[BIKINI_ADDON_1_EXTENDED_DESC]
+EN: The Rule: The additional fee applies if it has been over 4 weeks since shaving, or over 7–8 weeks since your last professional treatment.
+
+Why? Working with longer hair or extended gaps requires extra time and meticulous technique.
+
+Your Benefit: A wonderful advantage of this session is a longer-lasting result, as we thoroughly remove the maximum volume of hairs that have appeared.
+
+Maintenance: The standard regular interval for maintenance is 4–5–6 weeks. Please kindly let me know about your hair length beforehand so I can guide you. The cost is adjusted individually based on time and complexity.
+UA: 
+
+[BIKINI_ADDON_2_NAME]
+EN: Extra Patch
+UA: 
+
+[BIKINI_ADDON_2_DESC]
+EN: For small stray hairs or minor spots outside the standard menu — e.g. a few dark hairs on the back of the thighs, or a small partial patch on the butt cheeks.
+UA: 
+
+[BIKINI_ADDON_2_EXTENDED_DESC]
+EN: The Rule: Designed specifically for clearing small, stray hairs or minor individual spots outside our standard menu.
+
+Please Note: Standard bikini treatments do not include the butt cheeks or hair growing on the thighs beyond 4 fingers' width.
+
+When to book: If you need to add a small custom area (e.g., single dark stray hairs on the back of the thighs, or a small partial patch slightly deeper onto the butt cheeks without clearing the full buttocks).
+UA: 
+
+[BIKINI_ADDON_3_NAME]
+EN: Belly Line
+UA: 
+
+[BIKINI_ADDON_3_DESC]
+EN: A neat single line of hair removal from the navel downwards.
+UA: 
+
+— — — UPPER BODY TAB — — —
+
+[UPPER_FULL_LABEL]
+EN: Upper Body Sugaring
+UA: 
+
+[UPPER_TAGLINE]
+EN: Silky femininity — from your fingertips to your shoulders.
+UA: 
+
+[UPPER_SERVICE_1_NAME]
+EN: Underarms
+UA: 
+
+[UPPER_SERVICE_1_DURATION]
+EN: 10 – 15 min
+UA: 
+
+[UPPER_SERVICE_1_DESC]
+EN: Complete hair removal for the underarm area, ensuring clean, fresh, and smooth skin.
+UA: 
+
+[UPPER_SERVICE_2_NAME]
+EN: Full Arms
+UA: 
+
+[UPPER_SERVICE_2_DURATION]
+EN: 1 hour
+UA: 
+
+[UPPER_SERVICE_2_DESC]
+EN: Total hair removal from the shoulders down to the wrists, including the hands.
+UA: 
+
+[UPPER_SERVICE_3_NAME]
+EN: Half Arms
+UA: 
+
+[UPPER_SERVICE_3_DURATION]
+EN: 30 – 40 min
+UA: 
+
+[UPPER_SERVICE_3_DESC]
+EN: Hair removal from the elbow down to the tips of your fingers, with the elbow fully included in the service.
+UA: 
+
+[UPPER_SERVICE_4_NAME]
+EN: Stomach
+UA: 
+
+[UPPER_SERVICE_4_DURATION]
+EN: 15 – 20 min
+UA: 
+
+[UPPER_SERVICE_4_DESC]
+EN: Full hair removal across the abdomen area, leaving the skin perfectly clear and smooth.
+UA: 
+
+[UPPER_ADDON_1_NAME]
+EN: Nipple Area
+UA: 
+
+[UPPER_ADDON_1_DURATION]
+EN: 5 – 10 min
+UA: 
+
+[UPPER_ADDON_1_DESC]
+EN: Gentle and precise hair removal immediately around the nipple zone.
+UA: 
+
+[UPPER_ADDON_2_NAME]
+EN: Fingers Only
+UA: 
+
+[UPPER_ADDON_2_DURATION]
+EN: 5 – 10 min
+UA: 
+
+[UPPER_ADDON_2_DESC]
+EN: Quick and precise hair removal strictly for the fingers on both hands.
+UA: 
+
+— — — DOWN BODY TAB — — —
+
+[DOWN_FULL_LABEL]
+EN: Down Body Sugaring
+UA: 
+
+[DOWN_TAGLINE]
+EN: From your waist to your toes — effortlessly and beautifully smooth.
+UA: 
+
+[DOWN_SERVICE_1_NAME]
+EN: Full Legs (Includes Toes)
+UA: 
+
+[DOWN_SERVICE_1_DURATION]
+EN: 1 – 1.5 hours
+UA: 
+
+[DOWN_SERVICE_1_DESC]
+EN: Total hair removal from the very top of the thighs down to the tips of your toes. Please note: this service does not include bikini line hair removal.
+UA: 
+
+[DOWN_SERVICE_2_NAME]
+EN: Half Legs (Includes Toes)
+UA: 
+
+[DOWN_SERVICE_2_DURATION]
+EN: 30 – 45 min
+UA: 
+
+[DOWN_SERVICE_2_DESC]
+EN: Your choice of either Lower Legs (from the knee down to the tips of your toes) or Upper Legs (the thighs down to the knee).
+UA: 
+
+[DOWN_SERVICE_3_NAME]
+EN: Buttocks
+UA: 
+
+[DOWN_SERVICE_3_DURATION]
+EN: 15 – 20 min
+UA: 
+
+[DOWN_SERVICE_3_DESC]
+EN: Full hair removal across the buttocks area, leaving the skin perfectly smooth and silky.
+UA: 
+
+[DOWN_SERVICE_4_NAME]
+EN: Lower Back
+UA: 
+
+[DOWN_SERVICE_4_DURATION]
+EN: 15 – 20 min
+UA: 
+
+[DOWN_SERVICE_4_DESC]
+EN: Precise hair removal covering the lower lumbar area, from the waistline down to the top of the buttocks.
+UA: 
+
+[DOWN_SERVICE_5_NAME]
+EN: Lower Back + Buttocks Combo
+UA: 
+
+[DOWN_SERVICE_5_BADGE]
+EN: Package Deal
+UA: 
+
+[DOWN_SERVICE_5_DURATION]
+EN: 30 – 40 min
+UA: 
+
+[DOWN_SERVICE_5_DESC]
+EN: A cost-effective treatment combining both the lower back and the buttocks for a completely smooth silhouette.
+UA: 
+
+[DOWN_ADDON_1_NAME]
+EN: Toes only
+UA: 
+
+[DOWN_ADDON_1_DURATION]
+EN: 10 min
+UA: 
+
+[DOWN_ADDON_1_DESC]
+EN: A quick, standalone treatment to remove hair strictly from the tops of the feet and toes.
+UA: 
+
+— — — FACE TAB — — —
+
+[FACE_FULL_LABEL]
+EN: Face Sugaring
+UA: 
+
+[FACE_TAGLINE]
+EN: Precise, gentle sugaring for every delicate facial zone.
+UA: 
+
+[FACE_GROUP_INDIVIDUAL]
+EN: Individual Zones
+UA: 
+
+[FACE_SERVICE_1_NAME]
+EN: Upper Lip
+UA: 
+
+[FACE_SERVICE_1_DURATION]
+EN: 15–20 min
+UA: 
+
+[FACE_SERVICE_1_DESC]
+EN: Removal of fine fuzz and coarse hair above the lip.
+UA: 
+
+[FACE_SERVICE_2_NAME]
+EN: Chin
+UA: 
+
+[FACE_SERVICE_2_DURATION]
+EN: 10–15 min
+UA: 
+
+[FACE_SERVICE_2_DESC]
+EN: Hair removal from the chin and just under the jawline.
+UA: 
+
+[FACE_SERVICE_3_NAME]
+EN: Nose Pores
+UA: 
+
+[FACE_SERVICE_3_DURATION]
+EN: 15-20 min
+UA: 
+
+[FACE_SERVICE_3_DESC]
+EN: Deep sugar cleanse to clear blackheads from the nose surface.
+UA: 
+
+[FACE_SERVICE_4_NAME]
+EN: Nostrils
+UA: 
+
+[FACE_SERVICE_4_DURATION]
+EN: 15-20 min
+UA: 
+
+[FACE_SERVICE_4_DESC]
+EN: Removal of all hair inside the nostrils. It is not just about aesthetics, it is about making it much easier for you to breathe.
+UA: 
+
+[FACE_SERVICE_5_NAME]
+EN: Eyebrows
+UA: 
+
+[FACE_SERVICE_5_DURATION]
+EN: 30–40 min
+UA: 
+
+[FACE_SERVICE_5_DESC]
+EN: Tidying around the eyebrows using sugar paste. Creates a clean framing effect that makes your natural brows look sharper and more defined.
+UA: 
+
+[FACE_SERVICE_6_NAME]
+EN: Sideburns
+UA: 
+
+[FACE_SERVICE_6_DURATION]
+EN: 20-25 min
+UA: 
+
+[FACE_SERVICE_6_DESC]
+EN: Hair removal around the ears and along the jawline.
+UA: 
+
+[FACE_SERVICE_7_NAME]
+EN: Neck
+UA: 
+
+[FACE_SERVICE_7_DURATION]
+EN: 15-20 min
+UA: 
+
+[FACE_SERVICE_7_DESC]
+EN: Removal of unwanted hair on the front and sides of the neck.
+UA: 
+
+[FACE_SERVICE_8_NAME]
+EN: Nape Area
+UA: 
+
+[FACE_SERVICE_8_DURATION]
+EN: 15-20 min
+UA: 
+
+[FACE_SERVICE_8_DESC]
+EN: Creating a clean, defined hairline. Removes all fine, short hair and peach fuzz to make your haircut or updo look absolutely flawless.
+UA: 
+
+[FACE_GROUP_COMBOS]
+EN: Mini Combos
+UA: 
+
+[FACE_COMBO_1_NAME]
+EN: Combo 1 — Lower Face Care
+UA: 
+
+[FACE_COMBO_1_BADGE]
+EN: Most Popular
+UA: 
+
+[FACE_COMBO_1_DURATION]
+EN: 25–30 min
+UA: 
+
+[FACE_COMBO_1_DESC]
+EN: (Upper Lip + Chin) — Our most requested combination for flawless smoothness.
+UA: 
+
+[FACE_COMBO_2_NAME]
+EN: Combo 2 — Complete Nose Care
+UA: 
+
+[FACE_COMBO_2_DURATION]
+EN: 30–35 min
+UA: 
+
+[FACE_COMBO_2_DESC]
+EN: (Nose Pores + Nostrils) — Deep outer pore cleanse combined with inner hair removal.
+UA: 
+
+[FACE_COMBO_3_NAME]
+EN: Combo 3 — T-Zone Treatment
+UA: 
+
+[FACE_COMBO_3_DURATION]
+EN: 40–45 min
+UA: 
+
+[FACE_COMBO_3_DESC]
+EN: (Eyebrows + Nose Pores) — An effective duo package covering expert eyebrow shaping and pore cleansing.
+UA: 
+
+[FACE_COMBO_4_NAME]
+EN: Combo 4 — Perfect Facial Contour
+UA: 
+
+[FACE_COMBO_4_BADGE]
+EN: Special Offer
+UA: 
+
+[FACE_COMBO_4_DURATION]
+EN: 35–40 min
+UA: 
+
+[FACE_COMBO_4_DESC]
+EN: (Upper Lip + Chin + Sideburns) — A comprehensive package tailored for a completely smooth and neat contour.
+UA: 
+
+[FACE_GROUP_PREMIUM]
+EN: Premium Packages
+UA: 
+
+[FACE_PREMIUM_1_NAME]
+EN: Premium 1 — Full Facial Care
+UA: 
+
+[FACE_PREMIUM_1_DURATION]
+EN: 1.5–2 hrs
+UA: 
+
+[FACE_PREMIUM_1_DESC]
+EN: (Full Face + Eyebrows) — Total smoothness across all areas, expert eyebrow shaping, and professional care with a soothing mask.
+UA: 
+
+[FACE_PREMIUM_2_NAME]
+EN: Premium 2 — Ultimate Refresh: Face & Nape
+UA: 
+
+[FACE_PREMIUM_2_DURATION]
+EN: 2-2.5 hrs
+UA: 
+
+[FACE_PREMIUM_2_DESC]
+EN: (Full Face + Nape Area) — Flawless face, eyebrow shaping, and a defined hairline combined with professional care and a mask.
+UA: 
+
+[FACE_PREMIUM_3_NAME]
+EN: Premium 3 — Royal Smoothness: Face & Neck
+UA: 
+
+[FACE_PREMIUM_3_DURATION]
+EN: 2-2.5 hrs
+UA: 
+
+[FACE_PREMIUM_3_DESC]
+EN: (Full Face + Neck) — Seamless smoothness for the face, eyebrows, and neck area, completed with professional care and a soothing mask.
+UA: 
+
+— — — FACE CARE GUIDE (collapsible) — — —
+
+[FACE_CARE_GUIDE_TOGGLE_LABEL]
+EN: Important Information About Facial Sugaring
+UA: 
+
+[FACE_GUIDE_INTRO_1]
+EN: Facial hair removal requires an incredibly delicate touch. When working with this sensitive area, I use my own signature, highly gentle method. It is much safer and kinder to your skin than traditional techniques.
+UA: 
+
+[FACE_GUIDE_INTRO_2]
+EN: With 8 years of professional experience, I know exactly how much care this zone deserves. For me, this is never just a simple process of application and removal. It is a mindful sequence of steps tailored precisely to the unique condition of your skin on the day of your visit.
+UA: 
+
+[FACE_GUIDE_INTRO_3]
+EN: Every session is also a premium skincare treatment. I incorporate luxury professional products, soothing masks, and creams chosen specifically for you. Because of this dedicated care, my treatments take a little longer than what you might find in standard salons. This service is designed for those who value a truly bespoke approach and refuse to settle for anything less than the best for their skin.
+UA: 
+
+[FACE_GUIDE_SECTION_1_HEADING]
+EN: ✨ The Magic of Sugar Paste: More Than Just Hair Removal
+UA: 
+
+[FACE_GUIDE_SECTION_1_PARA_1]
+EN: Sugar paste is a truly remarkable material that works wonders on the delicate facial area. It deeply cleanses the skin and clears facial pores from blackheads in a way no other professional product can match. Because of this, my clients usually fall into two categories:
+UA: 
+
+[FACE_GUIDE_SECTION_1_BULLET_1]
+EN: Those who come for flawless smoothness and complete hair removal.
+UA: 
+
+[FACE_GUIDE_SECTION_1_BULLET_2]
+EN: Those who choose this treatment as a deep facial cleanse to instantly restore freshness, youthfulness, and a completely renewed glow.
+UA: 
+
+[FACE_GUIDE_SECTION_1_PARA_2]
+EN: The best part? No matter your main goal, you always get the perfect combination of both benefits! This is an absolute favorite treatment among my clients. It leaves you feeling incredibly inspired to care for your skin, and your daily at-home skincare routines (creams, serums) will become significantly more effective, as your deeply purified skin can finally absorb all the nutrients.
+UA: 
+
+[FACE_GUIDE_SECTION_1_QUOTE]
+EN: "I am absolutely in love with this feeling, and I regularly do facial sugaring on myself. Every single time, it is a true 'wow' moment! I look in the mirror and think: 'Is this really my skin? It feels as incredibly soft and tender as my daughter's.' You will absolutely fall in love with your reflection and enjoy every single touch!"
+UA: 
+
+[FACE_GUIDE_SECTION_2_HEADING]
+EN: 💡 What You Need to Know Before Your Facial Treatment
+UA: 
+
+[FACE_GUIDE_ITEM_1_STRONG]
+EN: Timing your first visit:
+UA: 
+
+[FACE_GUIDE_ITEM_1_TEXT]
+EN: If you are booking a Full Face treatment for the very first time, please schedule your appointment 5 to 7 days before any important event. If you have had facial waxing or sugaring before and know how your skin responds, 2 to 3 days in advance is perfect.
+UA: 
+
+[FACE_GUIDE_ITEM_2_STRONG]
+EN: Understanding skin reactions:
+UA: 
+
+[FACE_GUIDE_ITEM_2_TEXT]
+EN: Sugaring gently exfoliates the skin, so temporary redness is completely normal. While my signature technique is designed to minimize trauma, a first-time treatment can sometimes trigger tiny white bumps. This is a natural, individual response from your body. They clear up on their own, and I will always guide you on how to make them disappear quickly.
+UA: 
+
+[FACE_GUIDE_ITEM_3_STRONG]
+EN: The power of routine:
+UA: 
+
+[FACE_GUIDE_ITEM_3_TEXT]
+EN: With regular appointments, your skin adapts. If you experienced minor breakouts after your first visit, they usually significantly decrease or do not appear at all by the second time.
+UA: 
+
+[FACE_GUIDE_ITEM_4_STRONG]
+EN: Prone to breakouts? Your safety comes first:
+UA: 
+
+[FACE_GUIDE_ITEM_4_TEXT]
+EN: Some clients notice a few minor spots after treating even a tiny zone, regardless of whether wax or sugar is used. This is simply how their skin naturally reacts to the extraction process, driven by internal triggers. While professional products minimize this effect, clients who are prone to this usually know their skin well, expect this reaction, and independently choose what they prioritize right now: hair-free skin or managing a brief 1–2 day breakout.
+
+Please note that I do not work with skin in the active stages of acne or severe post-acne. If your skin is prone to breakouts, we can safely perform a targeted treatment strictly in areas free of inflammation on the day of your visit (such as just the eyebrows, upper lip, or chin). For your ultimate safety, the specific zone being treated must be completely free of active breakouts. If it is just a single, occasional spot (e.g., a hormonal breakout), I will simply and carefully work around it.
+UA: 
+
+[FACE_GUIDE_ITEM_5_STRONG]
+EN: Start small:
+UA: 
+
+[FACE_GUIDE_ITEM_5_TEXT]
+EN: If you feel nervous, I highly recommend starting with a smaller zone first. This allows you to experience the treatment, see how beautifully your skin changes, and monitor how your body reacts. We can always add more zones during your next visit!
+UA: 
+
+[FACE_GUIDE_SEND_PHOTO_NOTE]
+EN: Please send me a photo of your skin before booking. I am always happy to consult and guide you! I share this not to overwhelm you, but to ensure you feel confident, safe, and fully informed.
+UA: 
+
+[FACE_GUIDE_SECTION_3_HEADING]
+EN: ✨ Post-Treatment Care & What to Expect
+UA: 
+
+[FACE_GUIDE_SECTION_3_INTRO]
+EN: The facial area is very delicate, making a temporary skin reaction completely natural. Everyone is beautifully unique: for some, the skin settles within just 20–30 minutes after regular treatments, while others might need 1.5 to 2 days. To help your skin heal beautifully and prevent any irritation, please follow these simple steps after your visit:
+UA: 
+
+[FACE_GUIDE_AFTERCARE_1_STRONG]
+EN: Sun protection:
+UA: 
+
+[FACE_GUIDE_AFTERCARE_1_TEXT]
+EN: Always apply SPF before heading outside to protect your fresh skin, regardless of whether it is sunny or cloudy.
+UA: 
+
+[FACE_GUIDE_AFTERCARE_2_STRONG]
+EN: Take it easy:
+UA: 
+
+[FACE_GUIDE_AFTERCARE_2_TEXT]
+EN: If possible, enjoy a quiet, relaxing day after your appointment without rushing through a busy to-do list. Give your skin a day or two of relative calm.
+UA: 
+
+[FACE_GUIDE_AFTERCARE_3_STRONG]
+EN: Keep it clean:
+UA: 
+
+[FACE_GUIDE_AFTERCARE_3_TEXT]
+EN: Avoid touching your face with unwashed hands or your phone screen.
+UA: 
+
+[FACE_GUIDE_AFTERCARE_4_STRONG]
+EN: Avoid skin friction:
+UA: 
+
+[FACE_GUIDE_AFTERCARE_4_TEXT]
+EN: Avoid close contact with beards or rough stubble, as this can easily irritate freshly treated skin.
+UA: 
+
+[FACE_GUIDE_AFTERCARE_5_STRONG]
+EN: Fresh pillowcase:
+UA: 
+
+[FACE_GUIDE_AFTERCARE_5_TEXT]
+EN: Put a clean pillowcase on your bed for the night. A dirty surface is often the hidden reason for breakouts on just one side of the face.
+UA: 
+
+[FACE_GUIDE_AFTERCARE_6_STRONG]
+EN: Skip the makeup:
+UA: 
+
+[FACE_GUIDE_AFTERCARE_6_TEXT]
+EN: Give your skin a break from makeup until any redness or reaction completely settles.
+UA: 
+
+[FACE_GUIDE_CLOSING_NOTE]
+EN: Please remember: if you ever notice a little breakout or have any questions, don't panic! I am always just a message away and ready to guide you on what to do.
+UA: 
+
+[FACE_GUIDE_CLOSING_CTA]
+EN: If you have any questions left about facial treatments, feel free to drop me a message — I'll be absolutely happy to help!
+UA: 
+
+— — — DURATION NOTES (collapsible) — — —
+
+[DURATION_TOGGLE_LABEL]
+EN: About Treatment Durations
+UA: 
+
+[DURATION_INTRO]
+EN: The time shown next to each service is the maximum expected duration. In your specific case, it may well be much quicker. Every step of my work is focused on meticulous quality and your absolute comfort.
+UA: 
+
+[DURATION_NOTE_1_TITLE]
+EN: How I Work
+UA: 
+
+[DURATION_NOTE_1_DESC]
+EN: My expertise lies in performing hair removal with minimal discomfort and zero skin trauma — to the absolute greatest extent possible in your individual case.
+UA: 
+
+[DURATION_NOTE_2_TITLE]
+EN: Bespoke Technique
+UA: 
+
+[DURATION_NOTE_2_DESC]
+EN: My experience allows me to custom-select paste density and technique just for you — my actions always depend on the live condition of your skin during your visit.
+UA: 
+
+[DURATION_NOTE_3_TITLE]
+EN: No Client Conveyor Belt
+UA: 
+
+[DURATION_NOTE_3_DESC]
+EN: I do not operate on a high-volume, rushed schedule. Every treatment perfectly matches your individual needs in a calm, stress-free atmosphere.
+UA: 
+
+[DURATION_NOTE_4_TITLE]
+EN: Individual Factors
+UA: 
+
+[DURATION_NOTE_4_DESC]
+EN: Hair length, density, volume, and complexity all affect duration. For your very first visit, please plan around the maximum indicated time.
+UA: 
+
+[DURATION_NOTE_5_TITLE]
+EN: Time Savings with Combos
+UA: 
+
+[DURATION_NOTE_5_DESC]
+EN: Combining multiple zones into a single session will often be quicker than booking each zone separately.
+UA: 
+
+[DURATION_NOTE_6_TITLE]
+EN: Flexibility for Your Schedule
+UA: 
+
+[DURATION_NOTE_6_DESC]
+EN: If speed is your priority today, let me know in advance. Your safety and results always come first.
+UA: 
+
+— — — SERVICES BOTTOM CTA — — —
+
+[SERVICES_BOTTOM_QUOTE]
+EN: "Not sure which service is right for you? I'm always here to guide you."
+UA: 
+
+[SERVICES_BOTTOM_CTA_BUTTON]
+EN: Ask Me a Question
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/CoursesSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[COURSES_EYEBROW]
+EN: Education & Courses
+UA: 
+
+[COURSES_HEADING_LINE_1]
+EN: Want to do this yourself?
+UA: 
+
+[COURSES_HEADING_LINE_2]
+EN: I'll teach you everything.
+UA: 
+
+[COURSES_SUBTEXT]
+EN: My courses offer far more than just dry theory—they are a complete, carefully structured system designed to lead my students directly to success. Teaching is where I truly thrive and come alive.
+UA: 
+
+[COURSES_CARD_1_BADGE]
+EN: In-Person · Bristol
+UA: 
+
+[COURSES_CARD_1_TITLE]
+EN: For Professionals
+UA: 
+
+[COURSES_CARD_1_DESC]
+EN: Heartfelt beginners' courses and advanced masterclasses for practicing therapists looking to elevate their skills to a premium level. Perfect for those starting from zero or experienced specialists who want to reach the next tier.
+UA: 
+
+[COURSES_CARD_1_TAG_1]
+EN: One-to-One
+UA: 
+
+[COURSES_CARD_1_TAG_2]
+EN: Intensive Training
+UA: 
+
+[COURSES_CARD_2_BADGE]
+EN: In-Person · Bristol
+UA: 
+
+[COURSES_CARD_2_TITLE]
+EN: For Yourself
+UA: 
+
+[COURSES_CARD_2_DESC]
+EN: Cosy training designed for women who want to master the skill of professional sugaring for their personal home care. Because I teach strictly on a one-to-one basis, you will immediately receive only the exact details and techniques that will work flawlessly for your specific skin and hair type.
+UA: 
+
+[COURSES_CARD_2_TAG_1]
+EN: One-to-One
+UA: 
+
+[COURSES_CARD_2_TAG_2]
+EN: Personalised
+UA: 
+
+[COURSES_ONLINE_BADGE]
+EN: Online Academy
+UA: 
+
+[COURSES_ONLINE_HEADING]
+EN: Personal Sugaring At Home
+UA: 
+
+[COURSES_ONLINE_PARAGRAPH_1]
+EN: Two years ago, I launched my very first online course: "The Essentials of Personal Sugaring"—specifically created for those who want to master the exact nuances of professional hair removal at home.
+UA: 
+
+[COURSES_ONLINE_PARAGRAPH_2]
+EN: Today, over 19 successful students worldwide have graduated from this course. It is an incredible investment in oneself, and I am absolutely thrilled to see my dream of global education coming to life.
+UA: 
+
+[COURSES_STAT_1_LABEL]
+EN: Global Students
+UA: 
+
+[COURSES_STAT_2_LABEL]
+EN: Success Rate
+UA: 
+
+[COURSES_VIDEO_ALT]
+EN: Mariia Vatseba teaching a sugaring course
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/CareGuideSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[CARE_EYEBROW]
+EN: Skin Care
+UA: 
+
+[CARE_HEADING]
+EN: The Care Guide
+UA: 
+
+[CARE_SUBTEXT]
+EN: To guarantee baby-smooth skin, minimal discomfort, and a luxurious spa result, follow these simple preparation and aftercare recommendations.
+UA: 
+
+[CARE_BEFORE_TITLE]
+EN: Before Sugaring
+UA: 
+
+[CARE_BEFORE_SUBTITLE]
+EN: Preparation Rules
+UA: 
+
+[CARE_BEFORE_1_TITLE]
+EN: Ideal Hair Length
+UA: 
+
+[CARE_BEFORE_1_DESC]
+EN: For the most comfortable treatment, hair should be about 5-7 mm long (typically 2-3 weeks after your last shave).
+UA: 
+
+[CARE_BEFORE_2_TITLE]
+EN: Gentle Exfoliation
+UA: 
+
+[CARE_BEFORE_2_DESC]
+EN: Exfoliate the area gently 24 hours before your session. This lifts flat hairs and removes dead skin cells for easier removal.
+UA: 
+
+[CARE_BEFORE_3_TITLE]
+EN: Clean, Bare Skin
+UA: 
+
+[CARE_BEFORE_3_DESC]
+EN: Arrive with clean skin. Please do not apply rich body creams, lotions, or oils on the treatment day as they block the paste.
+UA: 
+
+[CARE_BEFORE_4_TITLE]
+EN: Avoid Tanning
+UA: 
+
+[CARE_BEFORE_4_DESC]
+EN: Avoid sunbathing, tanning beds, and fake tan application for at least 24-48 hours prior to your treatment.
+UA: 
+
+[CARE_AFTER_TITLE]
+EN: After Sugaring
+UA: 
+
+[CARE_AFTER_SUBTITLE]
+EN: Aftercare Rules
+UA: 
+
+[CARE_AFTER_1_TITLE]
+EN: Breathable Clothing
+UA: 
+
+[CARE_AFTER_1_DESC]
+EN: Wear loose-fitting, soft cotton underwear and clothing. Tight synthetic fabrics trap friction and sweat, leading to irritation.
+UA: 
+
+[CARE_AFTER_2_TITLE]
+EN: Avoid Heat & Exercise
+UA: 
+
+[CARE_AFTER_2_DESC]
+EN: For the first 24-48 hours, skip heavy gym workouts, hot baths, steam rooms, saunas, and swimming pools.
+UA: 
+
+[CARE_AFTER_3_TITLE]
+EN: No Harsh Products
+UA: 
+
+[CARE_AFTER_3_DESC]
+EN: Do not apply perfumed lotions, deodorants, self-tans, makeup, or active chemical skin treatments on the treated area.
+UA: 
+
+[CARE_AFTER_4_TITLE]
+EN: Hydration & Exfoliation
+UA: 
+
+[CARE_AFTER_4_DESC]
+EN: Start moisturizing daily after 24 hours. Begin gentle skin exfoliation 3-4 days post-treatment to prevent ingrown hairs.
+UA: 
+
+[CARE_CLOSING_QUOTE]
+EN: "Your skin is your body's shield and your signature accessory. Treat it with kindness, love, and professional care."
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/TestimonialsSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[TESTIMONIALS_EYEBROW]
+EN: Reviews
+UA: 
+
+[TESTIMONIALS_HEADING]
+EN: Kind Words from My Clients
+UA: 
+
+[TESTIMONIALS_REVIEW_1]
+EN: "I join all the positive reviews. Mariia is a master of her craft. My teenage daughter goes to her. This is a very difficult age and she was very afraid to go to someone for hair removal, and at home it didn't work out well. Mariia found the right approach and my daughter is now 200% satisfied and goes with great pleasure."
+UA: 
+
+[TESTIMONIALS_REVIEW_2]
+EN: "And I recommend Mariia!! Her technique is flawless and completely unlike other professionals! She works very gently and as a person she is incredibly pleasant. I can say with confidence that you won't find a better professional in Bristol than Mariia!"
+UA: 
+
+[TESTIMONIALS_REVIEW_3]
+EN: "This delicate girl (woman, mom) is a person who masterfully does her job, understands all the nuances of her craft, and loves her work and your skin as if it were her own. And rest assured, if you come to Mariika like a little doll, you will flutter away from her like a true butterfly - a feeling of renewal and fresh air through your whole skin, all your thoughts, and your soul. I could write a lot, but it is better to try it once than to read about it! Thanks to Mariika, I am so glad I met her specifically!🍀❤️"
+UA: 
+
+[TESTIMONIALS_REVIEW_4]
+EN: "Marichko, I always forget to write. I want to sincerely thank you for the hair removal course 💛 I really liked it — it was easy, clear, and stress-free. You explain everything so well that even complex moments become simple. And the practice was just 🔥 I feel much more confident now! Thank you for your support and the atmosphere you created. And for the video afterwards, I can rewatch the moments you showed ✨🫶"
+UA: 
+
+[TESTIMONIALS_REVIEW_5]
+EN: "You don't even imagine how much you motivate with your blogging and by showing your true self, how you cope with truly difficult hardships, and despite everything, you radiate tenderness, femininity, love, and sincerity 🕊️❤️ , and your girls are a whole separate love 😍😍😍😍😍 Therefore, another huge thank you to you for your blog and for this experience that you allow us to live through together with you 🙏🙏🙏🙏😘"
+UA: 
+
+[TESTIMONIALS_REVIEW_6]
+EN: "Marichko, I am very grateful to you for the course ❤️ Thanks to the knowledge you passed on—I have no paste sticking, my flicks are confident and high-quality, and now I won't throw away paste that has condensation on it 🤭 Today, after a long break, I did the underarm area, and I want to say that thanks to the knowledge, this process was fast(I even managed faster with my left hand than with my right)) 😚 The tip about holding down the edge with a finger at the end helps to make a clean flick without sticking or residues 👌 I'll attach a photo of my pulled-out hair bulbs 😃 Grateful to you! You are Mega! You succeeded!"
+UA: 
+
+[TESTIMONIALS_REVIEW_7]
+EN: "Just wanted to share my journey with Maria. 🌷 It has been a while since my first sugaring session, and my skin is still smooth, soft, and glowing. 🩵 For years, I tried almost every hair removal method out there, but the battle with body hair continued — significantly impacting how I felt about myself..... Till I met Maria. She did not just resolve the hair issue, but transformed completely my view of the issue: body hair felt normal and ordinary, but I felt free will and power of choice to make a change about my body."
+UA: 
+
+[TESTIMONIALS_REVIEW_8]
+EN: "I have tried all sorts of hair removal products and procedures including \"sugaring\" with other beauticians but the sugaring I have been having with Maria is on a different level! It's the way I felt while she was working on my skin, the way I felt after - days and weeks! The long lasting softness and hair free skin! Amazing! I can't go back to my previous waxing and painful hair removal work! High quality and outstanding professionalism! A person with a big ❤️ and magic hands! Truly beautiful experience I had with Maria!"
+UA: 
+
+[TESTIMONIALS_REVIEW_9]
+EN: "Heya! Thank you very much! ❤️ Skin on the face is soft and pleasant after treatment! I did use all creams as per your suggestion too 🥰 So glad I won the discount in your competition and finally managed to see you! Thank you for your skin care advice! I am glad to see a beauty therapist who genuinely likes what she does ❤️"
+UA: 
+
+[TESTIMONIALS_REVIEW_10]
+EN: "Mariika, I am very grateful to you for today's experience and introduction to sugaring! ❤️🤗 It was incredibly high- quality and professional! I appreciate such an individual approach to the client and all your advice on body skin care! 🫶 I will follow everything 👍 It's a pleasure to watch people who are passionate about their work, and this in turn is reflected on us as clients! 🥰 Thank you very much ❤️❤️❤️"
+UA: 
+
+[TESTIMONIALS_REVIEW_11]
+EN: "Marichko, I am very grateful for the wonderful, super-professional work and the beautifully spent time. I am very satisfied with the result. And also, I really had a good rest. Thank you for your sincerity and kindness 🥰 Extremely satisfied with the procedure. After the second time, the hair became softer. Especially pleased with the bikini area, there is significantly less hair ☺️ Thank you very much for the professional work. I will definitely come again 😻 ❤️"
+UA: 
+
+[TESTIMONIALS_REVIEW_12]
+EN: "Thank you so much for making me feel like my most confident self! I love how soft my skin feels afterwards! It's like I'm brand new!! I love your work and I always leave with a big smile on my face!! I also love your unique added pink touch to everything! I always wait for my next sessions with you!! Love youu so much and your talented work! ❤️❤️❤️❤️ Hi, i really like it! I will keep coming , Thankyou for a delightful conversation. You're an amazing person 💖"
+UA: 
+
+[TESTIMONIALS_REVIEW_13]
+EN: "Mariiechka. ☺️ 😘 I am very grateful to you for today's procedure. Every person who comes to you is incredibly lucky. You always take an individual approach to the needs and characteristics of us girls 😘 ❤️ and also your sincere love for your work adds a \"special touch\" and uniqueness to this 🥰🥰🥰."
+UA: 
+
+[TESTIMONIALS_CLOSING_QUOTE]
+EN: "Words like these are more than just a review—they are a true reward."
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/FAQSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[FAQ_EYEBROW]
+EN: FAQ
+UA: 
+
+[FAQ_HEADING]
+EN: Frequently Asked Questions
+UA: 
+
+— — — CATEGORY 1: Preparation & Booking — — —
+
+[FAQ_CAT_1_NAME]
+EN: Preparation & Booking
+UA: 
+
+[FAQ_CAT1_Q1]
+EN: How long does my hair need to be for sugaring?
+UA: 
+
+[FAQ_CAT1_A1]
+EN: For the best results, your hair should be about the length of a grain of rice (around 5-7mm). If you are switching from shaving, here is the ideal growth time required for each area:
+Underarms: 10–14 days of growth.
+Bikini / Hollywood: 12–16 days of growth.
+Legs: 2–3 weeks (2 weeks is plenty for lower legs, but thighs grow back much slower after shaving, so 3 weeks is best for full legs)
+UA: 
+
+[FAQ_CAT1_Q2]
+EN: I have a holiday planned and don't have enough time to grow my hair. Can I still get sugared?
+UA: 
+
+[FAQ_CAT1_A2]
+EN: Yes, absolutely! We can still do the treatment. The absolute minimum growth times required for an emergency or holiday booking are:
+Underarms: 7 days.
+Bikini: 12 days.
+Legs: 8-12 days.
+
+In these cases, I will always do my absolute best to give you the cleanest finish possible. It is still a much better option than shaving for your holiday! However, please keep in mind that some tiny hairs might just be starting to break through the skin, which means I physically won't be able to catch them. I have extensive experience working with short hair—even managing underarms with just 5 days of growth post-shave or legs with 7 days. It will be perfect for your holiday, but to experience the full, flawless benefit of sugaring, I highly recommend sticking to the standard guidelines above next time!
+UA: 
+
+[FAQ_CAT1_Q3]
+EN: What if my hair is much longer than 2–3 weeks? Can I still book a session?
+UA: 
+
+[FAQ_CAT1_A3]
+EN: Yes, you can. I regularly work with clients who have longer hair growth. Please note that the treatment may feel slightly more intense because more hairs will be removed at once. However, the result will exceed your expectations because we will catch a larger volume of hair, meaning your smooth results will last even longer!
+
+Important Note: If your hair is significantly longer, please let me know in advance. I will need to allocate extra time for your appointment, and a surcharge of +£5 to £30 will apply depending on the time and complexity. Please do not trim the hair yourself at home, as it is very easy to cut it too short (especially in the bikini area). If you feel you must tidy it up, you can use a trimmer gently to leave a consistent length of 5–7mm.
+UA: 
+
+[FAQ_CAT1_Q4]
+EN: What should I do before my appointment?
+UA: 
+
+[FAQ_CAT1_A4]
+EN: You can gently exfoliate the area 5 days before your scheduled appointment. On the day of your treatment, please make sure to take a shower. If you are coming straight from work, don't worry at all—intimate wet wipes will be available for you to use right before we begin.
+
+Key recommendations based on the area:
+
+Facial Sugaring: Please do not wear any makeup or cosmetic products on the day of your visit, as this directly impacts the overall quality of the treatment. If you do happen to be wearing makeup, please don't worry—I will thoroughly cleanse your skin before we start and do everything I can to ensure a beautiful result. However, these small details do make a difference, so it is always best to prepare in advance.
+
+General Rule: Please avoid applying any thick lotions, body oils, or deodorants to the areas being treated on the day of your appointment.
+
+I also highly recommend wearing or bringing comfortable, loose-fitting clothing, preferably made from natural fabrics. This allows your skin to breathe and minimises any post-treatment friction or irritation.
+UA: 
+
+[FAQ_CAT1_Q5]
+EN: I'm going on holiday soon. When should I book my sugaring appointment?
+UA: 
+
+[FAQ_CAT1_A5]
+EN: Booking your session 2 to 3 days before you travel is ideal. Your skin needs 24 to 48 hours to fully recover before any sun exposure, swimming, or sauna use.
+
+Important note for facial treatments: The face is a highly delicate zone and requires more time to recover. If it is your very first time getting facial sugaring, I highly recommend booking it 5 to 7 days before your important event or holiday. For regular clients, booking 3 days in advance is perfect!
+UA: 
+
+— — — CATEGORY 2: The Experience & Conditions — — —
+
+[FAQ_CAT_2_NAME]
+EN: The Experience & Conditions
+UA: 
+
+[FAQ_CAT2_Q1]
+EN: Does sugaring hurt?
+UA: 
+
+[FAQ_CAT2_A1]
+EN: Because the sugar paste only sticks to the hair and dead skin cells—not live skin—it is significantly less painful than traditional waxing.
+
+As women, we all experience pain very differently; some of us have a high pain threshold, while others are more sensitive. My signature technique ensures that any slight discomfort is felt only at the exact second the hair is removed—lasting just a brief moment.
+
+Many of my clients are genuinely surprised by how different and incredibly comfortable my method is compared to past experiences. This is because I have studied the mechanics of hair removal deeply and master all the technical nuances that lower skin sensitivity. Simply put, I know how to make the process as painless as humanly possible.
+
+Of course, your individuality plays a major role too. Every client responds differently: some find it so relaxing they want to sleep, while others just need a brief moment to focus. Rest assured, it gets easier with every single session as the hair becomes much thinner and softer!
+
+Top tips to help you schedule your visit for maximum comfort:
+
+Track your menstrual cycle. Generally, women tend to be more sensitive right before their period and during ovulation. The absolute best, most comfortable time to get treated is usually right after your period ends. However, practice shows that every body operates on its own unique rhythm. Some of my clients actually report feeling the least amount of sensitivity right before or during their cycle. It is all about tuning into your body to see what works best for you.
+UA: 
+
+[FAQ_CAT2_Q2]
+EN: Can I get sugared if I am on my period?
+UA: 
+
+[FAQ_CAT2_A2]
+EN: Yes, absolutely. Having your period is not a reason to cancel your appointment. I regularly treat clients during this time. All you need to do is wear a fresh tampon or menstrual cup before your session. Please keep in mind that your skin may be slightly more sensitive to pain just before and during your cycle, but the treatment can still be done flawlessly!
+UA: 
+
+[FAQ_CAT2_Q3]
+EN: I am pregnant. Can I still book a session?
+UA: 
+
+[FAQ_CAT2_A3]
+EN: Yes, absolutely! Sugaring is a 100% natural, organic, and completely safe method for both you and your baby, as the paste contains zero chemicals or toxins. Many of my clients continue their treatments right up until their due date, as it offers incredible comfort, convenience, and a feeling of lightness—especially during those final months.
+
+As a mother of two daughters myself, I completely understand the unique needs of expectant mums, making pregnant clients a deeply special category for me. The main condition is that your pregnancy is progressing smoothly and your doctor approves.
+
+However, here are a few key details to keep in mind:
+
+• If you are already used to sugaring: You can confidently continue your regular monthly sessions without any breaks. It is entirely safe and will not affect your pregnancy in any negative way.
+
+• If it is your first time sugaring: You can still absolutely have the treatment. However, during the first trimester, anything brand new can cause minor stress simply because you don't know what to expect. In these cases, I highly recommend waiting until your 12th week to start. We can begin with smaller areas, like the underarms or a basic bikini line, to ease you into the sensation.
+
+Pregnancy hormones can initially make your skin a bit more sensitive, so I will take extra care to ensure you are as relaxed and comfortable as possible. Interestingly, practice shows that the closer you get to your due date, the less sensitivity you will feel. Your body is already naturally preparing for childbirth, making your pain threshold much higher!
+UA: 
+
+[FAQ_CAT2_Q4]
+EN: I have a lot of moles. Is it safe to have a sugaring treatment?
+UA: 
+
+[FAQ_CAT2_A4]
+EN: Yes, it is perfectly safe! The presence of moles is by no means a contraindication for a sugaring treatment.
+
+Any flat moles that do not protrude above the skin and do not have hair growing from them are completely safe to be treated—the sugar paste glides over them smoothly and painlessly.
+
+Important note about hairs on moles: If there is hair growing directly from a mole, it must never be plucked or pulled out with paste. It can only be carefully trimmed with scissors, or the area can simply be left untouched.
+
+Therefore, if a mole is raised, large, sensitive, or has hair growing from it, I will simply work carefully nearby. Even if it is located in a highly delicate or intimate area (such as the labia in a Hollywood bikini), you can rest completely assured.
+
+I frequently work with clients who have moles, so if you have this specific feature, please be sure to let me know beforehand. My technique and years of expertise allow me to navigate these areas flawlessly, ensuring 100% skin safety, protection, and an immaculate, high-quality finish.
+UA: 
+
+[FAQ_CAT2_Q5]
+EN: Can I get sugared if I have varicose veins?
+UA: 
+
+[FAQ_CAT2_A5]
+EN: Yes, absolutely! In fact, sugaring is truly the best and safest hair removal method if you have varicose veins. Unlike hot wax, sugar paste is applied at a comfortable body temperature, meaning there is absolutely no heat to dilate your blood vessels or irritate your legs.
+
+The treatment is incredibly gentle and kind to your skin. If you do have varicose veins, just let me know before your visit. If you have any doubts or worries at all, you are always welcome to send me a photo in a private message, and I will gladly give you a consultation before you book!
+UA: 
+
+[FAQ_CAT2_Q6]
+EN: I have stretch marks. Can I still have the treatment?
+UA: 
+
+[FAQ_CAT2_A6]
+EN: Yes, absolutely! Having stretch marks is not a barrier at all for a sugaring treatment. However, it is important to know that skin with stretch marks is incredibly delicate, thinner, and carries a higher risk of skin trauma or heightened sensitivity.
+
+Because of this, these areas require a specialised technique and exceptional care. I am highly trained in working meticulously with sugar paste on delicate skin, ensuring your skin remains completely protected. It is vital to choose your therapist carefully, especially if you have stretch marks in the bikini area.
+
+In fact, because the sugar paste acts as a gentle spa exfoliation, it leaves the skin looking much smoother, softer, and beautifully hydrated. I am always so proud when my clients with stretch marks mention how light, comfortable, and easy their session felt. You can feel 100% confident knowing you are in safe, expert hands!
+UA: 
+
+[FAQ_CAT2_Q7]
+EN: My skin sweats heavily. Is sugaring suitable for me?
+UA: 
+
+[FAQ_CAT2_A7]
+EN: Yes, absolutely! Heavy sweating is not a barrier at all. Sugar paste handles this brilliantly and ensures a perfectly smooth finish.
+
+The treatment might take a little longer, so please make sure to let me know before your visit—I will allocate more time for your appointment to carefully prepare your skin and make everything as comfortable and high-quality as possible for you!
+UA: 
+
+[FAQ_CAT2_Q8]
+EN: How old do I have to be for sugaring?
+UA: 
+
+[FAQ_CAT2_A8]
+EN: Sugaring is 100% organic and completely safe for teenagers. It is a wonderful option from the moment a young girl feels ready and develops a personal wish to remove unwanted hair. First and foremost, it is incredibly important to me that this is entirely her own choice, as her comfort and confidence come first.
+
+If you are under 18, we just follow a few gentle guidelines to ensure everything is perfect:
+
+• Parental Support: For anyone under the age of 18, a parent or guardian needs to accompany her to the first appointment so we can all chat together, answer any questions, and sign a basic consent form.
+
+• Intimate Care: For teenagers under 18, we focus on a very gentle, basic bikini line treatment (along the underwear line). An extended bikini option is only recommended once her menstrual cycle has naturally regulated and stabilised. Please note that 18 is the minimum age for a full Hollywood or Brazilian treatment.
+UA: 
+
+— — — CATEGORY 3: Aftercare & Maintenance — — —
+
+[FAQ_CAT_3_NAME]
+EN: Aftercare & Maintenance
+UA: 
+
+[FAQ_CAT3_Q1]
+EN: Post-Treatment Aftercare Advice
+UA: 
+
+[FAQ_CAT3_A1]
+EN: Hair removal is naturally a minor trauma for your hair follicles, which means every action you take after your session is incredibly important.
+
+To keep your skin beautifully smooth, calm, and healthy, please follow these guidelines for 48 hours after your first appointment or 24 hours if you are a regular client (adjusting to your individual skin recovery time).
+
+What to avoid (For 24 to 48 hours):
+
+• Direct sunlight and sunbeds: Avoid exposing the treated area to the sun, as fresh skin is highly vulnerable to UV rays and can easily develop uneven pigmentation. If the sun is active and you need to go outdoors, you must apply a high-factor SPF 50 sunscreen to protect the newly treated areas.
+
+• Heat and friction: Avoid saunas, steam rooms, swimming pools, hot baths, intense workouts, and sex—essentially anything that causes heavy sweating or friction on your delicate skin.
+
+• Harsh products and soaps: Do not apply scented lotions, deodorants, self-tanners, or chemical peels. If needed, you can take a light, lukewarm shower no earlier than 4 hours after your session (this allows the professional aftercare products I applied to fully work their magic). Wash the area with water only—no shower gels or soaps.
+
+• Synthetics and bacteria: Minimise touching the treated area with your hands (if you must, ensure they are thoroughly clean). Opt for loose clothing and underwear made strictly from natural fabrics like cotton.
+
+• For facial areas: If we performed facial sugaring, please ensure you sleep on a fresh, clean pillowcase on the night of your treatment.
+UA: 
+
+[FAQ_CAT3_Q2]
+EN: What should you do for long-term skin health?
+UA: 
+
+[FAQ_CAT3_A2]
+EN: It is no secret that home care makes up 80% of how your skin looks and feels. After all, you spend just one hour a month with me, but you live with your skin every single day.
+
+I provide comprehensive, tailored advice based entirely on your specific skin type during your appointment. I am always here to teach you which products to choose and the correct order to use them in, ensuring you can confidently maintain healthy, radiant skin between your visits.
+UA: 
+
+[FAQ_CAT3_Q3]
+EN: How often should I book my appointments?
+UA: 
+
+[FAQ_CAT3_A3]
+EN: As a general guide, I recommend booking your treatments every 4 to 5 weeks to achieve that beautiful "natural laser effect" and reduce hair growth quickly.
+
+However, every body is beautifully unique. Hair growth cycles depend on many internal factors, including hormonal balance, medications, contraception, pregnancy, or breastfeeding, which can cause hair to grow much slower. Depending on the specific area and your body's rhythm, your intervals could easily be longer—around 6 to 8 weeks. I am always here to guide you and personalise your schedule so you get the absolute best, longest-lasting results for your skin.
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/ContactSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[CONTACT_EYEBROW]
+EN: Get in Touch
+UA: 
+
+[CONTACT_HEADING]
+EN: Book Your Session
+UA: 
+
+[CONTACT_SUBTEXT]
+EN: Ready to experience the ultimate in luxury sugaring? Get in touch to book your appointment or ask any questions.
+UA: 
+
+[CONTACT_INFO_LOCATION_LABEL]
+EN: Location
+UA: 
+
+[CONTACT_INFO_LOCATION_VALUE]
+EN: Bristol, England
+UA: 
+
+[CONTACT_INFO_LOCATION_NOTE]
+EN: Exact address shared upon booking
+UA: 
+
+[CONTACT_INFO_EMAIL_LABEL]
+EN: Email
+UA: 
+
+[CONTACT_INFO_AVAILABILITY_LABEL]
+EN: Availability
+UA: 
+
+[CONTACT_INFO_AVAILABILITY_VALUE]
+EN: By appointment only
+UA: 
+
+[CONTACT_INFO_AVAILABILITY_NOTE]
+EN: Please message to arrange your preferred time
+UA: 
+
+[CONTACT_FORM_TITLE]
+EN: Send a Message
+UA: 
+
+[CONTACT_FORM_NAME_LABEL]
+EN: Your Name
+UA: 
+
+[CONTACT_FORM_NAME_PLACEHOLDER]
+EN: Sophia Taylor
+UA: 
+
+[CONTACT_FORM_EMAIL_LABEL]
+EN: Email
+UA: 
+
+[CONTACT_FORM_EMAIL_PLACEHOLDER]
+EN: sophia@example.com
+UA: 
+
+[CONTACT_FORM_SERVICE_LABEL]
+EN: Service of Interest
+UA: 
+
+[CONTACT_FORM_SERVICE_DEFAULT_OPTION]
+EN: Select a service...
+UA: 
+
+[CONTACT_FORM_OPTGROUP_BIKINI]
+EN: Bikini & Intimate Sugaring
+UA: 
+
+[CONTACT_FORM_OPTION_HOLLYWOOD]
+EN: Hollywood / Brazilian
+UA: 
+
+[CONTACT_FORM_OPTION_GSTRING]
+EN: G-String / Extended Bikini
+UA: 
+
+[CONTACT_FORM_OPTION_BASIC_BIKINI]
+EN: Basic Bikini Line
+UA: 
+
+[CONTACT_FORM_OPTGROUP_UPPER]
+EN: Upper Body Sugaring
+UA: 
+
+[CONTACT_FORM_OPTION_UNDERARMS]
+EN: Underarms
+UA: 
+
+[CONTACT_FORM_OPTION_ARMS]
+EN: Full or Half Arms
+UA: 
+
+[CONTACT_FORM_OPTION_STOMACH]
+EN: Stomach
+UA: 
+
+[CONTACT_FORM_OPTGROUP_DOWN]
+EN: Down Body Sugaring
+UA: 
+
+[CONTACT_FORM_OPTION_LEGS]
+EN: Full or Half Legs
+UA: 
+
+[CONTACT_FORM_OPTION_BUTTOCKS]
+EN: Buttocks & Lower Back
+UA: 
+
+[CONTACT_FORM_OPTGROUP_FACE]
+EN: Face Sugaring
+UA: 
+
+[CONTACT_FORM_OPTION_FACE_ZONES]
+EN: Individual Face Zones
+UA: 
+
+[CONTACT_FORM_OPTION_FACE_COMBOS]
+EN: Face Combos & Premium Packages
+UA: 
+
+[CONTACT_FORM_OPTGROUP_COURSES]
+EN: Courses & Training
+UA: 
+
+[CONTACT_FORM_OPTION_COURSE_PRO]
+EN: Course: For Professionals
+UA: 
+
+[CONTACT_FORM_OPTION_COURSE_SELF]
+EN: Course: For Yourself
+UA: 
+
+[CONTACT_FORM_OPTION_COURSE_ONLINE]
+EN: Online Course
+UA: 
+
+[CONTACT_FORM_OPTGROUP_OTHER]
+EN: Other
+UA: 
+
+[CONTACT_FORM_OPTION_MULTI_ZONE]
+EN: Multiple Zones / Custom Package
+UA: 
+
+[CONTACT_FORM_OPTION_OTHER]
+EN: Other / General Enquiry
+UA: 
+
+[CONTACT_FORM_MESSAGE_LABEL]
+EN: Your Message
+UA: 
+
+[CONTACT_FORM_MESSAGE_PLACEHOLDER]
+EN: Tell me about your skin or any questions you have...
+UA: 
+
+[CONTACT_FORM_SUBMIT_BUTTON]
+EN: Send Message
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/BlogSection.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[BLOG_EYEBROW]
+EN: Journal
+UA: 
+
+[BLOG_HEADING]
+EN: Beauty Insights
+UA: 
+
+[BLOG_POST_1_TITLE]
+EN: What is Sugaring & Why Exactly Sugaring?
+UA: 
+
+[BLOG_POST_1_EXCERPT]
+EN: Sugaring is a 100% natural, organic hair removal method using sugar paste. To me, it is far more than just hair removal—it is a luxurious self-care spa ritual.
+UA: 
+
+[BLOG_POST_1_TAG]
+EN: Education
+UA: 
+
+[BLOG_POST_2_TITLE]
+EN: Arm Sugaring is Having a Moment!
+UA: 
+
+[BLOG_POST_2_EXCERPT]
+EN: It's just as highly requested as the bikini line. The post-treatment feeling is second to none—lightness, silkiness, and femininity right down to your fingertips.
+UA: 
+
+[BLOG_POST_2_TAG]
+EN: Trending
+UA: 
+
+[BLOG_READ_MORE]
+EN: Read More
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/Footer.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[FOOTER_BRAND_TAGLINE]
+EN: With Love to Your Skin. Premium sugaring specialist delivering luxury self-care experiences in Bristol.
+UA: 
+
+[FOOTER_EMAIL_BUTTON_LABEL]
+EN: Email
+UA: 
+
+[FOOTER_NAV_GROUP_EXPLORE]
+EN: Explore
+UA: 
+
+[FOOTER_NAV_ABOUT]
+EN: About
+UA: 
+
+[FOOTER_NAV_SERVICES]
+EN: Services & Prices
+UA: 
+
+[FOOTER_NAV_COURSES]
+EN: Courses
+UA: 
+
+[FOOTER_NAV_GROUP_SUPPORT]
+EN: Support
+UA: 
+
+[FOOTER_NAV_FAQ]
+EN: FAQ
+UA: 
+
+[FOOTER_NAV_CARE_GUIDE]
+EN: Care Guide
+UA: 
+
+[FOOTER_NAV_CONTACT]
+EN: Contact
+UA: 
+
+[FOOTER_COPYRIGHT]
+EN: © [year] Mariia Vatseba. All rights reserved.
+UA: 
+
+[FOOTER_MADE_WITH_LOVE]
+EN: Made with ❤ in Bristol
+UA: 
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FILE: src/components/StickyBookingButton.jsx
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[STICKY_BUTTON_LABEL]
+EN: Book Now
+UA: 
+
+
+================================================================================
+  END OF FILE — Total entries: 230+
+  Once all UA fields are filled in, send back to your developer for implementation.
+================================================================================

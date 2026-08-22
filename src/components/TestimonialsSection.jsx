@@ -214,6 +214,11 @@ export default function TestimonialsSection() {
                         {t.closingQuote}
                     </p>
                 </motion.div>
+
+                {/* Google Reviews Embed */}
+                <div className="mt-16 w-full flex justify-center">
+                    <div className="elfsight-app-a6b2e524-f9de-4ee1-a2d9-0d0e12e2d407 w-full max-w-4xl" data-elfsight-app-lazy></div>
+                </div>
             </div>
         </section>
     );
