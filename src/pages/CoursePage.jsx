@@ -67,7 +67,9 @@ export default function CoursePage() {
                         >
                             {t.buyNowBtn}
                         </a>
-                        <p className="text-xs text-primary font-medium">{t.consultationBonus}</p>
+                        <a href="/#contact" className="text-xs text-primary font-medium hover:underline inline-flex items-center justify-center">
+                            {t.questionsLink}
+                        </a>
                     </motion.div>
                 </section>
 

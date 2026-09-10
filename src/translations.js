@@ -466,7 +466,7 @@ const translations = {
       discountBadge: "50% OFF",
       timerPrefix: "Offer ends in",
       buyNowBtn: "Buy Course Now",
-      consultationBonus: "Bonus: 50% off a personal consultation with me!",
+      questionsLink: "Contact me if you have any questions",
       curriculumTitle: "What You Will Learn",
       curriculumItems: [
         "Skin preparation secrets for zero pain",
@@ -1167,7 +1167,7 @@ const translations = {
       discountBadge: "-50%",
       timerPrefix: "Знижка зникає через",
       buyNowBtn: "Придбати курс",
-      consultationBonus: "Бонус: -50% на мою особисту консультацію!",
+      questionsLink: "Зв'яжіться зі мною, якщо маєте запитання",
       curriculumTitle: "Що ви дізнаєтесь",
       curriculumItems: [
         "Секрети підготовки шкіри без болю",
