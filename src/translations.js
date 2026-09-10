@@ -467,6 +467,9 @@ const translations = {
       timerPrefix: "Offer ends in",
       buyNowBtn: "Buy Course Now",
       questionsLink: "Contact me if you have any questions",
+      contactModalTitle: "Choose how to contact me",
+      contactModalWhatsApp: "Message on WhatsApp",
+      contactModalEmail: "Send an Email",
       curriculumTitle: "What You Will Learn",
       curriculumItems: [
         "Skin preparation secrets for zero pain",
@@ -1168,6 +1171,9 @@ const translations = {
       timerPrefix: "Знижка зникає через",
       buyNowBtn: "Придбати курс",
       questionsLink: "Зв'яжіться зі мною, якщо маєте запитання",
+      contactModalTitle: "Оберіть спосіб зв'язку",
+      contactModalWhatsApp: "Написати у WhatsApp",
+      contactModalEmail: "Надіслати Email",
       curriculumTitle: "Що ви дізнаєтесь",
       curriculumItems: [
         "Секрети підготовки шкіри без болю",
