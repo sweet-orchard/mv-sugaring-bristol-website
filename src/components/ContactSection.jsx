@@ -115,18 +115,22 @@ export default function ContactSection() {
                     >
                         <div className="bg-secondary/40 border border-border/30 rounded-sm p-8 lg:p-10">
                             <h3 className="font-display text-2xl font-semibold text-foreground mb-6">{t.formTitle}</h3>
-                            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                            <form action="https://formsubmit.co/mariia.vatseba@gmail.com" method="POST" className="space-y-5">
+                                {/* FormSubmit Configuration */}
+                                <input type="hidden" name="_subject" value="New Inquiry from Website" />
+                                <input type="hidden" name="_captcha" value="false" />
+
                                 <div>
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">{t.nameLabel}</label>
-                                    <input type="text" className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder={t.namePlaceholder} />
+                                    <input type="text" name="name" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder={t.namePlaceholder} />
                                 </div>
                                 <div>
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">{t.emailFormLabel}</label>
-                                    <input type="email" className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder={t.emailPlaceholder} />
+                                    <input type="email" name="email" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder={t.emailPlaceholder} />
                                 </div>
                                 <div>
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">{t.serviceLabel}</label>
-                                    <select className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors">
+                                    <select name="service" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors">
                                         <option value="">{t.serviceDefault}</option>
                                         <optgroup label={t.optgroupBikini}>
                                             <option>{t.optionHollywood}</option>
@@ -159,7 +163,7 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">{t.messageLabel}</label>
-                                    <textarea rows={4} className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors resize-none" placeholder={t.messagePlaceholder} />
+                                    <textarea name="message" required rows={4} className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors resize-none" placeholder={t.messagePlaceholder} />
                                 </div>
                                 <button type="submit" className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:bg-primary/90 transition-all duration-300">
                                     <Send className="w-4 h-4" />
