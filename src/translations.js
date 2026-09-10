@@ -694,6 +694,7 @@ const translations = {
       brandTagline:
         "With Love to Your Skin. Premium sugaring specialist delivering luxury self-care experiences in Bristol.",
       emailButton: "Email",
+      whatsappButton: "WhatsApp",
       navGroupExplore: "Explore",
       navAbout: "About",
       navServices: "Services & Prices",
@@ -1384,6 +1385,7 @@ const translations = {
       brandTagline:
         "З любов'ю до вашої шкіри. Преміальна спеціалістка з шугарингу — розкішний догляд за собою у Брістолі.",
       emailButton: "Email",
+      whatsappButton: "WhatsApp",
       navGroupExplore: "Навігація",
       navAbout: "Про мене",
       navServices: "Послуги та ціни",
