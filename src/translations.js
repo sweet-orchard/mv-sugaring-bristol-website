@@ -438,9 +438,57 @@ const translations = {
         'Two years ago, I launched my very first online course: "The Essentials of Personal Sugaring"—specifically created for those who want to master the exact nuances of professional hair removal at home.',
       onlineParagraph2:
         "Today, over 19 successful students worldwide have graduated from this course. It is an incredible investment in oneself, and I am absolutely thrilled to see my dream of global education coming to life.",
+      onlinePrice: "£15",
+      onlineOldPrice: "£30",
+      onlineDiscount: "50% OFF",
+      onlineConsultationOffer: "Purchase the course and get a 50% discount on a personal consultation!",
+      learnMoreBtn: "Learn More",
+      payUkBtn: "Pay with UK / Int. Card",
+      payUaBtn: "Pay with Ukrainian Card",
+      checkoutTitle: "Checkout",
+      checkoutDesc: "Select your preferred payment method below to get access to the course.",
+      successTitle: "Thank you for your purchase!",
+      successDesc: "Your payment was successful. Click the button below to join our private Telegram channel and start learning.",
+      joinTelegramBtn: "Join Telegram Channel",
+      backToHomeBtn: "Back to Home",
       stat1Label: "Global Students",
       stat2Label: "Success Rate",
       videoAlt: "Mariia Vatseba teaching a sugaring course",
+    },
+
+    // ── Dedicated Course Page ──────────────────────────────────────────────────
+    coursePage: {
+      heroBadge: "Exclusive Offer",
+      heroTitle: "Master Professional Sugaring at Home",
+      heroSubtitle: "Learn the exact techniques used in premium salons to achieve flawless, baby-smooth skin that lasts for weeks.",
+      price: "£15",
+      oldPrice: "£30",
+      discountBadge: "50% OFF",
+      timerPrefix: "Offer ends in",
+      buyNowBtn: "Buy Course Now",
+      consultationBonus: "Bonus: 50% off a personal consultation with me!",
+      curriculumTitle: "What You Will Learn",
+      curriculumItems: [
+        "Skin preparation secrets for zero pain",
+        "The perfect sugar paste consistency",
+        "Application and flicking techniques",
+        "How to prevent ingrown hairs completely"
+      ],
+      faqTitle: "Frequently Asked Questions",
+      faqItems: [
+        {
+          q: "Do I need any previous experience?",
+          a: "Not at all! This course is designed specifically for beginners starting from scratch."
+        },
+        {
+          q: "How long do I have access to the materials?",
+          a: "You get lifetime access. You can learn at your own pace and revisit the videos anytime."
+        },
+        {
+          q: "How does the consultation bonus work?",
+          a: "After purchasing, you will receive a special link to book a personal 1-on-1 session with me at half the regular price."
+        }
+      ]
     },
 
     // ── Care Guide ────────────────────────────────────────────────────────
@@ -1085,9 +1133,57 @@ const translations = {
         "Два роки тому я запустила свій перший онлайн-курс: «Основи особистого шугарингу» — створений спеціально для тих, хто хоче освоїти всі нюанси професійного видалення волосся в домашніх умовах.",
       onlineParagraph2:
         "Сьогодні понад 19 успішних випускників з усього світу пройшли цей курс. Це неймовірна інвестиція в себе, і я в захваті від того, що моя мрія про глобальну освіту стає реальністю.",
+      onlinePrice: "£15",
+      onlineOldPrice: "£30",
+      onlineDiscount: "-50%",
+      onlineConsultationOffer: "Придбайте курс і отримайте знижку 50% на особисту консультацію!",
+      learnMoreBtn: "Дізнатися більше",
+      payUkBtn: "Оплата картою UK / Світ",
+      payUaBtn: "Оплата українською картою",
+      checkoutTitle: "Оформлення",
+      checkoutDesc: "Оберіть зручний для вас спосіб оплати, щоб отримати доступ до курсу.",
+      successTitle: "Дякуємо за покупку!",
+      successDesc: "Оплата пройшла успішно. Натисніть кнопку нижче, щоб приєднатися до закритого Telegram-каналу і почати навчання.",
+      joinTelegramBtn: "Приєднатися до Telegram",
+      backToHomeBtn: "На головну",
       stat1Label: "Студентів по всьому світу",
       stat2Label: "Успішних результатів",
       videoAlt: "Марія Вацеба проводить курс шугарингу",
+    },
+
+    // ── Dedicated Course Page ──────────────────────────────────────────────────
+    coursePage: {
+      heroBadge: "Ексклюзивна пропозиція",
+      heroTitle: "Опануйте професійний шугаринг вдома",
+      heroSubtitle: "Вивчіть точні техніки преміум-салонів, щоб отримати ідеально гладку шкіру на кілька тижнів.",
+      price: "£15",
+      oldPrice: "£30",
+      discountBadge: "-50%",
+      timerPrefix: "Знижка зникає через",
+      buyNowBtn: "Придбати курс",
+      consultationBonus: "Бонус: -50% на мою особисту консультацію!",
+      curriculumTitle: "Що ви дізнаєтесь",
+      curriculumItems: [
+        "Секрети підготовки шкіри без болю",
+        "Ідеальна консистенція цукрової пасти",
+        "Правильне нанесення та зрив пасти",
+        "Як назавжди забути про вросле волосся"
+      ],
+      faqTitle: "Часті запитання",
+      faqItems: [
+        {
+          q: "Чи потрібен мені попередній досвід?",
+          a: "Зовсім ні! Цей курс розроблений спеціально для новачків з нуля."
+        },
+        {
+          q: "Як довго я матиму доступ до матеріалів?",
+          a: "Ви отримуєте довічний доступ. Можете навчатися у своєму темпі."
+        },
+        {
+          q: "Як працює бонус на консультацію?",
+          a: "Після покупки ви отримаєте посилання для бронювання індивідуальної сесії зі мною за півціни."
+        }
+      ]
     },
 
     care: {

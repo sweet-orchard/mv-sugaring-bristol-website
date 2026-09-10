@@ -5,14 +5,14 @@ import { useLang } from '../context/LangContext';
 import translations from '../translations';
 
 const linkHrefs = [
-    { key: 'about',       href: '#about' },
-    { key: 'whySugaring', href: '#why-sugaring' },
-    { key: 'prices',      href: '#services' },
-    { key: 'courses',     href: '#courses' },
-    { key: 'careGuide',   href: '#care-guide' },
-    { key: 'reviews',     href: '#testimonials' },
-    { key: 'faq',         href: '#faq' },
-    { key: 'contact',     href: '#contact' },
+    { key: 'about',       href: '/#about' },
+    { key: 'whySugaring', href: '/#why-sugaring' },
+    { key: 'prices',      href: '/#services' },
+    { key: 'courses',     href: '/#courses' },
+    { key: 'careGuide',   href: '/#care-guide' },
+    { key: 'reviews',     href: '/#testimonials' },
+    { key: 'faq',         href: '/#faq' },
+    { key: 'contact',     href: '/#contact' },
 ];
 
 const LanguageToggle = ({ lang, onChange, t }) => {
@@ -89,7 +89,7 @@ export default function Navbar() {
 
                 {/* Center: Absolute centered Logo */}
                 <div className="absolute left-1/2 -translate-x-1/2 flex items-center">
-                    <a href="#" className="focus:outline-none flex items-center">
+                    <a href="/" className="focus:outline-none flex items-center">
                         <img
                             src="/logo.png"
                             alt={t.logoAlt}
@@ -117,7 +117,7 @@ export default function Navbar() {
                 {/* Right: Book Now button (desktop only) */}
                 <div className="flex items-center">
                     <a
-                        href="#contact"
+                        href="/#contact"
                         className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 bg-primary text-primary-foreground text-[10px] tracking-[0.2em] uppercase font-bold rounded-full hover:bg-primary/90 active:scale-95 transition-all shadow-md"
                     >
                         <span>{t.bookNow}</span>
@@ -155,7 +155,7 @@ export default function Navbar() {
                                     <LanguageToggle lang={lang} onChange={setLang} t={t} />
                                 </div>
                                 <a
-                                    href="#contact"
+                                    href="/#contact"
                                     onClick={() => setOpen(false)}
                                     className="w-full flex items-center justify-center py-3.5 bg-primary text-primary-foreground text-[11px] tracking-[0.25em] uppercase font-bold rounded-sm shadow-sm hover:bg-primary/90 transition-all"
                                 >

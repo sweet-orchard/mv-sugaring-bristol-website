@@ -110,7 +110,24 @@ export default function CoursesSection() {
                                 {t.onlineHeading}
                             </h3>
                             <p className="text-sm font-body text-background/70 leading-relaxed mb-4">{t.onlineParagraph1}</p>
-                            <p className="text-sm font-body text-background/70 leading-relaxed mb-8">{t.onlineParagraph2}</p>
+                            <p className="text-sm font-body text-background/70 leading-relaxed mb-6">{t.onlineParagraph2}</p>
+
+                            <div className="bg-background/5 border border-background/10 rounded-sm p-6 mb-8">
+                                <div className="flex items-end gap-3 mb-2">
+                                    <span className="font-display text-4xl font-semibold text-primary">{t.onlinePrice}</span>
+                                    <span className="text-lg text-background/50 line-through mb-1">{t.onlineOldPrice}</span>
+                                    <span className="text-xs font-semibold tracking-wider bg-primary text-background px-2 py-1 rounded-sm mb-1.5 ml-2">
+                                        {t.onlineDiscount}
+                                    </span>
+                                </div>
+                                <p className="text-sm font-body text-background/80 mb-6 flex items-start gap-2">
+                                    <span className="text-primary mt-0.5">✦</span>
+                                    {t.onlineConsultationOffer}
+                                </p>
+                                <a href="/course" className="w-full bg-primary hover:bg-primary/90 text-background font-medium py-3.5 px-6 rounded-sm transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                                    {t.learnMoreBtn}
+                                </a>
+                            </div>
 
                             <div className="flex gap-8">
                                 <div>
