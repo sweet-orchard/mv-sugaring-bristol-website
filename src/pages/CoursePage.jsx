@@ -70,16 +70,10 @@ export default function CoursePage() {
 
                         <a 
                             href="https://buy.stripe.com/test_6oUfZh9xidSn8RZ0zs2ZO00" 
-                            className="block w-full bg-primary hover:bg-primary/90 text-background font-medium py-4 rounded-sm transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5 mb-4 text-lg"
+                            className="block w-full bg-primary hover:bg-primary/90 text-background font-medium py-4 rounded-sm transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5 text-lg"
                         >
                             {t.buyNowBtn}
                         </a>
-                        <button 
-                            onClick={() => setIsContactModalOpen(true)} 
-                            className="text-xs text-primary font-medium hover:underline inline-flex items-center justify-center w-full focus:outline-none"
-                        >
-                            {t.questionsLink}
-                        </button>
                     </motion.div>
                 </section>
 
@@ -140,12 +134,12 @@ export default function CoursePage() {
                             <p className="text-muted-foreground font-body text-sm mb-4">
                                 {t.supportText}
                             </p>
-                            <a 
-                                href="/#contact"
-                                className="inline-block border border-primary/30 text-primary hover:bg-primary/5 px-6 py-2.5 rounded-sm transition-colors text-sm font-medium tracking-wide"
+                            <button 
+                                onClick={() => setIsContactModalOpen(true)}
+                                className="inline-block border border-primary/30 text-primary hover:bg-primary/5 px-6 py-2.5 rounded-sm transition-colors text-sm font-medium tracking-wide focus:outline-none"
                             >
                                 {t.supportLink}
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </section>
