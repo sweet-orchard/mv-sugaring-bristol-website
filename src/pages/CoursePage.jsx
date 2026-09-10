@@ -10,32 +10,6 @@ export default function CoursePage() {
     const { lang } = useLang();
     const t = translations[lang].coursePage;
 
-    // Countdown timer logic (e.g., 3 days from now)
-    const [timeLeft, setTimeLeft] = useState({ days: 3, hours: 14, minutes: 22, seconds: 59 });
-    
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setTimeLeft(prev => {
-                let { days, hours, minutes, seconds } = prev;
-                if (seconds > 0) { seconds--; }
-                else {
-                    seconds = 59;
-                    if (minutes > 0) { minutes--; }
-                    else {
-                        minutes = 59;
-                        if (hours > 0) { hours--; }
-                        else {
-                            hours = 23;
-                            if (days > 0) { days--; }
-                        }
-                    }
-                }
-                return { days, hours, minutes, seconds };
-            });
-        }, 1000);
-        return () => clearInterval(timer);
-    }, []);
-
     const [openFaq, setOpenFaq] = useState(null);
 
     return (
@@ -77,13 +51,7 @@ export default function CoursePage() {
                         transition={{ delay: 0.3 }}
                         className="bg-secondary/30 border border-primary/20 rounded-sm p-8 max-w-md mx-auto relative overflow-hidden"
                     >
-                        {/* Timer */}
-                        <div className="absolute top-0 left-0 w-full bg-primary text-background py-1.5 text-xs font-medium tracking-wider flex items-center justify-center gap-2">
-                            <Clock className="w-3.5 h-3.5" />
-                            {t.timerPrefix} {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-                        </div>
-
-                        <div className="mt-8 mb-6">
+                        <div className="mb-6">
                             <div className="flex justify-center items-end gap-3 mb-2">
                                 <span className="font-display text-5xl font-semibold text-foreground">{t.price}</span>
                                 <span className="text-xl text-muted-foreground line-through mb-1">{t.oldPrice}</span>
