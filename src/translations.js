@@ -488,7 +488,9 @@ const translations = {
           q: "How does the consultation bonus work?",
           a: "After purchasing, you will receive a special link to book a personal 1-on-1 session with me at half the regular price."
         }
-      ]
+      ],
+      supportText: "Contact me anytime if you have problems or any questions:",
+      supportLink: "Contact Support"
     },
 
     // ── Care Guide ────────────────────────────────────────────────────────
@@ -630,7 +632,10 @@ const translations = {
       subtext:
         "Ready to experience the ultimate in luxury sugaring? Get in touch to book your appointment or ask any questions.",
       locationLabel: "Location",
-      locationValue: "Bristol, England",
+      locationValue: "Bristol, UK",
+      locationNote: "Full address provided upon booking confirmation.",
+      whatsappLabel: "WhatsApp / Phone",
+      whatsappValue: "+44 7448 611080",
       emailLabel: "Email",
       availabilityLabel: "Availability",
       availabilityValue: "By appointment only",
@@ -1035,7 +1040,7 @@ const translations = {
       faceGuideSection1Bullet2:
         "Ті, хто обирає цю процедуру як глибоке очищення обличчя, щоб повернути шкірі свіжість, молодість та оновлений вигляд.",
       faceGuideSection1Para2:
-        "Проте, який би варіант ви не обрали, ви гарантовано отримуєте поєднання обох ефектів! Це абсолютний фаворит моїх клієнтів. Після такої процедури з'являється величезне бажання доглядати за собою, а будь-який домашній догляд (креми, сироватки) починає працювати в рази ефективніше, адже очищена шкіра здатна ввібрати максимум користі.",
+        "Проте, який б варіант ви не обрали, ви гарантовано отримуєте поєднання обох ефектів! Це абсолютний фаворит моїх клієнтів. Після такої процедури з'являється величезне бажання доглядати за собою, а будь-який домашній догляд (креми, сироватки) починає працювати в рази ефективніше, адже очищена шкіра здатна ввібрати максимум користі.",
       faceGuideSection1Quote:
         '«Я обожнюю ці відчуття і регулярно роблю шугаринг обличчя собі. Щоразу це справжній вау-ефект! Я дивлюся в дзеркало і думаю: "Невже це моя шкіра? Вона така ніжна, наче у моєї донечки". Ви точно кайфуватимете від свого відображення та насолоджуватиметеся кожним дотиком!»',
       faceGuideSection2Heading:
@@ -1183,7 +1188,9 @@ const translations = {
           q: "Як працює бонус на консультацію?",
           a: "Після покупки ви отримаєте посилання для бронювання індивідуальної сесії зі мною за півціни."
         }
-      ]
+      ],
+      supportText: "Напишіть мені в будь-який час, якщо у вас виникнуть проблеми або запитання:",
+      supportLink: "Зв'язатися з підтримкою"
     },
 
     care: {

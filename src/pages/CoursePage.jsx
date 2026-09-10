@@ -154,6 +154,19 @@ export default function CoursePage() {
                                 </div>
                             ))}
                         </div>
+
+                        {/* Support Section */}
+                        <div className="mt-16 text-center">
+                            <p className="text-muted-foreground font-body text-sm mb-4">
+                                {t.supportText}
+                            </p>
+                            <a 
+                                href="/#contact"
+                                className="inline-block border border-primary/30 text-primary hover:bg-primary/5 px-6 py-2.5 rounded-sm transition-colors text-sm font-medium tracking-wide"
+                            >
+                                {t.supportLink}
+                            </a>
+                        </div>
                     </div>
                 </section>
             </main>

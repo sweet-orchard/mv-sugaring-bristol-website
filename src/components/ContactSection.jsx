@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Mail, Clock, Send, Phone } from 'lucide-react';
 import { useLang } from '../context/LangContext';
 import translations from '../translations';
 
@@ -47,6 +47,16 @@ export default function ContactSection() {
                                     <h4 className="text-sm font-body font-semibold text-foreground mb-1">{t.locationLabel}</h4>
                                     <p className="text-sm text-muted-foreground">{t.locationValue}</p>
                                     {t.locationNote && <p className="text-xs text-muted-foreground/60 mt-1">{t.locationNote}</p>}
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4 items-start">
+                                <div className="w-10 h-10 shrink-0 rounded-sm bg-primary/10 flex items-center justify-center">
+                                    <Phone className="w-4 h-4 text-primary" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1">{t.whatsappLabel}</h4>
+                                    <a href="https://wa.me/447448611080" className="text-sm text-primary hover:underline">{t.whatsappValue}</a>
                                 </div>
                             </div>
 
