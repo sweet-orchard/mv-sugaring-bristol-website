@@ -507,7 +507,7 @@ export default function ServicesSection() {
     
     const { inclusions, durationNotes, categories } = getServicesData(t);
 
-    const [activeTab, setActiveTab] = useState('bikini');
+    const [activeTab, setActiveTab] = useState('face');
     const [notesOpen, setNotesOpen] = useState(false);
 
     const active = categories.find(c => c.id === activeTab);
