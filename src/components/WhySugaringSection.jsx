@@ -1,20 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, Zap, ShieldCheck, RefreshCw } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 const icons = [Leaf, Zap, ShieldCheck, RefreshCw];
 
 export default function WhySugaringSection() {
-    const { lang } = useLang();
-    const t = translations[lang].why;
+    const { t, lang } = useContent();
+    
 
     const benefits = [
-        { icon: Leaf,       title: t.benefit1Title, desc: t.benefit1Desc },
-        { icon: Zap,        title: t.benefit2Title, desc: t.benefit2Desc },
-        { icon: ShieldCheck,title: t.benefit3Title, desc: t.benefit3Desc },
-        { icon: RefreshCw,  title: t.benefit4Title, desc: t.benefit4Desc },
+        { icon: Leaf,       title: t("WHY_BENEFIT_1_TITLE"), desc: t("WHY_BENEFIT_1_DESC") },
+        { icon: Zap,        title: t("WHY_BENEFIT_2_TITLE"), desc: t("WHY_BENEFIT_2_DESC") },
+        { icon: ShieldCheck,title: t("WHY_BENEFIT_3_TITLE"), desc: t("WHY_BENEFIT_3_DESC") },
+        { icon: RefreshCw,  title: t("WHY_BENEFIT_4_TITLE"), desc: t("WHY_BENEFIT_4_DESC") },
     ];
 
     return (
@@ -29,15 +28,13 @@ export default function WhySugaringSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="WHY_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">
-                        {t.heading.replace('?', '')} <span className="font-semibold italic">?</span>
+                        {t("WHY_HEADING").replace('?', '')} <span className="font-semibold italic">?</span>
                     </h2>
-                    <p className="max-w-2xl mx-auto text-sm font-body text-muted-foreground leading-relaxed">
-                        {t.subtext}
-                    </p>
+                    <p className="max-w-2xl mx-auto text-sm font-body text-muted-foreground leading-relaxed"><T id="BLOG_POST_1_EXCERPT" /></p>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-8">
@@ -67,9 +64,7 @@ export default function WhySugaringSection() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-center mt-16"
                 >
-                    <p className="font-display text-xl md:text-2xl italic text-foreground/60 max-w-2xl mx-auto">
-                        {t.closingQuote}
-                    </p>
+                    <p className="font-display text-xl md:text-2xl italic text-foreground/60 max-w-2xl mx-auto"><T id="WHY_CLOSING_QUOTE" /></p>
                 </motion.div>
             </div>
         </section>

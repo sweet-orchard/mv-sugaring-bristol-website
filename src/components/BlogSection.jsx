@@ -1,16 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ImageIcon } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 export default function BlogSection() {
-    const { lang } = useLang();
-    const t = translations[lang].blog;
+    const { t, lang } = useContent();
+    
 
     const posts = [
-        { title: t.post1Title, excerpt: t.post1Excerpt, tag: t.post1Tag },
-        { title: t.post2Title, excerpt: t.post2Excerpt, tag: t.post2Tag },
+        { title: t("BLOG_POST_1_TITLE"), excerpt: t("BLOG_POST_1_EXCERPT"), tag: t("BLOG_POST_1_TAG") },
+        { title: t("BLOG_POST_2_TITLE"), excerpt: t("BLOG_POST_2_EXCERPT"), tag: t("BLOG_POST_2_TAG") },
     ];
 
     return (
@@ -25,12 +24,10 @@ export default function BlogSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="BLOG_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
-                        {t.heading}
-                    </h2>
+                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground"><T id="BLOG_HEADING" /></h2>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -60,8 +57,7 @@ export default function BlogSection() {
                                 {post.title}
                             </h3>
                             <p className="text-sm text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
-                            <span className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-primary font-medium group-hover:gap-3 transition-all">
-                                {t.readMore} <ArrowRight className="w-3.5 h-3.5" />
+                            <span className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-primary font-medium group-hover:gap-3 transition-all"><T id="BLOG_READ_MORE" /><ArrowRight className="w-3.5 h-3.5" />
                             </span>
                         </motion.article>
                     ))}

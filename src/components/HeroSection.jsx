@@ -1,12 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Play, Pause } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 export default function HeroSection() {
-    const { lang } = useLang();
-    const t = translations[lang].hero;
+    const { t, lang } = useContent();
+    
     const [isPlaying, setIsPlaying] = useState(true);
     const desktopVideoRef = useRef(null);
     const mobileVideoRef = useRef(null);
@@ -51,43 +50,29 @@ export default function HeroSection() {
                     >
                         <div className="flex items-center gap-3 mb-6">
                             <div className="h-px w-12 bg-primary/60" />
-                            <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
+                            <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="HERO_EYEBROW" /></span>
                         </div>
 
-                        <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] text-foreground mb-3">
-                            {t.headingLine1}
-                        </h1>
-                        <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] text-foreground mb-6">
-                            {t.headingLine2}
-                        </h1>
+                        <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] text-foreground mb-3"><T id="HERO_HEADING_LINE_1" /></h1>
+                        <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] text-foreground mb-6"><T id="HERO_HEADING_LINE_2" /></h1>
 
-                        <p className="font-display italic text-xl md:text-2xl text-primary/80 mb-6 leading-relaxed max-w-xl">
-                            {t.quote}
-                        </p>
+                        <p className="font-display italic text-xl md:text-2xl text-primary/80 mb-6 leading-relaxed max-w-xl"><T id="HERO_QUOTE" /></p>
 
-                        <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl mb-3">
-                            {t.paragraph1}
-                        </p>
+                        <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl mb-3"><T id="HERO_PARAGRAPH_1" /></p>
 
-                        <p className="text-sm font-body text-foreground/70 leading-relaxed max-w-xl mb-10">
-                            {t.paragraph2}
-                        </p>
+                        <p className="text-sm font-body text-foreground/70 leading-relaxed max-w-xl mb-10"><T id="HERO_PARAGRAPH_2" /></p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-12">
                             <a
                                 href="#contact"
                                 onClick={(e) => scrollToSection(e, 'contact')}
                                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:bg-primary/90 transition-all duration-300"
-                            >
-                                {t.ctaBook}
-                            </a>
+                            ><T id="CONTACT_HEADING" /></a>
                             <a
                                 href="#about"
                                 onClick={(e) => scrollToSection(e, 'about')}
                                 className="inline-flex items-center justify-center px-8 py-4 border border-foreground/20 text-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:border-primary hover:text-primary transition-all duration-300"
-                            >
-                                {t.ctaAbout}
-                            </a>
+                            ><T id="ABOUT_SECTION_EYEBROW" /></a>
                         </div>
 
 
@@ -131,7 +116,7 @@ export default function HeroSection() {
                                 <button
                                     onClick={togglePlay}
                                     className="absolute top-4 right-4 z-20 bg-background/80 backdrop-blur-md border border-border/40 hover:bg-background hover:text-primary text-foreground w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-md focus:outline-none"
-                                    aria-label={isPlaying ? t.pauseVideo : t.playVideo}
+                                    aria-label={isPlaying ? t("HERO_VIDEO_PAUSE_ARIA") : t("HERO_VIDEO_PLAY_ARIA")}
                                 >
                                     {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                                 </button>
@@ -154,7 +139,7 @@ export default function HeroSection() {
                         onClick={(e) => scrollToSection(e, 'about')}
                         className="flex flex-col items-center gap-2 text-muted-foreground/50 hover:text-primary transition-colors"
                     >
-                        <span className="text-[9px] tracking-[0.3em] pl-[0.3em] uppercase">{t.scroll}</span>
+                        <span className="text-[9px] tracking-[0.3em] pl-[0.3em] uppercase"><T id="HERO_SCROLL_LABEL" /></span>
                         <ChevronDown className="w-4 h-4" />
                     </a>
                 </motion.div>

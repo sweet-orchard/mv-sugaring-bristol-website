@@ -1,6 +1,5 @@
 import { Sparkles, Droplet, Ban, Shirt, Flame, GlassWater } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 const HairIcon = ({ className }) => (
     <svg
@@ -20,21 +19,21 @@ const HairIcon = ({ className }) => (
 );
 
 export default function CareGuideSection() {
-    const { lang } = useLang();
-    const t = translations[lang].care;
+    const { t, lang } = useContent();
+    
 
     const beforeRules = [
-        { icon: <HairIcon className="w-5 h-5 text-primary" />, title: t.before1Title, desc: t.before1Desc },
-        { icon: <Sparkles className="w-5 h-5 text-primary" />, title: t.before2Title, desc: t.before2Desc },
-        { icon: <Droplet className="w-5 h-5 text-primary" />,  title: t.before3Title, desc: t.before3Desc },
-        { icon: <Ban className="w-5 h-5 text-primary" />,     title: t.before4Title, desc: t.before4Desc },
+        { icon: <HairIcon className="w-5 h-5 text-primary" />, title: t("CARE_BEFORE_1_TITLE"), desc: t("CARE_BEFORE_1_DESC") },
+        { icon: <Sparkles className="w-5 h-5 text-primary" />, title: t("CARE_BEFORE_2_TITLE"), desc: t("CARE_BEFORE_2_DESC") },
+        { icon: <Droplet className="w-5 h-5 text-primary" />,  title: t("CARE_BEFORE_3_TITLE"), desc: t("CARE_BEFORE_3_DESC") },
+        { icon: <Ban className="w-5 h-5 text-primary" />,     title: t("CARE_BEFORE_4_TITLE"), desc: t("CARE_BEFORE_4_DESC") },
     ];
 
     const afterRules = [
-        { icon: <Shirt className="w-5 h-5 text-primary" />,      title: t.after1Title, desc: t.after1Desc },
-        { icon: <Flame className="w-5 h-5 text-primary" />,      title: t.after2Title, desc: t.after2Desc },
-        { icon: <Ban className="w-5 h-5 text-primary" />,        title: t.after3Title, desc: t.after3Desc },
-        { icon: <GlassWater className="w-5 h-5 text-primary" />, title: t.after4Title, desc: t.after4Desc },
+        { icon: <Shirt className="w-5 h-5 text-primary" />,      title: t("CARE_AFTER_1_TITLE"), desc: t("CARE_AFTER_1_DESC") },
+        { icon: <Flame className="w-5 h-5 text-primary" />,      title: t("CARE_AFTER_2_TITLE"), desc: t("CARE_AFTER_2_DESC") },
+        { icon: <Ban className="w-5 h-5 text-primary" />,        title: t("CARE_AFTER_3_TITLE"), desc: t("CARE_AFTER_3_DESC") },
+        { icon: <GlassWater className="w-5 h-5 text-primary" />, title: t("CARE_AFTER_4_TITLE"), desc: t("CARE_AFTER_4_DESC") },
     ];
 
     return (
@@ -49,15 +48,11 @@ export default function CareGuideSection() {
                 <div className="text-center mb-16 lg:mb-20">
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium font-body">{t.eyebrow}</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium font-body"><T id="CARE_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-4">
-                        {t.heading}
-                    </h2>
-                    <p className="max-w-2xl mx-auto text-sm text-muted-foreground leading-relaxed font-body">
-                        {t.subtext}
-                    </p>
+                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-4"><T id="CARE_HEADING" /></h2>
+                    <p className="max-w-2xl mx-auto text-sm text-muted-foreground leading-relaxed font-body"><T id="CARE_SUBTEXT" /></p>
                 </div>
 
                 {/* Symmetrical Grid layout */}
@@ -66,8 +61,8 @@ export default function CareGuideSection() {
                     {/* COLUMN 1: BEFORE THE SESSION */}
                     <div className="bg-background/80 backdrop-blur-sm border border-border/40 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
-                            <h3 className="font-display text-2xl font-semibold text-foreground">{t.beforeTitle}</h3>
-                            <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5">{t.beforeSubtitle}</p>
+                            <h3 className="font-display text-2xl font-semibold text-foreground"><T id="CARE_BEFORE_TITLE" /></h3>
+                            <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_BEFORE_SUBTITLE" /></p>
                         </div>
 
                         <div className="space-y-6">
@@ -88,8 +83,8 @@ export default function CareGuideSection() {
                     {/* COLUMN 2: AFTER THE SESSION */}
                     <div className="bg-background/80 backdrop-blur-sm border border-border/40 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
-                            <h3 className="font-display text-2xl font-semibold text-foreground">{t.afterTitle}</h3>
-                            <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5">{t.afterSubtitle}</p>
+                            <h3 className="font-display text-2xl font-semibold text-foreground"><T id="CARE_AFTER_TITLE" /></h3>
+                            <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_AFTER_SUBTITLE" /></p>
                         </div>
 
                         <div className="space-y-6">
@@ -111,9 +106,7 @@ export default function CareGuideSection() {
 
                 {/* Bottom luxury reminder */}
                 <div className="max-w-2xl mx-auto mt-16 text-center">
-                    <p className="font-display italic text-lg text-primary/80 leading-relaxed">
-                        {t.closingQuote}
-                    </p>
+                    <p className="font-display italic text-lg text-primary/80 leading-relaxed"><T id="CARE_CLOSING_QUOTE" /></p>
                 </div>
 
             </div>

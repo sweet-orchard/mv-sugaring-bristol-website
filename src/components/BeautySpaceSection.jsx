@@ -1,17 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ShieldCheck, Heart } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 export default function BeautySpaceSection() {
-    const { lang } = useLang();
-    const t = translations[lang].space;
+    const { t, lang } = useContent();
+    
 
     const highlights = [
-        { icon: ShieldCheck, title: t.highlight1Title, desc: t.highlight1Desc },
-        { icon: Heart,       title: t.highlight2Title, desc: t.highlight2Desc },
-        { icon: Sparkles,    title: t.highlight3Title, desc: t.highlight3Desc },
+        { icon: ShieldCheck, title: t("SPACE_HIGHLIGHT_1_TITLE"), desc: t("SPACE_HIGHLIGHT_1_DESC") },
+        { icon: Heart,       title: t("SPACE_HIGHLIGHT_2_TITLE"), desc: t("SPACE_HIGHLIGHT_2_DESC") },
+        { icon: Sparkles,    title: t("SPACE_HIGHLIGHT_3_TITLE"), desc: t("SPACE_HIGHLIGHT_3_DESC") },
     ];
 
     return (
@@ -30,12 +29,10 @@ export default function BeautySpaceSection() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">{t.eyebrow}</p>
-                            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight">
-                                {t.heading}
-                            </h2>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">{t.paragraph1}</p>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-8">{t.paragraph2}</p>
+                            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="SPACE_EYEBROW" /></p>
+                            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight"><T id="SPACE_HEADING" /></h2>
+                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6"><T id="SPACE_PARAGRAPH_1" /></p>
+                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-8"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
                         </motion.div>
 
                         {/* Highlights list */}
@@ -75,12 +72,12 @@ export default function BeautySpaceSection() {
                             >
                                 <img 
                                     src="/room-pictures/cozy-room.jpg" 
-                                    alt={t.imageAlt1} 
+                                    alt={t("SPACE_IMAGE_ALT_1")} 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-xs text-white uppercase tracking-widest font-body">{t.imageHover1}</span>
+                                    <span className="text-xs text-white uppercase tracking-widest font-body"><T id="SPACE_IMAGE_HOVER_1" /></span>
                                 </div>
                             </motion.div>
 
@@ -94,12 +91,12 @@ export default function BeautySpaceSection() {
                             >
                                 <img 
                                     src="/room-pictures/premium-products.jpg" 
-                                    alt={t.imageAlt2} 
+                                    alt={t("SPACE_IMAGE_ALT_2")} 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-xs text-white uppercase tracking-widest font-body">{t.imageHover2}</span>
+                                    <span className="text-xs text-white uppercase tracking-widest font-body"><T id="SPACE_IMAGE_HOVER_2" /></span>
                                 </div>
                             </motion.div>
 
@@ -113,12 +110,12 @@ export default function BeautySpaceSection() {
                             >
                                 <img 
                                     src="/room-pictures/clean-materials.jpg" 
-                                    alt={t.imageAlt3} 
+                                    alt={t("SPACE_IMAGE_ALT_3")} 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                     loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <span className="text-xs text-white uppercase tracking-widest font-body">{t.imageHover3}</span>
+                                    <span className="text-xs text-white uppercase tracking-widest font-body"><T id="SPACE_IMAGE_HOVER_3" /></span>
                                 </div>
                             </motion.div>
 

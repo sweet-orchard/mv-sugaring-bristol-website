@@ -2,144 +2,144 @@ import { Heart, Sparkles, ArrowDown, Smile } from 'lucide-react';
 
 export const getServicesData = (t) => ({
     inclusions: [
-        { title: t.inclusion1Title, desc: t.inclusion1Desc },
-        { title: t.inclusion2Title, desc: t.inclusion2Desc },
-        { title: t.inclusion3Title, desc: t.inclusion3Desc },
+        { title: t("SERVICES_INCLUSION_1_TITLE"), desc: t("SERVICES_INCLUSION_1_DESC") },
+        { title: t("SERVICES_INCLUSION_2_TITLE"), desc: t("SERVICES_INCLUSION_2_DESC") },
+        { title: t("SERVICES_INCLUSION_3_TITLE"), desc: t("SERVICES_INCLUSION_3_DESC") },
     ],
     durationNotes: [
-        { title: t.durationNote1Title, desc: t.durationNote1Desc },
-        { title: t.durationNote2Title, desc: t.durationNote2Desc },
-        { title: t.durationNote3Title, desc: t.durationNote3Desc },
-        { title: t.durationNote4Title, desc: t.durationNote4Desc },
-        { title: t.durationNote5Title, desc: t.durationNote5Desc },
-        { title: t.durationNote6Title, desc: t.durationNote6Desc },
+        { title: t("DURATION_NOTE_1_TITLE"), desc: t("DURATION_NOTE_1_DESC") },
+        { title: t("DURATION_NOTE_2_TITLE"), desc: t("DURATION_NOTE_2_DESC") },
+        { title: t("DURATION_NOTE_3_TITLE"), desc: t("DURATION_NOTE_3_DESC") },
+        { title: t("DURATION_NOTE_4_TITLE"), desc: t("DURATION_NOTE_4_DESC") },
+        { title: t("DURATION_NOTE_5_TITLE"), desc: t("DURATION_NOTE_5_DESC") },
+        { title: t("DURATION_NOTE_6_TITLE"), desc: t("DURATION_NOTE_6_DESC") },
     ],
     categories: [
         {
             id: 'face',
-            label: t.tabFace,
-            fullLabel: t.faceFullLabel,
+            label: t("SERVICES_TAB_FACE"),
+            fullLabel: t("CONTACT_FORM_OPTGROUP_FACE"),
             Icon: Smile,
             beforeImage: null,
             afterImage: null,
-            tagline: t.faceTagline,
+            tagline: t("FACE_TAGLINE"),
             groups: [
                 {
-                    groupName: t.faceGroupIndividual,
+                    groupName: t("FACE_GROUP_INDIVIDUAL"),
                     items: [
-                        { name: t.faceService1Name, price: '£15', duration: t.faceService1Duration, desc: t.faceService1Desc, image: '/price-list/face/upper lip.webp' },
-                        { name: t.faceService2Name, price: '£15', duration: t.faceService2Duration, desc: t.faceService2Desc, image: '/price-list/face/chin.webp' },
-                        { name: t.faceService3Name, price: '£20', duration: t.faceService3Duration, desc: t.faceService3Desc, image: '/price-list/face/nose pores.webp' },
-                        { name: t.faceService4Name, price: '£15', duration: t.faceService4Duration, desc: t.faceService4Desc, image: '/price-list/face/nostrils.webp' },
-                        { name: t.faceService5Name, price: '£30', duration: t.faceService5Duration, desc: t.faceService5Desc, image: '/price-list/face/eyebrows.webp' },
-                        { name: t.faceService6Name, price: '£20', duration: t.faceService6Duration, desc: t.faceService6Desc, image: '/price-list/face/sideburns.webp' },
-                        { name: t.faceService7Name, price: '£15', duration: t.faceService7Duration, desc: t.faceService7Desc, image: '/price-list/face/neck.webp' },
-                        { name: t.faceService8Name, price: '£15', duration: t.faceService8Duration, desc: t.faceService8Desc, image: '/price-list/face/nape.webp' },
+                        { name: t("FACE_SERVICE_1_NAME"), price: t("PRICE_ITEM_1"), duration: t("FACE_SERVICE_1_DURATION"), desc: t("FACE_SERVICE_1_DESC"), image: '/price-list/face/upper lip.webp' },
+                        { name: t("FACE_SERVICE_2_NAME"), price: t("PRICE_ITEM_2"), duration: t("FACE_SERVICE_2_DURATION"), desc: t("FACE_SERVICE_2_DESC"), image: '/price-list/face/chin.webp' },
+                        { name: t("FACE_SERVICE_3_NAME"), price: t("PRICE_ITEM_3"), duration: t("FACE_SERVICE_8_DURATION"), desc: t("FACE_SERVICE_3_DESC"), image: '/price-list/face/nose pores.webp' },
+                        { name: t("FACE_SERVICE_4_NAME"), price: t("PRICE_ITEM_4"), duration: t("FACE_SERVICE_8_DURATION"), desc: t("FACE_SERVICE_4_DESC"), image: '/price-list/face/nostrils.webp' },
+                        { name: t("FACE_SERVICE_5_NAME"), price: t("PRICE_ITEM_5"), duration: t("FACE_SERVICE_5_DURATION"), desc: t("FACE_SERVICE_5_DESC"), image: '/price-list/face/eyebrows.webp' },
+                        { name: t("FACE_SERVICE_6_NAME"), price: t("PRICE_ITEM_6"), duration: t("FACE_SERVICE_6_DURATION"), desc: t("FACE_SERVICE_6_DESC"), image: '/price-list/face/sideburns.webp' },
+                        { name: t("FACE_SERVICE_7_NAME"), price: t("PRICE_ITEM_7"), duration: t("FACE_SERVICE_8_DURATION"), desc: t("FACE_SERVICE_7_DESC"), image: '/price-list/face/neck.webp' },
+                        { name: t("FACE_SERVICE_8_NAME"), price: t("PRICE_ITEM_8"), duration: t("FACE_SERVICE_8_DURATION"), desc: t("FACE_SERVICE_8_DESC"), image: '/price-list/face/nape.webp' },
                     ]
                 },
                 {
-                    groupName: t.faceGroupCombos,
+                    groupName: t("FACE_GROUP_COMBOS"),
                     isPackages: true,
                     items: [
-                        { name: t.faceCombo1Name, price: '£30', duration: t.faceCombo1Duration, badge: t.faceCombo1Badge, desc: t.faceCombo1Desc, image: '/price-list/face/combo1-lower face care.webp' },
-                        { name: t.faceCombo2Name, price: '£30', duration: t.faceCombo2Duration, desc: t.faceCombo2Desc, image: '/price-list/face/combo2-complete nose care.webp' },
-                        { name: t.faceCombo3Name, price: '£40', duration: t.faceCombo3Duration, desc: t.faceCombo3Desc, image: '/price-list/face/combo3-t xone tratment.webp' },
-                        { name: t.faceCombo4Name, price: '£40', duration: t.faceCombo4Duration, badge: t.faceCombo4Badge, desc: t.faceCombo4Desc, image: '/price-list/face/combo4 - perfect facial contour.webp' },
+                        { name: t("FACE_COMBO_1_NAME"), price: t("PRICE_ITEM_9"), duration: t("FACE_COMBO_1_DURATION"), badge: t("FACE_COMBO_1_BADGE"), desc: t("FACE_COMBO_1_DESC"), image: '/price-list/face/combo1-lower face care.webp' },
+                        { name: t("FACE_COMBO_2_NAME"), price: t("PRICE_ITEM_10"), duration: t("FACE_COMBO_2_DURATION"), desc: t("FACE_COMBO_2_DESC"), image: '/price-list/face/combo2-complete nose care.webp' },
+                        { name: t("FACE_COMBO_3_NAME"), price: t("PRICE_ITEM_11"), duration: t("FACE_COMBO_3_DURATION"), desc: t("FACE_COMBO_3_DESC"), image: '/price-list/face/combo3-t xone tratment.webp' },
+                        { name: t("FACE_COMBO_4_NAME"), price: t("PRICE_ITEM_12"), duration: t("FACE_COMBO_4_DURATION"), badge: t("FACE_COMBO_4_BADGE"), desc: t("FACE_COMBO_4_DESC"), image: '/price-list/face/combo4 - perfect facial contour.webp' },
                     ]
                 },
                 {
-                    groupName: t.faceGroupPremium,
+                    groupName: t("FACE_GROUP_PREMIUM"),
                     isPackages: true,
                     isPremium: true,
                     items: [
-                        { name: t.facePremium1Name, price: '£70', duration: t.facePremium1Duration, desc: t.facePremium1Desc, image: '/price-list/face/premium 1.webp' },
-                        { name: t.facePremium2Name, price: '£80', duration: t.facePremium2Duration, desc: t.facePremium2Desc, image: '/price-list/face/premium 2.webp' },
-                        { name: t.facePremium3Name, price: '£80', duration: t.facePremium3Duration, desc: t.facePremium3Desc, image: '/price-list/face/premium 3.webp' },
+                        { name: t("FACE_PREMIUM_1_NAME"), price: t("PRICE_ITEM_13"), duration: t("FACE_PREMIUM_1_DURATION"), desc: t("FACE_PREMIUM_1_DESC"), image: '/price-list/face/premium 1.webp' },
+                        { name: t("FACE_PREMIUM_2_NAME"), price: t("PRICE_ITEM_14"), duration: t("FACE_PREMIUM_3_DURATION"), desc: t("FACE_PREMIUM_2_DESC"), image: '/price-list/face/premium 2.webp' },
+                        { name: t("FACE_PREMIUM_3_NAME"), price: t("PRICE_ITEM_15"), duration: t("FACE_PREMIUM_3_DURATION"), desc: t("FACE_PREMIUM_3_DESC"), image: '/price-list/face/premium 3.webp' },
                     ]
                 }
             ]
         },
         {
             id: 'upper',
-            label: t.tabUpper,
-            fullLabel: t.upperFullLabel,
+            label: t("SERVICES_TAB_UPPER"),
+            fullLabel: t("CONTACT_FORM_OPTGROUP_UPPER"),
             Icon: Sparkles,
             beforeImage: null,
             afterImage: null,
-            tagline: t.upperTagline,
+            tagline: t("UPPER_TAGLINE"),
             groups: [
                 {
                     groupName: null,
                     items: [
-                        { name: t.upperService1Name, price: '£20', duration: t.upperService1Duration, desc: t.upperService1Desc, image: '/price-list/upper-body/underarms.png' },
-                        { name: t.upperService2Name, price: '£50', duration: t.upperService2Duration, desc: t.upperService2Desc, image: '/price-list/upper-body/full arms.png' },
-                        { name: t.upperService3Name, price: '£40', duration: t.upperService3Duration, desc: t.upperService3Desc, image: '/price-list/upper-body/half arms.png' },
-                        { name: t.upperService4Name, price: '£30', duration: t.upperService4Duration, desc: t.upperService4Desc, image: '/price-list/upper-body/stomach.png' },
+                        { name: t("CONTACT_FORM_OPTION_UNDERARMS"), price: t("PRICE_ITEM_16"), duration: t("UPPER_SERVICE_1_DURATION"), desc: t("UPPER_SERVICE_1_DESC"), image: '/price-list/upper-body/underarms.png' },
+                        { name: t("UPPER_SERVICE_2_NAME"), price: t("PRICE_ITEM_17"), duration: t("UPPER_SERVICE_2_DURATION"), desc: t("UPPER_SERVICE_2_DESC"), image: '/price-list/upper-body/full arms.png' },
+                        { name: t("UPPER_SERVICE_3_NAME"), price: t("PRICE_ITEM_18"), duration: t("DOWN_SERVICE_5_DURATION"), desc: t("UPPER_SERVICE_3_DESC"), image: '/price-list/upper-body/half arms.png' },
+                        { name: t("CONTACT_FORM_OPTION_STOMACH"), price: t("PRICE_ITEM_19"), duration: t("DOWN_SERVICE_4_DURATION"), desc: t("UPPER_SERVICE_4_DESC"), image: '/price-list/upper-body/stomach.png' },
                     ]
                 },
                 {
-                    groupName: t.bikiniAddonGroupName,
+                    groupName: t("BIKINI_ADDON_GROUP_NAME"),
                     isAddOn: true,
                     items: [
-                        { name: t.upperAddon1Name, price: '£5', duration: t.upperAddon1Duration, desc: t.upperAddon1Desc, isAddOn: true, placeholderLabel: 'Nipple Area Graphic' },
-                        { name: t.upperAddon2Name, price: '£10', duration: t.upperAddon2Duration, desc: t.upperAddon2Desc, isAddOn: true, placeholderLabel: 'Fingers Graphic' },
+                        { name: t("UPPER_ADDON_1_NAME"), price: t("PRICE_ITEM_20"), duration: t("UPPER_ADDON_2_DURATION"), desc: t("UPPER_ADDON_1_DESC"), isAddOn: true, placeholderLabel: 'Nipple Area Graphic' },
+                        { name: t("UPPER_ADDON_2_NAME"), price: t("PRICE_ITEM_21"), duration: t("UPPER_ADDON_2_DURATION"), desc: t("UPPER_ADDON_2_DESC"), isAddOn: true, placeholderLabel: 'Fingers Graphic' },
                     ]
                 }
             ]
         },
         {
             id: 'down',
-            label: t.tabDown,
-            fullLabel: t.downFullLabel,
+            label: t("SERVICES_TAB_DOWN"),
+            fullLabel: t("CONTACT_FORM_OPTGROUP_DOWN"),
             Icon: ArrowDown,
             beforeImage: null,
             afterImage: null,
-            tagline: t.downTagline,
+            tagline: t("DOWN_TAGLINE"),
             groups: [
                 {
                     groupName: null,
                     items: [
-                        { name: t.downService1Name, price: '£60', duration: t.downService1Duration, desc: t.downService1Desc, image: '/price-list/lower-body/full legs.png' },
-                        { name: t.downService2Name, price: '£40', duration: t.downService2Duration, desc: t.downService2Desc, image: '/price-list/lower-body/half legs.png' },
-                        { name: t.downService3Name, price: '£25', duration: t.downService3Duration, desc: t.downService3Desc, image: '/price-list/lower-body/buttocks.png' },
-                        { name: t.downService4Name, price: '£25', duration: t.downService4Duration, desc: t.downService4Desc, image: '/price-list/lower-body/lower back.png' },
-                        { name: t.downService5Name, price: '£40', badge: t.downService5Badge, duration: t.downService5Duration, desc: t.downService5Desc, image: '/price-list/lower-body/lower back and buttocks.png' },
+                        { name: t("DOWN_SERVICE_1_NAME"), price: t("PRICE_ITEM_22"), duration: t("DOWN_SERVICE_1_DURATION"), desc: t("DOWN_SERVICE_1_DESC"), image: '/price-list/lower-body/full legs.png' },
+                        { name: t("DOWN_SERVICE_2_NAME"), price: t("PRICE_ITEM_23"), duration: t("DOWN_SERVICE_2_DURATION"), desc: t("DOWN_SERVICE_2_DESC"), image: '/price-list/lower-body/half legs.png' },
+                        { name: t("DOWN_SERVICE_3_NAME"), price: t("PRICE_ITEM_24"), duration: t("DOWN_SERVICE_4_DURATION"), desc: t("DOWN_SERVICE_3_DESC"), image: '/price-list/lower-body/buttocks.png' },
+                        { name: t("DOWN_SERVICE_4_NAME"), price: t("PRICE_ITEM_25"), duration: t("DOWN_SERVICE_4_DURATION"), desc: t("DOWN_SERVICE_4_DESC"), image: '/price-list/lower-body/lower back.png' },
+                        { name: t("DOWN_SERVICE_5_NAME"), price: t("PRICE_ITEM_26"), badge: t("DOWN_SERVICE_5_BADGE"), duration: t("DOWN_SERVICE_5_DURATION"), desc: t("DOWN_SERVICE_5_DESC"), image: '/price-list/lower-body/lower back and buttocks.png' },
                     ]
                 },
                 {
-                    groupName: t.bikiniAddonGroupName,
+                    groupName: t("BIKINI_ADDON_GROUP_NAME"),
                     isAddOn: true,
                     items: [
-                        { name: t.downAddon1Name, price: '£10', duration: t.downAddon1Duration, desc: t.downAddon1Desc, isAddOn: true, placeholderLabel: 'Toes Graphic' },
+                        { name: t("DOWN_ADDON_1_NAME"), price: t("PRICE_ITEM_27"), duration: t("DOWN_ADDON_1_DURATION"), desc: t("DOWN_ADDON_1_DESC"), isAddOn: true, placeholderLabel: 'Toes Graphic' },
                     ]
                 }
             ]
         },
         {
             id: 'bikini',
-            label: t.tabBikini,
-            fullLabel: t.bikiniFullLabel,
+            label: t("SERVICES_TAB_BIKINI"),
+            fullLabel: t("CONTACT_FORM_OPTGROUP_BIKINI"),
             Icon: Heart,
             beforeImage: null,
             afterImage: null,
-            tagline: t.bikiniTagline,
+            tagline: t("BIKINI_TAGLINE"),
             groups: [
                 {
                     groupName: null,
                     items: [
-                        { name: t.bikiniService1Name, price: '£45', badge: t.bikiniService1Badge, duration: t.bikiniService1Duration, desc: t.bikiniService1Desc, image: '/price-list/bikini/hollywood-bikini.jpeg' },
-                        { name: t.bikiniService2Name, price: '£45', duration: t.bikiniService2Duration, desc: t.bikiniService2Desc, image: '/price-list/bikini/brazilian-bikini.jpeg' },
-                        { name: t.bikiniService3Name, price: '£35', duration: t.bikiniService3Duration, desc: t.bikiniService3Desc, image: '/price-list/bikini/g-string-bikini.jpeg' },
-                        { name: t.bikiniService4Name, price: '£25', duration: t.bikiniService4Duration, desc: t.bikiniService4Desc, image: '/price-list/bikini/basic-bikini.jpg' },
+                        { name: t("BIKINI_SERVICE_1_NAME"), price: t("PRICE_ITEM_28"), badge: t("FACE_COMBO_1_BADGE"), duration: t("BIKINI_SERVICE_2_DURATION"), desc: t("BIKINI_SERVICE_1_DESC"), image: '/price-list/bikini/hollywood-bikini.jpeg' },
+                        { name: t("BIKINI_SERVICE_2_NAME"), price: t("PRICE_ITEM_29"), duration: t("BIKINI_SERVICE_2_DURATION"), desc: t("BIKINI_SERVICE_2_DESC"), image: '/price-list/bikini/brazilian-bikini.jpeg' },
+                        { name: t("CONTACT_FORM_OPTION_GSTRING"), price: t("PRICE_ITEM_30"), duration: t("DOWN_SERVICE_5_DURATION"), desc: t("BIKINI_SERVICE_3_DESC"), image: '/price-list/bikini/g-string-bikini.jpeg' },
+                        { name: t("CONTACT_FORM_OPTION_BASIC_BIKINI"), price: t("PRICE_ITEM_31"), duration: t("BIKINI_SERVICE_4_DURATION"), desc: t("BIKINI_SERVICE_4_DESC"), image: '/price-list/bikini/basic-bikini.jpg' },
                     ]
                 },
                 {
-                    groupName: t.bikiniAddonGroupName,
+                    groupName: t("BIKINI_ADDON_GROUP_NAME"),
                     isAddOn: true,
                     items: [
-                        { name: t.bikiniAddon1Name, price: '+£5 to £20', desc: t.bikiniAddon1Desc, extendedDesc: t.bikiniAddon1ExtendedDesc, isAddOn: true, placeholderLabel: 'Extra Long Hair Graphic' },
-                        { name: t.bikiniAddon2Name, price: '£5', desc: t.bikiniAddon2Desc, extendedDesc: t.bikiniAddon2ExtendedDesc, isAddOn: true, placeholderLabel: 'Extra Patch Graphic' },
-                        { name: t.bikiniAddon3Name, price: '£5', desc: t.bikiniAddon3Desc, isAddOn: true, placeholderLabel: 'Belly Line Graphic' },
+                        { name: t("BIKINI_ADDON_1_NAME"), price: t("PRICE_ITEM_32"), desc: t("BIKINI_ADDON_1_DESC"), extendedDesc: t("BIKINI_ADDON_1_EXTENDED_DESC"), isAddOn: true, placeholderLabel: 'Extra Long Hair Graphic' },
+                        { name: t("BIKINI_ADDON_2_NAME"), price: t("PRICE_ITEM_33"), desc: t("BIKINI_ADDON_2_DESC"), extendedDesc: t("BIKINI_ADDON_2_EXTENDED_DESC"), isAddOn: true, placeholderLabel: 'Extra Patch Graphic' },
+                        { name: t("BIKINI_ADDON_3_NAME"), price: t("PRICE_ITEM_34"), desc: t("BIKINI_ADDON_3_DESC"), isAddOn: true, placeholderLabel: 'Belly Line Graphic' },
                     ]
                 }
             ]

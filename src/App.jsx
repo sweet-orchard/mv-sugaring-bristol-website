@@ -7,23 +7,25 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Success from './pages/Success';
 import CoursePage from './pages/CoursePage';
-import { LangProvider } from './context/LangContext';
+import AdminPage from './pages/AdminPage';
+import { ContentProvider } from './context/ContentContext';
 
 function App() {
     return (
         <QueryClientProvider client={queryClientInstance}>
-            <LangProvider>
+            <ContentProvider>
                 <Router>
                     <ScrollToTop />
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/course" element={<CoursePage />} />
                         <Route path="/success" element={<Success />} />
+                        <Route path="/admin" element={<AdminPage />} />
                         <Route path="*" element={<PageNotFound />} />
                     </Routes>
                 </Router>
                 <Toaster />
-            </LangProvider>
+            </ContentProvider>
         </QueryClientProvider>
     )
 }

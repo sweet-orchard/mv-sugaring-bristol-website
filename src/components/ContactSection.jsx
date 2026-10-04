@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Clock, Send, Phone } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 const WhatsAppIcon = ({ className }) => (
     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className={className}>
@@ -11,8 +10,8 @@ const WhatsAppIcon = ({ className }) => (
 );
 
 export default function ContactSection() {
-    const { lang } = useLang();
-    const t = translations[lang].contact;
+    const { t, lang } = useContent();
+    
     return (
         <section id="contact" className="py-16 lg:py-32 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -25,15 +24,11 @@ export default function ContactSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="CONTACT_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">
-                        {t.heading}
-                    </h2>
-                    <p className="max-w-xl mx-auto text-sm font-body text-muted-foreground leading-relaxed">
-                        {t.subtext}
-                    </p>
+                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6"><T id="CONTACT_HEADING" /></h2>
+                    <p className="max-w-xl mx-auto text-sm font-body text-muted-foreground leading-relaxed"><T id="CONTACT_SUBTEXT" /></p>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-12">
@@ -50,9 +45,9 @@ export default function ContactSection() {
                                     <MapPin className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1">{t.locationLabel}</h4>
-                                    <p className="text-sm text-muted-foreground">{t.locationValue}</p>
-                                    {t.locationNote && <p className="text-xs text-muted-foreground/60 mt-1">{t.locationNote}</p>}
+                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1"><T id="CONTACT_INFO_LOCATION_LABEL" /></h4>
+                                    <p className="text-sm text-muted-foreground"><T id="CONTACT_LOCATION_VALUE" /></p>
+                                    {t("CONTACT_LOCATION_NOTE") && <p className="text-xs text-muted-foreground/60 mt-1"><T id="CONTACT_LOCATION_NOTE" /></p>}
                                 </div>
                             </div>
 
@@ -61,8 +56,8 @@ export default function ContactSection() {
                                     <WhatsAppIcon className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1">{t.whatsappLabel}</h4>
-                                    <a href="https://wa.me/447448611080" className="text-sm text-primary hover:underline">{t.whatsappValue}</a>
+                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1"><T id="CONTACT_WHATSAPP_LABEL" /></h4>
+                                    <a href="https://wa.me/447448611080" className="text-sm text-primary hover:underline"><T id="CONTACT_WHATSAPP_VALUE" /></a>
                                 </div>
                             </div>
 
@@ -71,7 +66,7 @@ export default function ContactSection() {
                                     <Mail className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1">{t.emailLabel}</h4>
+                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1"><T id="FOOTER_EMAIL_BUTTON_LABEL" /></h4>
                                     <a href="mailto:mariia.vatseba@gmail.com" className="text-sm text-primary hover:underline">mariia.vatseba@gmail.com</a>
                                 </div>
                             </div>
@@ -81,9 +76,9 @@ export default function ContactSection() {
                                     <Clock className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1">{t.availabilityLabel}</h4>
-                                    <p className="text-sm text-muted-foreground">{t.availabilityValue}</p>
-                                    <p className="text-xs text-muted-foreground/60 mt-1">{t.availabilityNote}</p>
+                                    <h4 className="text-sm font-body font-semibold text-foreground mb-1"><T id="CONTACT_INFO_AVAILABILITY_LABEL" /></h4>
+                                    <p className="text-sm text-muted-foreground"><T id="CONTACT_INFO_AVAILABILITY_VALUE" /></p>
+                                    <p className="text-xs text-muted-foreground/60 mt-1"><T id="CONTACT_INFO_AVAILABILITY_NOTE" /></p>
                                 </div>
                             </div>
 
@@ -114,61 +109,59 @@ export default function ContactSection() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                     >
                         <div className="bg-secondary/40 border border-border/30 rounded-sm p-8 lg:p-10">
-                            <h3 className="font-display text-2xl font-semibold text-foreground mb-6">{t.formTitle}</h3>
+                            <h3 className="font-display text-2xl font-semibold text-foreground mb-6"><T id="CONTACT_FORM_TITLE" /></h3>
                             <form action="https://formsubmit.co/mariia.vatseba@gmail.com" method="POST" className="space-y-5">
                                 {/* FormSubmit Configuration */}
                                 <input type="hidden" name="_subject" value="New Inquiry from Website" />
                                 <input type="hidden" name="_captcha" value="false" />
 
                                 <div>
-                                    <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">{t.nameLabel}</label>
-                                    <input type="text" name="name" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder={t.namePlaceholder} />
+                                    <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2"><T id="CONTACT_FORM_NAME_LABEL" /></label>
+                                    <input type="text" name="name" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder={t("CONTACT_FORM_NAME_PLACEHOLDER")} />
                                 </div>
                                 <div>
-                                    <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">{t.emailFormLabel}</label>
-                                    <input type="email" name="email" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder={t.emailPlaceholder} />
+                                    <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2"><T id="FOOTER_EMAIL_BUTTON_LABEL" /></label>
+                                    <input type="email" name="email" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors" placeholder={t("CONTACT_FORM_EMAIL_PLACEHOLDER")} />
                                 </div>
                                 <div>
-                                    <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">{t.serviceLabel}</label>
+                                    <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2"><T id="CONTACT_FORM_SERVICE_LABEL" /></label>
                                     <select name="service" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors">
-                                        <option value="">{t.serviceDefault}</option>
-                                        <optgroup label={t.optgroupBikini}>
-                                            <option>{t.optionHollywood}</option>
-                                            <option>{t.optionGstring}</option>
-                                            <option>{t.optionBasicBikini}</option>
+                                        <option value=""><T id="CONTACT_FORM_SERVICE_DEFAULT_OPTION" /></option>
+                                        <optgroup label={t("CONTACT_FORM_OPTGROUP_BIKINI")}>
+                                            <option><T id="CONTACT_FORM_OPTION_HOLLYWOOD" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_GSTRING" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_BASIC_BIKINI" /></option>
                                         </optgroup>
-                                        <optgroup label={t.optgroupUpper}>
-                                            <option>{t.optionUnderarms}</option>
-                                            <option>{t.optionArms}</option>
-                                            <option>{t.optionStomach}</option>
+                                        <optgroup label={t("CONTACT_FORM_OPTGROUP_UPPER")}>
+                                            <option><T id="CONTACT_FORM_OPTION_UNDERARMS" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_ARMS" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_STOMACH" /></option>
                                         </optgroup>
-                                        <optgroup label={t.optgroupDown}>
-                                            <option>{t.optionLegs}</option>
-                                            <option>{t.optionButtocks}</option>
+                                        <optgroup label={t("CONTACT_FORM_OPTGROUP_DOWN")}>
+                                            <option><T id="CONTACT_FORM_OPTION_LEGS" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_BUTTOCKS" /></option>
                                         </optgroup>
-                                        <optgroup label={t.optgroupFace}>
-                                            <option>{t.optionFaceZones}</option>
-                                            <option>{t.optionFaceCombos}</option>
+                                        <optgroup label={t("CONTACT_FORM_OPTGROUP_FACE")}>
+                                            <option><T id="CONTACT_FORM_OPTION_FACE_ZONES" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_FACE_COMBOS" /></option>
                                         </optgroup>
-                                        <optgroup label={t.optgroupCourses}>
-                                            <option>{t.optionCoursePro}</option>
-                                            <option>{t.optionCourseSelf}</option>
-                                            <option>{t.optionCourseOnline}</option>
+                                        <optgroup label={t("CONTACT_FORM_OPTGROUP_COURSES")}>
+                                            <option><T id="CONTACT_FORM_OPTION_COURSE_PRO" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_COURSE_SELF" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_COURSE_ONLINE" /></option>
                                         </optgroup>
-                                        <optgroup label={t.optgroupOther}>
-                                            <option>{t.optionMultiZone}</option>
-                                            <option>{t.optionOther}</option>
+                                        <optgroup label={t("CONTACT_FORM_OPTGROUP_OTHER")}>
+                                            <option><T id="CONTACT_FORM_OPTION_MULTI_ZONE" /></option>
+                                            <option><T id="CONTACT_FORM_OPTION_OTHER" /></option>
                                         </optgroup>
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2">{t.messageLabel}</label>
-                                    <textarea name="message" required rows={4} className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors resize-none" placeholder={t.messagePlaceholder} />
+                                    <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2"><T id="CONTACT_FORM_MESSAGE_LABEL" /></label>
+                                    <textarea name="message" required rows={4} className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors resize-none" placeholder={t("CONTACT_FORM_MESSAGE_PLACEHOLDER")} />
                                 </div>
                                 <button type="submit" className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:bg-primary/90 transition-all duration-300">
-                                    <Send className="w-4 h-4" />
-                                    {t.submitButton}
-                                </button>
+                                    <Send className="w-4 h-4" /><T id="CONTACT_FORM_SUBMIT_BUTTON" /></button>
                             </form>
                         </div>
                     </motion.div>

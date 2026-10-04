@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 import { CheckCircle, PlayCircle, Star, ChevronDown, ChevronUp, X, Mail } from 'lucide-react';
 
 const WhatsAppIcon = ({ className }) => (
@@ -13,8 +12,8 @@ const WhatsAppIcon = ({ className }) => (
 );
 
 export default function CoursePage() {
-    const { lang } = useLang();
-    const t = translations[lang].coursePage;
+    const { t, lang } = useContent();
+    
 
     const [openFaq, setOpenFaq] = useState(null);
     const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -30,27 +29,21 @@ export default function CoursePage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="inline-block bg-primary/10 text-primary text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-sm mb-6"
-                    >
-                        {t.heroBadge}
-                    </motion.div>
+                    ><T id="CONTACT_FORM_OPTION_COURSE_ONLINE" /></motion.div>
                     
                     <motion.h1 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
                         className="font-display text-4xl md:text-6xl font-light mb-6"
-                    >
-                        {t.heroTitle}
-                    </motion.h1>
+                    ><T id="COURSE_HERO_TITLE" /></motion.h1>
                     
                     <motion.p 
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
                         className="text-lg text-muted-foreground font-body max-w-2xl mx-auto mb-10"
-                    >
-                        {t.heroSubtitle}
-                    </motion.p>
+                    ><T id="COURSE_HERO_SUBTITLE" /></motion.p>
 
                     <motion.div 
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -60,29 +53,25 @@ export default function CoursePage() {
                     >
                         <div className="mb-6">
                             <div className="flex justify-center items-end gap-3 mb-2">
-                                <span className="font-display text-5xl font-semibold text-foreground">{t.price}</span>
-                                <span className="text-xl text-muted-foreground line-through mb-1">{t.oldPrice}</span>
+                                <span className="font-display text-5xl font-semibold text-foreground"><T id="COURSE_PRICE" /></span>
+                                <span className="text-xl text-muted-foreground line-through mb-1"><T id="COURSE_OLD_PRICE" /></span>
                             </div>
-                            <div className="inline-block bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-sm border border-primary/20">
-                                {t.discountBadge}
-                            </div>
+                            <div className="inline-block bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-sm border border-primary/20"><T id="COURSE_DISCOUNT_BADGE" /></div>
                         </div>
 
                         <a 
                             href="https://buy.stripe.com/test_6oUfZh9xidSn8RZ0zs2ZO00" 
                             className="block w-full bg-primary hover:bg-primary/90 text-background font-medium py-4 rounded-sm transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5 text-lg"
-                        >
-                            {t.buyNowBtn}
-                        </a>
+                        ><T id="COURSE_BUY_NOW_BTN" /></a>
                     </motion.div>
                 </section>
 
                 {/* Curriculum */}
                 <section className="bg-secondary/10 py-16">
                     <div className="max-w-4xl mx-auto px-6">
-                        <h2 className="font-display text-3xl md:text-4xl text-center mb-10">{t.curriculumTitle}</h2>
+                        <h2 className="font-display text-3xl md:text-4xl text-center mb-10"><T id="COURSE_CURRICULUM_TITLE" /></h2>
                         <div className="grid md:grid-cols-2 gap-4">
-                            {t.curriculumItems.map((item, idx) => (
+                            {["COURSE_CURRICULUM_ITEM_1", "COURSE_CURRICULUM_ITEM_2", "COURSE_CURRICULUM_ITEM_3", "COURSE_CURRICULUM_ITEM_4"].map((item, idx) => (
                                 <motion.div 
                                     key={idx}
                                     initial={{ opacity: 0, x: -20 }}
@@ -92,7 +81,7 @@ export default function CoursePage() {
                                     className="bg-background border border-border/40 p-4 rounded-sm flex items-start gap-3 shadow-sm"
                                 >
                                     <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                    <span className="font-body text-sm text-foreground/80 leading-relaxed">{item}</span>
+                                    <span className="font-body text-sm text-foreground/80 leading-relaxed"><T id={item} /></span>
                                 </motion.div>
                             ))}
                         </div>
@@ -102,15 +91,15 @@ export default function CoursePage() {
                 {/* FAQ */}
                 <section className="py-20">
                     <div className="max-w-3xl mx-auto px-6">
-                        <h2 className="font-display text-3xl md:text-4xl text-center mb-10">{t.faqTitle}</h2>
+                        <h2 className="font-display text-3xl md:text-4xl text-center mb-10"><T id="FAQ_HEADING" /></h2>
                         <div className="space-y-4">
-                            {t.faqItems.map((faq, idx) => (
+                            {[{ q: "COURSE_FAQ_1_Q", a: "COURSE_FAQ_1_A" }, { q: "COURSE_FAQ_2_Q", a: "COURSE_FAQ_2_A" }, { q: "COURSE_FAQ_3_Q", a: "COURSE_FAQ_3_A" }].map((faq, idx) => (
                                 <div key={idx} className="border border-border/50 rounded-sm overflow-hidden bg-background">
                                     <button 
                                         onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                                         className="w-full text-left px-6 py-4 flex items-center justify-between hover:bg-secondary/10 transition-colors"
                                     >
-                                        <span className="font-medium text-foreground text-sm">{faq.q}</span>
+                                        <span className="font-medium text-foreground text-sm"><T id={faq.q} /></span>
                                         {openFaq === idx ? <ChevronUp className="w-4 h-4 text-primary" /> : <ChevronDown className="w-4 h-4 text-muted-foreground" />}
                                     </button>
                                     <AnimatePresence>
@@ -121,7 +110,7 @@ export default function CoursePage() {
                                                 exit={{ height: 0, opacity: 0 }}
                                                 className="px-6 pb-4 text-sm text-muted-foreground font-body leading-relaxed"
                                             >
-                                                {faq.a}
+                                                <T id={faq.a} />
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
@@ -131,15 +120,11 @@ export default function CoursePage() {
 
                         {/* Support Section */}
                         <div className="mt-16 text-center">
-                            <p className="text-muted-foreground font-body text-sm mb-4">
-                                {t.supportText}
-                            </p>
+                            <p className="text-muted-foreground font-body text-sm mb-4"><T id="COURSE_SUPPORT_TEXT" /></p>
                             <button 
                                 onClick={() => setIsContactModalOpen(true)}
                                 className="inline-block border border-primary/30 text-primary hover:bg-primary/5 px-6 py-2.5 rounded-sm transition-colors text-sm font-medium tracking-wide focus:outline-none"
-                            >
-                                {t.supportLink}
-                            </button>
+                            ><T id="COURSE_SUPPORT_LINK" /></button>
                         </div>
                     </div>
                 </section>
@@ -171,7 +156,7 @@ export default function CoursePage() {
                                 <X className="w-5 h-5" />
                             </button>
                             
-                            <h3 className="font-display text-2xl font-semibold text-center mb-6">{t.contactModalTitle}</h3>
+                            <h3 className="font-display text-2xl font-semibold text-center mb-6"><T id="COURSE_CONTACT_MODAL_TITLE" /></h3>
                             
                             <div className="space-y-4">
                                 <a 
@@ -181,7 +166,7 @@ export default function CoursePage() {
                                     className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white border border-[#25D366]/20 transition-colors rounded-sm font-medium"
                                 >
                                     <WhatsAppIcon className="w-5 h-5" />
-                                    <span>{t.contactModalWhatsApp}</span>
+                                    <span><T id="COURSE_CONTACT_MODAL_WHATSAPP" /></span>
                                 </a>
                                 
                                 <a 
@@ -189,7 +174,7 @@ export default function CoursePage() {
                                     className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-primary/10 text-primary hover:bg-primary hover:text-background border border-primary/20 transition-colors rounded-sm font-medium"
                                 >
                                     <Mail className="w-5 h-5" />
-                                    <span>{t.contactModalEmail}</span>
+                                    <span><T id="COURSE_CONTACT_MODAL_EMAIL" /></span>
                                 </a>
                             </div>
                         </motion.div>

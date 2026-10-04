@@ -42,8 +42,7 @@ import {
     Star, Clock, Check, Sparkles, ChevronDown,
     Heart, Layers, ArrowDown, Smile, Info, AlertCircle
 } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 import { getServicesData } from './ServicesData';
 
 // Data is now imported from ServicesData.jsx
@@ -121,8 +120,8 @@ function ServiceCard({ item, index, isPremium }) {
 
 function AddOnCard({ item, index }) {
     const [isExpanded, setIsExpanded] = useState(false);
-    const { lang } = useLang();
-    const readMoreText = translations[lang].blog.readMore;
+    const { t, lang } = useContent();
+    const readMoreText = t("BLOG_READ_MORE");
 
     React.useEffect(() => {
         if (isExpanded) {
@@ -238,8 +237,8 @@ function AddOnCard({ item, index }) {
 // ─── FACE CARE GUIDE ─────────────────────────────────────────────────────────
 
 function FaceCareGuide() {
-    const { lang } = useLang();
-    const t = translations[lang].services;
+    const { t, lang } = useContent();
+    
     const [isOpen, setIsOpen] = useState(false);
     
     return (
@@ -255,9 +254,7 @@ function FaceCareGuide() {
             >
                 <div className="flex items-center gap-3">
                     <AlertCircle className="w-4 h-4 text-primary" />
-                    <p className="text-xs tracking-[0.2em] uppercase text-primary font-medium font-body">
-                        {t.faceCareGuideToggle}
-                    </p>
+                    <p className="text-xs tracking-[0.2em] uppercase text-primary font-medium font-body"><T id="FACE_CARE_GUIDE_TOGGLE_LABEL" /></p>
                 </div>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
@@ -275,107 +272,93 @@ function FaceCareGuide() {
                             
                             {/* Intro */}
                             <div className="space-y-4">
-                                <p>{t.faceGuideIntro1}</p>
-                                <p>{t.faceGuideIntro2}</p>
-                                <p>{t.faceGuideIntro3}</p>
+                                <p><T id="FACE_GUIDE_INTRO_1" /></p>
+                                <p><T id="FACE_GUIDE_INTRO_2" /></p>
+                                <p><T id="FACE_GUIDE_INTRO_3" /></p>
                             </div>
 
                             {/* Section 1 */}
                             <div>
-                                <h5 className="text-base font-semibold text-foreground mb-4 flex items-center gap-2">
-                                    {t.faceGuideSection1Heading}
-                                </h5>
+                                <h5 className="text-base font-semibold text-foreground mb-4 flex items-center gap-2"><T id="FACE_GUIDE_SECTION_1_HEADING" /></h5>
                                 <div className="space-y-4">
-                                    <p>{t.faceGuideSection1Para1}</p>
+                                    <p><T id="FACE_GUIDE_SECTION_1_PARA_1" /></p>
                                     <ul className="space-y-3 pl-2 list-none">
-                                        <li className="relative before:content-[''] before:absolute before:-left-5 before:w-1.5 before:h-1.5 before:bg-foreground before:rounded-full before:top-2 ml-5">
-                                            {t.faceGuideSection1Bullet1}
-                                        </li>
-                                        <li className="relative before:content-[''] before:absolute before:-left-5 before:w-1.5 before:h-1.5 before:bg-foreground before:rounded-full before:top-2 ml-5">
-                                            {t.faceGuideSection1Bullet2}
-                                        </li>
+                                        <li className="relative before:content-[''] before:absolute before:-left-5 before:w-1.5 before:h-1.5 before:bg-foreground before:rounded-full before:top-2 ml-5"><T id="FACE_GUIDE_SECTION_1_BULLET_1" /></li>
+                                        <li className="relative before:content-[''] before:absolute before:-left-5 before:w-1.5 before:h-1.5 before:bg-foreground before:rounded-full before:top-2 ml-5"><T id="FACE_GUIDE_SECTION_1_BULLET_2" /></li>
                                     </ul>
-                                    <p>{t.faceGuideSection1Para2}</p>
-                                    <blockquote className="border-l-2 border-primary/40 pl-4 py-1 my-6 italic text-foreground/80 bg-primary/5 rounded-r-sm p-4">
-                                        {t.faceGuideSection1Quote}
-                                    </blockquote>
+                                    <p><T id="FACE_GUIDE_SECTION_1_PARA_2" /></p>
+                                    <blockquote className="border-l-2 border-primary/40 pl-4 py-1 my-6 italic text-foreground/80 bg-primary/5 rounded-r-sm p-4"><T id="FACE_GUIDE_SECTION_1_QUOTE" /></blockquote>
                                 </div>
                             </div>
 
                             {/* Section 2 */}
                             <div>
-                                <h5 className="text-base font-semibold text-foreground mb-5 flex items-center gap-2">
-                                    {t.faceGuideSection2Heading}
-                                </h5>
+                                <h5 className="text-base font-semibold text-foreground mb-5 flex items-center gap-2"><T id="FACE_GUIDE_SECTION_2_HEADING" /></h5>
                                 <div className="space-y-5">
                                     <div className="flex gap-3">
                                         <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                        <p><strong className="text-foreground font-medium">{t.faceGuideItem1Strong}</strong> {t.faceGuideItem1Text}</p>
+                                        <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_ITEM_1_STRONG" /></strong><T id="FACE_GUIDE_ITEM_1_TEXT" /></p>
                                     </div>
                                     <div className="flex gap-3">
                                         <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                        <p><strong className="text-foreground font-medium">{t.faceGuideItem2Strong}</strong> {t.faceGuideItem2Text}</p>
+                                        <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_ITEM_2_STRONG" /></strong><T id="FACE_GUIDE_ITEM_2_TEXT" /></p>
                                     </div>
                                     <div className="flex gap-3">
                                         <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                        <p><strong className="text-foreground font-medium">{t.faceGuideItem3Strong}</strong> {t.faceGuideItem3Text}</p>
+                                        <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_ITEM_3_STRONG" /></strong><T id="FACE_GUIDE_ITEM_3_TEXT" /></p>
                                     </div>
                                     <div className="flex gap-3">
                                         <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                        <p><strong className="text-foreground font-medium">{t.faceGuideItem4Strong}</strong> {t.faceGuideItem4Text}</p>
+                                        <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_ITEM_4_STRONG" /></strong><T id="FACE_GUIDE_ITEM_4_TEXT" /></p>
                                     </div>
                                     <div className="flex gap-3">
                                         <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                        <p><strong className="text-foreground font-medium">{t.faceGuideItem5Strong}</strong> {t.faceGuideItem5Text}</p>
+                                        <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_ITEM_5_STRONG" /></strong><T id="FACE_GUIDE_ITEM_5_TEXT" /></p>
                                     </div>
                                     <div className="mt-6 bg-secondary/50 rounded-sm p-4 text-primary font-medium flex items-start gap-3">
                                         <span className="text-lg leading-none mt-0.5">💬</span>
-                                        <p>{t.faceGuideSendPhotoNote}</p>
+                                        <p><T id="FACE_GUIDE_SEND_PHOTO_NOTE" /></p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Section 3 */}
                             <div>
-                                <h5 className="text-base font-semibold text-foreground mb-4 flex items-center gap-2">
-                                    {t.faceGuideSection3Heading}
-                                </h5>
+                                <h5 className="text-base font-semibold text-foreground mb-4 flex items-center gap-2"><T id="FACE_GUIDE_SECTION_3_HEADING" /></h5>
                                 <div className="space-y-4">
-                                    <p>{t.faceGuideSection3Intro}</p>
+                                    <p><T id="FACE_GUIDE_SECTION_3_INTRO" /></p>
                                     <div className="grid sm:grid-cols-2 gap-5 mt-6">
                                         <div className="flex gap-3">
                                             <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                            <p><strong className="text-foreground font-medium">{t.faceGuideAftercare1Strong}</strong> {t.faceGuideAftercare1Text}</p>
+                                            <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_AFTERCARE_1_STRONG" /></strong><T id="FACE_GUIDE_AFTERCARE_1_TEXT" /></p>
                                         </div>
                                         <div className="flex gap-3">
                                             <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                            <p><strong className="text-foreground font-medium">{t.faceGuideAftercare2Strong}</strong> {t.faceGuideAftercare2Text}</p>
+                                            <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_AFTERCARE_2_STRONG" /></strong><T id="FACE_GUIDE_AFTERCARE_2_TEXT" /></p>
                                         </div>
                                         <div className="flex gap-3">
                                             <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                            <p><strong className="text-foreground font-medium">{t.faceGuideAftercare3Strong}</strong> {t.faceGuideAftercare3Text}</p>
+                                            <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_AFTERCARE_3_STRONG" /></strong><T id="FACE_GUIDE_AFTERCARE_3_TEXT" /></p>
                                         </div>
                                         <div className="flex gap-3">
                                             <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                            <p><strong className="text-foreground font-medium">{t.faceGuideAftercare4Strong}</strong> {t.faceGuideAftercare4Text}</p>
+                                            <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_AFTERCARE_4_STRONG" /></strong><T id="FACE_GUIDE_AFTERCARE_4_TEXT" /></p>
                                         </div>
                                         <div className="flex gap-3">
                                             <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                            <p><strong className="text-foreground font-medium">{t.faceGuideAftercare5Strong}</strong> {t.faceGuideAftercare5Text}</p>
+                                            <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_AFTERCARE_5_STRONG" /></strong><T id="FACE_GUIDE_AFTERCARE_5_TEXT" /></p>
                                         </div>
                                         <div className="flex gap-3">
                                             <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                                            <p><strong className="text-foreground font-medium">{t.faceGuideAftercare6Strong}</strong> {t.faceGuideAftercare6Text}</p>
+                                            <p><strong className="text-foreground font-medium"><T id="FACE_GUIDE_AFTERCARE_6_STRONG" /></strong><T id="FACE_GUIDE_AFTERCARE_6_TEXT" /></p>
                                         </div>
                                     </div>
                                     
                                     <div className="mt-8 space-y-4">
-                                        <p className="italic border-l-2 border-primary/40 pl-4 py-1 text-foreground/80">
-                                            {t.faceGuideClosingNote}
-                                        </p>
+                                        <p className="italic border-l-2 border-primary/40 pl-4 py-1 text-foreground/80"><T id="FACE_GUIDE_CLOSING_NOTE" /></p>
                                         <div className="bg-primary text-primary-foreground rounded-sm p-4 font-medium flex items-start gap-3">
                                             <span className="text-lg leading-none mt-0.5">💬</span>
-                                            <p>{t.faceGuideClosingCta}</p>
+                                            <p><T id="FACE_GUIDE_CLOSING_CTA" /></p>
                                         </div>
                                     </div>
                                 </div>
@@ -516,8 +499,8 @@ function MobileFlashcards({ items, isPremium }) {
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 
 export default function ServicesSection() {
-    const { lang } = useLang();
-    const t = translations[lang].services;
+    const { t, lang } = useContent();
+    
     const { inclusions, durationNotes, categories } = getServicesData(t);
 
     const [activeTab, setActiveTab] = useState('bikini');
@@ -539,13 +522,11 @@ export default function ServicesSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">
-                            {t.eyebrow}
-                        </span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="FOOTER_NAV_SERVICES" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
-                        {t.heading.split(' ')[0]} <span className="font-semibold italic">{t.heading.split(' ').slice(1).join(' ')}</span>
+                        {t("SERVICES_HEADING").split(' ')[0]} <span className="font-semibold italic">{t("SERVICES_HEADING").split(' ').slice(1).join(' ')}</span>
                     </h2>
                 </motion.div>
 
@@ -559,9 +540,7 @@ export default function ServicesSection() {
                 >
                     <div className="bg-background border border-border/40 rounded-sm p-6 lg:p-8">
                         <div className="flex items-center gap-2.5 mb-5">
-                            <p className="text-xs tracking-[0.25em] uppercase text-primary font-medium">
-                                {t.inclusionsLabel}
-                            </p>
+                            <p className="text-xs tracking-[0.25em] uppercase text-primary font-medium"><T id="SERVICES_INCLUSIONS_LABEL" /></p>
                         </div>
                         <div className="grid sm:grid-cols-3 gap-5">
                             {inclusions.map((item, i) => (
@@ -684,9 +663,7 @@ export default function ServicesSection() {
                     >
                         <div className="flex items-center gap-3">
                             <Clock className="w-4 h-4 text-primary" />
-                            <p className="text-xs tracking-[0.2em] uppercase text-primary font-medium font-body">
-                                {t.durationToggle}
-                            </p>
+                            <p className="text-xs tracking-[0.2em] uppercase text-primary font-medium font-body"><T id="DURATION_TOGGLE_LABEL" /></p>
                         </div>
                         <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${notesOpen ? 'rotate-180' : ''}`} />
                     </button>
@@ -701,9 +678,7 @@ export default function ServicesSection() {
                                 className="overflow-hidden"
                             >
                                 <div className="bg-background border border-t-0 border-border/40 rounded-b-sm px-6 py-6">
-                                    <p className="text-sm text-muted-foreground leading-relaxed mb-5 font-body">
-                                        {t.durationIntro}
-                                    </p>
+                                    <p className="text-sm text-muted-foreground leading-relaxed mb-5 font-body"><T id="DURATION_INTRO" /></p>
                                     <div className="grid md:grid-cols-2 gap-5">
                                         {durationNotes.map((note, i) => (
                                             <div key={i} className="flex gap-3 items-start">
@@ -728,15 +703,11 @@ export default function ServicesSection() {
                     viewport={{ once: true }}
                     className="mt-14 text-center"
                 >
-                    <p className="font-display italic text-lg text-foreground/50 mb-6">
-                        {t.servicesBottomQuote}
-                    </p>
+                    <p className="font-display italic text-lg text-foreground/50 mb-6"><T id="SERVICES_BOTTOM_QUOTE" /></p>
                     <a
                         href="#contact"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:bg-primary/90 active:scale-95 transition-all"
-                    >
-                        {t.servicesBottomCta}
-                    </a>
+                    ><T id="SERVICES_BOTTOM_CTA_BUTTON" /></a>
                 </motion.div>
 
             </div>

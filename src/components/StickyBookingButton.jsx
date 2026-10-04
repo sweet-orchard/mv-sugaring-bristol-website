@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 export default function StickyBookingButton() {
-    const { lang } = useLang();
-    const t = translations[lang].sticky;
+    const { t, lang } = useContent();
+    
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -27,9 +26,7 @@ export default function StickyBookingButton() {
                     <a
                         href="#contact"
                         className="flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-xs tracking-[0.2em] uppercase font-medium rounded-full shadow-xl hover:bg-primary/90 transition-all"
-                    >
-                        {t.bookNow}
-                    </a>
+                    ><T id="STICKY_BUTTON_LABEL" /></a>
                 </motion.div>
             )}
         </AnimatePresence>

@@ -1,37 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 const linkHrefs = [
-    { key: 'about',       href: '/#about' },
-    { key: 'whySugaring', href: '/#why-sugaring' },
-    { key: 'prices',      href: '/#services' },
-    { key: 'courses',     href: '/#courses' },
-    { key: 'careGuide',   href: '/#care-guide' },
-    { key: 'reviews',     href: '/#testimonials' },
-    { key: 'faq',         href: '/#faq' },
-    { key: 'contact',     href: '/#contact' },
+    { key: 'about',       href: '/#about',       textKey: 'NAV_LINK_ABOUT' },
+    { key: 'whySugaring', href: '/#why-sugaring', textKey: 'NAV_LINK_WHY_SUGARING' },
+    { key: 'prices',      href: '/#services',    textKey: 'NAV_LINK_PRICES' },
+    { key: 'courses',     href: '/#courses',     textKey: 'NAV_LINK_COURSES' },
+    { key: 'careGuide',   href: '/#care-guide',  textKey: 'NAV_LINK_CARE_GUIDE' },
+    { key: 'reviews',     href: '/#testimonials',textKey: 'NAV_LINK_REVIEWS' },
+    { key: 'faq',         href: '/#faq',         textKey: 'NAV_LINK_FAQ' },
+    { key: 'contact',     href: '/#contact',     textKey: 'NAV_LINK_CONTACT' },
 ];
 
 const LanguageToggle = ({ lang, onChange, t }) => {
     return (
         <button
-            onClick={() => onChange(lang === 'en' ? 'ua' : 'en')}
+            onClick={() => onChange(lang === 'en' ? 'uk' : 'en')}
             className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/50 border border-border/50 transition-all active:scale-95 shadow-sm"
             aria-label="Toggle Language"
-            title={lang === 'en' ? t.switchToUkrainian : t.switchToEnglish}
+            title={lang === 'en' ? t("NAV_TOGGLE_ARIA_SWITCH_TO_UKRAINIAN") : t("NAV_TOGGLE_ARIA_SWITCH_TO_ENGLISH")}
         >
             <span className={`text-[18px] leading-none transition-all duration-300 ${lang === 'en' ? 'opacity-100 scale-110' : 'opacity-40 grayscale scale-90'}`}>🇬🇧</span>
-            <span className={`text-[18px] leading-none transition-all duration-300 ${lang === 'ua' ? 'opacity-100 scale-110' : 'opacity-40 grayscale scale-90'}`}>🇺🇦</span>
+            <span className={`text-[18px] leading-none transition-all duration-300 ${lang === 'uk' ? 'opacity-100 scale-110' : 'opacity-40 grayscale scale-90'}`}>🇺🇦</span>
         </button>
     );
 };
 
 export default function Navbar() {
-    const { lang, setLang } = useLang();
-    const t = translations[lang].nav;
+    const { t, lang, setLang } = useContent();
+    
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -61,7 +60,7 @@ export default function Navbar() {
                 <button
                     onClick={() => setOpen(!open)}
                     className="xl:hidden p-1.5 text-foreground/70 hover:text-primary transition-colors"
-                    aria-label={open ? t.closeMenu : t.openMenu}
+                    aria-label={open ? t("NAV_HAMBURGER_CLOSE_ARIA") : t("NAV_HAMBURGER_OPEN_ARIA")}
                 >
                     {open ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
                 </button>
@@ -72,16 +71,16 @@ export default function Navbar() {
                 </div>
 
                 {/* Left Side Links */}
-                <div className={`hidden xl:flex items-center mr-auto ${lang === 'ua' ? 'gap-3 xl:gap-4 pl-4 xl:pl-6' : 'gap-5 pl-8'}`}>
+                <div className={`hidden xl:flex items-center mr-auto ${lang === 'uk' ? 'gap-3 xl:gap-4 pl-4 xl:pl-6' : 'gap-5 pl-8'}`}>
                     {leftKeys.map(key => {
                         const link = linkHrefs.find(l => l.key === key);
                         return (
                             <a
                                 key={key}
                                 href={link.href}
-                                className={`text-[11px] uppercase text-foreground/70 hover:text-primary transition-colors duration-200 font-semibold font-body whitespace-nowrap ${lang === 'ua' ? 'tracking-[0.08em]' : 'tracking-[0.18em]'}`}
+                                className={`text-[11px] uppercase text-foreground/70 hover:text-primary transition-colors duration-200 font-semibold font-body whitespace-nowrap ${lang === 'uk' ? 'tracking-[0.08em]' : 'tracking-[0.18em]'}`}
                             >
-                                {t[key]}
+                                <T id={link.textKey} />
                             </a>
                         );
                     })}
@@ -92,23 +91,23 @@ export default function Navbar() {
                     <a href="/" className="focus:outline-none flex items-center">
                         <img
                             src="/logo.png"
-                            alt={t.logoAlt}
+                            alt={t("HERO_EYEBROW")}
                             className="h-12 md:h-10 w-auto object-contain hover:opacity-85 transition-opacity"
                         />
                     </a>
                 </div>
 
                 {/* Right Side Links */}
-                <div className={`hidden xl:flex items-center ml-auto ${lang === 'ua' ? 'gap-3 xl:gap-4 pr-4 xl:pr-6' : 'gap-5 pr-8'}`}>
+                <div className={`hidden xl:flex items-center ml-auto ${lang === 'uk' ? 'gap-3 xl:gap-4 pr-4 xl:pr-6' : 'gap-5 pr-8'}`}>
                     {rightKeys.map(key => {
                         const link = linkHrefs.find(l => l.key === key);
                         return (
                             <a
                                 key={key}
                                 href={link.href}
-                                className={`text-[11px] uppercase text-foreground/70 hover:text-primary transition-colors duration-200 font-semibold font-body whitespace-nowrap ${lang === 'ua' ? 'tracking-[0.08em]' : 'tracking-[0.18em]'}`}
+                                className={`text-[11px] uppercase text-foreground/70 hover:text-primary transition-colors duration-200 font-semibold font-body whitespace-nowrap ${lang === 'uk' ? 'tracking-[0.08em]' : 'tracking-[0.18em]'}`}
                             >
-                                {t[key]}
+                                <T id={link.textKey} />
                             </a>
                         );
                     })}
@@ -120,7 +119,7 @@ export default function Navbar() {
                         href="/#contact"
                         className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 bg-primary text-primary-foreground text-[10px] tracking-[0.2em] uppercase font-bold rounded-full hover:bg-primary/90 active:scale-95 transition-all shadow-md"
                     >
-                        <span>{t.bookNow}</span>
+                        <span><T id="STICKY_BUTTON_LABEL" /></span>
                     </a>
                 </div>
             </nav>
@@ -143,7 +142,7 @@ export default function Navbar() {
                                     onClick={() => setOpen(false)}
                                     className="block py-3 text-[13px] tracking-[0.15em] uppercase text-foreground font-semibold hover:text-primary border-b border-border/30 transition-colors font-body"
                                 >
-                                    {t[link.key]}
+                                    <T id={link.textKey} />
                                 </a>
                             ))}
 
@@ -151,16 +150,14 @@ export default function Navbar() {
                             <div className="flex flex-col gap-3 pt-4 mt-2">
                                 {/* Language toggle row */}
                                 <div className="flex items-center justify-between px-1">
-                                    <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-semibold">{t.language}</span>
+                                    <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-semibold"><T id="NAV_LANGUAGE_LABEL" /></span>
                                     <LanguageToggle lang={lang} onChange={setLang} t={t} />
                                 </div>
                                 <a
                                     href="/#contact"
                                     onClick={() => setOpen(false)}
                                     className="w-full flex items-center justify-center py-3.5 bg-primary text-primary-foreground text-[11px] tracking-[0.25em] uppercase font-bold rounded-sm shadow-sm hover:bg-primary/90 transition-all"
-                                >
-                                    {t.bookNow}
-                                </a>
+                                ><T id="STICKY_BUTTON_LABEL" /></a>
                             </div>
                         </div>
                     </motion.div>

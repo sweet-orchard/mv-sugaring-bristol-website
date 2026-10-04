@@ -1,92 +1,98 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Quote, ImageIcon } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
-
+import { useContent, T } from '../context/ContentContext';
 const testimonials = [
     {
         id: 1,
         placeholder: 'Client Review Screenshot #1',
         image: '/testemonials/review-1.jpg',
+        textKey: "TESTIMONIALS_REVIEW_1",
     },
     {
         id: 2,
         placeholder: 'Client Review Screenshot #2',
         image: '/testemonials/review-2.jpg',
+        textKey: "TESTIMONIALS_REVIEW_2",
     },
     {
         id: 3,
         placeholder: 'Client Review Screenshot #3',
         image: '/testemonials/review-3.jpg',
+        textKey: "TESTIMONIALS_REVIEW_3",
     },
     {
         id: 4,
         placeholder: 'Client Review Screenshot #4',
         image: '/testemonials/review-4.jpg',
+        textKey: "TESTIMONIALS_REVIEW_4",
     },
     {
         id: 5,
         placeholder: 'Client Review Screenshot #5',
         image: '/testemonials/review-5.jpg',
+        textKey: "TESTIMONIALS_REVIEW_5",
     },
     {
         id: 6,
         placeholder: 'Client Review Screenshot #6',
         image: '/testemonials/review-6.JPG',
+        textKey: "TESTIMONIALS_REVIEW_6",
     },
     {
         id: 7,
         placeholder: 'Client Review Screenshot #7',
         image: '/testemonials/review-7.JPG',
+        textKey: "TESTIMONIALS_REVIEW_7",
     },
     {
         id: 8,
         placeholder: 'Client Review Screenshot #8',
         image: '/testemonials/review-8.JPG',
+        textKey: "TESTIMONIALS_REVIEW_8",
     },
     {
         id: 9,
         placeholder: 'Client Review Screenshot #9',
         image: '/testemonials/review-9.JPG',
+        textKey: "TESTIMONIALS_REVIEW_9",
     },
     {
         id: 10,
         placeholder: 'Client Review Screenshot #10',
         image: '/testemonials/review-10.JPG',
+        textKey: "TESTIMONIALS_REVIEW_10",
     },
     {
         id: 11,
         placeholder: 'Client Review Screenshot #11',
         image: '/testemonials/review-11.PNG',
+        textKey: "TESTIMONIALS_REVIEW_11",
     },
     {
         id: 12,
         placeholder: 'Client Review Screenshot #12',
         image: '/testemonials/review-12.PNG',
+        textKey: "TESTIMONIALS_REVIEW_12",
     },
     {
         id: 13,
         placeholder: 'Client Review Screenshot #13',
         image: '/testemonials/review-13.PNG',
+        textKey: "TESTIMONIALS_REVIEW_13",
     },
 ];
-
 export default function TestimonialsSection() {
-    const { lang } = useLang();
-    const t = translations[lang].testimonials;
+    const { t, lang } = useContent();
     const [[current, direction], setPage] = useState([0, 0]);
-
     const paginate = (dir) => {
         setPage(([prev]) => [
             (prev + dir + testimonials.length) % testimonials.length,
             dir,
         ]);
     };
-    
     const prev = () => paginate(-1);
     const next = () => paginate(1);
-
     const variants = {
         enter: (dir) => {
             if (dir > 0) {
@@ -111,7 +117,6 @@ export default function TestimonialsSection() {
             }
         },
     };
-
     return (
         <section id="testimonials" className="py-16 lg:py-32 bg-secondary/30 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -124,14 +129,11 @@ export default function TestimonialsSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="TESTIMONIALS_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">
-                        {t.heading}
-                    </h2>
+                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6"><T id="TESTIMONIALS_HEADING" /></h2>
                 </motion.div>
-
                 {/* Carousel */}
                 <div className="relative max-w-4xl mx-auto pt-4 pb-2">
                     {/* Visual Stack Cards Behind */}
@@ -139,7 +141,6 @@ export default function TestimonialsSection() {
                         <div className="w-[96%] h-full bg-background border border-border/60 rounded-sm shadow-sm absolute top-4 opacity-60" />
                         <div className="w-[92%] h-full bg-background border border-border/40 rounded-sm shadow-sm absolute top-8 opacity-30" />
                     </div>
-
                     <AnimatePresence initial={false} custom={direction} mode="popLayout">
                         <motion.div
                             key={current}
@@ -176,19 +177,17 @@ export default function TestimonialsSection() {
                                         </div>
                                     </div>
                                 )}
-
                                 {/* Text */}
                                 <div className="pointer-events-none">
                                     <Quote className="w-8 h-8 text-primary/30 mb-4" />
                                     <p className="text-sm md:text-base leading-relaxed text-foreground/80 font-body mb-6 mt-4 whitespace-pre-line">
-                                        {t[`review${testimonials[current].id}Text`]}
+                                        {t(testimonials[current].textKey)}
                                     </p>
                                 </div>
                             </div>
                         </motion.div>
                     </AnimatePresence>
                 </div>
-
                 {/* Controls */}
                 <div className="flex items-center justify-center gap-6 mt-12 relative z-20">
                     <button onClick={prev} className="w-10 h-10 bg-background rounded-full border border-border/60 flex items-center justify-center hover:border-primary hover:text-primary shadow-sm transition-all active:scale-95">
@@ -201,7 +200,6 @@ export default function TestimonialsSection() {
                         <ChevronRight className="w-4 h-4" />
                     </button>
                 </div>
-
                 {/* Bottom quote */}
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -210,11 +208,8 @@ export default function TestimonialsSection() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-center mt-16 max-w-2xl mx-auto"
                 >
-                    <p className="font-display text-lg italic text-foreground/50">
-                        {t.closingQuote}
-                    </p>
+                    <p className="font-display text-lg italic text-foreground/50"><T id="TESTIMONIALS_CLOSING_QUOTE" /></p>
                 </motion.div>
-
                 {/* Google Reviews Embed */}
                 <div className="mt-16 w-full flex justify-center">
                     <div className="elfsight-app-a6b2e524-f9de-4ee1-a2d9-0d0e12e2d407 w-full max-w-4xl" data-elfsight-app-lazy></div>

@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Heart, Shield, Sparkles } from 'lucide-react';
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 import {
     Carousel,
     CarouselContent,
@@ -30,14 +29,14 @@ const stats = [
 ];
 
 export default function AboutSection() {
-    const { lang } = useLang();
-    const t = translations[lang].about;
+    const { t, lang } = useContent();
+    
 
     const stats = [
-        { number: '8+', label: t.stat1Label, icon: Sparkles },
-        { number: '9x', label: t.stat2Label, icon: Award },
-        { number: '1000+', label: t.stat3Label, icon: Heart },
-        { number: '100%', label: t.stat4Label, icon: Shield },
+        { number: '8+', label: t("ABOUT_STAT_1_LABEL"), icon: Sparkles },
+        { number: '9x', label: t("ABOUT_STAT_2_LABEL"), icon: Award },
+        { number: '1000+', label: t("ABOUT_STAT_3_LABEL"), icon: Heart },
+        { number: '100%', label: t("ABOUT_STAT_4_LABEL"), icon: Shield },
     ];
     return (
         <section id="about" className="py-16 lg:py-32 bg-background">
@@ -52,7 +51,7 @@ export default function AboutSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="ABOUT_SECTION_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
@@ -106,15 +105,13 @@ export default function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, delay: 0.1 }}
                     >
-                        <p className="text-xs tracking-[0.25em] uppercase text-primary font-medium mb-6">
-                            {t.subtitle}
-                        </p>
+                        <p className="text-xs tracking-[0.25em] uppercase text-primary font-medium mb-6"><T id="ABOUT_SUBTITLE" /></p>
 
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6">{t.paragraph1}</p>
+                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6"><T id="ABOUT_PARAGRAPH_1" /></p>
 
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6">{t.paragraph2}</p>
+                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6"><T id="ABOUT_PARAGRAPH_2" /></p>
 
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-8">{t.paragraph3}</p>
+                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-8"><T id="ABOUT_PARAGRAPH_3" /></p>
                     </motion.div>
                 </div>
 
@@ -143,15 +140,13 @@ export default function AboutSection() {
                     transition={{ duration: 0.6 }}
                     className="max-w-3xl mx-auto mt-12 lg:mt-24 text-center"
                 >
-                    <h3 className="font-display text-3xl md:text-4xl italic font-light text-foreground mb-8">
-                        {t.quoteHeading}
-                    </h3>
+                    <h3 className="font-display text-3xl md:text-4xl italic font-light text-foreground mb-8"><T id="WHY_CLOSING_QUOTE" /></h3>
 
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6">{t.secondParagraph1}</p>
+                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6"><T id="ABOUT_SECOND_PARAGRAPH_1" /></p>
 
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6">{t.secondParagraph2}</p>
+                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6"><T id="ABOUT_SECOND_PARAGRAPH_2" /></p>
 
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed">{t.secondParagraph3}</p>
+                    <p className="text-sm font-body text-foreground/70 leading-relaxed"><T id="ABOUT_SECOND_PARAGRAPH_3" /></p>
                 </motion.div>
             </div>
         </section>

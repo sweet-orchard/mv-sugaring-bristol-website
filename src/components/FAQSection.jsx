@@ -6,43 +6,42 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useLang } from '../context/LangContext';
-import translations from '../translations';
+import { useContent, T } from '../context/ContentContext';
 
 export default function FAQSection() {
-    const { lang } = useLang();
-    const t = translations[lang].faq;
+    const { t, lang } = useContent();
+    
     
     const faqCategories = [
         {
-            category: t.cat1Name,
+            category: t("FAQ_CAT_1_NAME"),
             items: [
-                { q: t.cat1Q1, a: t.cat1A1 },
-                { q: t.cat1Q2, a: t.cat1A2 },
-                { q: t.cat1Q3, a: t.cat1A3 },
-                { q: t.cat1Q4, a: t.cat1A4 },
-                { q: t.cat1Q5, a: t.cat1A5 },
+                { q: t("FAQ_CAT1_Q1"), a: t("FAQ_CAT1_A1") },
+                { q: t("FAQ_CAT1_Q2"), a: t("FAQ_CAT1_A2") },
+                { q: t("FAQ_CAT1_Q3"), a: t("FAQ_CAT1_A3") },
+                { q: t("FAQ_CAT1_Q4"), a: t("FAQ_CAT1_A4") },
+                { q: t("FAQ_CAT1_Q5"), a: t("FAQ_CAT1_A5") },
             ]
         },
         {
-            category: t.cat2Name,
+            category: t("FAQ_CAT_2_NAME"),
             items: [
-                { q: t.cat2Q1, a: t.cat2A1 },
-                { q: t.cat2Q2, a: t.cat2A2 },
-                { q: t.cat2Q3, a: t.cat2A3 },
-                { q: t.cat2Q4, a: t.cat2A4 },
-                { q: t.cat2Q5, a: t.cat2A5 },
-                { q: t.cat2Q6, a: t.cat2A6 },
-                { q: t.cat2Q7, a: t.cat2A7 },
-                { q: t.cat2Q8, a: t.cat2A8 },
+                { q: t("FAQ_CAT2_Q1"), a: t("FAQ_CAT2_A1") },
+                { q: t("FAQ_CAT2_Q2"), a: t("FAQ_CAT2_A2") },
+                { q: t("FAQ_CAT2_Q3"), a: t("FAQ_CAT2_A3") },
+                { q: t("FAQ_CAT2_Q4"), a: t("FAQ_CAT2_A4") },
+                { q: t("FAQ_CAT2_Q5"), a: t("FAQ_CAT2_A5") },
+                { q: t("FAQ_CAT2_Q6"), a: t("FAQ_CAT2_A6") },
+                { q: t("FAQ_CAT2_Q7"), a: t("FAQ_CAT2_A7") },
+                { q: t("FAQ_CAT2_Q8"), a: t("FAQ_CAT2_A8") },
             ]
         },
         {
-            category: t.cat3Name,
+            category: t("FAQ_CAT_3_NAME"),
             items: [
-                { q: t.cat3Q1, a: t.cat3A1 },
-                { q: t.cat3Q2, a: t.cat3A2 },
-                { q: t.cat3Q3, a: t.cat3A3 },
+                { q: t("FAQ_CAT3_Q1"), a: t("FAQ_CAT3_A1") },
+                { q: t("FAQ_CAT3_Q2"), a: t("FAQ_CAT3_A2") },
+                { q: t("FAQ_CAT3_Q3"), a: t("FAQ_CAT3_A3") },
             ]
         }
     ];
@@ -59,12 +58,10 @@ export default function FAQSection() {
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium">{t.eyebrow}</span>
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="FOOTER_NAV_FAQ" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl font-light text-foreground">
-                        {t.heading}
-                    </h2>
+                    <h2 className="font-display text-4xl md:text-5xl font-light text-foreground"><T id="FAQ_HEADING" /></h2>
                 </motion.div>
 
                 <motion.div
