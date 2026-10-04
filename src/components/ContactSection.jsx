@@ -129,31 +129,31 @@ export default function ContactSection() {
                                     <select name="service" required className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground focus:outline-none focus:border-primary/50 transition-colors">
                                         <option value=""><T id="CONTACT_FORM_SERVICE_DEFAULT_OPTION" /></option>
                                         <optgroup label={t("CONTACT_FORM_OPTGROUP_BIKINI")}>
-                                            <option><T id="CONTACT_FORM_OPTION_HOLLYWOOD" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_GSTRING" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_BASIC_BIKINI" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_HOLLYWOOD")}><T id="CONTACT_FORM_OPTION_HOLLYWOOD" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_GSTRING")}><T id="CONTACT_FORM_OPTION_GSTRING" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_BASIC_BIKINI")}><T id="CONTACT_FORM_OPTION_BASIC_BIKINI" /></option>
                                         </optgroup>
                                         <optgroup label={t("CONTACT_FORM_OPTGROUP_UPPER")}>
-                                            <option><T id="CONTACT_FORM_OPTION_UNDERARMS" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_ARMS" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_STOMACH" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_UNDERARMS")}><T id="CONTACT_FORM_OPTION_UNDERARMS" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_ARMS")}><T id="CONTACT_FORM_OPTION_ARMS" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_STOMACH")}><T id="CONTACT_FORM_OPTION_STOMACH" /></option>
                                         </optgroup>
                                         <optgroup label={t("CONTACT_FORM_OPTGROUP_DOWN")}>
-                                            <option><T id="CONTACT_FORM_OPTION_LEGS" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_BUTTOCKS" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_LEGS")}><T id="CONTACT_FORM_OPTION_LEGS" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_BUTTOCKS")}><T id="CONTACT_FORM_OPTION_BUTTOCKS" /></option>
                                         </optgroup>
                                         <optgroup label={t("CONTACT_FORM_OPTGROUP_FACE")}>
-                                            <option><T id="CONTACT_FORM_OPTION_FACE_ZONES" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_FACE_COMBOS" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_FACE_ZONES")}><T id="CONTACT_FORM_OPTION_FACE_ZONES" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_FACE_COMBOS")}><T id="CONTACT_FORM_OPTION_FACE_COMBOS" /></option>
                                         </optgroup>
                                         <optgroup label={t("CONTACT_FORM_OPTGROUP_COURSES")}>
-                                            <option><T id="CONTACT_FORM_OPTION_COURSE_PRO" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_COURSE_SELF" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_COURSE_ONLINE" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_COURSE_PRO")}><T id="CONTACT_FORM_OPTION_COURSE_PRO" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_COURSE_SELF")}><T id="CONTACT_FORM_OPTION_COURSE_SELF" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_COURSE_ONLINE")}><T id="CONTACT_FORM_OPTION_COURSE_ONLINE" /></option>
                                         </optgroup>
                                         <optgroup label={t("CONTACT_FORM_OPTGROUP_OTHER")}>
-                                            <option><T id="CONTACT_FORM_OPTION_MULTI_ZONE" /></option>
-                                            <option><T id="CONTACT_FORM_OPTION_OTHER" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_MULTI_ZONE")}><T id="CONTACT_FORM_OPTION_MULTI_ZONE" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_OTHER")}><T id="CONTACT_FORM_OPTION_OTHER" /></option>
                                         </optgroup>
                                     </select>
                                 </div>
