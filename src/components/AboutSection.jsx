@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Heart, Shield, Sparkles } from 'lucide-react';
+import { Award, Heart, Shield, Sparkles, Star } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
 import {
     Carousel,
@@ -25,7 +25,7 @@ const stats = [
     { number: '8+', label: 'Years Of Experience', icon: Sparkles },
     { number: '9x', label: 'International Championship Winner', icon: Award },
     { number: '1000+', label: 'Happy Clients', icon: Heart },
-    { number: '100%', label: 'Smooth Skin Guarantee', icon: Shield },
+    { number: '5.0★', label: 'Smooth Skin Guarantee', icon: Star },
 ];
 
 export default function AboutSection() {
@@ -37,7 +37,7 @@ export default function AboutSection() {
         { number: '8+', label: <T id="ABOUT_STAT_1_LABEL" />, icon: Sparkles },
         { number: '9x', label: <T id="ABOUT_STAT_2_LABEL" />, icon: Award },
         { number: '1000+', label: <T id="ABOUT_STAT_3_LABEL" />, icon: Heart },
-        { number: '100%', label: <T id="ABOUT_STAT_4_LABEL" />, icon: Shield },
+        { number: '5.0★', label: <T id="ABOUT_STAT_4_LABEL" />, icon: Star },
     ];
     return (
         <section id="about" className="py-16 lg:py-32 bg-background">
