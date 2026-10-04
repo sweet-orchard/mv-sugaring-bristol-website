@@ -75,7 +75,6 @@ export function useContent() {
     const { lang, localContent, isEditMode } = ctx;
     
     const t = (key) => {
-        if (isEditMode && tKeys && tKeys.current) tKeys.current.add(key);
         if (import.meta.env.DEV) {
             if (!(key in localContent.en)) {
                 console.warn(`Missing content key: ${key}`);
@@ -96,9 +95,6 @@ export function useContent() {
 
 export function T({ id, render }) {
     const ctx = useContext(ContentContext);
-    if (ctx && ctx.TKeys && ctx.TKeys.current) {
-        ctx.TKeys.current.add(id);
-    }
     if (!ctx) return null;
     const { isEditMode, setEditingKey, localContent, lang } = ctx;
     
