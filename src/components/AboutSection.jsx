@@ -30,6 +30,7 @@ const stats = [
 
 export default function AboutSection() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
 
     const stats = [

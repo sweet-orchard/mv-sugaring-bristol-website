@@ -20,6 +20,7 @@ const HairIcon = ({ className }) => (
 
 export default function CareGuideSection() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
 
     const beforeRules = [

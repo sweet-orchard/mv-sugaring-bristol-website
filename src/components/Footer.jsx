@@ -10,6 +10,7 @@ import { useContent, T } from '../context/ContentContext';
 
 export default function Footer() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
 
     return (

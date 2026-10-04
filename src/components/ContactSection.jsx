@@ -11,6 +11,7 @@ const WhatsAppIcon = ({ className }) => (
 
 export default function ContactSection() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
     return (
         <section id="contact" className="py-16 lg:py-32 bg-background">

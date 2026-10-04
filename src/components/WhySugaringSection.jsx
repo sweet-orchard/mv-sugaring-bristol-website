@@ -7,6 +7,7 @@ const icons = [Leaf, Zap, ShieldCheck, RefreshCw];
 
 export default function WhySugaringSection() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
 
     const benefits = [

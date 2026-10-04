@@ -4,6 +4,7 @@ import { useContent, T } from '../context/ContentContext';
 
 export default function StickyBookingButton() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
     const [visible, setVisible] = useState(false);
 
@@ -21,7 +22,7 @@ export default function StickyBookingButton() {
                     animate={{ x: "-50%", y: 0, opacity: 1 }}
                     exit={{ x: "-50%", y: 100, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="fixed bottom-6 left-1/2 z-50 lg:hidden"
+                    className="fixed bottom-6 left-1/2 z-[1000] lg:hidden"
                 >
                     <a
                         href="#contact"

@@ -44,7 +44,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className="fixed top-4 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8">
+        <div className="fixed top-4 left-0 right-0 z-[1000] px-4 sm:px-6 lg:px-8">
             {/* ══ SYMMETRICAL 1-ROW FLOATING BAR ══ */}
             <nav
                 className={`

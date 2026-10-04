@@ -77,7 +77,7 @@ function ServiceCard({ item, index, isPremium }) {
             {/* Picture/Graphic Placeholder or Real Image */}
             {item.image ? (
                 <div className="w-full aspect-[16/9] border-b border-border/30 shrink-0 relative overflow-hidden rounded-t-sm">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+                    <img src={item.image} alt={getText(item.name)} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
                 </div>
             ) : item.placeholderLabel ? (
                 <div className="w-full aspect-[16/9] bg-gradient-to-br from-secondary/50 via-accent/35 to-secondary/50 flex items-center justify-center border-b border-border/30 shrink-0 relative overflow-hidden rounded-t-sm">
@@ -121,6 +121,7 @@ function ServiceCard({ item, index, isPremium }) {
 function AddOnCard({ item, index }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     const readMoreText = <T id="BLOG_READ_MORE" />;
 
     React.useEffect(() => {
@@ -158,7 +159,7 @@ function AddOnCard({ item, index }) {
                 {/* Picture/Graphic Placeholder or Real Image */}
                 {item.image && (
                     <div className="w-full h-16 rounded-sm overflow-hidden mb-3 border border-border/30">
-                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" loading="lazy" />
+                        <img src={item.image} alt={getText(item.name)} className="w-full h-full object-cover" loading="lazy" />
                     </div>
                 )}
 

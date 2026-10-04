@@ -23,6 +23,7 @@ const features = [
 
 export default function WhatSetsApartSection() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
 
     const features = [

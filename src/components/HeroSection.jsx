@@ -5,6 +5,7 @@ import { useContent, T } from '../context/ContentContext';
 
 export default function HeroSection() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
     const [isPlaying, setIsPlaying] = useState(true);
     const desktopVideoRef = useRef(null);

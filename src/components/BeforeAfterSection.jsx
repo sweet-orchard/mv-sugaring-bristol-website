@@ -15,6 +15,7 @@ const results = [
 
 export default function BeforeAfterSection() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
     const [activeItem, setActiveItem] = useState(null);
     const scrollContainerRef = useRef(null);
@@ -119,7 +120,7 @@ export default function BeforeAfterSection() {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         onClick={() => setActiveItem(null)}
-                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 cursor-zoom-out"
+                        className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 cursor-zoom-out"
                     >
                         {/* Close button */}
                         <button

@@ -84,6 +84,7 @@ const testimonials = [
 ];
 export default function TestimonialsSection() {
     const { t, lang } = useContent();
+    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     const [[current, direction], setPage] = useState([0, 0]);
     const paginate = (dir) => {
         setPage(([prev]) => [
