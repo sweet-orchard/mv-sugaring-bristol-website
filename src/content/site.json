@@ -498,7 +498,13 @@
     "COURSES_ONLINE_OLD_PRICE": "£30",
     "COURSES_ONLINE_DISCOUNT": "50% OFF",
     "COURSES_ONLINE_CONSULTATION_OFFER": "Purchase the course and get a 50% discount on a personal consultation!",
-    "COURSES_LEARN_MORE_BTN": "Learn More"
+    "COURSES_LEARN_MORE_BTN": "Learn More",
+    "UPPER_ADDON_GROUP_NAME": "Add-ons",
+    "DOWN_ADDON_GROUP_NAME": "Add-ons",
+    "FACE_TAB_FULL_LABEL": "Face Sugaring",
+    "UPPER_TAB_FULL_LABEL": "Upper Body Sugaring",
+    "DOWN_TAB_FULL_LABEL": "Down Body Sugaring",
+    "BIKINI_TAB_FULL_LABEL": "Bikini & Intimate Sugaring"
   },
   "uk": {
     "PAGE_TITLE": "Марія Вацеба Шугаринг Брістоль",
@@ -952,6 +958,12 @@
     "COURSES_ONLINE_DISCOUNT": "-50%",
     "COURSES_ONLINE_CONSULTATION_OFFER": "Придбайте курс і отримайте знижку 50% на особисту консультацію!",
     "COURSES_LEARN_MORE_BTN": "Дізнатися більше",
-    "CONTACT_WHATSAPP_LABEL": "Написати у WhatsApp"
+    "CONTACT_WHATSAPP_LABEL": "Написати у WhatsApp",
+    "UPPER_ADDON_GROUP_NAME": "Додаткові послуги",
+    "DOWN_ADDON_GROUP_NAME": "Додаткові послуги",
+    "FACE_TAB_FULL_LABEL": "Шугаринг обличчя",
+    "UPPER_TAB_FULL_LABEL": "Шугаринг верхньої частини тіла",
+    "DOWN_TAB_FULL_LABEL": "Шугаринг нижньої частини тіла",
+    "BIKINI_TAB_FULL_LABEL": "Шугаринг бікіні та інтимної зони"
   }
 }

@@ -97,14 +97,14 @@ export default function BeforeAfterSection() {
                     <button 
                         onClick={() => scroll('left')}
                         className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-background/80 backdrop-blur-md border border-border/50 text-primary rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background shadow-lg"
-                        aria-label=<T id="BEFORE_AFTER_SCROLL_LEFT_ARIA" />
+                        aria-label={t("BEFORE_AFTER_SCROLL_LEFT_ARIA")}
                     >
                         <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                     </button>
                     <button 
                         onClick={() => scroll('right')}
                         className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-background/80 backdrop-blur-md border border-border/50 text-primary rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-background shadow-lg"
-                        aria-label=<T id="BEFORE_AFTER_SCROLL_RIGHT_ARIA" />
+                        aria-label={t("BEFORE_AFTER_SCROLL_RIGHT_ARIA")}
                     >
                         <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
                     </button>
@@ -126,7 +126,7 @@ export default function BeforeAfterSection() {
                         <button
                             onClick={() => setActiveItem(null)}
                             className="absolute top-6 right-6 text-white hover:text-primary transition-colors p-2 rounded-full hover:bg-white/10"
-                            aria-label=<T id="BEFORE_AFTER_CLOSE_ARIA" />
+                            aria-label={t("BEFORE_AFTER_CLOSE_ARIA")}
                         >
                             <X className="w-8 h-8" />
                         </button>

@@ -52,7 +52,8 @@ import { getServicesData } from './ServicesData';
 function ServiceCard({ item, index, isPremium }) {
     const { t } = useContent();
     const getText = (v) => v?.props?.id ? t(v.props.id) : (typeof v === 'string' ? v : '');
-    const isPopular = item.badge === 'Most Popular' || item.badge === 'Найпопулярніше';
+    const badgeId = item.badge?.props?.id;
+    const isPopular = badgeId === 'BIKINI_SERVICE_1_BADGE' || badgeId === 'FACE_COMBO_1_BADGE';
     const isPackage = item.badge && !isPopular && !isPremium;
 
     return (
