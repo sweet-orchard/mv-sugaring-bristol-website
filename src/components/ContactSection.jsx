@@ -68,7 +68,7 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <h4 className="text-sm font-body font-semibold text-foreground mb-1"><T id="FOOTER_EMAIL_BUTTON_LABEL" /></h4>
-                                    <a href="mailto:mariia.vatseba@gmail.com" className="text-sm text-primary hover:underline">mariia.vatseba@gmail.com</a>
+                                    <a href={`mailto:${t('CONTACT_EMAIL_VALUE').trim()}`} className="text-sm text-primary hover:underline"><T id="CONTACT_EMAIL_VALUE" /></a>
                                 </div>
                             </div>
 

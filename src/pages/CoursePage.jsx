@@ -170,7 +170,7 @@ export default function CoursePage() {
                                 </a>
                                 
                                 <a 
-                                    href="mailto:mariia.vatseba@gmail.com"
+                                    href={`mailto:${t('CONTACT_EMAIL_VALUE').trim()}`}
                                     className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-primary/10 text-primary hover:bg-primary hover:text-background border border-primary/20 transition-colors rounded-sm font-medium"
                                 >
                                     <Mail className="w-5 h-5" />

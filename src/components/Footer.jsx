@@ -35,7 +35,7 @@ export default function Footer() {
                                 <WhatsAppIcon className="w-4 h-4 shrink-0" />
                                 <span className="text-[11px] font-body tracking-widest uppercase"><T id="FOOTER_WHATSAPP_BUTTON" /></span>
                             </a>
-                            <a href="mailto:mariia.vatseba@gmail.com" className="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-background/20 hover:border-primary hover:bg-primary/10 transition-all text-background/60 hover:text-primary">
+                            <a href={`mailto:${t('CONTACT_EMAIL_VALUE').trim()}`} className="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-background/20 hover:border-primary hover:bg-primary/10 transition-all text-background/60 hover:text-primary">
                                 <Mail className="w-4 h-4 shrink-0" />
                                 <span className="text-[11px] font-body tracking-widest uppercase"><T id="FOOTER_EMAIL_BUTTON_LABEL" /></span>
                             </a>
