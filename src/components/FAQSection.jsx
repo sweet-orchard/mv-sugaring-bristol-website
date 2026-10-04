@@ -14,34 +14,34 @@ export default function FAQSection() {
     
     const faqCategories = [
         {
-            category: t("FAQ_CAT_1_NAME"),
+            category: <T id="FAQ_CAT_1_NAME" />,
             items: [
-                { q: t("FAQ_CAT1_Q1"), a: t("FAQ_CAT1_A1") },
-                { q: t("FAQ_CAT1_Q2"), a: t("FAQ_CAT1_A2") },
-                { q: t("FAQ_CAT1_Q3"), a: t("FAQ_CAT1_A3") },
-                { q: t("FAQ_CAT1_Q4"), a: t("FAQ_CAT1_A4") },
-                { q: t("FAQ_CAT1_Q5"), a: t("FAQ_CAT1_A5") },
+                { q: <T id="FAQ_CAT1_Q1" />, a: <T id="FAQ_CAT1_A1" /> },
+                { q: <T id="FAQ_CAT1_Q2" />, a: <T id="FAQ_CAT1_A2" /> },
+                { q: <T id="FAQ_CAT1_Q3" />, a: <T id="FAQ_CAT1_A3" /> },
+                { q: <T id="FAQ_CAT1_Q4" />, a: <T id="FAQ_CAT1_A4" /> },
+                { q: <T id="FAQ_CAT1_Q5" />, a: <T id="FAQ_CAT1_A5" /> },
             ]
         },
         {
-            category: t("FAQ_CAT_2_NAME"),
+            category: <T id="FAQ_CAT_2_NAME" />,
             items: [
-                { q: t("FAQ_CAT2_Q1"), a: t("FAQ_CAT2_A1") },
-                { q: t("FAQ_CAT2_Q2"), a: t("FAQ_CAT2_A2") },
-                { q: t("FAQ_CAT2_Q3"), a: t("FAQ_CAT2_A3") },
-                { q: t("FAQ_CAT2_Q4"), a: t("FAQ_CAT2_A4") },
-                { q: t("FAQ_CAT2_Q5"), a: t("FAQ_CAT2_A5") },
-                { q: t("FAQ_CAT2_Q6"), a: t("FAQ_CAT2_A6") },
-                { q: t("FAQ_CAT2_Q7"), a: t("FAQ_CAT2_A7") },
-                { q: t("FAQ_CAT2_Q8"), a: t("FAQ_CAT2_A8") },
+                { q: <T id="FAQ_CAT2_Q1" />, a: <T id="FAQ_CAT2_A1" /> },
+                { q: <T id="FAQ_CAT2_Q2" />, a: <T id="FAQ_CAT2_A2" /> },
+                { q: <T id="FAQ_CAT2_Q3" />, a: <T id="FAQ_CAT2_A3" /> },
+                { q: <T id="FAQ_CAT2_Q4" />, a: <T id="FAQ_CAT2_A4" /> },
+                { q: <T id="FAQ_CAT2_Q5" />, a: <T id="FAQ_CAT2_A5" /> },
+                { q: <T id="FAQ_CAT2_Q6" />, a: <T id="FAQ_CAT2_A6" /> },
+                { q: <T id="FAQ_CAT2_Q7" />, a: <T id="FAQ_CAT2_A7" /> },
+                { q: <T id="FAQ_CAT2_Q8" />, a: <T id="FAQ_CAT2_A8" /> },
             ]
         },
         {
-            category: t("FAQ_CAT_3_NAME"),
+            category: <T id="FAQ_CAT_3_NAME" />,
             items: [
-                { q: t("FAQ_CAT3_Q1"), a: t("FAQ_CAT3_A1") },
-                { q: t("FAQ_CAT3_Q2"), a: t("FAQ_CAT3_A2") },
-                { q: t("FAQ_CAT3_Q3"), a: t("FAQ_CAT3_A3") },
+                { q: <T id="FAQ_CAT3_Q1" />, a: <T id="FAQ_CAT3_A1" /> },
+                { q: <T id="FAQ_CAT3_Q2" />, a: <T id="FAQ_CAT3_A2" /> },
+                { q: <T id="FAQ_CAT3_Q3" />, a: <T id="FAQ_CAT3_A3" /> },
             ]
         }
     ];

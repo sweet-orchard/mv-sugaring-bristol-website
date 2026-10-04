@@ -23,17 +23,17 @@ export default function CareGuideSection() {
     
 
     const beforeRules = [
-        { icon: <HairIcon className="w-5 h-5 text-primary" />, title: t("CARE_BEFORE_1_TITLE"), desc: t("CARE_BEFORE_1_DESC") },
-        { icon: <Sparkles className="w-5 h-5 text-primary" />, title: t("CARE_BEFORE_2_TITLE"), desc: t("CARE_BEFORE_2_DESC") },
-        { icon: <Droplet className="w-5 h-5 text-primary" />,  title: t("CARE_BEFORE_3_TITLE"), desc: t("CARE_BEFORE_3_DESC") },
-        { icon: <Ban className="w-5 h-5 text-primary" />,     title: t("CARE_BEFORE_4_TITLE"), desc: t("CARE_BEFORE_4_DESC") },
+        { icon: <HairIcon className="w-5 h-5 text-primary" />, title: <T id="CARE_BEFORE_1_TITLE" />, desc: <T id="CARE_BEFORE_1_DESC" /> },
+        { icon: <Sparkles className="w-5 h-5 text-primary" />, title: <T id="CARE_BEFORE_2_TITLE" />, desc: <T id="CARE_BEFORE_2_DESC" /> },
+        { icon: <Droplet className="w-5 h-5 text-primary" />,  title: <T id="CARE_BEFORE_3_TITLE" />, desc: <T id="CARE_BEFORE_3_DESC" /> },
+        { icon: <Ban className="w-5 h-5 text-primary" />,     title: <T id="CARE_BEFORE_4_TITLE" />, desc: <T id="CARE_BEFORE_4_DESC" /> },
     ];
 
     const afterRules = [
-        { icon: <Shirt className="w-5 h-5 text-primary" />,      title: t("CARE_AFTER_1_TITLE"), desc: t("CARE_AFTER_1_DESC") },
-        { icon: <Flame className="w-5 h-5 text-primary" />,      title: t("CARE_AFTER_2_TITLE"), desc: t("CARE_AFTER_2_DESC") },
-        { icon: <Ban className="w-5 h-5 text-primary" />,        title: t("CARE_AFTER_3_TITLE"), desc: t("CARE_AFTER_3_DESC") },
-        { icon: <GlassWater className="w-5 h-5 text-primary" />, title: t("CARE_AFTER_4_TITLE"), desc: t("CARE_AFTER_4_DESC") },
+        { icon: <Shirt className="w-5 h-5 text-primary" />,      title: <T id="CARE_AFTER_1_TITLE" />, desc: <T id="CARE_AFTER_1_DESC" /> },
+        { icon: <Flame className="w-5 h-5 text-primary" />,      title: <T id="CARE_AFTER_2_TITLE" />, desc: <T id="CARE_AFTER_2_DESC" /> },
+        { icon: <Ban className="w-5 h-5 text-primary" />,        title: <T id="CARE_AFTER_3_TITLE" />, desc: <T id="CARE_AFTER_3_DESC" /> },
+        { icon: <GlassWater className="w-5 h-5 text-primary" />, title: <T id="CARE_AFTER_4_TITLE" />, desc: <T id="CARE_AFTER_4_DESC" /> },
     ];
 
     return (

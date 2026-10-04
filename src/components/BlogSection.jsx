@@ -8,8 +8,8 @@ export default function BlogSection() {
     
 
     const posts = [
-        { title: t("BLOG_POST_1_TITLE"), excerpt: t("BLOG_POST_1_EXCERPT"), tag: t("BLOG_POST_1_TAG") },
-        { title: t("BLOG_POST_2_TITLE"), excerpt: t("BLOG_POST_2_EXCERPT"), tag: t("BLOG_POST_2_TAG") },
+        { title: <T id="BLOG_POST_1_TITLE" />, excerpt: <T id="BLOG_POST_1_EXCERPT" />, tag: <T id="BLOG_POST_1_TAG" /> },
+        { title: <T id="BLOG_POST_2_TITLE" />, excerpt: <T id="BLOG_POST_2_EXCERPT" />, tag: <T id="BLOG_POST_2_TAG" /> },
     ];
 
     return (

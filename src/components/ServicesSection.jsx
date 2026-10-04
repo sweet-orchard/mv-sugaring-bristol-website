@@ -121,7 +121,7 @@ function ServiceCard({ item, index, isPremium }) {
 function AddOnCard({ item, index }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const { t, lang } = useContent();
-    const readMoreText = t("BLOG_READ_MORE");
+    const readMoreText = <T id="BLOG_READ_MORE" />;
 
     React.useEffect(() => {
         if (isExpanded) {
@@ -526,7 +526,7 @@ export default function ServicesSection() {
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
-                        {t("SERVICES_HEADING").split(' ')[0]} <span className="font-semibold italic">{t("SERVICES_HEADING").split(' ').slice(1).join(' ')}</span>
+                        <T id="SERVICES_HEADING" render={(text) => <>{text.split(' ')[0]} <span className="font-semibold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
                     </h2>
                 </motion.div>
 

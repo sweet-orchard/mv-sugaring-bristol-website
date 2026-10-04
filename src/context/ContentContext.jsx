@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import siteContent from '../content/site.json';
 import { EditMenu } from '../components/EditMenu'; // we will create this
 
@@ -75,6 +75,7 @@ export function useContent() {
     const { lang, localContent, isEditMode } = ctx;
     
     const t = (key) => {
+        if (isEditMode && tKeys && tKeys.current) tKeys.current.add(key);
         if (import.meta.env.DEV) {
             if (!(key in localContent.en)) {
                 console.warn(`Missing content key: ${key}`);
@@ -93,7 +94,11 @@ export function useContent() {
     return { ...ctx, t };
 }
 
-export function T({ id }) {
+export function T({ id, render }) {
+    const ctx = useContext(ContentContext);
+    if (ctx && ctx.TKeys && ctx.TKeys.current) {
+        ctx.TKeys.current.add(id);
+    }
     const ctx = useContext(ContentContext);
     if (!ctx) return null;
     const { isEditMode, setEditingKey, localContent, lang } = ctx;
@@ -110,20 +115,18 @@ export function T({ id }) {
         }
     }
 
-    if (!isEditMode) {
-        return <>{text}</>;
-    }
+    if (!isEditMode) { return render ? render(text) : <>{text}</>; }
 
     return (
         <span 
-            className="group relative cursor-text hover:ring-2 hover:ring-primary/60 transition-all rounded-sm inline-flex items-center"
+            className="group relative z-[99] cursor-text hover:ring-2 hover:ring-primary/60 transition-all rounded-sm inline-flex items-center"
             onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 setEditingKey(id);
             }}
         >
-            <span className={isFallback ? 'opacity-50' : ''}>{text || ' '}</span>
+            <span className={isFallback ? 'opacity-50' : ''}>{render ? render(text) : (text || ' ')}</span>
             {isFallback && <span className="absolute -top-3 -right-3 text-[8px] bg-secondary/80 text-foreground px-1 rounded whitespace-nowrap  transition-opacity pointer-events-none">not translated yet</span>}
         </span>
     );

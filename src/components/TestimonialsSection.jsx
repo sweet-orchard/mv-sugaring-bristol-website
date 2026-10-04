@@ -181,7 +181,7 @@ export default function TestimonialsSection() {
                                 <div className="pointer-events-none">
                                     <Quote className="w-8 h-8 text-primary/30 mb-4" />
                                     <p className="text-sm md:text-base leading-relaxed text-foreground/80 font-body mb-6 mt-4 whitespace-pre-line">
-                                        {t(testimonials[current].textKey)}
+                                        <T id={testimonials[current].textKey} />
                                     </p>
                                 </div>
                             </div>

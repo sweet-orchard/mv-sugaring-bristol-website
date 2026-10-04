@@ -26,9 +26,9 @@ export default function WhatSetsApartSection() {
     
 
     const features = [
-        { icon: Flame,    title: t("APART_FEATURE_1_TITLE"), desc: t("APART_FEATURE_1_DESC") },
-        { icon: Hand,     title: t("APART_FEATURE_2_TITLE"), desc: t("APART_FEATURE_2_DESC") },
-        { icon: Droplets, title: t("APART_FEATURE_3_TITLE"), desc: t("APART_FEATURE_3_DESC") },
+        { icon: Flame,    title: <T id="APART_FEATURE_1_TITLE" />, desc: <T id="APART_FEATURE_1_DESC" /> },
+        { icon: Hand,     title: <T id="APART_FEATURE_2_TITLE" />, desc: <T id="APART_FEATURE_2_DESC" /> },
+        { icon: Droplets, title: <T id="APART_FEATURE_3_TITLE" />, desc: <T id="APART_FEATURE_3_DESC" /> },
     ];
 
     const [isPlaying, setIsPlaying] = useState(true);
@@ -57,7 +57,7 @@ export default function WhatSetsApartSection() {
                     >
                         <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="APART_EYEBROW" /></p>
                         <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-6">
-                            {t("APART_HEADING").split(' ').slice(0,1).join(' ')} <span className="font-semibold italic">{t("APART_HEADING").split(' ').slice(1).join(' ')}</span>
+                            <T id="APART_HEADING" render={(text) => <>{text.split(' ').slice(0,1).join(' ')} <span className="font-semibold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
                         </h2>
                         <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4"><T id="APART_PARAGRAPH_1" /></p>
                         <p className="text-sm font-body text-muted-foreground leading-relaxed mb-8"><T id="APART_PARAGRAPH_2" /></p>

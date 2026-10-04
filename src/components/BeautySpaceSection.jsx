@@ -8,9 +8,9 @@ export default function BeautySpaceSection() {
     
 
     const highlights = [
-        { icon: ShieldCheck, title: t("SPACE_HIGHLIGHT_1_TITLE"), desc: t("SPACE_HIGHLIGHT_1_DESC") },
-        { icon: Heart,       title: t("SPACE_HIGHLIGHT_2_TITLE"), desc: t("SPACE_HIGHLIGHT_2_DESC") },
-        { icon: Sparkles,    title: t("SPACE_HIGHLIGHT_3_TITLE"), desc: t("SPACE_HIGHLIGHT_3_DESC") },
+        { icon: ShieldCheck, title: <T id="SPACE_HIGHLIGHT_1_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_1_DESC" /> },
+        { icon: Heart,       title: <T id="SPACE_HIGHLIGHT_2_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_2_DESC" /> },
+        { icon: Sparkles,    title: <T id="SPACE_HIGHLIGHT_3_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_3_DESC" /> },
     ];
 
     return (

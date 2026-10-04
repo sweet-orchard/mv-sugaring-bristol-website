@@ -33,10 +33,10 @@ export default function AboutSection() {
     
 
     const stats = [
-        { number: '8+', label: t("ABOUT_STAT_1_LABEL"), icon: Sparkles },
-        { number: '9x', label: t("ABOUT_STAT_2_LABEL"), icon: Award },
-        { number: '1000+', label: t("ABOUT_STAT_3_LABEL"), icon: Heart },
-        { number: '100%', label: t("ABOUT_STAT_4_LABEL"), icon: Shield },
+        { number: '8+', label: <T id="ABOUT_STAT_1_LABEL" />, icon: Sparkles },
+        { number: '9x', label: <T id="ABOUT_STAT_2_LABEL" />, icon: Award },
+        { number: '1000+', label: <T id="ABOUT_STAT_3_LABEL" />, icon: Heart },
+        { number: '100%', label: <T id="ABOUT_STAT_4_LABEL" />, icon: Shield },
     ];
     return (
         <section id="about" className="py-16 lg:py-32 bg-background">

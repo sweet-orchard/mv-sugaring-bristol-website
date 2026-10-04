@@ -10,10 +10,10 @@ export default function WhySugaringSection() {
     
 
     const benefits = [
-        { icon: Leaf,       title: t("WHY_BENEFIT_1_TITLE"), desc: t("WHY_BENEFIT_1_DESC") },
-        { icon: Zap,        title: t("WHY_BENEFIT_2_TITLE"), desc: t("WHY_BENEFIT_2_DESC") },
-        { icon: ShieldCheck,title: t("WHY_BENEFIT_3_TITLE"), desc: t("WHY_BENEFIT_3_DESC") },
-        { icon: RefreshCw,  title: t("WHY_BENEFIT_4_TITLE"), desc: t("WHY_BENEFIT_4_DESC") },
+        { icon: Leaf,       title: <T id="WHY_BENEFIT_1_TITLE" />, desc: <T id="WHY_BENEFIT_1_DESC" /> },
+        { icon: Zap,        title: <T id="WHY_BENEFIT_2_TITLE" />, desc: <T id="WHY_BENEFIT_2_DESC" /> },
+        { icon: ShieldCheck,title: <T id="WHY_BENEFIT_3_TITLE" />, desc: <T id="WHY_BENEFIT_3_DESC" /> },
+        { icon: RefreshCw,  title: <T id="WHY_BENEFIT_4_TITLE" />, desc: <T id="WHY_BENEFIT_4_DESC" /> },
     ];
 
     return (
@@ -32,7 +32,7 @@ export default function WhySugaringSection() {
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
                     <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6">
-                        {t("WHY_HEADING").replace('?', '')} <span className="font-semibold italic">?</span>
+                        <T id="WHY_HEADING" render={(text) => <>{text.replace('?', '')} <span className="font-semibold italic">?</span></>} />
                     </h2>
                     <p className="max-w-2xl mx-auto text-sm font-body text-muted-foreground leading-relaxed"><T id="BLOG_POST_1_EXCERPT" /></p>
                 </motion.div>
