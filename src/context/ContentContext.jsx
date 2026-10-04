@@ -93,8 +93,12 @@ export function useContent() {
     return { ...ctx, t };
 }
 
+const LONG_PRESS_MS = 600;
+
 export function T({ id, render }) {
     const ctx = useContext(ContentContext);
+    const pressTimer = useRef(null);
+    const longPressed = useRef(false);
     if (!ctx) return null;
     const { isEditMode, setEditingKey, localContent, lang } = ctx;
     
@@ -112,10 +116,41 @@ export function T({ id, render }) {
 
     if (!isEditMode) { return render ? render(text) : <>{text}</>; }
 
+    // Inside a button/link: a tap behaves like the real control, a long press opens the editor.
+    const interactiveSelector = 'a, button, [role="button"]';
+    const isInteractive = (el) => !!el.closest(interactiveSelector);
+    const cancelPress = () => {
+        clearTimeout(pressTimer.current);
+        pressTimer.current = null;
+    };
+
     return (
         <span 
             className="group relative z-[99] cursor-text hover:ring-2 hover:ring-primary/60 transition-all rounded-sm inline-flex items-center"
+            onPointerDown={(e) => {
+                if (!isInteractive(e.currentTarget)) return;
+                longPressed.current = false;
+                cancelPress();
+                pressTimer.current = setTimeout(() => {
+                    longPressed.current = true;
+                    setEditingKey(id);
+                }, LONG_PRESS_MS);
+            }}
+            onPointerUp={cancelPress}
+            onPointerLeave={cancelPress}
+            onPointerCancel={cancelPress}
+            onContextMenu={(e) => { if (isInteractive(e.currentTarget)) e.preventDefault(); }}
+            onClickCapture={(e) => {
+                if (!isInteractive(e.currentTarget)) return;
+                if (longPressed.current) {
+                    // The press already opened the editor; don't also trigger the button.
+                    longPressed.current = false;
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            }}
             onClick={(e) => {
+                if (isInteractive(e.currentTarget)) return; // normal click: let the button/link act
                 e.preventDefault();
                 e.stopPropagation();
                 setEditingKey(id);
