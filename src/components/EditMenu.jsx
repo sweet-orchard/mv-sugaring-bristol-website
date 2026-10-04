@@ -175,41 +175,41 @@ export function EditMenu() {
             )}
 
             {/* Fixed Bottom Toolbar */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-auto w-[90%] max-w-2xl bg-background border border-primary/20 shadow-xl rounded-full px-6 py-3 flex items-center justify-between gap-4">
+            <div className="fixed bottom-4 left-1/2 -translate-x-1/2 pointer-events-auto w-[95%] sm:w-[90%] max-w-2xl bg-background/95 backdrop-blur-md border border-primary/20 shadow-2xl rounded-full px-3 py-2 sm:px-6 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
                 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1.5 sm:gap-3">
                     <button 
                         onClick={handleToggleLang}
-                        className="px-4 py-1.5 bg-secondary hover:bg-secondary/80 border border-border/50 rounded-full text-xs uppercase tracking-wider font-semibold transition-all flex items-center gap-2"
+                        className="px-3 py-1.5 sm:px-4 sm:py-2 bg-secondary hover:bg-secondary/80 border border-border/50 rounded-full text-[10px] sm:text-xs uppercase tracking-wider font-semibold transition-all flex items-center gap-1.5 sm:gap-2 whitespace-nowrap"
                     >
-                        Editing: <span className="text-primary">{lang === 'en' ? '🇬🇧 EN' : '🇺🇦 UA'}</span>
+                        <span className="hidden sm:inline">Editing:</span> <span className="text-primary">{lang === 'en' ? '🇬🇧 EN' : '🇺🇦 UA'}</span>
                     </button>
 
                     <button 
                         onClick={() => setShowMoreTexts(true)}
-                        className="p-1.5 text-muted-foreground hover:text-foreground hover:bg-secondary rounded-full transition-all"
+                        className="p-1.5 sm:p-2 text-muted-foreground hover:text-foreground hover:bg-secondary rounded-full transition-all"
                         title="Edit attributes / more texts"
                     >
-                        <List className="w-5 h-5" />
+                        <List className="w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1.5 sm:gap-3">
                     <button 
                         onClick={handleSaveChanges}
                         disabled={!unsavedChanges || isSaving}
-                        className={`px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold flex items-center gap-2 transition-all ${unsavedChanges ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-md animate-pulse' : 'bg-secondary text-muted-foreground opacity-50 cursor-not-allowed'}`}
+                        className={`px-3 py-1.5 sm:px-5 sm:py-2 rounded-full text-[10px] sm:text-xs uppercase tracking-wider font-semibold flex items-center gap-1.5 sm:gap-2 transition-all whitespace-nowrap ${unsavedChanges ? 'bg-primary text-primary-foreground hover:bg-primary/90 shadow-md animate-pulse' : 'bg-secondary text-muted-foreground opacity-50 cursor-not-allowed'}`}
                     >
-                        <Save className="w-4 h-4" />
-                        {isSaving ? 'Saving...' : 'Save Changes'}
+                        <Save className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        {isSaving ? 'Saving...' : 'Save'}
                     </button>
 
                     <button 
                         onClick={handleLogout}
-                        className="p-1.5 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded-full transition-all"
+                        className="p-1.5 sm:p-2 text-red-500/70 hover:text-red-500 hover:bg-red-500/10 rounded-full transition-all"
                         title="Log out"
                     >
-                        <LogOut className="w-5 h-5" />
+                        <LogOut className="w-4 h-4 sm:w-5 sm:h-5" />
                     </button>
                 </div>
             </div>

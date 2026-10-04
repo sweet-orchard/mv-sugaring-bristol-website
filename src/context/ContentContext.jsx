@@ -99,7 +99,6 @@ export function T({ id, render }) {
     if (ctx && ctx.TKeys && ctx.TKeys.current) {
         ctx.TKeys.current.add(id);
     }
-    const ctx = useContext(ContentContext);
     if (!ctx) return null;
     const { isEditMode, setEditingKey, localContent, lang } = ctx;
     
