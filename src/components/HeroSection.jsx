@@ -49,13 +49,15 @@ export default function HeroSection() {
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         className="order-2 lg:order-1"
                     >
-                        <div className="flex items-center gap-3 mb-6">
+                        {/* Desktop Eyebrow */}
+                        <div className="hidden lg:flex items-center gap-3 mb-6">
                             <div className="h-px w-12 bg-primary/60" />
                             <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="HERO_EYEBROW" /></span>
                         </div>
 
-                        <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] text-foreground mb-3"><T id="HERO_HEADING_LINE_1" /></h1>
-                        <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] text-foreground mb-6"><T id="HERO_HEADING_LINE_2" /></h1>
+                        {/* Desktop Headings */}
+                        <h1 className="hidden lg:block font-display text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] text-foreground mb-3"><T id="HERO_HEADING_LINE_1" /></h1>
+                        <h1 className="hidden lg:block font-display text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] text-foreground mb-6"><T id="HERO_HEADING_LINE_2" /></h1>
 
                         <p className="font-display italic text-xl md:text-2xl text-primary/80 mb-6 leading-relaxed max-w-xl"><T id="HERO_QUOTE" /></p>
 
@@ -75,23 +77,31 @@ export default function HeroSection() {
                                 className="inline-flex items-center justify-center px-8 py-4 border border-foreground/20 text-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:border-primary hover:text-primary transition-all duration-300"
                             ><T id="ABOUT_SECTION_EYEBROW" /></a>
                         </div>
-
-
                     </motion.div>
 
-                    {/* Right — Image Placeholder */}
+                    {/* Right — Image Placeholder & Mobile Header */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-                        className="order-1 lg:order-2 relative"
+                        className="order-1 lg:order-2 flex flex-col w-full"
                     >
-                        <div className="relative aspect-[16/9] lg:aspect-[3/4] max-w-lg mx-auto">
-                            {/* Gold frame accent */}
-                            <div className="absolute -top-4 -right-4 w-full h-full border border-primary/30 rounded-sm" />
+                        {/* Mobile Eyebrow */}
+                        <div className="flex lg:hidden items-center justify-center gap-3 mb-6 w-full">
+                            <div className="h-px w-8 bg-primary/60" />
+                            <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium text-center"><T id="HERO_EYEBROW" /></span>
+                            <div className="h-px w-8 bg-primary/60" />
+                        </div>
+
+                        <div className="relative aspect-[16/9] lg:aspect-[3/4] max-w-lg mx-auto w-full">
+                            {/* Gold frame accent (desktop only or adjust for mobile) */}
+                            <div className="hidden lg:block absolute -top-4 -right-4 w-full h-full border border-primary/30 rounded-sm" />
 
                             {/* Video player */}
                             <div className="relative w-full h-full rounded-sm overflow-hidden bg-gradient-to-br from-secondary via-accent to-secondary">
+                                {/* Mobile Dark Overlay */}
+                                <div className="absolute inset-0 bg-black/40 lg:bg-transparent z-10 pointer-events-none" />
+
                                 {/* Desktop Video */}
                                 <video
                                     ref={desktopVideoRef}
@@ -113,17 +123,21 @@ export default function HeroSection() {
                                     src="/herovideo-mobile.webm"
                                 />
 
+                                {/* Mobile Headings Overlay */}
+                                <div className="absolute inset-0 z-20 flex flex-col items-center justify-center lg:hidden text-white pointer-events-none px-4">
+                                    <h1 className="font-display text-5xl sm:text-6xl font-light leading-[0.95] mb-2 text-center text-white"><T id="HERO_HEADING_LINE_1" /></h1>
+                                    <h1 className="font-display text-5xl sm:text-6xl font-semibold leading-[0.95] text-center text-white"><T id="HERO_HEADING_LINE_2" /></h1>
+                                </div>
+
                                 {/* Play/Pause control button */}
                                 <button
                                     onClick={togglePlay}
-                                    className="absolute top-4 right-4 z-20 bg-background/80 backdrop-blur-md border border-border/40 hover:bg-background hover:text-primary text-foreground w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-md focus:outline-none"
+                                    className="absolute top-4 right-4 z-30 bg-background/80 backdrop-blur-md border border-border/40 hover:bg-background hover:text-primary text-foreground w-10 h-10 rounded-full flex items-center justify-center transition-all shadow-md focus:outline-none"
                                     aria-label={isPlaying ? t("HERO_VIDEO_PAUSE_ARIA") : t("HERO_VIDEO_PLAY_ARIA")}
                                 >
                                     {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                                 </button>
                             </div>
-
-
                         </div>
                     </motion.div>
                 </div>
