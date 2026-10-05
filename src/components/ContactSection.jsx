@@ -161,8 +161,13 @@ export default function ContactSection() {
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2"><T id="CONTACT_FORM_MESSAGE_LABEL" /></label>
                                     <textarea name="message" required rows={4} className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors resize-none" placeholder={t("CONTACT_FORM_MESSAGE_PLACEHOLDER")} />
                                 </div>
-                                <button type="submit" className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:bg-primary/90 transition-all duration-300">
-                                    <Send className="w-4 h-4" /><T id="CONTACT_FORM_SUBMIT_BUTTON" /></button>
+                                <button type="button" disabled className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-muted border border-border/50 text-muted-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm cursor-not-allowed transition-all duration-300 opacity-70">
+                                    <Send className="w-4 h-4 opacity-50" />
+                                    <span className="flex items-center gap-2">
+                                        <T id="CONTACT_FORM_SUBMIT_BUTTON" /> 
+                                        <span className="text-[10px] bg-background/50 px-2 py-0.5 rounded-sm lowercase tracking-normal font-medium">(coming soon)</span>
+                                    </span>
+                                </button>
                             </form>
                         </div>
                     </motion.div>
