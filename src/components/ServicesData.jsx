@@ -78,14 +78,6 @@ export const getServicesData = (t) => ({
                         { name: <T id="UPPER_SERVICE_4_NAME" />, price: <T id="PRICE_ITEM_19" />, duration: <T id="UPPER_SERVICE_4_DURATION" />, desc: <T id="UPPER_SERVICE_4_DESC" />, image: '/price-list/upper-body/stomach.png' },
                     ]
                 },
-                {
-                    groupName: <T id="UPPER_ADDON_GROUP_NAME" />,
-                    isAddOn: true,
-                    items: [
-                        { name: <T id="UPPER_ADDON_1_NAME" />, price: <T id="PRICE_ITEM_20" />, duration: <T id="UPPER_ADDON_1_DURATION" />, desc: <T id="UPPER_ADDON_1_DESC" />, isAddOn: true, placeholderLabel: 'Nipple Area Graphic' },
-                        { name: <T id="UPPER_ADDON_2_NAME" />, price: <T id="PRICE_ITEM_21" />, duration: <T id="UPPER_ADDON_2_DURATION" />, desc: <T id="UPPER_ADDON_2_DESC" />, isAddOn: true, placeholderLabel: 'Fingers Graphic' },
-                    ]
-                }
             ]
         },
         {
@@ -107,13 +99,6 @@ export const getServicesData = (t) => ({
                         { name: <T id="DOWN_SERVICE_5_NAME" />, price: <T id="PRICE_ITEM_26" />, badge: <T id="DOWN_SERVICE_5_BADGE" />, duration: <T id="DOWN_SERVICE_5_DURATION" />, desc: <T id="DOWN_SERVICE_5_DESC" />, image: '/price-list/lower-body/lower back and buttocks.png' },
                     ]
                 },
-                {
-                    groupName: <T id="DOWN_ADDON_GROUP_NAME" />,
-                    isAddOn: true,
-                    items: [
-                        { name: <T id="DOWN_ADDON_1_NAME" />, price: <T id="PRICE_ITEM_27" />, duration: <T id="DOWN_ADDON_1_DURATION" />, desc: <T id="DOWN_ADDON_1_DESC" />, isAddOn: true, placeholderLabel: 'Toes Graphic' },
-                    ]
-                }
             ]
         },
         {
@@ -134,15 +119,6 @@ export const getServicesData = (t) => ({
                         { name: <T id="BIKINI_SERVICE_4_NAME" />, price: <T id="PRICE_ITEM_31" />, duration: <T id="BIKINI_SERVICE_4_DURATION" />, desc: <T id="BIKINI_SERVICE_4_DESC" />, image: '/price-list/bikini/basic-bikini.jpg' },
                     ]
                 },
-                {
-                    groupName: <T id="BIKINI_ADDON_GROUP_NAME" />,
-                    isAddOn: true,
-                    items: [
-                        { name: <T id="BIKINI_ADDON_1_NAME" />, price: <T id="PRICE_ITEM_32" />, desc: <T id="BIKINI_ADDON_1_DESC" />, extendedDesc: <T id="BIKINI_ADDON_1_EXTENDED_DESC" />, isAddOn: true, placeholderLabel: 'Extra Long Hair Graphic' },
-                        { name: <T id="BIKINI_ADDON_2_NAME" />, price: <T id="PRICE_ITEM_33" />, desc: <T id="BIKINI_ADDON_2_DESC" />, extendedDesc: <T id="BIKINI_ADDON_2_EXTENDED_DESC" />, isAddOn: true, placeholderLabel: 'Extra Patch Graphic' },
-                        { name: <T id="BIKINI_ADDON_3_NAME" />, price: <T id="PRICE_ITEM_34" />, desc: <T id="BIKINI_ADDON_3_DESC" />, isAddOn: true, placeholderLabel: 'Belly Line Graphic' },
-                    ]
-                }
             ]
         }
     ]
