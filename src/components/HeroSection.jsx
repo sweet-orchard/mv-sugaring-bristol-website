@@ -90,6 +90,19 @@ export default function HeroSection() {
                                 className="inline-flex items-center justify-center px-8 py-4 border border-foreground/20 text-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:border-primary hover:text-primary transition-all duration-300"
                             ><T id="ABOUT_SECTION_EYEBROW" /></a>
                         </div>
+
+                        {/* Mobile Stats Grid */}
+                        <div className="block lg:hidden w-full mt-4">
+                            <div className="grid grid-cols-2 gap-4">
+                                {stats.map((stat, i) => (
+                                    <div key={i} className="text-center p-4 bg-secondary/40 border border-border/30 rounded-sm">
+                                        <stat.icon className="w-5 h-5 text-primary mx-auto mb-3" />
+                                        <p className="font-display text-3xl font-semibold text-foreground mb-1">{stat.number}</p>
+                                        <p className="text-[9px] tracking-[0.05em] uppercase text-muted-foreground font-body leading-tight">{stat.label}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </motion.div>
 
                     {/* Right — Image Placeholder & Mobile Header */}
@@ -173,18 +186,6 @@ export default function HeroSection() {
                 </motion.div>
             </div>
 
-            {/* Mobile Stats Grid */}
-            <div className="block lg:hidden w-full px-6 pb-12 mt-4 relative z-10">
-                <div className="grid grid-cols-2 gap-4">
-                    {stats.map((stat, i) => (
-                        <div key={i} className="text-center p-4 bg-secondary/40 border border-border/30 rounded-sm">
-                            <stat.icon className="w-5 h-5 text-primary mx-auto mb-3" />
-                            <p className="font-display text-3xl font-semibold text-foreground mb-1">{stat.number}</p>
-                            <p className="text-[9px] tracking-[0.05em] uppercase text-muted-foreground font-body leading-tight">{stat.label}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
         </section>
     );
 }
