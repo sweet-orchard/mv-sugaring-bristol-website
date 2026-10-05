@@ -119,6 +119,13 @@ export const getServicesData = (t) => ({
                         { name: <T id="BIKINI_SERVICE_4_NAME" />, price: <T id="PRICE_ITEM_31" />, duration: <T id="BIKINI_SERVICE_4_DURATION" />, desc: <T id="BIKINI_SERVICE_4_DESC" />, image: '/price-list/bikini/basic-bikini.jpg' },
                     ]
                 },
+                {
+                    groupName: null,
+                    isAddOn: true,
+                    items: [
+                        { name: <T id="BIKINI_ADDON_NEW_NAME" />, price: <T id="BIKINI_ADDON_NEW_PRICE" />, desc: <T id="BIKINI_ADDON_NEW_DESC" /> }
+                    ]
+                }
             ]
         }
     ]
