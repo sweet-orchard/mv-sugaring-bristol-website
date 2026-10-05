@@ -567,6 +567,51 @@ export default function ServicesSection() {
                         </div>
                     </div>
                 </motion.div>
+                {/* ── Collapsible Duration Notes ── */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    className="mt-8"
+                >
+                    <button
+                        onClick={() => setNotesOpen(o => !o)}
+                        className="w-full flex items-center justify-between px-6 py-4 bg-background border border-border/40 rounded-sm hover:border-primary/30 transition-colors"
+                    >
+                        <div className="flex items-center gap-3">
+                            <Clock className="w-4 h-4 text-primary" />
+                            <p className="text-xs tracking-[0.2em] uppercase text-primary font-medium font-body"><T id="DURATION_TOGGLE_LABEL" /></p>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${notesOpen ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    <AnimatePresence>
+                        {notesOpen && (
+                            <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="overflow-hidden"
+                            >
+                                <div className="bg-background border border-t-0 border-border/40 rounded-b-sm px-6 py-6">
+                                    <p className="text-sm text-muted-foreground leading-relaxed mb-5 font-body"><T id="DURATION_INTRO" /></p>
+                                    <div className="grid md:grid-cols-2 gap-5">
+                                        {durationNotes.map((note, i) => (
+                                            <div key={i} className="flex gap-3 items-start">
+                                                <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                                                <div>
+                                                    <p className="text-sm font-semibold text-foreground font-body mb-0.5">{note.title}</p>
+                                                    <p className="text-sm text-muted-foreground leading-relaxed font-body">{note.desc}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </motion.div>
 
                 {/* ── Tab Navigation ── */}
                 <div className="mb-8 overflow-x-auto -mx-6 px-6 lg:mx-0 lg:px-0">
@@ -662,51 +707,6 @@ export default function ServicesSection() {
                     )}
                 </AnimatePresence>
 
-                {/* ── Collapsible Duration Notes ── */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    className="mt-8"
-                >
-                    <button
-                        onClick={() => setNotesOpen(o => !o)}
-                        className="w-full flex items-center justify-between px-6 py-4 bg-background border border-border/40 rounded-sm hover:border-primary/30 transition-colors"
-                    >
-                        <div className="flex items-center gap-3">
-                            <Clock className="w-4 h-4 text-primary" />
-                            <p className="text-xs tracking-[0.2em] uppercase text-primary font-medium font-body"><T id="DURATION_TOGGLE_LABEL" /></p>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${notesOpen ? 'rotate-180' : ''}`} />
-                    </button>
-
-                    <AnimatePresence>
-                        {notesOpen && (
-                            <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: 'auto', opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="overflow-hidden"
-                            >
-                                <div className="bg-background border border-t-0 border-border/40 rounded-b-sm px-6 py-6">
-                                    <p className="text-sm text-muted-foreground leading-relaxed mb-5 font-body"><T id="DURATION_INTRO" /></p>
-                                    <div className="grid md:grid-cols-2 gap-5">
-                                        {durationNotes.map((note, i) => (
-                                            <div key={i} className="flex gap-3 items-start">
-                                                <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                                                <div>
-                                                    <p className="text-sm font-semibold text-foreground font-body mb-0.5">{note.title}</p>
-                                                    <p className="text-sm text-muted-foreground leading-relaxed font-body">{note.desc}</p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
-                </motion.div>
 
                 {/* ── Book CTA ── */}
                 <motion.div
