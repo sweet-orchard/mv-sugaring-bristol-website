@@ -133,14 +133,14 @@ export default function ContactSection() {
                                             <option value={t("CONTACT_FORM_OPTION_GSTRING")}><T id="CONTACT_FORM_OPTION_GSTRING" /></option>
                                             <option value={t("CONTACT_FORM_OPTION_BASIC_BIKINI")}><T id="CONTACT_FORM_OPTION_BASIC_BIKINI" /></option>
                                         </optgroup>
+                                        <optgroup label={t("CONTACT_FORM_OPTGROUP_DOWN")}>
+                                            <option value={t("CONTACT_FORM_OPTION_LEGS")}><T id="CONTACT_FORM_OPTION_LEGS" /></option>
+                                            <option value={t("CONTACT_FORM_OPTION_BUTTOCKS")}><T id="CONTACT_FORM_OPTION_BUTTOCKS" /></option>
+                                        </optgroup>
                                         <optgroup label={t("CONTACT_FORM_OPTGROUP_UPPER")}>
                                             <option value={t("CONTACT_FORM_OPTION_UNDERARMS")}><T id="CONTACT_FORM_OPTION_UNDERARMS" /></option>
                                             <option value={t("CONTACT_FORM_OPTION_ARMS")}><T id="CONTACT_FORM_OPTION_ARMS" /></option>
                                             <option value={t("CONTACT_FORM_OPTION_STOMACH")}><T id="CONTACT_FORM_OPTION_STOMACH" /></option>
-                                        </optgroup>
-                                        <optgroup label={t("CONTACT_FORM_OPTGROUP_DOWN")}>
-                                            <option value={t("CONTACT_FORM_OPTION_LEGS")}><T id="CONTACT_FORM_OPTION_LEGS" /></option>
-                                            <option value={t("CONTACT_FORM_OPTION_BUTTOCKS")}><T id="CONTACT_FORM_OPTION_BUTTOCKS" /></option>
                                         </optgroup>
                                         <optgroup label={t("CONTACT_FORM_OPTGROUP_FACE")}>
                                             <option value={t("CONTACT_FORM_OPTION_FACE_ZONES")}><T id="CONTACT_FORM_OPTION_FACE_ZONES" /></option>
