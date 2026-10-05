@@ -59,11 +59,17 @@ export default function HeroSection() {
                         <h1 className="hidden lg:block font-display text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] text-foreground mb-3"><T id="HERO_HEADING_LINE_1" /></h1>
                         <h1 className="hidden lg:block font-display text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] text-foreground mb-6"><T id="HERO_HEADING_LINE_2" /></h1>
 
-                        <p className="font-display italic text-xl md:text-2xl text-primary/80 mb-6 leading-relaxed max-w-xl"><T id="HERO_QUOTE" /></p>
+                        {/* Desktop Text */}
+                        <div className="hidden lg:block">
+                            <p className="font-display italic text-xl md:text-2xl text-primary/80 mb-6 leading-relaxed max-w-xl"><T id="HERO_QUOTE" /></p>
+                            <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl mb-3"><T id="HERO_PARAGRAPH_1" /></p>
+                            <p className="text-sm font-body text-foreground/70 leading-relaxed max-w-xl mb-10"><T id="HERO_PARAGRAPH_2" /></p>
+                        </div>
 
-                        <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl mb-3"><T id="HERO_PARAGRAPH_1" /></p>
-
-                        <p className="text-sm font-body text-foreground/70 leading-relaxed max-w-xl mb-10"><T id="HERO_PARAGRAPH_2" /></p>
+                        {/* Mobile Text */}
+                        <div className="block lg:hidden mb-8">
+                            <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl"><T id="HERO_MOBILE_TEXT" /></p>
+                        </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-12">
                             <a
