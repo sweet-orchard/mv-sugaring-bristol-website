@@ -640,7 +640,7 @@ export default function ServicesSection() {
                     {/* ── Collapsible Duration Notes ── */}
                     <button
                         onClick={() => setNotesOpen(o => !o)}
-                        className={\`w-full flex items-center justify-between px-6 py-4 bg-background border border-border/40 hover:bg-muted/10 transition-colors \${notesOpen ? 'border-b-0' : 'rounded-b-sm'}\`}
+                        className={`w-full flex items-center justify-between px-6 py-4 bg-background border border-border/40 hover:bg-muted/10 transition-colors ${notesOpen ? 'border-b-0' : 'rounded-b-sm'}`}
                     >
                         <div className="flex items-center gap-3">
                             <Clock className="w-4 h-4 text-primary" />
@@ -785,11 +785,14 @@ export default function ServicesSection() {
                     viewport={{ once: true }}
                     className="mt-14 text-center"
                 >
-                    <p className="font-display italic text-lg text-foreground/50 mb-6"><T id="SERVICES_BOTTOM_QUOTE" /></p>
                     <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:bg-primary/90 active:scale-95 transition-all"
-                    ><T id="SERVICES_BOTTOM_CTA_BUTTON" /></a>
+                        href="/pdf/MV-Sugaring-Price-List-A4-print.pdf"
+                        download="MV-Sugaring-Price-List.pdf"
+                        className="inline-flex items-center gap-2 px-10 py-4 bg-transparent border border-border/80 text-foreground font-body font-medium rounded-sm hover:bg-muted/10 active:scale-95 transition-all shadow-sm"
+                    >
+                        <ArrowDown className="w-4 h-4" />
+                        Download price list (PDF)
+                    </a>
                 </motion.div>
 
             </div>
