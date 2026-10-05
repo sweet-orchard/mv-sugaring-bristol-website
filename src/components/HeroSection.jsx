@@ -1,11 +1,18 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Play, Pause } from 'lucide-react';
+import { ChevronDown, Play, Pause, Award, Heart, Sparkles, Star } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
 
 export default function HeroSection() {
     const { t, lang } = useContent();
     const getText = (v) => v?.props?.id ? t(v.props.id) : v;
+
+    const stats = [
+        { number: '8+', label: <T id="ABOUT_STAT_1_LABEL" />, icon: Sparkles },
+        { number: '9x', label: <T id="ABOUT_STAT_2_LABEL" />, icon: Award },
+        { number: '1000+', label: <T id="ABOUT_STAT_3_LABEL" />, icon: Heart },
+        { number: '5.0★', label: <T id="ABOUT_STAT_4_LABEL" />, icon: Star },
+    ];
     
     const [isPlaying, setIsPlaying] = useState(true);
     const desktopVideoRef = useRef(null);
@@ -149,8 +156,8 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            {/* Scroll indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+            {/* Scroll indicator - Desktop */}
+            <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
                 <motion.div
                     animate={{ y: [0, 8, 0] }}
                     transition={{ repeat: Infinity, duration: 2 }}
@@ -164,6 +171,19 @@ export default function HeroSection() {
                         <ChevronDown className="w-4 h-4" />
                     </a>
                 </motion.div>
+            </div>
+
+            {/* Mobile Stats Grid */}
+            <div className="block lg:hidden w-full px-6 pb-12 mt-4 relative z-10">
+                <div className="grid grid-cols-2 gap-4">
+                    {stats.map((stat, i) => (
+                        <div key={i} className="text-center p-4 bg-secondary/40 border border-border/30 rounded-sm">
+                            <stat.icon className="w-5 h-5 text-primary mx-auto mb-3" />
+                            <p className="font-display text-3xl font-semibold text-foreground mb-1">{stat.number}</p>
+                            <p className="text-[9px] tracking-[0.05em] uppercase text-muted-foreground font-body leading-tight">{stat.label}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );

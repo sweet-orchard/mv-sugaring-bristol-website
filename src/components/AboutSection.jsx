@@ -122,7 +122,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12 lg:mt-24"
+                    className="hidden lg:grid grid-cols-4 gap-6 mt-24"
                 >
                     {stats.map((stat, i) => (
                         <div key={i} className="text-center p-8 bg-secondary/40 border border-border/30 rounded-sm hover:border-primary/30 transition-all duration-300">
