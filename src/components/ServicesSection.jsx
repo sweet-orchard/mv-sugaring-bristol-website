@@ -638,10 +638,9 @@ export default function ServicesSection() {
                     </div>
 
                     {/* ── Collapsible Duration Notes ── */}
-                    <div>
                     <button
                         onClick={() => setNotesOpen(o => !o)}
-                        className="w-full flex items-center justify-between px-6 py-4 bg-background border border-border/40 rounded-b-sm hover:bg-muted/10 transition-colors"
+                        className={\`w-full flex items-center justify-between px-6 py-4 bg-background border border-border/40 hover:bg-muted/10 transition-colors \${notesOpen ? 'border-b-0' : 'rounded-b-sm'}\`}
                     >
                         <div className="flex items-center gap-3">
                             <Clock className="w-4 h-4 text-primary" />
