@@ -505,9 +505,17 @@ function MobileFlashcards({ items, isPremium }) {
 export default function ServicesSection() {
     const { t, lang } = useContent();
     
-    const { inclusions, durationNotes, categories } = getServicesData(t);
+    const data = getServicesData(t);
+    const inclusions = data.inclusions;
+    const durationNotes = data.durationNotes;
+    const categories = [
+        data.categories.find(c => c.id === 'bikini'),
+        data.categories.find(c => c.id === 'down'),
+        data.categories.find(c => c.id === 'upper'),
+        data.categories.find(c => c.id === 'face'),
+    ].filter(Boolean);
 
-    const [activeTab, setActiveTab] = useState('face');
+    const [activeTab, setActiveTab] = useState('bikini');
     const [notesOpen, setNotesOpen] = useState(false);
 
     const active = categories.find(c => c.id === activeTab);
