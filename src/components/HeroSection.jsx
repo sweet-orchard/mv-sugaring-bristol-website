@@ -104,18 +104,20 @@ export default function HeroSection() {
                             </div>
                             
                             {/* Mobile Reviews */}
-                            <div className="mt-8 flex flex-col gap-4">
+                            <div className="mt-8 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-6 px-6">
                                 {[1, 2, 3, 4].map((num) => (
-                                    <div key={num} className="p-5 bg-secondary/20 border border-border/30 rounded-sm">
-                                        <div className="flex items-center gap-1 mb-3 text-amber-500">
-                                            {[...Array(5)].map((_, i) => (
-                                                <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                                            ))}
+                                    <div key={num} className="snap-center shrink-0 w-[85%] p-6 bg-secondary/30 border border-border/40 rounded-sm flex flex-col justify-between">
+                                        <div>
+                                            <div className="flex items-center gap-1 mb-4 text-primary">
+                                                {[...Array(5)].map((_, i) => (
+                                                    <Star key={i} className="w-4 h-4 fill-current" />
+                                                ))}
+                                            </div>
+                                            <p className="font-display text-base text-foreground leading-relaxed mb-5">
+                                                <T id={`HERO_REVIEW_${num}_TEXT`} />
+                                            </p>
                                         </div>
-                                        <p className="font-display italic text-sm text-foreground/90 leading-relaxed mb-3">
-                                            <T id={`HERO_REVIEW_${num}_TEXT`} />
-                                        </p>
-                                        <p className="text-xs font-body font-medium text-muted-foreground">
+                                        <p className="text-sm font-body font-semibold text-primary/90 uppercase tracking-wider">
                                             <T id={`HERO_REVIEW_${num}_NAME`} />
                                         </p>
                                     </div>
