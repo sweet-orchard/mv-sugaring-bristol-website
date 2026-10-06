@@ -509,7 +509,7 @@ function MobileFlashcards({ items, isPremium }) {
                         animate="center"
                         exit="exit"
                         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-                        className="relative z-10 w-full"
+                        className="relative z-10 w-full touch-pan-y"
                         drag="x"
                         dragConstraints={{ left: 0, right: 0 }}
                         dragElastic={1}

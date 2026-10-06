@@ -54,7 +54,7 @@ export default function HeroSection() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
-                        className="order-2 lg:order-1"
+                        className="order-2 lg:order-1 min-w-0"
                     >
                         {/* Desktop Eyebrow */}
                         <div className="hidden lg:flex items-center gap-3 mb-6">
