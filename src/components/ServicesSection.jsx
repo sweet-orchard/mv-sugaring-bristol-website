@@ -764,6 +764,13 @@ export default function ServicesSection() {
                                                 </div>
                                             </>
                                         )}
+
+                                        {/* Group Note */}
+                                        {group.note && (
+                                            <div className="mt-6 bg-secondary/40 rounded-sm p-4 text-foreground/80 font-body text-sm text-center">
+                                                {group.note}
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                             </div>

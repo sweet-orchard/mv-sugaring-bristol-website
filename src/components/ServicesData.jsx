@@ -98,6 +98,28 @@ export const getServicesData = (t) => ({
             ]
         },
         {
+            id: 'body',
+            label: <T id="SERVICES_TAB_BODY" />,
+            fullLabel: <T id="BODY_TAB_FULL_LABEL" />,
+            Icon: Sparkles,
+            beforeImage: null,
+            afterImage: null,
+            tagline: <T id="BODY_TAGLINE" />,
+            groups: [
+                {
+                    groupName: <T id="BODY_GROUP_PACKAGES" />,
+                    isPackages: true,
+                    note: <T id="BODY_PACKAGE_NOTE" />,
+                    items: [
+                        { name: <T id="BODY_PACKAGE_1_NAME" />, price: <T id="PRICE_BODY_PKG_1" />, saveText: <T id="BODY_PACKAGE_1_SAVE" />, image: null },
+                        { name: <T id="BODY_PACKAGE_2_NAME" />, price: <T id="PRICE_BODY_PKG_2" />, saveText: <T id="BODY_PACKAGE_2_SAVE" />, image: null },
+                        { name: <T id="BODY_PACKAGE_3_NAME" />, price: <T id="PRICE_BODY_PKG_3" />, saveText: <T id="BODY_PACKAGE_3_SAVE" />, image: null },
+                        { name: <T id="BODY_PACKAGE_4_NAME" />, price: <T id="PRICE_BODY_PKG_4" />, saveText: <T id="BODY_PACKAGE_4_SAVE" />, image: null },
+                    ]
+                }
+            ]
+        },
+        {
             id: 'bikini',
             label: <T id="SERVICES_TAB_BIKINI" />,
             fullLabel: <T id="BIKINI_TAB_FULL_LABEL" />,
