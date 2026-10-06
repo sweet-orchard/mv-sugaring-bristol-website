@@ -40,17 +40,17 @@ export const getServicesData = (t) => ({
                     groupName: <T id="FACE_GROUP_NECK" />,
                     items: [
                         { name: <T id="FACE_SERVICE_7_NAME" />, price: <T id="PRICE_FACE_7" />, desc: <T id="FACE_SERVICE_7_DESC" />, image: '/price-list/face/neck.webp' },
-                        { name: <T id="FACE_SERVICE_8_NAME" />, price: <T id="PRICE_FACE_8" />, desc: <T id="FACE_SERVICE_8_DESC" />, image: '/price-list/face/nape.webp' },
-                        { name: <T id="FACE_SERVICE_9_NAME" />, price: <T id="PRICE_FACE_9" />, desc: <T id="FACE_SERVICE_9_DESC" />, image: null },
+                        { name: <T id="FACE_SERVICE_8_NAME" />, price: <T id="PRICE_FACE_8" />, desc: <T id="FACE_SERVICE_8_DESC" />, image: '/price-list/face/nape area.webp' },
+                        { name: <T id="FACE_SERVICE_9_NAME" />, price: <T id="PRICE_FACE_9" />, desc: <T id="FACE_SERVICE_9_DESC" />, image: '/price-list/face/nape and neck.webp' },
                     ]
                 },
                 {
                     groupName: <T id="FACE_GROUP_PACKAGES" />,
                     isPackages: true,
                     items: [
-                        { name: <T id="FACE_PACKAGE_1_NAME" />, price: <T id="PRICE_FACE_PKG_1" />, desc: <T id="FACE_PACKAGE_1_DESC" />, saveText: <T id="FACE_PACKAGE_1_SAVE" />, image: '/price-list/face/premium 1.webp' },
-                        { name: <T id="FACE_PACKAGE_2_NAME" />, price: <T id="PRICE_FACE_PKG_2" />, desc: <T id="FACE_PACKAGE_2_DESC" />, saveText: <T id="FACE_PACKAGE_2_SAVE" />, image: '/price-list/face/premium 2.webp' },
-                        { name: <T id="FACE_PACKAGE_3_NAME" />, price: <T id="PRICE_FACE_PKG_3" />, desc: <T id="FACE_PACKAGE_3_DESC" />, saveText: <T id="FACE_PACKAGE_3_SAVE" />, image: '/price-list/face/combo1-lower face care.webp' },
+                        { name: <T id="FACE_PACKAGE_1_NAME" />, price: <T id="PRICE_FACE_PKG_1" />, desc: <T id="FACE_PACKAGE_1_DESC" />, saveText: <T id="FACE_PACKAGE_1_SAVE" />, image: '/price-list/face/full face.webp' },
+                        { name: <T id="FACE_PACKAGE_2_NAME" />, price: <T id="PRICE_FACE_PKG_2" />, desc: <T id="FACE_PACKAGE_2_DESC" />, saveText: <T id="FACE_PACKAGE_2_SAVE" />, image: '/price-list/face/full face + neck or nape.webp' },
+                        { name: <T id="FACE_PACKAGE_3_NAME" />, price: <T id="PRICE_FACE_PKG_3" />, desc: <T id="FACE_PACKAGE_3_DESC" />, saveText: <T id="FACE_PACKAGE_3_SAVE" />, image: '/price-list/face/lip chin & sideburns.webp' },
                         { name: <T id="FACE_PACKAGE_4_NAME" />, price: <T id="PRICE_FACE_PKG_4" />, desc: <T id="FACE_PACKAGE_4_DESC" />, saveText: <T id="FACE_PACKAGE_4_SAVE" />, image: null },
                     ]
                 }
