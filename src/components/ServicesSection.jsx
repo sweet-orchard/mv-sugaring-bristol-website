@@ -806,8 +806,8 @@ export default function ServicesSection() {
                     className="mt-14 text-center"
                 >
                     <a
-                        href="/pdf/MV-Sugaring-Price-List-A4-print.pdf"
-                        download="MV-Sugaring-Price-List.pdf"
+                        href="/pdf/mvsugaringbristol-price-list.pdf"
+                        download="mvsugaringbristol-price-list.pdf"
                         className="inline-flex items-center gap-2 px-10 py-4 bg-transparent border border-border/80 text-foreground font-body font-medium rounded-sm hover:bg-muted/10 active:scale-95 transition-all shadow-sm"
                     >
                         <ArrowDown className="w-4 h-4" />
