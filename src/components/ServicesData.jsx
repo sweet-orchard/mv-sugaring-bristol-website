@@ -50,8 +50,14 @@ export const getServicesData = (t) => ({
                     items: [
                         { name: <T id="FACE_PACKAGE_1_NAME" />, price: <T id="PRICE_FACE_PKG_1" />, duration: <T id="FACE_PACKAGE_1_DURATION" />, desc: <T id="FACE_PACKAGE_1_DESC" />, saveText: <T id="FACE_PACKAGE_1_SAVE" />, image: '/price-list/face/full-face.webp' },
                         { name: <T id="FACE_PACKAGE_2_NAME" />, price: <T id="PRICE_FACE_PKG_2" />, duration: <T id="FACE_PACKAGE_2_DURATION" />, desc: <T id="FACE_PACKAGE_2_DESC" />, saveText: <T id="FACE_PACKAGE_2_SAVE" />, image: '/price-list/face/full-face-plus-neck-or-nape.webp' },
-                        { name: <T id="FACE_PACKAGE_3_NAME" />, price: <T id="PRICE_FACE_PKG_3" />, duration: <T id="FACE_PACKAGE_3_DURATION" />, desc: <T id="FACE_PACKAGE_3_DESC" />, saveText: <T id="FACE_PACKAGE_3_SAVE" />, image: '/price-list/face/lip-chin-and-sideburns.webp' },
-                        { name: <T id="FACE_PACKAGE_4_NAME" />, price: <T id="PRICE_FACE_PKG_4" />, duration: <T id="FACE_PACKAGE_4_DURATION" />, desc: <T id="FACE_PACKAGE_4_DESC" />, saveText: <T id="FACE_PACKAGE_4_SAVE" />, image: null },
+                        { name: <T id="FACE_PACKAGE_3_NAME" />, price: <T id="PRICE_FACE_PKG_3" />, duration: <T id="FACE_PACKAGE_3_DURATION" />, desc: <T id="FACE_PACKAGE_3_DESC" />, saveText: <T id="FACE_PACKAGE_3_SAVE" />, image: '/price-list/face/lip-chin-and-sideburns.webp' }
+                    ]
+                },
+                {
+                    groupName: null,
+                    isAddOn: true,
+                    items: [
+                        { name: <T id="FACE_PACKAGE_4_NAME" />, price: <T id="PRICE_FACE_PKG_4" />, duration: <T id="FACE_PACKAGE_4_DURATION" />, desc: <T id="FACE_PACKAGE_4_SAVE" /> }
                     ]
                 }
             ]

@@ -171,6 +171,13 @@ function AddOnCard({ item, index }) {
                     </div>
                 )}
 
+                {item.duration && (
+                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-body mt-2 mb-1">
+                        <Clock className="w-3.5 h-3.5 text-primary/70" />
+                        <span>{item.duration}</span>
+                    </div>
+                )}
+
                 {item.desc && (
                     <p className="text-sm text-muted-foreground leading-relaxed font-body mt-1.5 whitespace-pre-line">
                         {item.desc}
