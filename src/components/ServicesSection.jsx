@@ -114,6 +114,11 @@ function ServiceCard({ item, index, isPremium }) {
                         {item.desc}
                     </p>
                 )}
+                {item.saveText && (
+                    <p className={`text-sm italic font-medium whitespace-pre-line font-body mt-1 text-primary/80`}>
+                        {item.saveText}
+                    </p>
+                )}
             </div>
         </motion.div>
     );
