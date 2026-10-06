@@ -105,7 +105,7 @@ export default function HeroSection() {
                             
                             {/* Mobile Reviews */}
                             <div className="mt-8 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-6 px-6">
-                                {[1, 2, 3, 4].map((num) => (
+                                {[1, 2, 3].map((num) => (
                                     <div key={num} className="snap-center shrink-0 w-[85%] p-6 bg-secondary/30 border border-border/40 rounded-sm flex flex-col justify-between">
                                         <div>
                                             <div className="flex items-center gap-1 mb-4 text-primary">
