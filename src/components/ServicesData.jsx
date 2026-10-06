@@ -72,6 +72,8 @@ export const getServicesData = (t) => ({
                         { name: <T id="UPPER_SERVICE_2_NAME" />, price: <T id="PRICE_ITEM_17" />, duration: <T id="UPPER_SERVICE_2_DURATION" />, desc: <T id="UPPER_SERVICE_2_DESC" />, image: '/price-list/upper-body/full arms.png' },
                         { name: <T id="UPPER_SERVICE_3_NAME" />, price: <T id="PRICE_ITEM_18" />, duration: <T id="UPPER_SERVICE_3_DURATION" />, desc: <T id="UPPER_SERVICE_3_DESC" />, image: '/price-list/upper-body/half arms.png' },
                         { name: <T id="UPPER_SERVICE_4_NAME" />, price: <T id="PRICE_ITEM_19" />, duration: <T id="UPPER_SERVICE_4_DURATION" />, desc: <T id="UPPER_SERVICE_4_DESC" />, image: '/price-list/upper-body/stomach.png' },
+                        { name: <T id="UPPER_SERVICE_5_NAME" />, price: <T id="PRICE_ITEM_36" />, duration: <T id="UPPER_SERVICE_5_DURATION" />, desc: <T id="UPPER_SERVICE_5_DESC" />, image: null },
+                        { name: <T id="UPPER_SERVICE_6_NAME" />, price: <T id="PRICE_ITEM_37" />, duration: <T id="UPPER_SERVICE_6_DURATION" />, desc: <T id="UPPER_SERVICE_6_DESC" />, image: null },
                     ]
                 },
             ]
@@ -92,6 +94,7 @@ export const getServicesData = (t) => ({
                         { name: <T id="DOWN_SERVICE_2_NAME" />, price: <T id="PRICE_ITEM_23" />, duration: <T id="DOWN_SERVICE_2_DURATION" />, desc: <T id="DOWN_SERVICE_2_DESC" />, image: '/price-list/lower-body/half legs.png' },
                         { name: <T id="DOWN_SERVICE_3_NAME" />, price: <T id="PRICE_ITEM_24" />, duration: <T id="DOWN_SERVICE_3_DURATION" />, desc: <T id="DOWN_SERVICE_3_DESC" />, image: '/price-list/lower-body/buttocks.png' },
                         { name: <T id="DOWN_SERVICE_4_NAME" />, price: <T id="PRICE_ITEM_25" />, duration: <T id="DOWN_SERVICE_4_DURATION" />, desc: <T id="DOWN_SERVICE_4_DESC" />, image: '/price-list/lower-body/lower back.png' },
+                        { name: <T id="DOWN_SERVICE_6_NAME" />, price: <T id="PRICE_ITEM_35" />, duration: <T id="DOWN_SERVICE_6_DURATION" />, desc: <T id="DOWN_SERVICE_6_DESC" />, image: null },
                         { name: <T id="DOWN_SERVICE_5_NAME" />, price: <T id="PRICE_ITEM_26" />, badge: <T id="DOWN_SERVICE_5_BADGE" />, duration: <T id="DOWN_SERVICE_5_DURATION" />, desc: <T id="DOWN_SERVICE_5_DESC" />, image: '/price-list/lower-body/lower back and buttocks.png' },
                     ]
                 },
