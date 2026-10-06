@@ -102,6 +102,25 @@ export default function HeroSection() {
                                     </div>
                                 ))}
                             </div>
+                            
+                            {/* Mobile Reviews */}
+                            <div className="mt-8 flex flex-col gap-4">
+                                {[1, 2, 3, 4].map((num) => (
+                                    <div key={num} className="p-5 bg-secondary/20 border border-border/30 rounded-sm">
+                                        <div className="flex items-center gap-1 mb-3 text-amber-500">
+                                            {[...Array(5)].map((_, i) => (
+                                                <Star key={i} className="w-3.5 h-3.5 fill-current" />
+                                            ))}
+                                        </div>
+                                        <p className="font-display italic text-sm text-foreground/90 leading-relaxed mb-3">
+                                            <T id={`HERO_REVIEW_${num}_TEXT`} />
+                                        </p>
+                                        <p className="text-xs font-body font-medium text-muted-foreground">
+                                            <T id={`HERO_REVIEW_${num}_NAME`} />
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </motion.div>
 

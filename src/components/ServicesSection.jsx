@@ -588,6 +588,7 @@ export default function ServicesSection() {
         data.categories.find(c => c.id === 'down'),
         data.categories.find(c => c.id === 'upper'),
         data.categories.find(c => c.id === 'face'),
+        data.categories.find(c => c.id === 'body'),
     ].filter(Boolean);
 
     const [activeTab, setActiveTab] = useState('bikini');
