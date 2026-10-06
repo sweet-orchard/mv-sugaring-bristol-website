@@ -16,13 +16,15 @@ function App() {
             <ContentProvider>
                 <Router>
                     <ScrollToTop />
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/course" element={<CoursePage />} />
-                        <Route path="/success" element={<Success />} />
-                        <Route path="/admin" element={<AdminPage />} />
-                        <Route path="*" element={<PageNotFound />} />
-                    </Routes>
+                    <div className="overflow-x-hidden w-full relative">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/course" element={<CoursePage />} />
+                            <Route path="/success" element={<Success />} />
+                            <Route path="/admin" element={<AdminPage />} />
+                            <Route path="*" element={<PageNotFound />} />
+                        </Routes>
+                    </div>
                 </Router>
                 <Toaster />
             </ContentProvider>
