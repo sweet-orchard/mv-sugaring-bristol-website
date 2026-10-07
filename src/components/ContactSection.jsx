@@ -111,7 +111,7 @@ export default function ContactSection() {
                     >
                         <div className="bg-secondary/40 border border-border/30 rounded-sm p-8 lg:p-10">
                             <h3 className="font-display text-2xl font-semibold text-foreground mb-6"><T id="CONTACT_FORM_TITLE" /></h3>
-                            <form action="https://formsubmit.co/mariia.vatseba@gmail.com" method="POST" className="space-y-5">
+                            <form action="https://formsubmit.co/marichka21.08.95@gmail.com" method="POST" className="space-y-5">
                                 {/* FormSubmit Configuration */}
                                 <input type="hidden" name="_subject" value="New Inquiry from Website" />
                                 <input type="hidden" name="_captcha" value="false" />
