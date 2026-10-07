@@ -117,8 +117,11 @@ export default function HeroSection() {
                                                 <T id={`HERO_REVIEW_${num}_TEXT`} />
                                             </p>
                                         </div>
-                                        <p className="text-sm font-body font-semibold text-primary/90 uppercase tracking-wider">
+                                        <p className="text-sm font-body font-semibold text-primary/90 uppercase tracking-wider flex items-center flex-wrap gap-x-2">
                                             <T id={`HERO_REVIEW_${num}_NAME`} />
+                                            <span className="text-[10px] normal-case text-muted-foreground/60 tracking-normal font-medium">
+                                                - Google review
+                                            </span>
                                         </p>
                                     </div>
                                 ))}
