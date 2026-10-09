@@ -28,8 +28,8 @@ export default function ContactSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="CONTACT_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-6"><T id="CONTACT_HEADING" /></h2>
-                    <p className="max-w-xl mx-auto text-sm font-body text-muted-foreground leading-relaxed"><T id="CONTACT_SUBTEXT" /></p>
+                    <h2 className="font-display font-light text-foreground mb-6 text-3xl md:text-5xl lg:text-6xl"><T id="CONTACT_HEADING" /></h2>
+                    <p className="max-w-xl mx-auto font-body text-muted-foreground text-sm md:text-[17px] leading-[1.8]"><T id="CONTACT_SUBTEXT" /></p>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-12">
@@ -47,7 +47,7 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <h4 className="text-sm font-body font-semibold text-foreground mb-1"><T id="CONTACT_INFO_LOCATION_LABEL" /></h4>
-                                    <p className="text-sm text-muted-foreground"><T id="CONTACT_LOCATION_VALUE" /></p>
+                                    <p className="text-muted-foreground text-sm md:text-[17px] leading-[1.8]"><T id="CONTACT_LOCATION_VALUE" /></p>
                                     {t("CONTACT_LOCATION_NOTE") && <p className="text-xs text-muted-foreground/60 mt-1"><T id="CONTACT_LOCATION_NOTE" /></p>}
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ export default function ContactSection() {
                                 </div>
                                 <div>
                                     <h4 className="text-sm font-body font-semibold text-foreground mb-1"><T id="CONTACT_INFO_AVAILABILITY_LABEL" /></h4>
-                                    <p className="text-sm text-muted-foreground"><T id="CONTACT_INFO_AVAILABILITY_VALUE" /></p>
+                                    <p className="text-muted-foreground text-sm md:text-[17px] leading-[1.8]"><T id="CONTACT_INFO_AVAILABILITY_VALUE" /></p>
                                     <p className="text-xs text-muted-foreground/60 mt-1"><T id="CONTACT_INFO_AVAILABILITY_NOTE" /></p>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                     >
                         <div className="bg-secondary/40 border border-border/30 rounded-sm p-8 lg:p-10">
-                            <h3 className="font-display text-2xl font-semibold text-foreground mb-6"><T id="CONTACT_FORM_TITLE" /></h3>
+                            <h3 className="font-display font-semibold text-foreground mb-6 text-xl md:text-2xl"><T id="CONTACT_FORM_TITLE" /></h3>
                             <form action="https://formsubmit.co/marichka21.08.95@gmail.com" method="POST" className="space-y-5">
                                 {/* FormSubmit Configuration */}
                                 <input type="hidden" name="_subject" value="New Inquiry from Website" />

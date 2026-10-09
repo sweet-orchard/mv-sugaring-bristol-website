@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Play, Pause, Award, Heart, Sparkles, Star } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
+import ScrollButton from './ScrollButton';
 
 export default function HeroSection() {
     const { t, lang } = useContent();
@@ -79,11 +80,12 @@ export default function HeroSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                            <a
+                            <ScrollButton
                                 href="#contact"
                                 onClick={(e) => scrollToSection(e, 'contact')}
-                                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm hover:bg-primary/90 transition-all duration-300"
-                            ><T id="CONTACT_HEADING" /></a>
+                                className="inline-flex items-center justify-center px-8 py-4 text-xs tracking-[0.25em] uppercase font-medium rounded-sm transition-all duration-300"
+                                textId="CONTACT_HEADING"
+                            />
                             <a
                                 href="#about"
                                 onClick={(e) => scrollToSection(e, 'about')}

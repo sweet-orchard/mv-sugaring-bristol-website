@@ -31,9 +31,9 @@ export default function BeautySpaceSection() {
                             transition={{ duration: 0.6 }}
                         >
                             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="SPACE_EYEBROW" /></p>
-                            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-light text-foreground mb-6 leading-tight"><T id="SPACE_HEADING" /></h2>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6"><T id="SPACE_PARAGRAPH_1" /></p>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-8"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
+                            <h2 className="font-display font-light text-foreground mb-6 leading-tight text-3xl md:text-5xl lg:text-6xl"><T id="SPACE_HEADING" /></h2>
+                            <p className="font-body text-muted-foreground mb-6 text-sm md:text-[17px] leading-[1.8]"><T id="SPACE_PARAGRAPH_1" /></p>
+                            <p className="font-body text-muted-foreground mb-8 text-sm md:text-[17px] leading-[1.8]"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
                         </motion.div>
 
                         {/* Highlights list */}
@@ -52,7 +52,7 @@ export default function BeautySpaceSection() {
                                     </div>
                                     <div>
                                         <h4 className="text-sm font-body font-semibold text-foreground mb-1">{item.title}</h4>
-                                        <p className="text-sm text-muted-foreground leading-relaxed font-body">{item.desc}</p>
+                                        <p className="text-muted-foreground font-body text-sm md:text-[17px] leading-[1.8]">{item.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}

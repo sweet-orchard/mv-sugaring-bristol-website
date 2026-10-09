@@ -47,8 +47,8 @@ export default function BeforeAfterSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="BEFORE_AFTER_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground"><T id="BEFORE_AFTER_HEADING" /></h2>
-                    <p className="max-w-xl mx-auto text-sm text-muted-foreground mt-4 font-body leading-relaxed"><T id="BEFORE_AFTER_SUBTEXT" /></p>
+                    <h2 className="font-display font-light text-foreground text-3xl md:text-5xl lg:text-6xl"><T id="BEFORE_AFTER_HEADING" /></h2>
+                    <p className="max-w-xl mx-auto text-muted-foreground mt-4 font-body text-sm md:text-[17px] leading-[1.8]"><T id="BEFORE_AFTER_SUBTEXT" /></p>
                 </motion.div>
 
                 {/* Scrolling Gallery Container */}

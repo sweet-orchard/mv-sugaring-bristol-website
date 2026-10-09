@@ -179,7 +179,7 @@ function AddOnCard({ item, index }) {
                 )}
 
                 {item.desc && (
-                    <p className="text-sm text-muted-foreground leading-relaxed font-body mt-1.5 whitespace-pre-line">
+                    <p className="text-muted-foreground font-body mt-1.5 whitespace-pre-line text-sm md:text-[17px] leading-[1.8]">
                         {item.desc}
                     </p>
                 )}
@@ -266,7 +266,7 @@ function BikiniPricingGuide() {
                 {/* Intro */}
                 <div>
                     <h4 className="text-2xl font-display text-primary mb-4">Hair length & pricing</h4>
-                    <p className="text-foreground/80">Longer hair takes more time and care to remove gently, so bikini prices depend on when you last removed your hair.</p>
+                    <p className="text-foreground/80 text-sm md:text-[17px] leading-[1.8]">Longer hair takes more time and care to remove gently, so bikini prices depend on when you last removed your hair.</p>
                 </div>
 
                 {/* Pricing table equivalents */}
@@ -441,7 +441,7 @@ function FaceCareGuide() {
                                     </div>
                                     
                                     <div className="mt-8 space-y-4">
-                                        <p className="italic border-l-2 border-primary/40 pl-4 py-1 text-foreground/80"><T id="FACE_GUIDE_CLOSING_NOTE" /></p>
+                                        <p className="italic border-l-2 border-primary/40 pl-4 py-1 text-foreground/80 text-sm md:text-[17px] leading-[1.8]"><T id="FACE_GUIDE_CLOSING_NOTE" /></p>
                                         <div className="bg-primary text-primary-foreground rounded-sm p-4 font-medium flex items-start gap-3">
                                             <span className="text-lg leading-none mt-0.5">💬</span>
                                             <p><T id="FACE_GUIDE_CLOSING_CTA" /></p>
@@ -620,7 +620,7 @@ export default function ServicesSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="FOOTER_NAV_SERVICES" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
+                    <h2 className="font-display font-light text-foreground text-3xl md:text-5xl lg:text-6xl">
                         <T id="SERVICES_HEADING" render={(text) => <>{text.split(' ')[0]} <span className="font-semibold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
                     </h2>
                 </motion.div>
@@ -642,8 +642,8 @@ export default function ServicesSection() {
                                 <div key={i} className="flex gap-3">
                                     <Check className="w-4.5 h-4.5 text-primary shrink-0 mt-0.5" />
                                     <div>
-                                        <p className="text-sm font-semibold text-foreground font-body mb-1">{item.title}</p>
-                                        <p className="text-sm text-muted-foreground leading-relaxed font-body">{item.desc}</p>
+                                        <p className="font-semibold text-foreground font-body mb-1 text-sm md:text-[17px] leading-[1.8]">{item.title}</p>
+                                        <p className="text-muted-foreground font-body text-sm md:text-[17px] leading-[1.8]">{item.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -672,14 +672,14 @@ export default function ServicesSection() {
                                 className="overflow-hidden"
                             >
                                 <div className="bg-background border border-t-0 border-border/40 rounded-b-sm px-6 py-6">
-                                    <p className="text-sm text-muted-foreground leading-relaxed mb-5 font-body"><T id="DURATION_INTRO" /></p>
+                                    <p className="text-muted-foreground mb-5 font-body text-sm md:text-[17px] leading-[1.8]"><T id="DURATION_INTRO" /></p>
                                     <div className="grid md:grid-cols-2 gap-5">
                                         {durationNotes.map((note, i) => (
                                             <div key={i} className="flex gap-3 items-start">
                                                 <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                                                 <div>
-                                                    <p className="text-sm font-semibold text-foreground font-body mb-0.5">{note.title}</p>
-                                                    <p className="text-sm text-muted-foreground leading-relaxed font-body">{note.desc}</p>
+                                                    <p className="font-semibold text-foreground font-body mb-0.5 text-sm md:text-[17px] leading-[1.8]">{note.title}</p>
+                                                    <p className="text-muted-foreground font-body text-sm md:text-[17px] leading-[1.8]">{note.desc}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -730,10 +730,10 @@ export default function ServicesSection() {
 
                             {/* Category header */}
                             <div className="mb-8">
-                                <h3 className="font-display text-3xl md:text-4xl font-light text-foreground mb-2">
+                                <h3 className="font-display font-light text-foreground mb-2 text-xl md:text-2xl">
                                     {active.fullLabel}
                                 </h3>
-                                <p className="text-sm font-body text-muted-foreground italic">
+                                <p className="font-body text-muted-foreground italic text-sm md:text-[17px] leading-[1.8]">
                                     {active.tagline}
                                 </p>
                             </div>

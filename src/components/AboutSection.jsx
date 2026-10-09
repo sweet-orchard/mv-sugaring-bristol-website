@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Heart, Shield, Sparkles, Star } from 'lucide-react';
+import { Flower, Heart, Grid, Diamond, Sparkles, Music, Star } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
+import ScrollButton from './ScrollButton';
 import {
     Carousel,
     CarouselContent,
@@ -21,134 +22,134 @@ const aboutImages = [
     '/mariia-about-me-pictures/8.JPG',
 ];
 
-const stats = [
-    { number: '8+', label: 'Years Of Experience', icon: Sparkles },
-    { number: '9x', label: 'International Championship Winner', icon: Award },
-    { number: '1000+', label: 'Happy Clients', icon: Heart },
-    { number: '5.0★', label: 'Smooth Skin Guarantee', icon: Star },
+const aboutItems = [
+    { icon: '🇺🇦', textId: 'NEW_ABOUT_LIST_1' },
+    { icon: '❤️', textId: 'NEW_ABOUT_LIST_2' },
+    { icon: '👶', textId: 'NEW_ABOUT_LIST_3' },
+    { icon: '🎓', textId: 'NEW_ABOUT_LIST_4' },
+    { icon: '📚', textId: 'NEW_ABOUT_LIST_5' },
+    { icon: '💃', textId: 'NEW_ABOUT_LIST_6' },
+    { icon: '🏆', textId: 'NEW_ABOUT_LIST_7' },
 ];
 
 export default function AboutSection() {
-    const { t, lang } = useContent();
-    const getText = (v) => v?.props?.id ? t(v.props.id) : v;
+    const { t } = useContent();
     
-
-    const stats = [
-        { number: '8+', label: <T id="ABOUT_STAT_1_LABEL" />, icon: Sparkles },
-        { number: '9x', label: <T id="ABOUT_STAT_2_LABEL" />, icon: Award },
-        { number: '1000+', label: <T id="ABOUT_STAT_3_LABEL" />, icon: Heart },
-        { number: '5.0★', label: <T id="ABOUT_STAT_4_LABEL" />, icon: Star },
-    ];
     return (
-        <section id="about" className="py-16 lg:py-32 bg-background">
-            <div className="max-w-7xl mx-auto px-6 lg:px-10">
-                {/* Section header */}
+        <section id="about" className="py-16 lg:py-32 bg-[#FAF8F3]">
+            <div className="max-w-3xl mx-auto px-6 lg:px-10">
+                
+                {/* Image Carousel */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-12 lg:mb-20"
+                    className="mb-16 lg:mb-24"
                 >
-                    <div className="flex items-center justify-center gap-3 mb-4">
-                        <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="ABOUT_SECTION_EYEBROW" /></span>
+                    <Carousel
+                        opts={{
+                            align: "center",
+                            loop: true,
+                        }}
+                        className="w-full max-w-sm mx-auto relative"
+                    >
+                        <CarouselContent>
+                            {aboutImages.map((src, index) => (
+                                <CarouselItem key={index}>
+                                    <div className="aspect-[3/4] rounded-sm overflow-hidden bg-secondary">
+                                        <img
+                                            src={src}
+                                            alt={`Mariia ${index + 1}`}
+                                            className="w-full h-full object-cover"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <>
+                            <CarouselPrevious className="left-4 bg-background/60 backdrop-blur-md border-border/50 hover:bg-background" />
+                            <CarouselNext className="right-4 bg-background/60 backdrop-blur-md border-border/50 hover:bg-background" />
+                        </>
+                    </Carousel>
+                </motion.div>
+
+                {/* Introduction Text */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="mb-20 lg:mb-24 text-foreground/80 leading-[1.8] font-body text-sm md:text-[17px] space-y-6"
+                >
+                    <div>
+                        <span><T id="NEW_ABOUT_P1_HI" /></span>
+                        <span><T id="NEW_ABOUT_P1" /></span>
+                    </div>
+
+                    <p>
+                        <strong><T id="NEW_ABOUT_P2_1" /></strong><T id="NEW_ABOUT_P2_2" />
+                    </p>
+
+                    <p>
+                        <strong><T id="NEW_ABOUT_P3_1" /></strong><T id="NEW_ABOUT_P3_2" />
+                    </p>
+                    
+                    <p>
+                        <strong><T id="NEW_ABOUT_P4_1" /></strong><T id="NEW_ABOUT_P4_2" />
+                    </p>
+                    
+                    <p><T id="NEW_ABOUT_P5" /></p>
+                    
+                    <p><T id="NEW_ABOUT_P6" /></p>
+
+                    <div className="text-right mt-12 md:mt-16 pr-4">
+                        <p className="font-display italic text-xl md:text-2xl gold-text">
+                            <T id="NEW_ABOUT_SIGN_1" /><br/>
+                            <T id="NEW_ABOUT_SIGN_2" />
+                        </p>
+                    </div>
+                </motion.div>
+
+                {/* A few things about me list */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                >
+                    <div className="flex justify-center mb-8">
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-foreground">
-                        <span className="font-semibold italic">Mariia</span> Vatseba
-                    </h2>
+                    <h3 className="font-display text-center text-foreground mb-12 text-xl md:text-2xl">
+                        <T id="NEW_ABOUT_LIST_TITLE" />
+                    </h3>
+
+                    <div className="space-y-6 md:space-y-8">
+                        {aboutItems.map((item, idx) => (
+                            <div key={idx} className="flex gap-4 md:gap-6 items-start">
+                                <div className="shrink-0 mt-0.5 md:mt-1">
+                                    <span className="font-display italic text-xl md:text-2xl text-[#B38B4D] font-semibold">
+                                        {String(idx + 1).padStart(2, '0')}
+                                    </span>
+                                </div>
+                                <p className="text-foreground/80 font-body pt-1.5 md:pt-2 text-sm md:text-[17px] leading-[1.8]">
+                                    <T id={item.textId} />
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-16 flex justify-center">
+                        <ScrollButton 
+                            href="#contact"
+                            className="inline-flex items-center justify-center px-8 py-4 font-body text-xs tracking-[0.2em] uppercase font-medium rounded-sm"
+                            textId="HERO_CTA_BOOK_SESSION"
+                        />
+                    </div>
                 </motion.div>
 
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-                    {/* Image column */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
-                        className="relative"
-                    >
-                        <Carousel
-                            opts={{
-                                align: "start",
-                                loop: true,
-                            }}
-                            className="w-full max-w-lg mx-auto"
-                        >
-                            <CarouselContent>
-                                {aboutImages.map((src, index) => (
-                                    <CarouselItem key={index}>
-                                        <div className="aspect-[3/4] rounded-sm overflow-hidden bg-secondary">
-                                            <img
-                                                src={src}
-                                                alt={`Mariia ${index + 1}`}
-                                                className="w-full h-full object-cover"
-                                                loading="lazy"
-                                            />
-                                        </div>
-                                    </CarouselItem>
-                                ))}
-                            </CarouselContent>
-                            <>
-                                <CarouselPrevious className="left-4 bg-background/60 backdrop-blur-md border-border/50 hover:bg-background" />
-                                <CarouselNext className="right-4 bg-background/60 backdrop-blur-md border-border/50 hover:bg-background" />
-                            </>
-                        </Carousel>
-                        {/* Accent line */}
-                        <div className="absolute -bottom-4 left-8 right-8 h-px bg-primary/30" />
-                    </motion.div>
-
-                    {/* Text column */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7, delay: 0.1 }}
-                    >
-                        <p className="text-xs tracking-[0.25em] uppercase text-primary font-medium mb-6"><T id="ABOUT_SUBTITLE" /></p>
-
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6"><T id="ABOUT_PARAGRAPH_1" /></p>
-
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-6"><T id="ABOUT_PARAGRAPH_2" /></p>
-
-                        <p className="text-base font-body text-foreground/80 leading-relaxed mb-8"><T id="ABOUT_PARAGRAPH_3" /></p>
-                    </motion.div>
-                </div>
-
-                {/* Stats Grid */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="hidden lg:grid grid-cols-4 gap-6 mt-24"
-                >
-                    {stats.map((stat, i) => (
-                        <div key={i} className="text-center p-8 bg-secondary/40 border border-border/30 rounded-sm hover:border-primary/30 transition-all duration-300">
-                            <stat.icon className="w-5 h-5 text-primary mx-auto mb-4" />
-                            <p className="font-display text-4xl font-semibold text-foreground mb-2">{stat.number}</p>
-                            <p className="text-[11px] tracking-[0.1em] uppercase text-muted-foreground font-body leading-relaxed">{stat.label}</p>
-                        </div>
-                    ))}
-                </motion.div>
-
-                {/* Second about block */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="max-w-3xl mx-auto mt-12 lg:mt-24 text-center"
-                >
-                    <h3 className="font-display text-3xl md:text-4xl italic font-light text-foreground mb-8"><T id="WHY_CLOSING_QUOTE" /></h3>
-
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6"><T id="ABOUT_SECOND_PARAGRAPH_1" /></p>
-
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed mb-6"><T id="ABOUT_SECOND_PARAGRAPH_2" /></p>
-
-                    <p className="text-sm font-body text-foreground/70 leading-relaxed"><T id="ABOUT_SECOND_PARAGRAPH_3" /></p>
-                </motion.div>
             </div>
         </section>
     );

@@ -62,7 +62,7 @@ export default function FAQSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="FOOTER_NAV_FAQ" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display text-4xl md:text-5xl font-light text-foreground"><T id="FAQ_HEADING" /></h2>
+                    <h2 className="font-display font-light text-foreground text-3xl md:text-5xl lg:text-6xl"><T id="FAQ_HEADING" /></h2>
                 </motion.div>
 
                 <motion.div
@@ -74,7 +74,7 @@ export default function FAQSection() {
                     <Accordion type="single" collapsible className="space-y-10">
                         {faqCategories.map((cat, catIdx) => (
                             <div key={catIdx}>
-                                <h3 className="font-display text-xl text-primary font-semibold mb-4 italic px-2">{cat.category}</h3>
+                                <h3 className="font-display text-primary font-semibold mb-4 italic px-2 text-xl md:text-2xl">{cat.category}</h3>
                                 <div className="space-y-3">
                                     {cat.items.map((faq, i) => (
                                         <AccordionItem key={i} value={`faq-${catIdx}-${i}`} className="bg-background border border-border/50 rounded-sm px-6 data-[state=open]:border-primary/30 transition-colors">

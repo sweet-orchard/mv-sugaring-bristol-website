@@ -102,7 +102,7 @@ export function EditMenu() {
                 <div className="absolute inset-0 bg-background/50 backdrop-blur-sm pointer-events-auto flex items-center justify-center p-4">
                     <div className="bg-background border border-border/50 shadow-2xl rounded-lg p-6 max-w-lg w-full">
                         <div className="flex justify-between items-center mb-4">
-                            <h3 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground flex items-center gap-2">
+                            <h3 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground flex items-center gap-2 text-xl md:text-2xl">
                                 Editing <span className="bg-primary/20 text-primary px-2 py-0.5 rounded">{editingKey}</span>
                             </h3>
                             <button onClick={() => setEditingKey(null)} className="text-muted-foreground hover:text-foreground"><X className="w-5 h-5"/></button>
@@ -156,7 +156,7 @@ export function EditMenu() {
                 <div className="absolute inset-0 bg-background/50 backdrop-blur-sm pointer-events-auto flex justify-end p-4">
                     <div className="bg-background border border-border/50 shadow-2xl rounded-lg w-full max-w-sm flex flex-col h-[calc(100vh-100px)]">
                         <div className="flex justify-between items-center p-4 border-b border-border/50">
-                            <h3 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">More Texts (Attributes)</h3>
+                            <h3 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground text-xl md:text-2xl">More Texts (Attributes)</h3>
                             <button onClick={() => setShowMoreTexts(false)} className="text-muted-foreground hover:text-foreground"><X className="w-5 h-5"/></button>
                         </div>
                         <div className="flex-1 overflow-y-auto p-4 space-y-2 pointer-events-auto">

@@ -124,3 +124,18 @@ html {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+.gold-text {
+  background: linear-gradient(
+    110deg,
+    hsl(40, 60%, 40%) 0%,
+    hsl(45, 75%, 75%) 25%,
+    hsl(40, 52%, 55%) 50%,
+    hsl(45, 75%, 75%) 75%,
+    hsl(40, 60%, 40%) 100%
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+

@@ -57,11 +57,11 @@ export default function WhatSetsApartSection() {
                         transition={{ duration: 0.6 }}
                     >
                         <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="APART_EYEBROW" /></p>
-                        <h2 className="font-display text-3xl md:text-4xl font-light text-foreground mb-6">
+                        <h2 className="font-display font-light text-foreground mb-6 text-3xl md:text-5xl lg:text-6xl">
                             <T id="APART_HEADING" render={(text) => <>{text.split(' ').slice(0,1).join(' ')} <span className="font-semibold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
                         </h2>
-                        <p className="text-sm font-body text-muted-foreground leading-relaxed mb-4"><T id="APART_PARAGRAPH_1" /></p>
-                        <p className="text-sm font-body text-muted-foreground leading-relaxed mb-8"><T id="APART_PARAGRAPH_2" /></p>
+                        <p className="font-body text-muted-foreground mb-4 text-sm md:text-[17px] leading-[1.8]"><T id="APART_PARAGRAPH_1" /></p>
+                        <p className="font-body text-muted-foreground mb-8 text-sm md:text-[17px] leading-[1.8]"><T id="APART_PARAGRAPH_2" /></p>
 
                         <div className="space-y-6">
                             {features.map((f, i) => (
@@ -71,7 +71,7 @@ export default function WhatSetsApartSection() {
                                     </div>
                                     <div>
                                         <h4 className="text-sm font-body font-semibold text-foreground mb-1">{f.title}</h4>
-                                        <p className="text-sm text-muted-foreground">{f.desc}</p>
+                                        <p className="text-muted-foreground text-sm md:text-[17px] leading-[1.8]">{f.desc}</p>
                                     </div>
                                 </div>
                             ))}
