@@ -107,7 +107,7 @@ export default function CareGuideSection() {
 
                 {/* Bottom luxury reminder */}
                 <div className="max-w-2xl mx-auto mt-16 text-center">
-                    <p className="font-display italic text-lg text-primary/80 leading-relaxed"><T id="CARE_CLOSING_QUOTE" /></p>
+                    <p className="font-display italic text-xl md:text-2xl text-primary leading-relaxed"><T id="CARE_CLOSING_QUOTE" /></p>
                 </div>
 
             </div>
