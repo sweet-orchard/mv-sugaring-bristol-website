@@ -15,12 +15,12 @@ export default function BeautySpaceSection() {
     ];
 
     return (
-        <section id="beauty-space" className="py-12 lg:py-28 bg-secondary/10 relative overflow-hidden">
+        <section id="beauty-space" className="py-14 md:py-20 lg:py-28 bg-secondary/10 relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-primary/5 blur-3xl -translate-y-1/2" />
             
             <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
-                <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
                     
                     {/* Left: Content */}
                     <div className="lg:col-span-5">
@@ -31,9 +31,9 @@ export default function BeautySpaceSection() {
                             transition={{ duration: 0.6 }}
                         >
                             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="SPACE_EYEBROW" /></p>
-                            <h2 className="font-display font-light text-foreground mb-6 leading-tight text-3xl md:text-5xl lg:text-6xl"><T id="SPACE_HEADING" /></h2>
-                            <p className="font-body text-muted-foreground mb-6 text-sm md:text-[17px] leading-[1.8]"><T id="SPACE_PARAGRAPH_1" /></p>
-                            <p className="font-body text-muted-foreground mb-8 text-sm md:text-[17px] leading-[1.8]"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
+                            <h2 className="font-display font-light text-foreground mb-5 leading-tight text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="SPACE_HEADING" /></h2>
+                            <p className="font-body text-muted-foreground mb-6 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="SPACE_PARAGRAPH_1" /></p>
+                            <p className="font-body text-muted-foreground mb-8 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
                         </motion.div>
 
                         {/* Highlights list */}
@@ -51,8 +51,8 @@ export default function BeautySpaceSection() {
                                         <item.icon className="w-5 h-5 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-sm font-body font-semibold text-foreground mb-1">{item.title}</h4>
-                                        <p className="text-muted-foreground font-body text-sm md:text-[17px] leading-[1.8]">{item.desc}</p>
+                                        <h4 className="text-base font-body font-semibold text-foreground mb-1.5">{item.title}</h4>
+                                        <p className="text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]">{item.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}

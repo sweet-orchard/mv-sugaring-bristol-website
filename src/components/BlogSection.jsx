@@ -14,21 +14,21 @@ export default function BlogSection() {
     ];
 
     return (
-        <section id="blog" className="py-16 lg:py-32 bg-background">
+        <section id="blog" className="py-14 md:py-20 lg:py-28 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 md:mb-14"
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="BLOG_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground text-3xl md:text-5xl lg:text-6xl"><T id="BLOG_HEADING" /></h2>
+                    <h2 className="font-display font-light text-foreground text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="BLOG_HEADING" /></h2>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -57,7 +57,7 @@ export default function BlogSection() {
                             <h3 className="font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors text-xl md:text-2xl">
                                 {post.title}
                             </h3>
-                            <p className="text-muted-foreground mb-4 text-sm md:text-[17px] leading-[1.8]">{post.excerpt}</p>
+                            <p className="text-muted-foreground mb-4 text-sm md:text-[15px] lg:text-base leading-[1.7]">{post.excerpt}</p>
                             <span className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-primary font-medium group-hover:gap-3 transition-all"><T id="BLOG_READ_MORE" /><ArrowRight className="w-3.5 h-3.5" />
                             </span>
                         </motion.article>

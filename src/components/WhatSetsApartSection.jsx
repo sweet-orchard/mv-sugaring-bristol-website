@@ -46,9 +46,9 @@ export default function WhatSetsApartSection() {
     };
 
     return (
-        <section className="py-12 lg:py-28 bg-background">
+        <section className="py-14 md:py-20 lg:py-28 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     {/* Left content */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -57,11 +57,11 @@ export default function WhatSetsApartSection() {
                         transition={{ duration: 0.6 }}
                     >
                         <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="APART_EYEBROW" /></p>
-                        <h2 className="font-display font-light text-foreground mb-6 text-3xl md:text-5xl lg:text-6xl">
+                        <h2 className="font-display font-light text-foreground mb-5 text-3xl md:text-4xl lg:text-5xl leading-[1.15]">
                             <T id="APART_HEADING" render={(text) => <>{text.split(' ').slice(0,1).join(' ')} <span className="font-semibold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
                         </h2>
-                        <p className="font-body text-muted-foreground mb-4 text-sm md:text-[17px] leading-[1.8]"><T id="APART_PARAGRAPH_1" /></p>
-                        <p className="font-body text-muted-foreground mb-8 text-sm md:text-[17px] leading-[1.8]"><T id="APART_PARAGRAPH_2" /></p>
+                        <p className="font-body text-muted-foreground mb-4 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="APART_PARAGRAPH_1" /></p>
+                        <p className="font-body text-muted-foreground mb-8 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="APART_PARAGRAPH_2" /></p>
 
                         <div className="space-y-6">
                             {features.map((f, i) => (
@@ -70,8 +70,8 @@ export default function WhatSetsApartSection() {
                                         <f.icon className="w-4 h-4 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-sm font-body font-semibold text-foreground mb-1">{f.title}</h4>
-                                        <p className="text-muted-foreground text-sm md:text-[17px] leading-[1.8]">{f.desc}</p>
+                                        <h4 className="text-base font-body font-semibold text-foreground mb-1.5">{f.title}</h4>
+                                        <p className="text-muted-foreground text-sm md:text-[15px] lg:text-base leading-[1.7]">{f.desc}</p>
                                     </div>
                                 </div>
                             ))}

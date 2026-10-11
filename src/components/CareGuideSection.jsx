@@ -38,22 +38,22 @@ export default function CareGuideSection() {
     ];
 
     return (
-        <section id="care-guide" className="py-16 lg:py-32 bg-secondary/20 relative overflow-hidden">
+        <section id="care-guide" className="py-14 md:py-20 lg:py-28 bg-secondary/20 relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl -translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl translate-x-1/2 translate-y-1/2" />
 
-            <div className="max-w-7xl mx-auto px-5 lg:px-10 relative">
+            <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
                 
                 {/* Header */}
-                <div className="text-center mb-16 lg:mb-20">
+                <div className="text-center mb-10 md:mb-14">
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium font-body"><T id="CARE_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-4 text-3xl md:text-5xl lg:text-6xl"><T id="CARE_HEADING" /></h2>
-                    <p className="max-w-2xl mx-auto text-muted-foreground font-body text-sm md:text-[17px] leading-[1.8]"><T id="CARE_SUBTEXT" /></p>
+                    <h2 className="font-display font-light text-foreground mb-4 text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CARE_HEADING" /></h2>
+                    <p className="max-w-2xl mx-auto text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="CARE_SUBTEXT" /></p>
                 </div>
 
                 {/* Symmetrical Grid layout */}
@@ -73,8 +73,8 @@ export default function CareGuideSection() {
                                         {rule.icon}
                                     </div>
                                     <div>
-                                        <h4 className="text-sm font-semibold text-foreground tracking-wide font-body mb-1">{rule.title}</h4>
-                                        <p className="text-muted-foreground font-body text-sm md:text-[17px] leading-[1.8]">{rule.desc}</p>
+                                        <h4 className="text-base font-semibold text-foreground font-body mb-1.5">{rule.title}</h4>
+                                        <p className="text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]">{rule.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -95,8 +95,8 @@ export default function CareGuideSection() {
                                         {rule.icon}
                                     </div>
                                     <div>
-                                        <h4 className="text-sm font-semibold text-foreground tracking-wide font-body mb-1">{rule.title}</h4>
-                                        <p className="text-muted-foreground font-body text-sm md:text-[17px] leading-[1.8]">{rule.desc}</p>
+                                        <h4 className="text-base font-semibold text-foreground font-body mb-1.5">{rule.title}</h4>
+                                        <p className="text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]">{rule.desc}</p>
                                     </div>
                                 </div>
                             ))}
