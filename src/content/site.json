@@ -210,6 +210,7 @@
     "FACE_SERVICE_5_DESC": "Not just brows — a skincare treatment for the upper face. Includes the forehead and the delicate area around the eyes, pore cleansing and professional skincare.",
     "PRICE_FACE_5": "£30",
     "FACE_SERVICE_10_NAME": "Eyebrow Shape Only",
+    "FACE_SERVICE_10_DURATION": "15 - 20 min",
     "FACE_SERVICE_10_DESC": "Hair removal for a clean brow shape, without the skincare.",
     "PRICE_FACE_10": "£20",
     "FACE_SERVICE_6_NAME": "Sideburns",
@@ -604,6 +605,7 @@
     "NEW_WHY_BENEFIT_4_TITLE": "Less hair over time",
     "NEW_WHY_BENEFIT_4_DESC": "In 8 years of sugaring, I've seen it again and again: hair starts to change from the very first session. Most clients see around 30% less hair — often more — and it grows back thinner, lighter and softer, so you can forget about stubble. Over time, some areas stay completely smooth, with no hair growing back at all — this can take anywhere from one year to a few years. Every client's result is her own.",
     "NEW_WHY_CLOSING_QUOTE": "\"Just had my second sugaring appointment for bikini with Mariia, at my first appointment Mariia put me at ease imodiatly because I am new to suagring and wasn't sure what to expect, ladies honestly it is sooooo much better than waxing, she really does know her stuff, she has a lovely space and is so knowledgeable and welcoming. 100% recomened, and it really is true, it does not hurt as much as waxing and other hair removing methods.\"",
+    "NEW_WHY_CLOSING_HIGHLIGHTS": "put me at ease|much better than waxing|really does know her stuff|lovely space|knowledgeable and welcoming|100% recomened|does not hurt as much as waxing",
     "NEW_WHY_CLOSING_AUTHOR": "Laura Wake",
     "NEW_WHY_CLOSING_SOURCE": "Google review",
     "NEW_ABOUT_P1_HI": "Hi,"
@@ -815,6 +817,7 @@
     "FACE_SERVICE_5_DESC": "Не просто брови, а догляд за шкірою верхньої частини обличчя. Включає чоло й делікатну зону навколо очей, очищення пор і професійний догляд.",
     "PRICE_FACE_5": "£30",
     "FACE_SERVICE_10_NAME": "Тільки форма брів",
+    "FACE_SERVICE_10_DURATION": "15 - 20 хв",
     "FACE_SERVICE_10_DESC": "Видалення волосся для чіткої форми брів, без догляду за шкірою.",
     "PRICE_FACE_10": "£20",
     "FACE_SERVICE_6_NAME": "Бакенбарди",
@@ -1157,6 +1160,7 @@
     "NEW_WHY_BENEFIT_4_TITLE": "Less hair over time",
     "NEW_WHY_BENEFIT_4_DESC": "In 8 years of sugaring, I've seen it again and again: hair starts to change from the very first session. Most clients see around 30% less hair — often more — and it grows back thinner, lighter and softer, so you can forget about stubble. Over time, some areas stay completely smooth, with no hair growing back at all — this can take anywhere from one year to a few years. Every client's result is her own.",
     "NEW_WHY_CLOSING_QUOTE": "\"Щойно була на другому сеансі шугарингу бікіні в Марії. На першому візиті Марія одразу мене заспокоїла, бо я нова в шугарингу й не знала, чого очікувати. Дівчата, чесно, це набагато краще, ніж воскова епіляція: вона справді знає свою справу, має чудовий простір, дуже обізнана та привітна. 100% рекомендую, і це правда: це не так боляче, як воскова епіляція та інші методи видалення волосся.\"",
+    "NEW_WHY_CLOSING_HIGHLIGHTS": "одразу мене заспокоїла|набагато краще, ніж воскова епіляція|справді знає свою справу|чудовий простір|обізнана та привітна|100% рекомендую|це не так боляче, як воскова епіляція",
     "NEW_WHY_CLOSING_AUTHOR": "Laura Wake",
     "NEW_WHY_CLOSING_SOURCE": "Відгук Google",
     "NEW_ABOUT_P1_HI": "Hi,"
