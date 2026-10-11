@@ -29,7 +29,7 @@ function highlight(text, phrases) {
         if (i < cursor) return;
         if (i > cursor) parts.push(text.slice(cursor, i));
         parts.push(
-            <mark key={i} className="bg-transparent text-foreground font-semibold rounded-[2px] px-0.5 -mx-0.5 [background-image:linear-gradient(transparent_55%,hsl(var(--primary)/0.45)_55%)]">
+            <mark key={i} className="bg-transparent text-foreground font-semibold underline decoration-foreground/30 decoration-1 underline-offset-[3px]">
                 {p}
             </mark>
         );
