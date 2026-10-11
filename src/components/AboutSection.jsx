@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Flower, Heart, Grid, Diamond, Sparkles, Music, Star } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
-import ScrollButton from './ScrollButton';
 import {
     Carousel,
     CarouselContent,
@@ -97,7 +96,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-20 lg:mb-24 text-foreground/80 leading-[1.8] font-body text-[13px] md:text-sm lg:text-[15px] space-y-4"
+                    className="mb-12 lg:mb-16 text-foreground/80 leading-[1.8] font-body text-[13px] md:text-sm lg:text-[15px] space-y-4"
                 >
                     <div>
                         <span><T id="NEW_ABOUT_P1_HI" /></span>
@@ -119,17 +118,6 @@ export default function AboutSection() {
                     <p><T id="NEW_ABOUT_P5" /></p>
                     
                     <p><T id="NEW_ABOUT_P6" /></p>
-
-                    <div className="flex items-center justify-end gap-4 md:gap-5 mt-10 md:mt-14 pt-6 border-t border-[#B38B4D]/25">
-                        <div className="text-right">
-                            <p className="font-display italic text-base md:text-lg text-[#B38B4D] leading-none mb-1">
-                                <T id="NEW_ABOUT_SIGN_1" />
-                            </p>
-                            <p className="font-script text-5xl md:text-6xl gold-text-strong leading-[1.1] pr-1">
-                                <T id="NEW_ABOUT_SIGN_2" />
-                            </p>
-                        </div>
-                    </div>
                 </motion.div>
 
                 {/* A few things about me list */}
@@ -161,12 +149,15 @@ export default function AboutSection() {
                         ))}
                     </div>
 
-                    <div className="mt-10 flex justify-center">
-                        <ScrollButton 
-                            href="#contact"
-                            className="inline-flex items-center justify-center px-8 py-4 font-body text-xs tracking-[0.2em] uppercase font-medium rounded-sm"
-                            textId="HERO_CTA_BOOK_SESSION"
-                        />
+                    <div className="flex items-center justify-end gap-4 md:gap-5 mt-10 md:mt-12 pt-6 border-t border-[#B38B4D]/25">
+                        <div className="text-right">
+                            <p className="font-display italic text-base md:text-lg text-[#B38B4D] leading-none mb-1">
+                                <T id="NEW_ABOUT_SIGN_1" />
+                            </p>
+                            <p className="font-script text-5xl md:text-6xl gold-text-strong leading-[1.1] pr-1">
+                                <T id="NEW_ABOUT_SIGN_2" />
+                            </p>
+                        </div>
                     </div>
                 </motion.div>
 

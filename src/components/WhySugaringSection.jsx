@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { T } from '../context/ContentContext';
+import ScrollButton from './ScrollButton';
 
 const benefits = [
     { num: '01', titleId: 'NEW_WHY_BENEFIT_1_TITLE', descId: 'NEW_WHY_BENEFIT_1_DESC' },
@@ -132,6 +133,13 @@ export default function WhySugaringSection() {
                         <div className="h-[2px] w-12 bg-[#B38B4D]/60" />
                     </div>
                     <p className="font-display text-xl md:text-3xl italic text-foreground/80 max-w-3xl mx-auto leading-[1.6]"><T id="NEW_WHY_CLOSING_QUOTE" /></p>
+                    <div className="mt-8 md:mt-10 flex justify-center">
+                        <ScrollButton
+                            href="#contact"
+                            className="inline-flex items-center justify-center px-8 py-4 font-body text-xs tracking-[0.2em] uppercase font-medium rounded-sm"
+                            textId="HERO_CTA_BOOK_SESSION"
+                        />
+                    </div>
                 </motion.div>
             </div>
         </section>
