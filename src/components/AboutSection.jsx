@@ -122,7 +122,7 @@ export default function AboutSection() {
                     <div className="flex justify-center mb-5">
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h3 className="font-display text-center text-foreground mb-6 md:mb-8 text-lg md:text-xl lg:text-2xl">
+                    <h3 className="font-display font-bold text-center text-foreground mb-6 md:mb-8 text-lg md:text-xl lg:text-2xl">
                         <T id="NEW_ABOUT_LIST_TITLE" />
                     </h3>
 

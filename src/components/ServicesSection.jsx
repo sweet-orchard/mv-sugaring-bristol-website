@@ -259,30 +259,30 @@ function BikiniPricingGuide() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-12"
+            className="mt-8"
         >
-            <div className="bg-background border-l-2 border-primary/60 rounded-r-sm p-5 md:p-8 space-y-6 text-[13px] md:text-sm font-body leading-[1.65] text-muted-foreground shadow-sm">
+            <div className="bg-background border-l-2 border-primary/60 rounded-r-sm p-4 md:p-6 space-y-4 text-[11px] md:text-xs font-body leading-[1.55] text-muted-foreground shadow-sm">
                 
                 {/* Intro */}
                 <div>
-                    <h4 className="text-xl font-display text-primary mb-2">Hair length & pricing</h4>
-                    <p className="text-foreground/80 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">Longer hair takes more time and care to remove gently, so bikini prices depend on when you last removed your hair.</p>
+                    <h4 className="text-lg md:text-xl font-display font-bold text-primary mb-1.5">Hair length & pricing</h4>
+                    <p className="text-foreground/80 text-[11px] md:text-xs leading-[1.55]">Longer hair takes more time and care to remove gently, so bikini prices depend on when you last removed your hair.</p>
                 </div>
 
                 {/* Pricing table equivalents */}
-                <div className="space-y-6">
+                <div className="space-y-4">
                     <div>
-                        <h5 className="text-[11px] tracking-[0.2em] font-semibold text-primary uppercase mb-4">After waxing or sugaring</h5>
-                        <div className="space-y-3">
-                            <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-3">
+                        <h5 className="text-[10px] tracking-[0.15em] font-bold text-primary uppercase mb-2">After waxing or sugaring</h5>
+                        <div className="space-y-2">
+                            <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-2">
                                 <span>Up to 6 weeks</span>
                                 <span className="font-semibold text-primary whitespace-nowrap pl-4">Standard price</span>
                             </div>
-                            <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-3">
+                            <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-2">
                                 <span>7–11 weeks</span>
                                 <span className="font-semibold text-primary whitespace-nowrap pl-4">Up to +£10</span>
                             </div>
-                            <div className="flex justify-between items-center pb-2">
+                            <div className="flex justify-between items-center pb-1">
                                 <span>12+ weeks</span>
                                 <span className="font-semibold text-primary whitespace-nowrap pl-4">Up to +£20</span>
                             </div>
@@ -290,13 +290,13 @@ function BikiniPricingGuide() {
                     </div>
 
                     <div>
-                        <h5 className="text-[11px] tracking-[0.2em] font-semibold text-primary uppercase mb-4">After shaving</h5>
-                        <div className="space-y-3">
-                            <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-3">
+                        <h5 className="text-[10px] tracking-[0.15em] font-bold text-primary uppercase mb-2">After shaving</h5>
+                        <div className="space-y-2">
+                            <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-2">
                                 <span>2–4 weeks <i className="font-normal opacity-90">(2–3 weeks is ideal)</i></span>
                                 <span className="font-semibold text-primary whitespace-nowrap pl-4">Standard price</span>
                             </div>
-                            <div className="flex justify-between items-center pb-2">
+                            <div className="flex justify-between items-center pb-1">
                                 <span>Over 4 weeks</span>
                                 <span className="font-semibold text-primary whitespace-nowrap pl-4">Up to +£15</span>
                             </div>
@@ -305,15 +305,15 @@ function BikiniPricingGuide() {
                 </div>
 
                 {/* Explanations */}
-                <div className="space-y-3 pt-1">
+                <div className="space-y-2 pt-0">
                     <p>
-                        <strong className="text-foreground font-semibold">Why "up to"?</strong> Every visit is different. If your treatment takes less time, you pay less. After years of regular sugaring — or after laser — hair often grows back finer and sparser, so many clients pay no extra at all, even after a longer break.
+                        <strong className="text-foreground font-bold">Why "up to"?</strong> Every visit is different. If your treatment takes less time, you pay less. After years of regular sugaring — or after laser — hair often grows back finer and sparser, so many clients pay no extra at all, even after a longer break.
                     </p>
                     <p>
-                        <strong className="text-foreground font-semibold">Long hair?</strong> You can trim it before your visit — just not too short, as very short hair is harder to remove and can affect your results.
+                        <strong className="text-foreground font-bold">Long hair?</strong> You can trim it before your visit — just not too short, as very short hair is harder to remove and can affect your results.
                     </p>
                     <p>
-                        <strong className="text-foreground font-semibold">Not sure, or several months of growth? Message me on WhatsApp</strong> — I'll advise what's best for you and give you a guide price.
+                        <strong className="text-foreground font-bold">Not sure, or several months of growth? Message me on WhatsApp</strong> — I'll advise what's best for you and give you a guide price.
                     </p>
                 </div>
 
@@ -620,8 +620,8 @@ export default function ServicesSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="FOOTER_NAV_SERVICES" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]">
-                        <T id="SERVICES_HEADING" render={(text) => <>{text.split(' ')[0]} <span className="font-semibold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
+                    <h2 className="font-display font-semibold text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]">
+                        <T id="SERVICES_HEADING" render={(text) => <>{text.split(' ')[0]} <span className="font-bold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
                     </h2>
                 </motion.div>
 
@@ -730,7 +730,7 @@ export default function ServicesSection() {
 
                             {/* Category header */}
                             <div className="mb-8">
-                                <h3 className="font-display font-light text-foreground mb-2 text-lg md:text-xl lg:text-2xl">
+                                <h3 className="font-display font-bold text-foreground mb-2 text-lg md:text-xl lg:text-2xl">
                                     {active.fullLabel}
                                 </h3>
                                 <p className="font-body text-muted-foreground italic text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
