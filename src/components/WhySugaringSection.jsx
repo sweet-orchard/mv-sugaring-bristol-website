@@ -20,34 +20,32 @@ const Blob = () => (
 );
 
 const illustrations = [
-    // Less painful — a light feather
+    // Less painful — a healing plus
     () => (
         <>
             <Blob />
-            <path d="M30 94 C26 62 48 30 90 22 C88 56 68 84 30 94 Z" {...stroke} fill={GOLD} />
-            <path d="M30 94 L78 36" {...stroke} />
-            <path d="M52 66 L66 70 M60 54 L74 56 M44 78 L54 82" {...stroke} strokeWidth={1.5} />
-            <path d="M98 20 L98 30 M93 25 L103 25" {...stroke} strokeWidth={1.5} />
+            <path d="M52 30 H68 V48 H86 V64 H68 V82 H52 V64 H34 V48 H52 Z" {...stroke} fill={GOLD} />
+            <path d="M98 22 L98 32 M93 27 L103 27" {...stroke} strokeWidth={1.5} />
+            <path d="M24 86 L24 94 M20 90 L28 90" {...stroke} strokeWidth={1.5} />
         </>
     ),
-    // Kinder to your skin — a gentle sprig with a drop
+    // Kinder to your skin — a heart
     () => (
         <>
             <Blob />
-            <path d="M60 98 C60 74 60 50 62 24" {...stroke} />
-            <path d="M60 74 C38 74 28 56 30 42 C50 42 60 54 60 74 Z" {...stroke} fill={GOLD} />
-            <path d="M61 56 C80 56 92 42 90 28 C70 28 60 40 61 56 Z" {...stroke} fill="#fff" />
-            <path d="M96 66 C96 66 88 76 88 82 C88 87 92 90 96 90 C100 90 104 87 104 82 C104 76 96 66 96 66 Z" {...stroke} fill={GOLD} strokeWidth={1.5} />
+            <path d="M60 90 C26 68 24 38 44 33 C53 31 60 37 60 45 C60 37 67 31 76 33 C96 38 94 68 60 90 Z" {...stroke} fill={GOLD} />
+            <path d="M44 46 C46 42 50 41 53 43" {...stroke} stroke="#fff" strokeWidth={2.5} />
+            <path d="M99 24 L99 34 M94 29 L104 29" {...stroke} strokeWidth={1.5} />
         </>
     ),
-    // Softer skin, every time — a soft glow of sparkles
+    // Softer skin, every time — soft flowing waves
     () => (
         <>
             <Blob />
-            <circle cx="60" cy="56" r="30" {...stroke} fill="#fff" strokeDasharray="2 6" />
-            <path d="M60 26 C62 44 70 50 90 56 C70 62 62 70 60 88 C58 70 50 62 30 56 C50 50 58 44 60 26 Z" {...stroke} fill={GOLD} />
-            <path d="M96 24 C97 30 99 32 105 33 C99 34 97 36 96 42 C95 36 93 34 87 33 C93 32 95 30 96 24 Z" {...stroke} fill="#fff" strokeWidth={1.5} />
-            <path d="M26 84 C27 88 29 90 33 91 C29 92 27 94 26 98 C25 94 23 92 19 91 C23 90 25 88 26 84 Z" {...stroke} fill="#fff" strokeWidth={1.5} />
+            <path d="M14 66 C30 52 44 52 60 66 S90 80 106 66" {...stroke} stroke={GOLD} strokeWidth={4} />
+            <path d="M14 52 C30 38 44 38 60 52 S90 66 106 52" {...stroke} />
+            <path d="M14 80 C30 66 44 66 60 80 S90 94 106 80" {...stroke} strokeOpacity={0.45} />
+            <path d="M92 18 C93 24 95 26 101 27 C95 28 93 30 92 36 C91 30 89 28 83 27 C89 26 91 24 92 18 Z" {...stroke} fill="#fff" strokeWidth={1.5} />
         </>
     ),
     // Less hair over time — strands growing finer
