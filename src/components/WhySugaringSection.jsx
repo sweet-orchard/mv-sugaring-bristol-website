@@ -73,7 +73,7 @@ function highlight(text, phrases) {
     found.forEach(({ p, i }) => {
         if (i < cursor) return;
         if (i > cursor) parts.push(text.slice(cursor, i));
-        parts.push(<mark key={i} className="bg-transparent font-bold text-foreground">{p}</mark>);
+        parts.push(<mark key={i} className="bg-transparent font-bold text-foreground underline decoration-[#B38B4D] decoration-2 underline-offset-[5px]">{p}</mark>);
         cursor = i + p.length;
     });
     parts.push(text.slice(cursor));

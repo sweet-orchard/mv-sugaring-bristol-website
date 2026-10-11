@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { T } from "@/context/ContentContext"
 
 const CarouselContext = React.createContext(null)
 
@@ -163,7 +164,7 @@ const CarouselPrevious = React.forwardRef(({ className, variant = "outline", siz
             onClick={scrollPrev}
             {...props}>
             <ArrowLeft className="h-4 w-4" />
-            <span className="sr-only">Previous slide</span>
+            <span className="sr-only"><T id="CAROUSEL_PREVIOUS" /></span>
         </Button>)
     );
 })
@@ -184,7 +185,7 @@ const CarouselNext = React.forwardRef(({ className, variant = "outline", size = 
             onClick={scrollNext}
             {...props}>
             <ArrowRight className="h-4 w-4" />
-            <span className="sr-only">Next slide</span>
+            <span className="sr-only"><T id="CAROUSEL_NEXT" /></span>
         </Button>)
     );
 })

@@ -73,7 +73,7 @@ export default function Footer() {
                 {/* Bottom row */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-center md:text-left">
                     <p className="text-[10px] text-background/35 font-body tracking-widest uppercase">
-                        © {new Date().getFullYear()} Mariia Vatseba. All rights reserved.
+                        {t("FOOTER_COPYRIGHT").replace("[year]", new Date().getFullYear())}
                     </p>
                     <p className="text-[10px] text-background/35 font-body flex items-center justify-center gap-1.5 tracking-widest uppercase"><T id="FOOTER_MADE_WITH_LOVE" /><Heart className="w-3 h-3 text-primary fill-primary animate-pulse" /><T id="FOOTER_MADE_WITH_LOVE_CITY" /></p>
                 </div>
