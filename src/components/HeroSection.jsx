@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Play, Pause, Award, Heart, Sparkles, Star } from 'lucide-react';
+import { ChevronDown, Play, Pause, Star } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
 import ScrollButton from './ScrollButton';
 
@@ -81,10 +81,10 @@ export default function HeroSection() {
     const getText = (v) => v?.props?.id ? t(v.props.id) : v;
 
     const stats = [
-        { number: '8+', label: <T id="ABOUT_STAT_1_LABEL" />, icon: Sparkles },
-        { number: '9x', label: <T id="ABOUT_STAT_2_LABEL" />, icon: Award },
-        { number: '1000+', label: <T id="ABOUT_STAT_3_LABEL" />, icon: Heart },
-        { number: <>5.0<span className="text-xl align-[0.1em] ml-0.5">★</span></>, label: <T id="ABOUT_STAT_4_LABEL" />, icon: Star },
+        { number: '8+', label: <T id="ABOUT_STAT_1_LABEL" /> },
+        { number: '9x', label: <T id="ABOUT_STAT_2_LABEL" /> },
+        { number: '1000+', label: <T id="ABOUT_STAT_3_LABEL" /> },
+        { number: <>5.0<span className="text-xl align-[0.1em] ml-0.5">★</span></>, label: <T id="ABOUT_STAT_4_LABEL" /> },
     ];
     
     const [isPlaying, setIsPlaying] = useState(true);
@@ -169,10 +169,10 @@ export default function HeroSection() {
                         <div className="block lg:hidden w-full mt-4">
                             <div className="grid grid-cols-2 gap-4">
                                 {stats.map((stat, i) => (
-                                    <div key={i} className="text-center p-4 bg-secondary/40 border border-border/30 rounded-sm">
-                                        <stat.icon className="w-5 h-5 text-primary mx-auto mb-3" />
-                                        <p className="font-display text-3xl font-semibold text-foreground mb-1">{stat.number}</p>
-                                        <p className="text-[9px] tracking-[0.05em] uppercase text-muted-foreground font-body leading-tight">{stat.label}</p>
+                                    <div key={i} className="relative flex flex-col items-center justify-start text-center px-3 pt-6 pb-5 bg-white border border-[#EAE0C5]/70 rounded-xl shadow-[0_2px_10px_rgba(179,139,77,0.08)]">
+                                        <span className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] w-10 rounded-b-full bg-[#B38B4D]/70" />
+                                        <p className="font-display text-4xl font-bold text-[#B38B4D] leading-none mb-2">{stat.number}</p>
+                                        <p className="text-[10px] tracking-[0.12em] uppercase text-muted-foreground font-body leading-snug">{stat.label}</p>
                                     </div>
                                 ))}
                             </div>
