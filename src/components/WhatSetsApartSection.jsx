@@ -1,25 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Flame, Hand, Droplets, Play, Pause } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
+import MiniIllustration from './MiniIllustrations';
 import { useContent, T } from '../context/ContentContext';
 
-const features = [
-    {
-        icon: Flame,
-        title: 'Zero Risk of Burns',
-        desc: 'Applied at a comfortable room temperature.',
-    },
-    {
-        icon: Hand,
-        title: 'A Gentle, Mindful Touch',
-        desc: 'My techniques are entirely tailored to you.',
-    },
-    {
-        icon: Droplets,
-        title: 'More Than Hair Removal',
-        desc: "It's a luxurious SPA-style exfoliation that leaves your skin feeling silky-soft and glowing.",
-    },
-];
 
 export default function WhatSetsApartSection() {
     const { t, lang } = useContent();
@@ -27,9 +11,9 @@ export default function WhatSetsApartSection() {
     
 
     const features = [
-        { icon: Flame,    title: <T id="APART_FEATURE_1_TITLE" />, desc: <T id="APART_FEATURE_1_DESC" /> },
-        { icon: Hand,     title: <T id="APART_FEATURE_2_TITLE" />, desc: <T id="APART_FEATURE_2_DESC" /> },
-        { icon: Droplets, title: <T id="APART_FEATURE_3_TITLE" />, desc: <T id="APART_FEATURE_3_DESC" /> },
+        { icon: 'leaf',      title: <T id="APART_FEATURE_1_TITLE" />, desc: <T id="APART_FEATURE_1_DESC" /> },
+        { icon: 'cloud',     title: <T id="APART_FEATURE_2_TITLE" />, desc: <T id="APART_FEATURE_2_DESC" /> },
+        { icon: 'hourglass', title: <T id="APART_FEATURE_3_TITLE" />, desc: <T id="APART_FEATURE_3_DESC" /> },
     ];
 
     const [isPlaying, setIsPlaying] = useState(true);
@@ -65,10 +49,8 @@ export default function WhatSetsApartSection() {
 
                         <div className="space-y-6">
                             {features.map((f, i) => (
-                                <div key={i} className="flex gap-4 items-start">
-                                    <div className="w-10 h-10 shrink-0 rounded-sm bg-primary/10 flex items-center justify-center">
-                                        <f.icon className="w-4 h-4 text-primary" />
-                                    </div>
+                                <div key={i} className="flex gap-3 md:gap-4 items-start">
+                                    <MiniIllustration name={f.icon} className="w-[4.5rem] h-16 md:w-20 md:h-[4.5rem] -mt-2 -ml-2" />
                                     <div>
                                         <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1">{f.title}</h4>
                                         <p className="text-muted-foreground text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{f.desc}</p>
