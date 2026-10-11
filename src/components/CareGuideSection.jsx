@@ -1,22 +1,5 @@
-import { Sparkles, Droplet, Ban, Shirt, Flame, GlassWater } from 'lucide-react';
+import MiniIllustration from './MiniIllustrations';
 import { useContent, T } from '../context/ContentContext';
-
-const HairIcon = ({ className }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={className}
-    >
-        <path d="M5 2c3 4-3 9 0 13c2 2.5 4 4.5 5 7" />
-        <path d="M11 2c3 5-3 10 0 14c2 2.5 4 4.5 5 6" />
-        <path d="M17 2c3 4-3 9 0 13c1.5 2 3.5 4 4.5 6" />
-    </svg>
-);
 
 export default function CareGuideSection() {
     const { t, lang } = useContent();
@@ -24,17 +7,17 @@ export default function CareGuideSection() {
     
 
     const beforeRules = [
-        { icon: <HairIcon className="w-5 h-5 text-primary" />, title: <T id="CARE_BEFORE_1_TITLE" />, desc: <T id="CARE_BEFORE_1_DESC" /> },
-        { icon: <Sparkles className="w-5 h-5 text-primary" />, title: <T id="CARE_BEFORE_2_TITLE" />, desc: <T id="CARE_BEFORE_2_DESC" /> },
-        { icon: <Droplet className="w-5 h-5 text-primary" />,  title: <T id="CARE_BEFORE_3_TITLE" />, desc: <T id="CARE_BEFORE_3_DESC" /> },
-        { icon: <Ban className="w-5 h-5 text-primary" />,     title: <T id="CARE_BEFORE_4_TITLE" />, desc: <T id="CARE_BEFORE_4_DESC" /> },
+        { icon: 'ruler', title: <T id="CARE_BEFORE_1_TITLE" />, desc: <T id="CARE_BEFORE_1_DESC" /> },
+        { icon: 'scrub', title: <T id="CARE_BEFORE_2_TITLE" />, desc: <T id="CARE_BEFORE_2_DESC" /> },
+        { icon: 'drop',  title: <T id="CARE_BEFORE_3_TITLE" />, desc: <T id="CARE_BEFORE_3_DESC" /> },
+        { icon: 'sun',     title: <T id="CARE_BEFORE_4_TITLE" />, desc: <T id="CARE_BEFORE_4_DESC" /> },
     ];
 
     const afterRules = [
-        { icon: <Shirt className="w-5 h-5 text-primary" />,      title: <T id="CARE_AFTER_1_TITLE" />, desc: <T id="CARE_AFTER_1_DESC" /> },
-        { icon: <Flame className="w-5 h-5 text-primary" />,      title: <T id="CARE_AFTER_2_TITLE" />, desc: <T id="CARE_AFTER_2_DESC" /> },
-        { icon: <Ban className="w-5 h-5 text-primary" />,        title: <T id="CARE_AFTER_3_TITLE" />, desc: <T id="CARE_AFTER_3_DESC" /> },
-        { icon: <GlassWater className="w-5 h-5 text-primary" />, title: <T id="CARE_AFTER_4_TITLE" />, desc: <T id="CARE_AFTER_4_DESC" /> },
+        { icon: 'tee',      title: <T id="CARE_AFTER_1_TITLE" />, desc: <T id="CARE_AFTER_1_DESC" /> },
+        { icon: 'flame',      title: <T id="CARE_AFTER_2_TITLE" />, desc: <T id="CARE_AFTER_2_DESC" /> },
+        { icon: 'bottle',        title: <T id="CARE_AFTER_3_TITLE" />, desc: <T id="CARE_AFTER_3_DESC" /> },
+        { icon: 'glass', title: <T id="CARE_AFTER_4_TITLE" />, desc: <T id="CARE_AFTER_4_DESC" /> },
     ];
 
     return (
@@ -60,7 +43,7 @@ export default function CareGuideSection() {
                 <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
                     
                     {/* COLUMN 1: BEFORE THE SESSION */}
-                    <div className="bg-background/80 backdrop-blur-sm border border-border/40 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="bg-[#F6EDD3]/80 border border-[#E6D3A0]/70 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
                             <h3 className="font-display font-bold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_BEFORE_TITLE" /></h3>
                             <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_BEFORE_SUBTITLE" /></p>
@@ -68,12 +51,10 @@ export default function CareGuideSection() {
 
                         <div className="space-y-6">
                             {beforeRules.map((rule, idx) => (
-                                <div key={idx} className="flex gap-4 items-start group">
-                                    <div className="w-9 h-9 rounded-full bg-secondary/50 flex items-center justify-center shrink-0 border border-border/30 group-hover:border-primary/30 transition-colors">
-                                        {rule.icon}
-                                    </div>
+                                <div key={idx} className="flex gap-3 items-start group">
+                                    <MiniIllustration name={rule.icon} className="w-16 h-14 md:w-[4.5rem] md:h-16 -mt-2 -ml-2" />
                                     <div>
-                                        <h4 className="text-sm md:text-[15px] font-semibold text-foreground font-body mb-1">{rule.title}</h4>
+                                        <h4 className="text-sm md:text-[15px] font-medium text-foreground font-body mb-1">{rule.title}</h4>
                                         <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{rule.desc}</p>
                                     </div>
                                 </div>
@@ -90,12 +71,10 @@ export default function CareGuideSection() {
 
                         <div className="space-y-6">
                             {afterRules.map((rule, idx) => (
-                                <div key={idx} className="flex gap-4 items-start group">
-                                    <div className="w-9 h-9 rounded-full bg-secondary/50 flex items-center justify-center shrink-0 border border-border/30 group-hover:border-primary/30 transition-colors">
-                                        {rule.icon}
-                                    </div>
+                                <div key={idx} className="flex gap-3 items-start group">
+                                    <MiniIllustration name={rule.icon} className="w-16 h-14 md:w-[4.5rem] md:h-16 -mt-2 -ml-2" />
                                     <div>
-                                        <h4 className="text-sm md:text-[15px] font-semibold text-foreground font-body mb-1">{rule.title}</h4>
+                                        <h4 className="text-sm md:text-[15px] font-medium text-foreground font-body mb-1">{rule.title}</h4>
                                         <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{rule.desc}</p>
                                     </div>
                                 </div>

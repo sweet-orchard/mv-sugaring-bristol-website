@@ -52,7 +52,7 @@ export default function WhatSetsApartSection() {
                                 <div key={i} className="flex gap-3 md:gap-4 items-start">
                                     <MiniIllustration name={f.icon} className="w-[4.5rem] h-16 md:w-20 md:h-[4.5rem] -mt-2 -ml-2" />
                                     <div>
-                                        <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1">{f.title}</h4>
+                                        <h4 className="text-sm md:text-[15px] font-body font-medium text-foreground mb-1">{f.title}</h4>
                                         <p className="text-muted-foreground text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{f.desc}</p>
                                     </div>
                                 </div>

@@ -49,7 +49,7 @@ export default function BeautySpaceSection() {
                                 >
                                     <MiniIllustration name={item.icon} className="w-[4.5rem] h-16 md:w-20 md:h-[4.5rem] -mt-2 -ml-2" />
                                     <div>
-                                        <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1">{item.title}</h4>
+                                        <h4 className="text-sm md:text-[15px] font-body font-medium text-foreground mb-1">{item.title}</h4>
                                         <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{item.desc}</p>
                                     </div>
                                 </motion.div>
