@@ -67,6 +67,83 @@ const drawings = {
             <path d="M54 34 H66 L60 44 Z" fill={GOLD} stroke={INK} strokeWidth={2} strokeLinejoin="round" />
         </>
     ),
+    // Care guide — Ideal hair length: ruler with a short strand
+    ruler: (
+        <>
+            <Blob />
+            <path d="M44 62 C41 52 48 46 45 34" {...line} strokeWidth={3} />
+            <path d="M22 62 H98 V82 H22 Z" {...line} fill={GOLD} />
+            <path d="M34 62 V71 M46 62 V74 M58 62 V71 M70 62 V74 M82 62 V71" {...line} strokeWidth={2} />
+        </>
+    ),
+    // Gentle exfoliation — a soft sponge with a sparkle
+    scrub: (
+        <>
+            <Blob />
+            <circle cx="58" cy="60" r="28" {...line} fill={GOLD} />
+            <circle cx="48" cy="52" r="3" fill="#fff" />
+            <circle cx="64" cy="48" r="3" fill="#fff" />
+            <circle cx="70" cy="66" r="3" fill="#fff" />
+            <circle cx="50" cy="70" r="3" fill="#fff" />
+            <path d="M98 18 C99 25 101 27 108 28 C101 29 99 31 98 38 C97 31 95 29 88 28 C95 27 97 25 98 18 Z" {...line} strokeWidth={1.8} fill="#fff" />
+        </>
+    ),
+    // Clean, bare skin — a clean drop
+    drop: (
+        <>
+            <Blob />
+            <path d="M60 20 C60 20 36 50 36 68 C36 82 47 94 60 94 C73 94 84 82 84 68 C84 50 60 20 60 20 Z" {...line} fill="#fff" />
+            <path d="M48 70 C48 79 54 85 62 86" {...line} stroke={GOLD} strokeWidth={4} />
+            <path d="M98 22 L98 32 M93 27 L103 27" {...line} strokeWidth={1.8} />
+        </>
+    ),
+    // Avoid tanning — sun with a slash
+    sun: (
+        <>
+            <Blob />
+            <circle cx="60" cy="58" r="17" {...line} fill={GOLD} />
+            <path d="M60 24 V32 M60 84 V92 M26 58 H34 M86 58 H94 M36 34 L42 40 M78 76 L84 82 M84 34 L78 40 M42 76 L36 82" {...line} strokeWidth={2.2} />
+            <path d="M30 94 L90 22" {...line} stroke="#fff" strokeWidth={9} />
+            <path d="M30 94 L90 22" {...line} />
+        </>
+    ),
+    // Breathable clothing — a soft tee
+    tee: (
+        <>
+            <Blob />
+            <path d="M44 26 L26 40 L35 55 L44 50 V94 H76 V50 L85 55 L94 40 L76 26 C72 34 48 34 44 26 Z" {...line} fill="#fff" />
+            <path d="M44 82 H76" {...line} stroke={GOLD} strokeWidth={5} />
+        </>
+    ),
+    // Avoid heat & exercise — a flame
+    flame: (
+        <>
+            <Blob />
+            <path d="M60 18 C66 36 84 44 84 66 C84 82 73 94 60 94 C47 94 36 82 36 66 C36 56 42 50 46 44 C48 52 52 54 54 54 C52 40 54 30 60 18 Z" {...line} fill={GOLD} />
+            <path d="M60 62 C64 70 70 72 70 80 C70 86 65 90 60 90 C55 90 50 86 50 80 C50 72 57 70 60 62 Z" {...line} strokeWidth={2} fill="#fff" />
+        </>
+    ),
+    // No harsh products — a bottle with a slash
+    bottle: (
+        <>
+            <Blob />
+            <path d="M50 22 H70 V33 H50 Z" {...line} fill={GOLD} />
+            <path d="M44 33 H76 V90 C76 94 74 97 70 97 H50 C46 97 44 94 44 90 Z" {...line} fill="#fff" />
+            <path d="M51 56 H69 V76 H51 Z" {...line} strokeWidth={2} />
+            <path d="M34 94 L88 26" {...line} stroke="#fff" strokeWidth={9} />
+            <path d="M34 94 L88 26" {...line} />
+        </>
+    ),
+    // Hydration — a glass of water
+    glass: (
+        <>
+            <Blob />
+            <path d="M42.5 52 H77.5 L74 94 H46 Z" fill={GOLD} />
+            <path d="M40 28 H80 L74 94 H46 Z" {...line} fill="none" />
+            <path d="M42.5 52 H77.5" {...line} strokeWidth={2} />
+            <path d="M98 22 L98 32 M93 27 L103 27" {...line} strokeWidth={1.8} />
+        </>
+    ),
 };
 
 export default function MiniIllustration({ name, className = 'w-14 h-14 md:w-16 md:h-16' }) {
