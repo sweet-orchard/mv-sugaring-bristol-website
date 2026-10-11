@@ -34,7 +34,7 @@ export const getServicesData = (t) => ({
                         { name: <T id="FACE_SERVICE_4_NAME" />, price: <T id="PRICE_FACE_4" />, duration: <T id="FACE_SERVICE_4_DURATION" />, desc: <T id="FACE_SERVICE_4_DESC" />, image: '/price-list/face/nostrils.webp' },
                         { name: <T id="FACE_SERVICE_6_NAME" />, price: <T id="PRICE_FACE_6" />, duration: <T id="FACE_SERVICE_6_DURATION" />, desc: <T id="FACE_SERVICE_6_DESC" />, image: '/price-list/face/sideburns.webp' },
                         { name: <T id="FACE_SERVICE_5_NAME" />, price: <T id="PRICE_FACE_5" />, duration: <T id="FACE_SERVICE_5_DURATION" />, desc: <T id="FACE_SERVICE_5_DESC" />, image: '/price-list/face/eyebrows.webp' },
-                        { name: <T id="FACE_SERVICE_10_NAME" />, price: <T id="PRICE_FACE_10" />, desc: <T id="FACE_SERVICE_10_DESC" />, image: null },
+                        { name: <T id="FACE_SERVICE_10_NAME" />, price: <T id="PRICE_FACE_10" />, duration: <T id="FACE_SERVICE_10_DURATION" />, desc: <T id="FACE_SERVICE_10_DESC" />, image: null },
                     ]
                 },
                 {

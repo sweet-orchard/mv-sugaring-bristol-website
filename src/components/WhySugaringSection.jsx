@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
-import { T } from '../context/ContentContext';
+import { useContent, T } from '../context/ContentContext';
 import ScrollButton from './ScrollButton';
 
 const benefits = [
@@ -62,7 +62,26 @@ const illustrations = [
     ),
 ];
 
+// Wraps the key phrases of the review in <mark>; the review text itself is never altered.
+function highlight(text, phrases) {
+    const found = phrases
+        .map((p) => ({ p, i: text.indexOf(p) }))
+        .filter((x) => x.i >= 0)
+        .sort((a, b) => a.i - b.i);
+    const parts = [];
+    let cursor = 0;
+    found.forEach(({ p, i }) => {
+        if (i < cursor) return;
+        if (i > cursor) parts.push(text.slice(cursor, i));
+        parts.push(<mark key={i} className="bg-transparent font-bold text-foreground">{p}</mark>);
+        cursor = i + p.length;
+    });
+    parts.push(text.slice(cursor));
+    return parts;
+}
+
 export default function WhySugaringSection() {
+    const { t } = useContent();
     return (
         <section id="why-sugaring" className="py-10 md:py-16 lg:py-24 bg-[#FAF8F3] relative overflow-hidden">
             {/* Soft gold glow, same family as the rest of the site */}
@@ -138,7 +157,7 @@ export default function WhySugaringSection() {
                             <Star key={i} className="w-5 h-5 fill-[#FBBC04] text-[#FBBC04]" />
                         ))}
                     </div>
-                    <p className="font-display text-lg md:text-2xl italic text-foreground/80 max-w-3xl mx-auto leading-[1.6]"><T id="NEW_WHY_CLOSING_QUOTE" /></p>
+                    <p className="font-display text-lg md:text-2xl italic text-foreground/80 max-w-3xl mx-auto leading-[1.6]">{highlight(t('NEW_WHY_CLOSING_QUOTE'), (t('NEW_WHY_CLOSING_HIGHLIGHTS') || '').split('|').filter(Boolean))}</p>
                     <p className="mt-5 font-body text-xs tracking-[0.2em] uppercase text-[#B38B4D] font-semibold">
                         <T id="NEW_WHY_CLOSING_AUTHOR" />
                         <span className="normal-case tracking-normal font-medium text-muted-foreground"> · <T id="NEW_WHY_CLOSING_SOURCE" /></span>
