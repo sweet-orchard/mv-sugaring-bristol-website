@@ -28,7 +28,7 @@ export default function ContactSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="CONTACT_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CONTACT_HEADING" /></h2>
+                    <h2 className="font-display font-semibold text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CONTACT_HEADING" /></h2>
                     <p className="max-w-xl mx-auto font-body text-muted-foreground text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="CONTACT_SUBTEXT" /></p>
                 </motion.div>
 
@@ -110,7 +110,7 @@ export default function ContactSection() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                     >
                         <div className="bg-secondary/40 border border-border/30 rounded-sm p-8 lg:p-10">
-                            <h3 className="font-display font-semibold text-foreground mb-6 text-lg md:text-xl lg:text-2xl"><T id="CONTACT_FORM_TITLE" /></h3>
+                            <h3 className="font-display font-bold text-foreground mb-6 text-lg md:text-xl lg:text-2xl"><T id="CONTACT_FORM_TITLE" /></h3>
                             <form action="https://formsubmit.co/marichka21.08.95@gmail.com" method="POST" className="space-y-5">
                                 {/* FormSubmit Configuration */}
                                 <input type="hidden" name="_subject" value="New Inquiry from Website" />

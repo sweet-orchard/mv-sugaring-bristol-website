@@ -31,7 +31,7 @@ export default function BeautySpaceSection() {
                             transition={{ duration: 0.6 }}
                         >
                             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="SPACE_EYEBROW" /></p>
-                            <h2 className="font-display font-light text-foreground mb-5 leading-tight text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="SPACE_HEADING" /></h2>
+                            <h2 className="font-display font-semibold text-foreground mb-5 leading-tight text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="SPACE_HEADING" /></h2>
                             <p className="font-body text-muted-foreground mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="SPACE_PARAGRAPH_1" /></p>
                             <p className="font-body text-muted-foreground mb-8 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
                         </motion.div>

@@ -52,7 +52,7 @@ export default function CareGuideSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium font-body"><T id="CARE_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-4 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CARE_HEADING" /></h2>
+                    <h2 className="font-display font-semibold text-foreground mb-4 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CARE_HEADING" /></h2>
                     <p className="max-w-2xl mx-auto text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="CARE_SUBTEXT" /></p>
                 </div>
 
@@ -62,7 +62,7 @@ export default function CareGuideSection() {
                     {/* COLUMN 1: BEFORE THE SESSION */}
                     <div className="bg-background/80 backdrop-blur-sm border border-border/40 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
-                            <h3 className="font-display font-semibold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_BEFORE_TITLE" /></h3>
+                            <h3 className="font-display font-bold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_BEFORE_TITLE" /></h3>
                             <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_BEFORE_SUBTITLE" /></p>
                         </div>
 
@@ -84,7 +84,7 @@ export default function CareGuideSection() {
                     {/* COLUMN 2: AFTER THE SESSION */}
                     <div className="bg-background/80 backdrop-blur-sm border border-border/40 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
-                            <h3 className="font-display font-semibold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_AFTER_TITLE" /></h3>
+                            <h3 className="font-display font-bold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_AFTER_TITLE" /></h3>
                             <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_AFTER_SUBTITLE" /></p>
                         </div>
 

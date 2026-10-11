@@ -57,8 +57,8 @@ export default function WhatSetsApartSection() {
                         transition={{ duration: 0.6 }}
                     >
                         <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="APART_EYEBROW" /></p>
-                        <h2 className="font-display font-light text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]">
-                            <T id="APART_HEADING" render={(text) => <>{text.split(' ').slice(0,1).join(' ')} <span className="font-semibold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
+                        <h2 className="font-display font-semibold text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]">
+                            <T id="APART_HEADING" render={(text) => <>{text.split(' ').slice(0,1).join(' ')} <span className="font-bold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
                         </h2>
                         <p className="font-body text-muted-foreground mb-4 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="APART_PARAGRAPH_1" /></p>
                         <p className="font-body text-muted-foreground mb-8 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="APART_PARAGRAPH_2" /></p>

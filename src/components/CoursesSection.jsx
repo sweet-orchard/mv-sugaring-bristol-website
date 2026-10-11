@@ -29,8 +29,8 @@ export default function CoursesSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="COURSES_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="COURSES_HEADING_LINE_1" />{' '}<br className="hidden md:block" />
-                        <span className="font-semibold italic"><T id="COURSES_HEADING_LINE_2" /></span>
+                    <h2 className="font-display font-semibold text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="COURSES_HEADING_LINE_1" />{' '}<br className="hidden md:block" />
+                        <span className="font-bold italic"><T id="COURSES_HEADING_LINE_2" /></span>
                     </h2>
                     <p className="max-w-2xl mx-auto font-body text-muted-foreground text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_SUBTEXT" /></p>
                 </motion.div>
@@ -51,7 +51,7 @@ export default function CoursesSection() {
                             <div className="w-2 h-2 bg-primary rounded-full" />
                             <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium"><T id="COURSES_CARD_2_BADGE" /></span>
                         </div>
-                        <h3 className="font-display font-semibold text-foreground mb-4 text-lg md:text-xl lg:text-2xl"><T id="COURSES_CARD_1_TITLE" /></h3>
+                        <h3 className="font-display font-bold text-foreground mb-4 text-lg md:text-xl lg:text-2xl"><T id="COURSES_CARD_1_TITLE" /></h3>
                         <p className="font-body text-muted-foreground mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_CARD_1_DESC" /></p>
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
                             <div className="flex items-center gap-1.5">
@@ -80,7 +80,7 @@ export default function CoursesSection() {
                             <div className="w-2 h-2 bg-primary rounded-full" />
                             <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium"><T id="COURSES_CARD_2_BADGE" /></span>
                         </div>
-                        <h3 className="font-display font-semibold text-foreground mb-4 text-lg md:text-xl lg:text-2xl"><T id="COURSES_CARD_2_TITLE" /></h3>
+                        <h3 className="font-display font-bold text-foreground mb-4 text-lg md:text-xl lg:text-2xl"><T id="COURSES_CARD_2_TITLE" /></h3>
                         <p className="font-body text-muted-foreground mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_CARD_2_DESC" /></p>
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
                             <div className="flex items-center gap-1.5">
@@ -109,7 +109,7 @@ export default function CoursesSection() {
                                 <Globe className="w-4 h-4 text-primary" />
                                 <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium"><T id="COURSES_ONLINE_BADGE" /></span>
                             </div>
-                            <h3 className="font-display font-light text-background mb-6 text-lg md:text-xl lg:text-2xl"><T id="COURSES_ONLINE_HEADING" /></h3>
+                            <h3 className="font-display font-bold text-background mb-6 text-lg md:text-xl lg:text-2xl"><T id="COURSES_ONLINE_HEADING" /></h3>
                             <p className="font-body text-background/70 mb-4 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_ONLINE_PARAGRAPH_1" /></p>
                             <p className="font-body text-background/70 mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_ONLINE_PARAGRAPH_2" /></p>
 
@@ -173,7 +173,7 @@ export default function CoursesSection() {
                                 <X className="w-5 h-5" />
                             </button>
                             
-                            <h3 className="font-display font-semibold text-center mb-6 text-foreground text-lg md:text-xl lg:text-2xl"><T id="COURSE_CONTACT_MODAL_TITLE" /></h3>
+                            <h3 className="font-display font-bold text-center mb-6 text-foreground text-lg md:text-xl lg:text-2xl"><T id="COURSE_CONTACT_MODAL_TITLE" /></h3>
                             
                             <div className="space-y-4">
                                 <a 

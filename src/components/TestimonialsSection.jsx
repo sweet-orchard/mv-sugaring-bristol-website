@@ -133,7 +133,7 @@ export default function TestimonialsSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="TESTIMONIALS_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="TESTIMONIALS_HEADING" /></h2>
+                    <h2 className="font-display font-semibold text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="TESTIMONIALS_HEADING" /></h2>
                 </motion.div>
                 {/* Carousel */}
                 <div className="relative max-w-4xl mx-auto pt-4 pb-2">

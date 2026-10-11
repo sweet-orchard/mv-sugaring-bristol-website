@@ -47,7 +47,7 @@ export default function BeforeAfterSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="BEFORE_AFTER_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="BEFORE_AFTER_HEADING" /></h2>
+                    <h2 className="font-display font-semibold text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="BEFORE_AFTER_HEADING" /></h2>
                     <p className="max-w-xl mx-auto text-muted-foreground mt-4 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="BEFORE_AFTER_SUBTEXT" /></p>
                 </motion.div>
 

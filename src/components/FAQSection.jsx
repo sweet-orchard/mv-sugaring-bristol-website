@@ -62,7 +62,7 @@ export default function FAQSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="FOOTER_NAV_FAQ" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="FAQ_HEADING" /></h2>
+                    <h2 className="font-display font-semibold text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="FAQ_HEADING" /></h2>
                 </motion.div>
 
                 <motion.div

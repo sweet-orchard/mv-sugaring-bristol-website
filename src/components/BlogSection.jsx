@@ -28,7 +28,7 @@ export default function BlogSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="BLOG_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="BLOG_HEADING" /></h2>
+                    <h2 className="font-display font-semibold text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="BLOG_HEADING" /></h2>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -54,7 +54,7 @@ export default function BlogSection() {
                                 </div>
                             </div>
 
-                            <h3 className="font-display font-semibold text-foreground mb-3 group-hover:text-primary transition-colors text-lg md:text-xl lg:text-2xl">
+                            <h3 className="font-display font-bold text-foreground mb-3 group-hover:text-primary transition-colors text-lg md:text-xl lg:text-2xl">
                                 {post.title}
                             </h3>
                             <p className="text-muted-foreground mb-4 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{post.excerpt}</p>

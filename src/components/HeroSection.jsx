@@ -63,7 +63,7 @@ function GoogleReviewCard({ num, t }) {
                         <Star key={i} className="w-[18px] h-[18px] fill-[#FBBC04] text-[#FBBC04]" />
                     ))}
                 </div>
-                <h3 className="font-display text-xl font-semibold text-foreground leading-tight mb-2"><T id={`HERO_REVIEW_${num}_TITLE`} /></h3>
+                <h3 className="font-display text-xl font-bold text-foreground leading-tight mb-2"><T id={`HERO_REVIEW_${num}_TITLE`} /></h3>
                 <p className="font-body text-[13px] text-foreground/75 leading-[1.7]">
                     {highlight(t(`HERO_REVIEW_${num}_TEXT`), phrases)}
                 </p>
@@ -136,7 +136,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Desktop Headings */}
-                        <h1 className="hidden lg:block font-display text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] text-foreground mb-3"><T id="HERO_HEADING_LINE_1" /></h1>
+                        <h1 className="hidden lg:block font-display text-6xl md:text-7xl lg:text-8xl font-medium leading-[0.95] text-foreground mb-3"><T id="HERO_HEADING_LINE_1" /></h1>
                         <h1 className="hidden lg:block font-display text-6xl md:text-7xl lg:text-8xl font-semibold leading-[0.95] text-foreground mb-6"><T id="HERO_HEADING_LINE_2" /></h1>
 
                         {/* Desktop Text */}
@@ -232,7 +232,7 @@ export default function HeroSection() {
 
                                 {/* Mobile Headings Overlay */}
                                 <div className="absolute inset-0 z-20 flex flex-col items-center justify-center lg:hidden text-white pointer-events-none px-4">
-                                    <h1 className="font-display text-5xl sm:text-6xl font-light leading-[0.95] mb-2 text-center text-white"><T id="HERO_HEADING_LINE_1" /></h1>
+                                    <h1 className="font-display text-5xl sm:text-6xl font-medium leading-[0.95] mb-2 text-center text-white"><T id="HERO_HEADING_LINE_1" /></h1>
                                     <h1 className="font-display text-5xl sm:text-6xl font-semibold leading-[0.95] text-center text-white"><T id="HERO_HEADING_LINE_2" /></h1>
                                 </div>
 
