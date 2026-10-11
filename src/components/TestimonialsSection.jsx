@@ -4,6 +4,12 @@ import { ChevronLeft, ChevronRight, Quote, ImageIcon } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
 const testimonials = [
     {
+        id: 7,
+        placeholder: 'Client Review Screenshot #7',
+        image: '/testemonials/review-7.JPG',
+        textKey: "TESTIMONIALS_REVIEW_7",
+    },
+    {
         id: 1,
         placeholder: 'Client Review Screenshot #1',
         image: '/testemonials/review-1.jpg',
@@ -38,12 +44,6 @@ const testimonials = [
         placeholder: 'Client Review Screenshot #6',
         image: '/testemonials/review-6.JPG',
         textKey: "TESTIMONIALS_REVIEW_6",
-    },
-    {
-        id: 7,
-        placeholder: 'Client Review Screenshot #7',
-        image: '/testemonials/review-7.JPG',
-        textKey: "TESTIMONIALS_REVIEW_7",
     },
     {
         id: 8,

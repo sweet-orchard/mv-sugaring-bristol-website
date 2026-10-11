@@ -126,11 +126,12 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
+                    className="bg-foreground text-background rounded-sm p-6 md:p-10"
                 >
                     <div className="flex justify-center mb-5">
-                        <div className="h-px w-12 bg-primary/40" />
+                        <div className="h-px w-12 bg-[#D8B878]/50" />
                     </div>
-                    <h3 className="font-display font-bold text-center text-foreground mb-6 md:mb-8 text-lg md:text-xl lg:text-2xl">
+                    <h3 className="font-display font-bold text-center text-background mb-6 md:mb-8 text-lg md:text-xl lg:text-2xl">
                         <T id="NEW_ABOUT_LIST_TITLE" />
                     </h3>
 
@@ -138,23 +139,23 @@ export default function AboutSection() {
                         {aboutItems.map((item, idx) => (
                             <div key={idx} className="flex gap-3 md:gap-5 items-baseline">
                                 <div className="shrink-0 w-7 md:w-9">
-                                    <span className="font-display italic text-lg md:text-xl lg:text-2xl text-[#B38B4D] font-semibold">
+                                    <span className="font-display italic text-lg md:text-xl lg:text-2xl text-[#D8B878] font-semibold">
                                         {String(idx + 1).padStart(2, '0')}
                                     </span>
                                 </div>
-                                <p className="text-foreground/80 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
+                                <p className="text-background/80 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
                                     <T id={item.textId} />
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="flex items-center justify-end gap-4 md:gap-5 mt-10 md:mt-12 pt-6 border-t border-[#B38B4D]/25">
+                    <div className="flex items-center justify-end gap-4 md:gap-5 mt-10 md:mt-12 pt-6 border-t border-background/15">
                         <div className="text-right">
-                            <p className="font-display italic text-base md:text-lg text-[#B38B4D] leading-none mb-1">
+                            <p className="font-display italic text-base md:text-lg text-[#D8B878] leading-none mb-1">
                                 <T id="NEW_ABOUT_SIGN_1" />
                             </p>
-                            <p className="font-script text-5xl md:text-6xl gold-text-strong leading-[1.1] pr-1">
+                            <p className="font-script text-5xl md:text-6xl gold-text-light leading-[1.1] pr-1">
                                 <T id="NEW_ABOUT_SIGN_2" />
                             </p>
                         </div>

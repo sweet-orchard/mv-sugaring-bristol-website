@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 import { T } from '../context/ContentContext';
 import ScrollButton from './ScrollButton';
 
@@ -121,7 +122,7 @@ export default function WhySugaringSection() {
                     </div>
                 </div>
 
-                {/* Closing quote */}
+                {/* Closing review */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -132,7 +133,16 @@ export default function WhySugaringSection() {
                     <div className="flex justify-center mb-6">
                         <div className="h-[2px] w-12 bg-[#B38B4D]/60" />
                     </div>
-                    <p className="font-display text-xl md:text-3xl italic text-foreground/80 max-w-3xl mx-auto leading-[1.6]"><T id="NEW_WHY_CLOSING_QUOTE" /></p>
+                    <div className="flex justify-center gap-0.5 mb-4" aria-label="5 out of 5 stars">
+                        {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 fill-[#FBBC04] text-[#FBBC04]" />
+                        ))}
+                    </div>
+                    <p className="font-display text-lg md:text-2xl italic text-foreground/80 max-w-3xl mx-auto leading-[1.6]"><T id="NEW_WHY_CLOSING_QUOTE" /></p>
+                    <p className="mt-5 font-body text-xs tracking-[0.2em] uppercase text-[#B38B4D] font-semibold">
+                        <T id="NEW_WHY_CLOSING_AUTHOR" />
+                        <span className="normal-case tracking-normal font-medium text-muted-foreground"> · <T id="NEW_WHY_CLOSING_SOURCE" /></span>
+                    </p>
                     <div className="mt-8 md:mt-10 flex justify-center">
                         <ScrollButton
                             href="#contact"

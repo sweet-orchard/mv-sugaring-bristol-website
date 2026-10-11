@@ -141,6 +141,16 @@ html {
   background-clip: text;
 }
 
+.gold-text-light {
+  background: linear-gradient(110deg,
+      hsl(42, 66%, 60%) 0%,
+      hsl(45, 80%, 76%) 50%,
+      hsl(42, 66%, 60%) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .gold-text-strong {
   background: linear-gradient(110deg,
       hsl(38, 62%, 30%) 0%,
