@@ -35,7 +35,7 @@ export default function AboutSection() {
     const { t } = useContent();
     
     return (
-        <section id="about" className="py-10 md:py-16 lg:py-24 bg-[#FAF8F3]">
+        <section id="about" className="pt-10 md:pt-16 lg:pt-24 bg-[#FAF8F3]">
             <div className="max-w-3xl mx-auto px-6 lg:px-10">
                 
                 {/* Heading */}
@@ -119,49 +119,51 @@ export default function AboutSection() {
                     
                     <p><T id="NEW_ABOUT_P6" /></p>
                 </motion.div>
+            </div>
 
-                {/* A few things about me list */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="bg-foreground text-background rounded-sm p-6 md:p-10"
-                >
-                    <div className="flex justify-center mb-5">
-                        <div className="h-px w-12 bg-[#D8B878]/50" />
-                    </div>
-                    <h3 className="font-display font-bold text-center text-background mb-6 md:mb-8 text-lg md:text-xl lg:text-2xl">
-                        <T id="NEW_ABOUT_LIST_TITLE" />
-                    </h3>
+            {/* A few things about me — full-width dark band */}
+            <div className="bg-foreground text-background mt-12 lg:mt-16 py-10 md:py-16 lg:py-20">
+                <div className="max-w-3xl mx-auto px-6 lg:px-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                    >
+                        <div className="flex justify-center mb-5">
+                            <div className="h-px w-12 bg-[#D8B878]/50" />
+                        </div>
+                        <h3 className="font-display font-bold text-center text-background mb-6 md:mb-8 text-lg md:text-xl lg:text-2xl">
+                            <T id="NEW_ABOUT_LIST_TITLE" />
+                        </h3>
 
-                    <div className="space-y-3 md:space-y-4">
-                        {aboutItems.map((item, idx) => (
-                            <div key={idx} className="flex gap-3 md:gap-5 items-baseline">
-                                <div className="shrink-0 w-7 md:w-9">
-                                    <span className="font-display italic text-lg md:text-xl lg:text-2xl text-[#D8B878] font-semibold">
-                                        {String(idx + 1).padStart(2, '0')}
-                                    </span>
+                        <div className="space-y-3 md:space-y-4">
+                            {aboutItems.map((item, idx) => (
+                                <div key={idx} className="flex gap-3 md:gap-5 items-baseline">
+                                    <div className="shrink-0 w-7 md:w-9">
+                                        <span className="font-display italic text-lg md:text-xl lg:text-2xl text-[#D8B878] font-semibold">
+                                            {String(idx + 1).padStart(2, '0')}
+                                        </span>
+                                    </div>
+                                    <p className="text-background/80 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
+                                        <T id={item.textId} />
+                                    </p>
                                 </div>
-                                <p className="text-background/80 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
-                                    <T id={item.textId} />
+                            ))}
+                        </div>
+
+                        <div className="flex items-center justify-end gap-4 md:gap-5 mt-10 md:mt-12 pt-6 border-t border-background/15">
+                            <div className="text-right">
+                                <p className="font-display italic text-base md:text-lg text-[#D8B878] leading-none mb-1">
+                                    <T id="NEW_ABOUT_SIGN_1" />
+                                </p>
+                                <p className="font-script text-5xl md:text-6xl gold-text-light leading-[1.1] pr-1">
+                                    <T id="NEW_ABOUT_SIGN_2" />
                                 </p>
                             </div>
-                        ))}
-                    </div>
-
-                    <div className="flex items-center justify-end gap-4 md:gap-5 mt-10 md:mt-12 pt-6 border-t border-background/15">
-                        <div className="text-right">
-                            <p className="font-display italic text-base md:text-lg text-[#D8B878] leading-none mb-1">
-                                <T id="NEW_ABOUT_SIGN_1" />
-                            </p>
-                            <p className="font-script text-5xl md:text-6xl gold-text-light leading-[1.1] pr-1">
-                                <T id="NEW_ABOUT_SIGN_2" />
-                            </p>
                         </div>
-                    </div>
-                </motion.div>
-
+                    </motion.div>
+                </div>
             </div>
         </section>
     );
