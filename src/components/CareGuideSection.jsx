@@ -43,7 +43,7 @@ export default function CareGuideSection() {
                 <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
                     
                     {/* COLUMN 1: BEFORE THE SESSION */}
-                    <div className="bg-[#F6EDD3]/80 border border-[#E6D3A0]/70 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="bg-[#FAF5E6] border border-transparent rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
                             <h3 className="font-display font-bold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_BEFORE_TITLE" /></h3>
                             <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_BEFORE_SUBTITLE" /></p>
@@ -86,7 +86,7 @@ export default function CareGuideSection() {
 
                 {/* Bottom luxury reminder */}
                 <div className="max-w-2xl mx-auto mt-10 md:mt-14 text-center">
-                    <p className="font-display italic text-lg md:text-xl lg:text-2xl gold-text-strong font-bold leading-relaxed"><T id="CARE_CLOSING_QUOTE" /></p>
+                    <p className="font-display italic text-lg md:text-xl lg:text-2xl gold-text-strong font-semibold leading-relaxed"><T id="CARE_CLOSING_QUOTE" /></p>
                 </div>
 
             </div>
