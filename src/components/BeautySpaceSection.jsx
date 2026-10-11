@@ -15,7 +15,7 @@ export default function BeautySpaceSection() {
     ];
 
     return (
-        <section id="beauty-space" className="py-14 md:py-20 lg:py-28 bg-secondary/10 relative overflow-hidden">
+        <section id="beauty-space" className="py-10 md:py-16 lg:py-24 bg-secondary/10 relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-primary/5 blur-3xl -translate-y-1/2" />
             
@@ -31,9 +31,9 @@ export default function BeautySpaceSection() {
                             transition={{ duration: 0.6 }}
                         >
                             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="SPACE_EYEBROW" /></p>
-                            <h2 className="font-display font-light text-foreground mb-5 leading-tight text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="SPACE_HEADING" /></h2>
-                            <p className="font-body text-muted-foreground mb-6 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="SPACE_PARAGRAPH_1" /></p>
-                            <p className="font-body text-muted-foreground mb-8 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
+                            <h2 className="font-display font-light text-foreground mb-5 leading-tight text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="SPACE_HEADING" /></h2>
+                            <p className="font-body text-muted-foreground mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="SPACE_PARAGRAPH_1" /></p>
+                            <p className="font-body text-muted-foreground mb-8 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
                         </motion.div>
 
                         {/* Highlights list */}
@@ -51,8 +51,8 @@ export default function BeautySpaceSection() {
                                         <item.icon className="w-5 h-5 text-primary" />
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-body font-semibold text-foreground mb-1.5">{item.title}</h4>
-                                        <p className="text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]">{item.desc}</p>
+                                        <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1">{item.title}</h4>
+                                        <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{item.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}

@@ -179,7 +179,7 @@ function AddOnCard({ item, index }) {
                 )}
 
                 {item.desc && (
-                    <p className="text-muted-foreground font-body mt-1.5 whitespace-pre-line text-sm md:text-[15px] lg:text-base leading-[1.7]">
+                    <p className="text-muted-foreground font-body mt-1.5 whitespace-pre-line text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
                         {item.desc}
                     </p>
                 )}
@@ -261,16 +261,16 @@ function BikiniPricingGuide() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-12"
         >
-            <div className="bg-background border-l-2 border-primary/60 rounded-r-sm p-6 md:p-8 space-y-8 text-[15px] font-body leading-relaxed text-muted-foreground shadow-sm">
+            <div className="bg-background border-l-2 border-primary/60 rounded-r-sm p-5 md:p-8 space-y-6 text-[13px] md:text-sm font-body leading-[1.65] text-muted-foreground shadow-sm">
                 
                 {/* Intro */}
                 <div>
-                    <h4 className="text-2xl font-display text-primary mb-4">Hair length & pricing</h4>
-                    <p className="text-foreground/80 text-sm md:text-[15px] lg:text-base leading-[1.7]">Longer hair takes more time and care to remove gently, so bikini prices depend on when you last removed your hair.</p>
+                    <h4 className="text-xl font-display text-primary mb-2">Hair length & pricing</h4>
+                    <p className="text-foreground/80 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">Longer hair takes more time and care to remove gently, so bikini prices depend on when you last removed your hair.</p>
                 </div>
 
                 {/* Pricing table equivalents */}
-                <div className="space-y-8">
+                <div className="space-y-6">
                     <div>
                         <h5 className="text-[11px] tracking-[0.2em] font-semibold text-primary uppercase mb-4">After waxing or sugaring</h5>
                         <div className="space-y-3">
@@ -305,7 +305,7 @@ function BikiniPricingGuide() {
                 </div>
 
                 {/* Explanations */}
-                <div className="space-y-5 pt-2">
+                <div className="space-y-3 pt-1">
                     <p>
                         <strong className="text-foreground font-semibold">Why "up to"?</strong> Every visit is different. If your treatment takes less time, you pay less. After years of regular sugaring — or after laser — hair often grows back finer and sparser, so many clients pay no extra at all, even after a longer break.
                     </p>
@@ -441,7 +441,7 @@ function FaceCareGuide() {
                                     </div>
                                     
                                     <div className="mt-8 space-y-4">
-                                        <p className="italic border-l-2 border-primary/40 pl-4 py-1 text-foreground/80 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="FACE_GUIDE_CLOSING_NOTE" /></p>
+                                        <p className="italic border-l-2 border-primary/40 pl-4 py-1 text-foreground/80 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="FACE_GUIDE_CLOSING_NOTE" /></p>
                                         <div className="bg-primary text-primary-foreground rounded-sm p-4 font-medium flex items-start gap-3">
                                             <span className="text-lg leading-none mt-0.5">💬</span>
                                             <p><T id="FACE_GUIDE_CLOSING_CTA" /></p>
@@ -604,7 +604,7 @@ export default function ServicesSection() {
     const active = categories.find(c => c.id === activeTab);
 
     return (
-        <section id="services" className="py-14 md:py-20 lg:py-28 bg-secondary/30">
+        <section id="services" className="py-10 md:py-16 lg:py-24 bg-secondary/30">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
                 {/* ── Section Header ── */}
@@ -613,14 +613,14 @@ export default function ServicesSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-10 md:mb-14"
+                    className="text-center mb-8 md:mb-12"
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="FOOTER_NAV_SERVICES" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground text-3xl md:text-4xl lg:text-5xl leading-[1.15]">
+                    <h2 className="font-display font-light text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]">
                         <T id="SERVICES_HEADING" render={(text) => <>{text.split(' ')[0]} <span className="font-semibold italic">{text.split(' ').slice(1).join(' ')}</span></>} />
                     </h2>
                 </motion.div>
@@ -642,8 +642,8 @@ export default function ServicesSection() {
                                 <div key={i} className="flex gap-3">
                                     <Check className="w-4.5 h-4.5 text-primary shrink-0 mt-0.5" />
                                     <div>
-                                        <p className="font-semibold text-foreground font-body mb-1 text-sm md:text-[15px] lg:text-base leading-[1.7]">{item.title}</p>
-                                        <p className="text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]">{item.desc}</p>
+                                        <p className="font-semibold text-foreground font-body mb-1 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{item.title}</p>
+                                        <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{item.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -672,14 +672,14 @@ export default function ServicesSection() {
                                 className="overflow-hidden"
                             >
                                 <div className="bg-background border border-t-0 border-border/40 rounded-b-sm px-6 py-6">
-                                    <p className="text-muted-foreground mb-5 font-body text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="DURATION_INTRO" /></p>
+                                    <p className="text-muted-foreground mb-5 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="DURATION_INTRO" /></p>
                                     <div className="grid md:grid-cols-2 gap-5">
                                         {durationNotes.map((note, i) => (
                                             <div key={i} className="flex gap-3 items-start">
                                                 <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                                                 <div>
-                                                    <p className="font-semibold text-foreground font-body mb-0.5 text-sm md:text-[15px] lg:text-base leading-[1.7]">{note.title}</p>
-                                                    <p className="text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]">{note.desc}</p>
+                                                    <p className="font-semibold text-foreground font-body mb-0.5 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{note.title}</p>
+                                                    <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{note.desc}</p>
                                                 </div>
                                             </div>
                                         ))}
@@ -730,10 +730,10 @@ export default function ServicesSection() {
 
                             {/* Category header */}
                             <div className="mb-8">
-                                <h3 className="font-display font-light text-foreground mb-2 text-xl md:text-2xl">
+                                <h3 className="font-display font-light text-foreground mb-2 text-lg md:text-xl lg:text-2xl">
                                     {active.fullLabel}
                                 </h3>
-                                <p className="font-body text-muted-foreground italic text-sm md:text-[15px] lg:text-base leading-[1.7]">
+                                <p className="font-body text-muted-foreground italic text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
                                     {active.tagline}
                                 </p>
                             </div>

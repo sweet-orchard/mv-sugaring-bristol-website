@@ -14,22 +14,22 @@ export default function ContactSection() {
     const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
     return (
-        <section id="contact" className="py-14 md:py-20 lg:py-28 bg-background">
+        <section id="contact" className="py-10 md:py-16 lg:py-24 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-10 md:mb-14"
+                    className="text-center mb-8 md:mb-12"
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="CONTACT_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-5 text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CONTACT_HEADING" /></h2>
-                    <p className="max-w-xl mx-auto font-body text-muted-foreground text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="CONTACT_SUBTEXT" /></p>
+                    <h2 className="font-display font-light text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CONTACT_HEADING" /></h2>
+                    <p className="max-w-xl mx-auto font-body text-muted-foreground text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="CONTACT_SUBTEXT" /></p>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
@@ -46,8 +46,8 @@ export default function ContactSection() {
                                     <MapPin className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="text-base font-body font-semibold text-foreground mb-1.5"><T id="CONTACT_INFO_LOCATION_LABEL" /></h4>
-                                    <p className="text-muted-foreground text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="CONTACT_LOCATION_VALUE" /></p>
+                                    <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1"><T id="CONTACT_INFO_LOCATION_LABEL" /></h4>
+                                    <p className="text-muted-foreground text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="CONTACT_LOCATION_VALUE" /></p>
                                     {t("CONTACT_LOCATION_NOTE") && <p className="text-xs text-muted-foreground/60 mt-1"><T id="CONTACT_LOCATION_NOTE" /></p>}
                                 </div>
                             </div>
@@ -57,7 +57,7 @@ export default function ContactSection() {
                                     <WhatsAppIcon className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="text-base font-body font-semibold text-foreground mb-1.5"><T id="CONTACT_WHATSAPP_LABEL" /></h4>
+                                    <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1"><T id="CONTACT_WHATSAPP_LABEL" /></h4>
                                     <a href="https://wa.me/447448611080" className="text-sm text-primary hover:underline"><T id="CONTACT_WHATSAPP_VALUE" /></a>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ export default function ContactSection() {
                                     <Mail className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="text-base font-body font-semibold text-foreground mb-1.5"><T id="FOOTER_EMAIL_BUTTON_LABEL" /></h4>
+                                    <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1"><T id="FOOTER_EMAIL_BUTTON_LABEL" /></h4>
                                     <a href={`mailto:${t('CONTACT_EMAIL_VALUE').trim()}`} className="text-sm text-primary hover:underline"><T id="CONTACT_EMAIL_VALUE" /></a>
                                 </div>
                             </div>
@@ -77,8 +77,8 @@ export default function ContactSection() {
                                     <Clock className="w-4 h-4 text-primary" />
                                 </div>
                                 <div>
-                                    <h4 className="text-base font-body font-semibold text-foreground mb-1.5"><T id="CONTACT_INFO_AVAILABILITY_LABEL" /></h4>
-                                    <p className="text-muted-foreground text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="CONTACT_INFO_AVAILABILITY_VALUE" /></p>
+                                    <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1"><T id="CONTACT_INFO_AVAILABILITY_LABEL" /></h4>
+                                    <p className="text-muted-foreground text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="CONTACT_INFO_AVAILABILITY_VALUE" /></p>
                                     <p className="text-xs text-muted-foreground/60 mt-1"><T id="CONTACT_INFO_AVAILABILITY_NOTE" /></p>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ export default function ContactSection() {
                         transition={{ duration: 0.6, delay: 0.1 }}
                     >
                         <div className="bg-secondary/40 border border-border/30 rounded-sm p-8 lg:p-10">
-                            <h3 className="font-display font-semibold text-foreground mb-6 text-xl md:text-2xl"><T id="CONTACT_FORM_TITLE" /></h3>
+                            <h3 className="font-display font-semibold text-foreground mb-6 text-lg md:text-xl lg:text-2xl"><T id="CONTACT_FORM_TITLE" /></h3>
                             <form action="https://formsubmit.co/marichka21.08.95@gmail.com" method="POST" className="space-y-5">
                                 {/* FormSubmit Configuration */}
                                 <input type="hidden" name="_subject" value="New Inquiry from Website" />

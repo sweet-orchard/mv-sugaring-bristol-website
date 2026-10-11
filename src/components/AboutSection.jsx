@@ -36,7 +36,7 @@ export default function AboutSection() {
     const { t } = useContent();
     
     return (
-        <section id="about" className="py-14 md:py-20 lg:py-28 bg-[#FAF8F3]">
+        <section id="about" className="py-10 md:py-16 lg:py-24 bg-[#FAF8F3]">
             <div className="max-w-3xl mx-auto px-6 lg:px-10">
                 
                 {/* Image Carousel */}
@@ -81,7 +81,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-20 lg:mb-24 text-foreground/80 leading-[1.8] font-body text-sm md:text-[15px] lg:text-base space-y-5"
+                    className="mb-20 lg:mb-24 text-foreground/80 leading-[1.8] font-body text-[13px] md:text-sm lg:text-[15px] space-y-4"
                 >
                     <div>
                         <span><T id="NEW_ABOUT_P1_HI" /></span>
@@ -105,7 +105,7 @@ export default function AboutSection() {
                     <p><T id="NEW_ABOUT_P6" /></p>
 
                     <div className="text-right mt-12 md:mt-16 pr-4">
-                        <p className="font-display italic text-xl md:text-2xl gold-text">
+                        <p className="font-display italic text-lg md:text-xl lg:text-2xl gold-text">
                             <T id="NEW_ABOUT_SIGN_1" /><br/>
                             <T id="NEW_ABOUT_SIGN_2" />
                         </p>
@@ -119,29 +119,29 @@ export default function AboutSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                    <div className="flex justify-center mb-8">
+                    <div className="flex justify-center mb-5">
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h3 className="font-display text-center text-foreground mb-12 text-xl md:text-2xl">
+                    <h3 className="font-display text-center text-foreground mb-6 md:mb-8 text-lg md:text-xl lg:text-2xl">
                         <T id="NEW_ABOUT_LIST_TITLE" />
                     </h3>
 
-                    <div className="space-y-6 md:space-y-8">
+                    <div className="space-y-3 md:space-y-4">
                         {aboutItems.map((item, idx) => (
-                            <div key={idx} className="flex gap-4 md:gap-6 items-start">
-                                <div className="shrink-0 mt-0.5 md:mt-1">
-                                    <span className="font-display italic text-xl md:text-2xl text-[#B38B4D] font-semibold">
+                            <div key={idx} className="flex gap-3 md:gap-5 items-baseline">
+                                <div className="shrink-0 w-7 md:w-9">
+                                    <span className="font-display italic text-lg md:text-xl lg:text-2xl text-[#B38B4D] font-semibold">
                                         {String(idx + 1).padStart(2, '0')}
                                     </span>
                                 </div>
-                                <p className="text-foreground/80 font-body pt-1.5 md:pt-2 text-sm md:text-[15px] lg:text-base leading-[1.7]">
+                                <p className="text-foreground/80 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
                                     <T id={item.textId} />
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="mt-16 flex justify-center">
+                    <div className="mt-10 flex justify-center">
                         <ScrollButton 
                             href="#contact"
                             className="inline-flex items-center justify-center px-8 py-4 font-body text-xs tracking-[0.2em] uppercase font-medium rounded-sm"

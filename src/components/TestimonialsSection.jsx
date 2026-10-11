@@ -119,21 +119,21 @@ export default function TestimonialsSection() {
         },
     };
     return (
-        <section id="testimonials" className="py-14 md:py-20 lg:py-28 bg-secondary/30 overflow-hidden">
+        <section id="testimonials" className="py-10 md:py-16 lg:py-24 bg-secondary/30 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-10 md:mb-14"
+                    className="text-center mb-8 md:mb-12"
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="TESTIMONIALS_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-5 text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="TESTIMONIALS_HEADING" /></h2>
+                    <h2 className="font-display font-light text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="TESTIMONIALS_HEADING" /></h2>
                 </motion.div>
                 {/* Carousel */}
                 <div className="relative max-w-4xl mx-auto pt-4 pb-2">
@@ -174,14 +174,14 @@ export default function TestimonialsSection() {
                                         <div className="text-center p-6">
                                             <ImageIcon className="w-8 h-8 text-primary/40 mx-auto mb-3" />
                                             <p className="text-xs tracking-[0.15em] uppercase text-muted-foreground font-body">{testimonials[current].placeholder}</p>
-                                            <p className="text-[10px] text-muted-foreground/60 mt-1 text-sm md:text-[15px] lg:text-base leading-[1.7]">Replace with real client review image</p>
+                                            <p className="text-[10px] text-muted-foreground/60 mt-1 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">Replace with real client review image</p>
                                         </div>
                                     </div>
                                 )}
                                 {/* Text */}
                                 <div className="pointer-events-none">
                                     <Quote className="w-8 h-8 text-primary/30 mb-4" />
-                                    <p className="text-foreground/80 font-body mb-6 mt-4 whitespace-pre-line text-sm md:text-[15px] lg:text-base leading-[1.7]">
+                                    <p className="text-foreground/80 font-body mb-6 mt-4 whitespace-pre-line text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
                                         <T id={testimonials[current].textKey} />
                                     </p>
                                 </div>
@@ -209,7 +209,7 @@ export default function TestimonialsSection() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                     className="text-center mt-16 max-w-2xl mx-auto"
                 >
-                    <p className="font-display italic text-foreground/50 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="TESTIMONIALS_CLOSING_QUOTE" /></p>
+                    <p className="font-display italic text-foreground/50 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="TESTIMONIALS_CLOSING_QUOTE" /></p>
                 </motion.div>
                 {/* Google Reviews Embed */}
                 <div className="mt-16 w-full flex justify-center">

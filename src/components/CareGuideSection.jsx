@@ -38,7 +38,7 @@ export default function CareGuideSection() {
     ];
 
     return (
-        <section id="care-guide" className="py-14 md:py-20 lg:py-28 bg-secondary/20 relative overflow-hidden">
+        <section id="care-guide" className="py-10 md:py-16 lg:py-24 bg-secondary/20 relative overflow-hidden">
             {/* Background decorative elements */}
             <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl -translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -46,14 +46,14 @@ export default function CareGuideSection() {
             <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
                 
                 {/* Header */}
-                <div className="text-center mb-10 md:mb-14">
+                <div className="text-center mb-8 md:mb-12">
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium font-body"><T id="CARE_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-4 text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CARE_HEADING" /></h2>
-                    <p className="max-w-2xl mx-auto text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="CARE_SUBTEXT" /></p>
+                    <h2 className="font-display font-light text-foreground mb-4 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="CARE_HEADING" /></h2>
+                    <p className="max-w-2xl mx-auto text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="CARE_SUBTEXT" /></p>
                 </div>
 
                 {/* Symmetrical Grid layout */}
@@ -62,7 +62,7 @@ export default function CareGuideSection() {
                     {/* COLUMN 1: BEFORE THE SESSION */}
                     <div className="bg-background/80 backdrop-blur-sm border border-border/40 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
-                            <h3 className="font-display font-semibold text-foreground text-xl md:text-2xl"><T id="CARE_BEFORE_TITLE" /></h3>
+                            <h3 className="font-display font-semibold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_BEFORE_TITLE" /></h3>
                             <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_BEFORE_SUBTITLE" /></p>
                         </div>
 
@@ -73,8 +73,8 @@ export default function CareGuideSection() {
                                         {rule.icon}
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-semibold text-foreground font-body mb-1.5">{rule.title}</h4>
-                                        <p className="text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]">{rule.desc}</p>
+                                        <h4 className="text-sm md:text-[15px] font-semibold text-foreground font-body mb-1">{rule.title}</h4>
+                                        <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{rule.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -84,7 +84,7 @@ export default function CareGuideSection() {
                     {/* COLUMN 2: AFTER THE SESSION */}
                     <div className="bg-background/80 backdrop-blur-sm border border-border/40 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
-                            <h3 className="font-display font-semibold text-foreground text-xl md:text-2xl"><T id="CARE_AFTER_TITLE" /></h3>
+                            <h3 className="font-display font-semibold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_AFTER_TITLE" /></h3>
                             <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_AFTER_SUBTITLE" /></p>
                         </div>
 
@@ -95,8 +95,8 @@ export default function CareGuideSection() {
                                         {rule.icon}
                                     </div>
                                     <div>
-                                        <h4 className="text-base font-semibold text-foreground font-body mb-1.5">{rule.title}</h4>
-                                        <p className="text-muted-foreground font-body text-sm md:text-[15px] lg:text-base leading-[1.7]">{rule.desc}</p>
+                                        <h4 className="text-sm md:text-[15px] font-semibold text-foreground font-body mb-1">{rule.title}</h4>
+                                        <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{rule.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -107,7 +107,7 @@ export default function CareGuideSection() {
 
                 {/* Bottom luxury reminder */}
                 <div className="max-w-2xl mx-auto mt-16 text-center">
-                    <p className="font-display italic text-xl md:text-2xl gold-text font-medium leading-relaxed"><T id="CARE_CLOSING_QUOTE" /></p>
+                    <p className="font-display italic text-lg md:text-xl lg:text-2xl gold-text font-medium leading-relaxed"><T id="CARE_CLOSING_QUOTE" /></p>
                 </div>
 
             </div>
