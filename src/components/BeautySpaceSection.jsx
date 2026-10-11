@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, ShieldCheck, Heart } from 'lucide-react';
+import MiniIllustration from './MiniIllustrations';
 import { useContent, T } from '../context/ContentContext';
 
 export default function BeautySpaceSection() {
@@ -9,9 +9,9 @@ export default function BeautySpaceSection() {
     
 
     const highlights = [
-        { icon: ShieldCheck, title: <T id="SPACE_HIGHLIGHT_1_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_1_DESC" /> },
-        { icon: Heart,       title: <T id="SPACE_HIGHLIGHT_2_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_2_DESC" /> },
-        { icon: Sparkles,    title: <T id="SPACE_HIGHLIGHT_3_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_3_DESC" /> },
+        { icon: 'shield', title: <T id="SPACE_HIGHLIGHT_1_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_1_DESC" /> },
+        { icon: 'nest',        title: <T id="SPACE_HIGHLIGHT_2_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_2_DESC" /> },
+        { icon: 'jar',        title: <T id="SPACE_HIGHLIGHT_3_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_3_DESC" /> },
     ];
 
     return (
@@ -45,11 +45,9 @@ export default function BeautySpaceSection() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                    className="flex gap-4 items-start"
+                                    className="flex gap-3 md:gap-4 items-start"
                                 >
-                                    <div className="w-10 h-10 shrink-0 rounded-sm bg-primary/10 flex items-center justify-center">
-                                        <item.icon className="w-5 h-5 text-primary" />
-                                    </div>
+                                    <MiniIllustration name={item.icon} className="w-[4.5rem] h-16 md:w-20 md:h-[4.5rem] -mt-2 -ml-2" />
                                     <div>
                                         <h4 className="text-sm md:text-[15px] font-body font-semibold text-foreground mb-1">{item.title}</h4>
                                         <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{item.desc}</p>

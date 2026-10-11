@@ -140,3 +140,15 @@ html {
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+.gold-text-strong {
+  background: linear-gradient(110deg,
+      hsl(38, 62%, 30%) 0%,
+      hsl(40, 60%, 42%) 25%,
+      hsl(42, 62%, 46%) 50%,
+      hsl(40, 60%, 42%) 75%,
+      hsl(38, 62%, 30%) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
