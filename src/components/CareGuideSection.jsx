@@ -43,7 +43,7 @@ export default function CareGuideSection() {
                 <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
                     
                     {/* COLUMN 1: BEFORE THE SESSION */}
-                    <div className="bg-[#FAF5E6] border border-transparent rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="bg-[#F3EEE3] border border-transparent rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="mb-8 pb-4 border-b border-border/30">
                             <h3 className="font-display font-bold text-foreground text-lg md:text-xl lg:text-2xl"><T id="CARE_BEFORE_TITLE" /></h3>
                             <p className="text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5"><T id="CARE_BEFORE_SUBTITLE" /></p>
