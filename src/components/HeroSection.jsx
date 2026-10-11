@@ -43,7 +43,7 @@ function GoogleReviewCard({ num, t }) {
     const name = t(`HERO_REVIEW_${num}_NAME`);
     const phrases = (t(`HERO_REVIEW_${num}_HIGHLIGHTS`) || '').split('|').filter(Boolean);
     return (
-        <div className="snap-center shrink-0 w-[85%] bg-background border border-border/60 rounded-xl shadow-[0_1px_3px_rgba(60,64,67,0.15),0_4px_12px_rgba(60,64,67,0.06)] flex flex-col overflow-hidden">
+        <div className="snap-center shrink-0 w-[85%] bg-white border border-[#EAE0C5]/70 rounded-xl shadow-[0_1px_3px_rgba(60,64,67,0.15),0_4px_12px_rgba(60,64,67,0.06)] flex flex-col overflow-hidden">
             <div className="p-5 flex-1">
                 <div className="flex items-center gap-3 mb-4">
                     <div
@@ -68,7 +68,7 @@ function GoogleReviewCard({ num, t }) {
                     {highlight(t(`HERO_REVIEW_${num}_TEXT`), phrases)}
                 </p>
             </div>
-            <div className="px-5 py-2.5 border-t border-border/50 bg-secondary/30 flex items-center gap-1.5 text-[10px] font-body text-muted-foreground">
+            <div className="px-5 py-2.5 border-t border-[#EAE0C5]/60 bg-white flex items-center gap-1.5 text-[10px] font-body text-muted-foreground">
                 <GoogleLogo className="w-3 h-3" />
                 <span>Posted on Google</span>
             </div>
