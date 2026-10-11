@@ -128,13 +128,6 @@ export default function AboutSection() {
                             <p className="font-script text-5xl md:text-6xl gold-text-strong leading-[1.1] pr-1">
                                 <T id="NEW_ABOUT_SIGN_2" />
                             </p>
-                            <p className="mt-1 flex items-center justify-end gap-2 text-[#B38B4D]/70" aria-hidden="true">
-                                <span className="h-px w-10 bg-[#B38B4D]/40" />
-                                <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-[#D8B878] stroke-[#B38B4D]" strokeWidth="1.5" strokeLinejoin="round"><path d="M12 21C5 16 3 11.5 5 8.5 6.7 6 10 6.3 12 9c2-2.7 5.3-3 7-.5 2 3-0 7.5-7 12.5Z" /></svg>
-                            </p>
-                        </div>
-                        <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full p-[3px] bg-gradient-to-br from-[#D8B878] to-[#B38B4D]">
-                            <div className="w-full h-full rounded-full overflow-hidden border-2 border-[#FAF8F3]"><img src="/mariia-about-me-pictures/1.JPG" alt="" className="w-full h-full object-cover object-top scale-[1.9] origin-[45%_12%]" loading="lazy" /></div>
                         </div>
                     </div>
                 </motion.div>
