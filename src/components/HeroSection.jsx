@@ -4,6 +4,78 @@ import { ChevronDown, Play, Pause, Award, Heart, Sparkles, Star } from 'lucide-r
 import { useContent, T } from '../context/ContentContext';
 import ScrollButton from './ScrollButton';
 
+const AVATAR_COLORS = ['#4285F4', '#EA4335', '#34A853'];
+
+function GoogleLogo({ className }) {
+    return (
+        <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+        </svg>
+    );
+}
+
+// Wraps the key phrases of a review in <mark>; the review text itself is never altered.
+function highlight(text, phrases) {
+    const found = phrases
+        .map((p) => ({ p, i: text.indexOf(p) }))
+        .filter((x) => x.i >= 0)
+        .sort((a, b) => a.i - b.i);
+    const parts = [];
+    let cursor = 0;
+    found.forEach(({ p, i }) => {
+        if (i < cursor) return;
+        if (i > cursor) parts.push(text.slice(cursor, i));
+        parts.push(
+            <mark key={i} className="bg-transparent text-foreground font-semibold rounded-[2px] px-0.5 -mx-0.5 [background-image:linear-gradient(transparent_55%,hsl(var(--primary)/0.45)_55%)]">
+                {p}
+            </mark>
+        );
+        cursor = i + p.length;
+    });
+    parts.push(text.slice(cursor));
+    return parts;
+}
+
+function GoogleReviewCard({ num, t }) {
+    const name = t(`HERO_REVIEW_${num}_NAME`);
+    const phrases = (t(`HERO_REVIEW_${num}_HIGHLIGHTS`) || '').split('|').filter(Boolean);
+    return (
+        <div className="snap-center shrink-0 w-[85%] bg-background border border-border/60 rounded-xl shadow-[0_1px_3px_rgba(60,64,67,0.15),0_4px_12px_rgba(60,64,67,0.06)] flex flex-col overflow-hidden">
+            <div className="p-5 flex-1">
+                <div className="flex items-center gap-3 mb-4">
+                    <div
+                        className="w-10 h-10 rounded-full flex items-center justify-center text-white font-body font-medium text-base shrink-0"
+                        style={{ backgroundColor: AVATAR_COLORS[(num - 1) % AVATAR_COLORS.length] }}
+                    >
+                        {name.charAt(0)}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                        <p className="font-body text-sm font-semibold text-foreground truncate">{name}</p>
+                        <p className="font-body text-[11px] text-muted-foreground">Google review</p>
+                    </div>
+                    <GoogleLogo className="w-5 h-5 shrink-0" />
+                </div>
+                <div className="flex items-center gap-0.5 mb-3" aria-label="5 out of 5 stars">
+                    {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-[18px] h-[18px] fill-[#FBBC04] text-[#FBBC04]" />
+                    ))}
+                </div>
+                <h3 className="font-display text-xl font-semibold text-foreground leading-tight mb-2"><T id={`HERO_REVIEW_${num}_TITLE`} /></h3>
+                <p className="font-body text-[13px] text-foreground/75 leading-[1.7]">
+                    {highlight(t(`HERO_REVIEW_${num}_TEXT`), phrases)}
+                </p>
+            </div>
+            <div className="px-5 py-2.5 border-t border-border/50 bg-secondary/30 flex items-center gap-1.5 text-[10px] font-body text-muted-foreground">
+                <GoogleLogo className="w-3 h-3" />
+                <span>Posted on Google</span>
+            </div>
+        </div>
+    );
+}
+
 export default function HeroSection() {
     const { t, lang } = useContent();
     const getText = (v) => v?.props?.id ? t(v.props.id) : v;
@@ -108,24 +180,7 @@ export default function HeroSection() {
                             {/* Mobile Reviews */}
                             <div className="mt-8 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-6 px-6">
                                 {[1, 2, 3].map((num) => (
-                                    <div key={num} className="snap-center shrink-0 w-[85%] p-6 bg-secondary/30 border border-border/40 rounded-sm flex flex-col justify-between">
-                                        <div>
-                                            <div className="flex items-center gap-1 mb-4 text-primary">
-                                                {[...Array(5)].map((_, i) => (
-                                                    <Star key={i} className="w-4 h-4 fill-current" />
-                                                ))}
-                                            </div>
-                                            <p className="font-display text-base text-foreground leading-relaxed mb-5">
-                                                <T id={`HERO_REVIEW_${num}_TEXT`} />
-                                            </p>
-                                        </div>
-                                        <p className="text-sm font-body font-semibold text-primary/90 uppercase tracking-wider flex items-center flex-wrap gap-x-2">
-                                            <T id={`HERO_REVIEW_${num}_NAME`} />
-                                            <span className="text-[10px] normal-case text-muted-foreground/60 tracking-normal font-medium">
-                                                - Google review
-                                            </span>
-                                        </p>
-                                    </div>
+                                    <GoogleReviewCard key={num} num={num} t={t} />
                                 ))}
                             </div>
                         </div>
