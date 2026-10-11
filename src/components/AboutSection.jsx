@@ -39,13 +39,29 @@ export default function AboutSection() {
         <section id="about" className="py-10 md:py-16 lg:py-24 bg-[#FAF8F3]">
             <div className="max-w-3xl mx-auto px-6 lg:px-10">
                 
+                {/* Heading */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-8 md:mb-10"
+                >
+                    <div className="flex items-center justify-center gap-3 mb-4">
+                        <div className="h-px w-10 bg-primary/40" />
+                        <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="ABOUT_SECTION_EYEBROW" /></span>
+                        <div className="h-px w-10 bg-primary/40" />
+                    </div>
+                    <h2 className="font-display font-semibold text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="ABOUT_SECTION_HEADING" /></h2>
+                </motion.div>
+
                 {/* Image Carousel */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-12 lg:mb-16"
+                    className="mb-10 lg:mb-14"
                 >
                     <Carousel
                         opts={{

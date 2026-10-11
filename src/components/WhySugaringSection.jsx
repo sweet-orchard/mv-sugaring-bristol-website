@@ -79,6 +79,7 @@ export default function WhySugaringSection() {
                         <div className="flex items-center justify-center lg:justify-start gap-3 mb-5">
                             <div className="h-px w-10 bg-[#B38B4D]/60" />
                             <span className="text-[11px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#B38B4D] font-body font-semibold"><T id="NEW_WHY_EYEBROW" /></span>
+                            <div className="h-px w-10 bg-[#B38B4D]/60 lg:hidden" />
                         </div>
                         <h2 className="font-display font-semibold text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]">
                             <T id="NEW_WHY_HEADING" />
@@ -113,7 +114,7 @@ export default function WhySugaringSection() {
                                 </span>
                                 <div className="h-[2px] w-10 bg-[#B38B4D]/60 mb-5 transition-all duration-300 group-hover:w-16" />
                                 <h3 className="font-display font-bold text-foreground mb-3 text-lg md:text-xl lg:text-2xl leading-snug"><T id={b.titleId} /></h3>
-                                <p className="font-body text-foreground/80 text-sm md:text-[15px] leading-[1.8]"><T id={b.descId} /></p>
+                                <p className="font-body text-foreground/80 text-xs md:text-[13px] lg:text-sm leading-[1.7]"><T id={b.descId} /></p>
                             </motion.div>
                         ))}
                     </div>
