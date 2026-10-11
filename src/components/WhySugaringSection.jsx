@@ -62,7 +62,7 @@ const illustrations = [
 
 export default function WhySugaringSection() {
     return (
-        <section id="why-sugaring" className="py-14 md:py-20 lg:py-28 bg-[#FAF8F3] relative overflow-hidden">
+        <section id="why-sugaring" className="py-10 md:py-16 lg:py-24 bg-[#FAF8F3] relative overflow-hidden">
             {/* Soft gold glow, same family as the rest of the site */}
             <div className="absolute -top-32 -left-32 w-[28rem] h-[28rem] rounded-full bg-[#B38B4D]/[0.07] blur-3xl pointer-events-none" />
 
@@ -80,10 +80,10 @@ export default function WhySugaringSection() {
                             <div className="h-px w-10 bg-[#B38B4D]/60" />
                             <span className="text-[11px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#B38B4D] font-body font-semibold"><T id="NEW_WHY_EYEBROW" /></span>
                         </div>
-                        <h2 className="font-display font-light text-foreground mb-5 text-3xl md:text-4xl lg:text-5xl leading-[1.15]">
+                        <h2 className="font-display font-light text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]">
                             <T id="NEW_WHY_HEADING" />
                         </h2>
-                        <p className="max-w-xl mx-auto lg:mx-0 font-body text-foreground/80 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="NEW_WHY_SUBTEXT" /></p>
+                        <p className="max-w-xl mx-auto lg:mx-0 font-body text-foreground/80 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="NEW_WHY_SUBTEXT" /></p>
                     </motion.div>
 
                     {/* Benefit cards */}
@@ -112,7 +112,7 @@ export default function WhySugaringSection() {
                                     {b.num}
                                 </span>
                                 <div className="h-[2px] w-10 bg-[#B38B4D]/60 mb-5 transition-all duration-300 group-hover:w-16" />
-                                <h3 className="font-display font-semibold text-foreground mb-3 text-xl md:text-2xl leading-snug"><T id={b.titleId} /></h3>
+                                <h3 className="font-display font-semibold text-foreground mb-3 text-lg md:text-xl lg:text-2xl leading-snug"><T id={b.titleId} /></h3>
                                 <p className="font-body text-foreground/80 text-sm md:text-[15px] leading-[1.8]"><T id={b.descId} /></p>
                             </motion.div>
                         ))}

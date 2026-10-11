@@ -15,7 +15,7 @@ export default function CoursesSection() {
     const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
     return (
-        <section id="courses" className="py-14 md:py-20 lg:py-28 bg-background">
+        <section id="courses" className="py-10 md:py-16 lg:py-24 bg-background">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -29,10 +29,10 @@ export default function CoursesSection() {
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="COURSES_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground mb-5 text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="COURSES_HEADING_LINE_1" />{' '}<br className="hidden md:block" />
+                    <h2 className="font-display font-light text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="COURSES_HEADING_LINE_1" />{' '}<br className="hidden md:block" />
                         <span className="font-semibold italic"><T id="COURSES_HEADING_LINE_2" /></span>
                     </h2>
-                    <p className="max-w-2xl mx-auto font-body text-muted-foreground text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="COURSES_SUBTEXT" /></p>
+                    <p className="max-w-2xl mx-auto font-body text-muted-foreground text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_SUBTEXT" /></p>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -51,8 +51,8 @@ export default function CoursesSection() {
                             <div className="w-2 h-2 bg-primary rounded-full" />
                             <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium"><T id="COURSES_CARD_2_BADGE" /></span>
                         </div>
-                        <h3 className="font-display font-semibold text-foreground mb-4 text-xl md:text-2xl"><T id="COURSES_CARD_1_TITLE" /></h3>
-                        <p className="font-body text-muted-foreground mb-6 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="COURSES_CARD_1_DESC" /></p>
+                        <h3 className="font-display font-semibold text-foreground mb-4 text-lg md:text-xl lg:text-2xl"><T id="COURSES_CARD_1_TITLE" /></h3>
+                        <p className="font-body text-muted-foreground mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_CARD_1_DESC" /></p>
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
                             <div className="flex items-center gap-1.5">
                                 <Users className="w-3.5 h-3.5" />
@@ -80,8 +80,8 @@ export default function CoursesSection() {
                             <div className="w-2 h-2 bg-primary rounded-full" />
                             <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium"><T id="COURSES_CARD_2_BADGE" /></span>
                         </div>
-                        <h3 className="font-display font-semibold text-foreground mb-4 text-xl md:text-2xl"><T id="COURSES_CARD_2_TITLE" /></h3>
-                        <p className="font-body text-muted-foreground mb-6 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="COURSES_CARD_2_DESC" /></p>
+                        <h3 className="font-display font-semibold text-foreground mb-4 text-lg md:text-xl lg:text-2xl"><T id="COURSES_CARD_2_TITLE" /></h3>
+                        <p className="font-body text-muted-foreground mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_CARD_2_DESC" /></p>
                         <div className="flex items-center gap-4 text-xs text-muted-foreground">
                             <div className="flex items-center gap-1.5">
                                 <Users className="w-3.5 h-3.5" />
@@ -109,9 +109,9 @@ export default function CoursesSection() {
                                 <Globe className="w-4 h-4 text-primary" />
                                 <span className="text-xs tracking-[0.3em] uppercase text-primary font-medium"><T id="COURSES_ONLINE_BADGE" /></span>
                             </div>
-                            <h3 className="font-display font-light text-background mb-6 text-xl md:text-2xl"><T id="COURSES_ONLINE_HEADING" /></h3>
-                            <p className="font-body text-background/70 mb-4 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="COURSES_ONLINE_PARAGRAPH_1" /></p>
-                            <p className="font-body text-background/70 mb-6 text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="COURSES_ONLINE_PARAGRAPH_2" /></p>
+                            <h3 className="font-display font-light text-background mb-6 text-lg md:text-xl lg:text-2xl"><T id="COURSES_ONLINE_HEADING" /></h3>
+                            <p className="font-body text-background/70 mb-4 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_ONLINE_PARAGRAPH_1" /></p>
+                            <p className="font-body text-background/70 mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="COURSES_ONLINE_PARAGRAPH_2" /></p>
 
                             <div className="bg-background/5 border border-background/10 rounded-sm p-6 mb-8">
                                 <div className="flex items-end gap-3 mb-2">
@@ -119,7 +119,7 @@ export default function CoursesSection() {
                                     <span className="text-lg text-background/50 line-through mb-1"><T id="COURSES_ONLINE_OLD_PRICE" /></span>
                                     <span className="text-xs font-semibold tracking-wider bg-primary text-background px-2 py-1 rounded-sm mb-1.5 ml-2"><T id="COURSES_ONLINE_DISCOUNT" /></span>
                                 </div>
-                                <p className="font-body text-background/80 mb-6 flex items-start gap-2 text-sm md:text-[15px] lg:text-base leading-[1.7]">
+                                <p className="font-body text-background/80 mb-6 flex items-start gap-2 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
                                     <span className="text-primary mt-0.5">✦</span><T id="COURSES_ONLINE_CONSULTATION_OFFER" /></p>
                                 <button onClick={() => setIsContactModalOpen(true)} className="w-full bg-primary hover:bg-primary/90 text-background text-xs tracking-[0.2em] uppercase font-medium py-4 px-6 rounded-sm transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2"><T id="COURSES_LEARN_MORE_BTN" /></button>
                             </div>
@@ -173,7 +173,7 @@ export default function CoursesSection() {
                                 <X className="w-5 h-5" />
                             </button>
                             
-                            <h3 className="font-display font-semibold text-center mb-6 text-foreground text-xl md:text-2xl"><T id="COURSE_CONTACT_MODAL_TITLE" /></h3>
+                            <h3 className="font-display font-semibold text-center mb-6 text-foreground text-lg md:text-xl lg:text-2xl"><T id="COURSE_CONTACT_MODAL_TITLE" /></h3>
                             
                             <div className="space-y-4">
                                 <a 

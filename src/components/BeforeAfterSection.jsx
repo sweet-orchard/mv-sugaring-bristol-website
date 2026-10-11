@@ -32,7 +32,7 @@ export default function BeforeAfterSection() {
     };
 
     return (
-        <section id="results" className="py-14 md:py-20 lg:py-28 bg-background border-t border-border/20 overflow-hidden">
+        <section id="results" className="py-10 md:py-16 lg:py-24 bg-background border-t border-border/20 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 {/* Section Header */}
                 <motion.div
@@ -40,15 +40,15 @@ export default function BeforeAfterSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-10 md:mb-14"
+                    className="text-center mb-8 md:mb-12"
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-12 bg-primary/40" />
                         <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium"><T id="BEFORE_AFTER_EYEBROW" /></span>
                         <div className="h-px w-12 bg-primary/40" />
                     </div>
-                    <h2 className="font-display font-light text-foreground text-3xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="BEFORE_AFTER_HEADING" /></h2>
-                    <p className="max-w-xl mx-auto text-muted-foreground mt-4 font-body text-sm md:text-[15px] lg:text-base leading-[1.7]"><T id="BEFORE_AFTER_SUBTEXT" /></p>
+                    <h2 className="font-display font-light text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="BEFORE_AFTER_HEADING" /></h2>
+                    <p className="max-w-xl mx-auto text-muted-foreground mt-4 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="BEFORE_AFTER_SUBTEXT" /></p>
                 </motion.div>
 
                 {/* Scrolling Gallery Container */}
