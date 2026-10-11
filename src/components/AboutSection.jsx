@@ -36,7 +36,7 @@ export default function AboutSection() {
     const { t } = useContent();
     
     return (
-        <section id="about" className="py-16 lg:py-32 bg-[#FAF8F3]">
+        <section id="about" className="py-14 md:py-20 lg:py-28 bg-[#FAF8F3]">
             <div className="max-w-3xl mx-auto px-6 lg:px-10">
                 
                 {/* Image Carousel */}
@@ -45,7 +45,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-16 lg:mb-24"
+                    className="mb-12 lg:mb-16"
                 >
                     <Carousel
                         opts={{
@@ -81,7 +81,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-20 lg:mb-24 text-foreground/80 leading-[1.8] font-body text-sm md:text-[17px] space-y-6"
+                    className="mb-20 lg:mb-24 text-foreground/80 leading-[1.8] font-body text-sm md:text-[15px] lg:text-base space-y-5"
                 >
                     <div>
                         <span><T id="NEW_ABOUT_P1_HI" /></span>
@@ -134,7 +134,7 @@ export default function AboutSection() {
                                         {String(idx + 1).padStart(2, '0')}
                                     </span>
                                 </div>
-                                <p className="text-foreground/80 font-body pt-1.5 md:pt-2 text-sm md:text-[17px] leading-[1.8]">
+                                <p className="text-foreground/80 font-body pt-1.5 md:pt-2 text-sm md:text-[15px] lg:text-base leading-[1.7]">
                                     <T id={item.textId} />
                                 </p>
                             </div>

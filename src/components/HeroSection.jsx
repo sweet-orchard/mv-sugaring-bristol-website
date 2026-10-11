@@ -84,7 +84,7 @@ export default function HeroSection() {
         { number: '8+', label: <T id="ABOUT_STAT_1_LABEL" />, icon: Sparkles },
         { number: '9x', label: <T id="ABOUT_STAT_2_LABEL" />, icon: Award },
         { number: '1000+', label: <T id="ABOUT_STAT_3_LABEL" />, icon: Heart },
-        { number: '5.0★', label: <T id="ABOUT_STAT_4_LABEL" />, icon: Star },
+        { number: <>5.0<span className="text-xl align-[0.1em] ml-0.5">★</span></>, label: <T id="ABOUT_STAT_4_LABEL" />, icon: Star },
     ];
     
     const [isPlaying, setIsPlaying] = useState(true);
@@ -196,7 +196,7 @@ export default function HeroSection() {
                         {/* Mobile Eyebrow */}
                         <div className="flex lg:hidden items-center justify-center gap-3 mb-6 w-full">
                             <div className="h-px w-8 bg-primary/60" />
-                            <span className="text-xs tracking-[0.3em] uppercase text-primary font-body font-medium text-center"><T id="HERO_EYEBROW" /></span>
+                            <span className="text-xs tracking-[0.2em] uppercase text-primary font-body font-medium text-center"><T id="HERO_EYEBROW" /></span>
                             <div className="h-px w-8 bg-primary/60" />
                         </div>
 
