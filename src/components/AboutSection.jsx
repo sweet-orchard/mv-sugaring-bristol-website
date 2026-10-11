@@ -120,11 +120,15 @@ export default function AboutSection() {
                     
                     <p><T id="NEW_ABOUT_P6" /></p>
 
-                    <div className="text-right mt-12 md:mt-16 pr-4">
-                        <p className="font-display italic text-lg md:text-xl lg:text-2xl gold-text">
-                            <T id="NEW_ABOUT_SIGN_1" /><br/>
-                            <T id="NEW_ABOUT_SIGN_2" />
-                        </p>
+                    <div className="flex items-center justify-end gap-4 md:gap-5 mt-10 md:mt-14 pt-6 border-t border-[#B38B4D]/25">
+                        <div className="text-right">
+                            <p className="font-display italic text-base md:text-lg text-[#B38B4D] leading-none mb-1">
+                                <T id="NEW_ABOUT_SIGN_1" />
+                            </p>
+                            <p className="font-script text-5xl md:text-6xl gold-text-strong leading-[1.1] pr-1">
+                                <T id="NEW_ABOUT_SIGN_2" />
+                            </p>
+                        </div>
                     </div>
                 </motion.div>
 
