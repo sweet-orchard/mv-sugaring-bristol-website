@@ -73,7 +73,7 @@ function highlight(text, phrases) {
     found.forEach(({ p, i }) => {
         if (i < cursor) return;
         if (i > cursor) parts.push(text.slice(cursor, i));
-        parts.push(<mark key={i} className="bg-transparent font-bold text-foreground underline decoration-[#B38B4D] decoration-2 underline-offset-[5px]">{p}</mark>);
+        parts.push(<mark key={i} className="bg-transparent font-bold text-foreground underline decoration-foreground decoration-2 underline-offset-[5px]">{p}</mark>);
         cursor = i + p.length;
     });
     parts.push(text.slice(cursor));
@@ -154,7 +154,7 @@ export default function WhySugaringSection() {
                     </div>
                     <div className="flex justify-center gap-0.5 mb-4" aria-label="5 out of 5 stars">
                         {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 fill-[#FBBC04] text-[#FBBC04]" />
+                            <Star key={i} className="w-5 h-5 fill-transparent text-[#B38B4D]" strokeWidth={1.75} />
                         ))}
                     </div>
                     <p className="font-display text-lg md:text-2xl italic text-foreground/80 max-w-3xl mx-auto leading-[1.6]">{highlight(t('NEW_WHY_CLOSING_QUOTE'), (t('NEW_WHY_CLOSING_HIGHLIGHTS') || '').split('|').filter(Boolean))}</p>
