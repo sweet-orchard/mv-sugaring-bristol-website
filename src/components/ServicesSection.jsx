@@ -265,40 +265,40 @@ function BikiniPricingGuide() {
                 
                 {/* Intro */}
                 <div>
-                    <h4 className="text-lg md:text-xl font-display font-bold text-primary mb-1.5">Hair length & pricing</h4>
-                    <p className="text-foreground/80 text-[11px] md:text-xs leading-[1.55]">Longer hair takes more time and care to remove gently, so bikini prices depend on when you last removed your hair.</p>
+                    <h4 className="text-lg md:text-xl font-display font-bold text-primary mb-1.5"><T id="BIKINI_GUIDE_TITLE" /></h4>
+                    <p className="text-foreground/80 text-[11px] md:text-xs leading-[1.55]"><T id="BIKINI_GUIDE_INTRO" /></p>
                 </div>
 
                 {/* Pricing table equivalents */}
                 <div className="space-y-4">
                     <div>
-                        <h5 className="text-[10px] tracking-[0.15em] font-bold text-primary uppercase mb-2">After waxing or sugaring</h5>
+                        <h5 className="text-[10px] tracking-[0.15em] font-bold text-primary uppercase mb-2"><T id="BIKINI_GUIDE_LABEL_WAX" /></h5>
                         <div className="space-y-2">
                             <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-2">
-                                <span>Up to 6 weeks</span>
-                                <span className="font-semibold text-primary whitespace-nowrap pl-4">Standard price</span>
+                                <span><T id="BIKINI_GUIDE_W1" /></span>
+                                <span className="font-semibold text-primary whitespace-nowrap pl-4"><T id="BIKINI_GUIDE_STANDARD" /></span>
                             </div>
                             <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-2">
-                                <span>7–11 weeks</span>
-                                <span className="font-semibold text-primary whitespace-nowrap pl-4">Up to +£10</span>
+                                <span><T id="BIKINI_GUIDE_W2" /></span>
+                                <span className="font-semibold text-primary whitespace-nowrap pl-4"><T id="BIKINI_GUIDE_UP_TO_10" /></span>
                             </div>
                             <div className="flex justify-between items-center pb-1">
-                                <span>12+ weeks</span>
-                                <span className="font-semibold text-primary whitespace-nowrap pl-4">Up to +£20</span>
+                                <span><T id="BIKINI_GUIDE_W3" /></span>
+                                <span className="font-semibold text-primary whitespace-nowrap pl-4"><T id="BIKINI_GUIDE_UP_TO_20" /></span>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <h5 className="text-[10px] tracking-[0.15em] font-bold text-primary uppercase mb-2">After shaving</h5>
+                        <h5 className="text-[10px] tracking-[0.15em] font-bold text-primary uppercase mb-2"><T id="BIKINI_GUIDE_LABEL_SHAVE" /></h5>
                         <div className="space-y-2">
                             <div className="flex justify-between items-center border-b border-border/50 border-dotted pb-2">
-                                <span>2–4 weeks <i className="font-normal opacity-90">(2–3 weeks is ideal)</i></span>
-                                <span className="font-semibold text-primary whitespace-nowrap pl-4">Standard price</span>
+                                <span><T id="BIKINI_GUIDE_S1" /> <i className="font-normal opacity-90"><T id="BIKINI_GUIDE_S1_NOTE" /></i></span>
+                                <span className="font-semibold text-primary whitespace-nowrap pl-4"><T id="BIKINI_GUIDE_STANDARD" /></span>
                             </div>
                             <div className="flex justify-between items-center pb-1">
-                                <span>Over 4 weeks</span>
-                                <span className="font-semibold text-primary whitespace-nowrap pl-4">Up to +£15</span>
+                                <span><T id="BIKINI_GUIDE_S2" /></span>
+                                <span className="font-semibold text-primary whitespace-nowrap pl-4"><T id="BIKINI_GUIDE_UP_TO_15" /></span>
                             </div>
                         </div>
                     </div>
@@ -307,13 +307,13 @@ function BikiniPricingGuide() {
                 {/* Explanations */}
                 <div className="space-y-2 pt-0">
                     <p>
-                        <strong className="text-foreground font-bold">Why "up to"?</strong> Every visit is different. If your treatment takes less time, you pay less. After years of regular sugaring — or after laser — hair often grows back finer and sparser, so many clients pay no extra at all, even after a longer break.
+                        <strong className="text-foreground font-bold"><T id="BIKINI_GUIDE_EXPL_1_STRONG" /></strong><T id="BIKINI_GUIDE_EXPL_1" />
                     </p>
                     <p>
-                        <strong className="text-foreground font-bold">Long hair?</strong> You can trim it before your visit — just not too short, as very short hair is harder to remove and can affect your results.
+                        <strong className="text-foreground font-bold"><T id="BIKINI_GUIDE_EXPL_2_STRONG" /></strong><T id="BIKINI_GUIDE_EXPL_2" />
                     </p>
                     <p>
-                        <strong className="text-foreground font-bold">Not sure, or several months of growth? Message me on WhatsApp</strong> — I'll advise what's best for you and give you a guide price.
+                        <strong className="text-foreground font-bold"><T id="BIKINI_GUIDE_EXPL_3_STRONG" /></strong><T id="BIKINI_GUIDE_EXPL_3" />
                     </p>
                 </div>
 
@@ -811,7 +811,7 @@ export default function ServicesSection() {
                         className="inline-flex items-center gap-2 px-10 py-4 bg-transparent border border-border/80 text-foreground font-body font-medium rounded-sm hover:bg-muted/10 active:scale-95 transition-all shadow-sm"
                     >
                         <ArrowDown className="w-4 h-4" />
-                        Download price list (PDF)
+                        <T id="SERVICES_DOWNLOAD_PDF" />
                     </a>
                 </motion.div>
 

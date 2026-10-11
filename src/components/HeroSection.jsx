@@ -54,7 +54,7 @@ function GoogleReviewCard({ num, t }) {
                     </div>
                     <div className="min-w-0 flex-1">
                         <p className="font-body text-sm font-semibold text-foreground truncate">{name}</p>
-                        <p className="font-body text-[11px] text-muted-foreground">Google review</p>
+                        <p className="font-body text-[11px] text-muted-foreground"><T id="HERO_GOOGLE_REVIEW_LABEL" /></p>
                     </div>
                     <GoogleLogo className="w-5 h-5 shrink-0" />
                 </div>
@@ -70,7 +70,7 @@ function GoogleReviewCard({ num, t }) {
             </div>
             <div className="px-5 py-2.5 border-t border-[#EAE0C5]/60 bg-white flex items-center gap-1.5 text-[10px] font-body text-muted-foreground">
                 <GoogleLogo className="w-3 h-3" />
-                <span>Posted on Google</span>
+                <span><T id="HERO_POSTED_ON_GOOGLE" /></span>
             </div>
         </div>
     );
