@@ -207,9 +207,9 @@ export default function TestimonialsSection() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.3 }}
-                    className="text-center mt-16 max-w-2xl mx-auto"
+                    className="text-center mt-10 md:mt-14 max-w-2xl mx-auto"
                 >
-                    <p className="font-display italic text-foreground/50 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="TESTIMONIALS_CLOSING_QUOTE" /></p>
+                    <p className="font-display italic font-medium text-foreground/75 text-xl md:text-2xl lg:text-[26px] leading-[1.5]"><T id="TESTIMONIALS_CLOSING_QUOTE" /></p>
                 </motion.div>
                 {/* Google Reviews Embed */}
                 <div className="mt-16 w-full flex justify-center">
