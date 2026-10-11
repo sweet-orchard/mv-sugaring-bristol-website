@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Clock, Send, Phone } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
@@ -12,6 +12,27 @@ const WhatsAppIcon = ({ className }) => (
 export default function ContactSection() {
     const { t, lang } = useContent();
     const getText = (v) => v?.props?.id ? t(v.props.id) : v;
+    const [status, setStatus] = useState('idle'); // idle | sending | success | error
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (status === 'sending') return;
+        const form = e.currentTarget;
+        setStatus('sending');
+        try {
+            const res = await fetch('https://formsubmit.co/ajax/marichka21.08.95@gmail.com', {
+                method: 'POST',
+                headers: { Accept: 'application/json' },
+                body: new FormData(form),
+            });
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok || String(data.success) === 'false') throw new Error('send failed');
+            form.reset();
+            setStatus('success');
+        } catch (err) {
+            setStatus('error');
+        }
+    };
     
     return (
         <section id="contact" className="py-10 md:py-16 lg:py-24 bg-background">
@@ -111,10 +132,12 @@ export default function ContactSection() {
                     >
                         <div className="bg-secondary/40 border border-border/30 rounded-sm p-8 lg:p-10">
                             <h3 className="font-display font-bold text-foreground mb-6 text-lg md:text-xl lg:text-2xl"><T id="CONTACT_FORM_TITLE" /></h3>
-                            <form action="https://formsubmit.co/marichka21.08.95@gmail.com" method="POST" className="space-y-5">
+                            <form onSubmit={handleSubmit} className="space-y-5">
                                 {/* FormSubmit Configuration */}
                                 <input type="hidden" name="_subject" value="New Inquiry from Website" />
                                 <input type="hidden" name="_captcha" value="false" />
+                                <input type="hidden" name="_template" value="table" />
+                                <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
 
                                 <div>
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2"><T id="CONTACT_FORM_NAME_LABEL" /></label>
@@ -161,13 +184,18 @@ export default function ContactSection() {
                                     <label className="block text-xs tracking-[0.15em] uppercase text-muted-foreground font-medium mb-2"><T id="CONTACT_FORM_MESSAGE_LABEL" /></label>
                                     <textarea name="message" required rows={4} className="w-full px-4 py-3 bg-background border border-border/50 rounded-sm text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 transition-colors resize-none" placeholder={t("CONTACT_FORM_MESSAGE_PLACEHOLDER")} />
                                 </div>
-                                <button type="button" disabled className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-muted border border-border/50 text-muted-foreground text-xs tracking-[0.25em] uppercase font-medium rounded-sm cursor-not-allowed transition-all duration-300 opacity-70">
-                                    <Send className="w-4 h-4 opacity-50" />
-                                    <span className="flex items-center gap-2">
-                                        <T id="CONTACT_FORM_SUBMIT_BUTTON" /> 
-                                        <span className="text-[10px] bg-background/50 px-2 py-0.5 rounded-sm lowercase tracking-normal font-medium">(coming soon)</span>
-                                    </span>
+                                <button type="submit" disabled={status === 'sending'} className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-[#B38B4D] hover:bg-[#9f7a41] text-white text-xs tracking-[0.25em] uppercase font-medium rounded-sm transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed">
+                                    <Send className="w-4 h-4" />
+                                    <span><T id={status === 'sending' ? 'CONTACT_FORM_SENDING' : 'CONTACT_FORM_SUBMIT_BUTTON'} /></span>
                                 </button>
+                                <div aria-live="polite">
+                                    {status === 'success' && (
+                                        <p className="text-sm text-[#7a5c2a] bg-[#B38B4D]/10 border border-[#B38B4D]/30 rounded-sm px-4 py-3"><T id="CONTACT_FORM_SUCCESS" /></p>
+                                    )}
+                                    {status === 'error' && (
+                                        <p className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-sm px-4 py-3"><T id="CONTACT_FORM_ERROR" /></p>
+                                    )}
+                                </div>
                             </form>
                         </div>
                     </motion.div>
