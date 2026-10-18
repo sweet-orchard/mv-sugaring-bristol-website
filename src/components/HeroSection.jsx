@@ -121,7 +121,7 @@ export default function HeroSection() {
 
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-screen pt-28 pb-20">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-screen pt-28 pb-6 lg:pb-20">
                     {/* Left — Text */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}

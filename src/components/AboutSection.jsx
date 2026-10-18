@@ -35,7 +35,7 @@ export default function AboutSection() {
     const { t } = useContent();
     
     return (
-        <section id="about" className="pt-10 md:pt-16 lg:pt-24 bg-[#FAF8F3]">
+        <section id="about" className="pt-4 md:pt-14 lg:pt-24 bg-[#FAF8F3]">
             <div className="max-w-3xl mx-auto px-6 lg:px-10">
                 
                 {/* Heading */}
@@ -118,6 +118,17 @@ export default function AboutSection() {
                     <p><T id="NEW_ABOUT_P5" /></p>
                     
                     <p><T id="NEW_ABOUT_P6" /></p>
+
+                    <div className="flex items-center justify-end mt-6 md:mt-8">
+                        <div className="text-right">
+                            <p className="font-display italic text-base md:text-lg text-[#B38B4D] leading-none mb-1">
+                                <T id="NEW_ABOUT_SIGN_1" />
+                            </p>
+                            <p className="font-script text-5xl md:text-6xl gold-text-strong leading-[1.1] pr-1">
+                                <T id="NEW_ABOUT_SIGN_2" />
+                            </p>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
 
@@ -150,17 +161,6 @@ export default function AboutSection() {
                                     </p>
                                 </div>
                             ))}
-                        </div>
-
-                        <div className="flex items-center justify-end gap-4 md:gap-5 mt-10 md:mt-12 pt-6 border-t border-background/15">
-                            <div className="text-right">
-                                <p className="font-display italic text-base md:text-lg text-[#D8B878] leading-none mb-1">
-                                    <T id="NEW_ABOUT_SIGN_1" />
-                                </p>
-                                <p className="font-script text-5xl md:text-6xl gold-text-light leading-[1.1] pr-1">
-                                    <T id="NEW_ABOUT_SIGN_2" />
-                                </p>
-                            </div>
                         </div>
                     </motion.div>
                 </div>
