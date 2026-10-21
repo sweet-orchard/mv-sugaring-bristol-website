@@ -36,7 +36,7 @@ export default function AboutSection() {
     
     return (
         <section id="about" className="pt-4 md:pt-14 lg:pt-24 bg-[#FAF8F3]">
-            <div className="max-w-3xl mx-auto px-6 lg:px-10">
+            <div className="max-w-3xl lg:max-w-6xl mx-auto px-6 lg:px-10">
                 
                 {/* Heading */}
                 <motion.div
@@ -44,7 +44,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-8 md:mb-10"
+                    className="text-center mb-8 md:mb-12 lg:mb-16"
                 >
                     <div className="flex items-center justify-center gap-3 mb-4">
                         <div className="h-px w-10 bg-primary/40" />
@@ -54,82 +54,86 @@ export default function AboutSection() {
                     <h2 className="font-display font-semibold text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="ABOUT_SECTION_HEADING" /></h2>
                 </motion.div>
 
-                {/* Image Carousel */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-10 lg:mb-14"
-                >
-                    <Carousel
-                        opts={{
-                            align: "center",
-                            loop: true,
-                        }}
-                        className="w-full max-w-sm mx-auto relative"
+                {/* Main Content: Desktop 2-columns (Images Left, Text Right), Mobile stacked */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start">
+                    
+                    {/* Left Column (Desktop): Image Carousel */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="lg:col-span-5 w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none lg:sticky lg:top-28 mb-8 lg:mb-0"
                     >
-                        <CarouselContent>
-                            {aboutImages.map((src, index) => (
-                                <CarouselItem key={index}>
-                                    <div className="aspect-[3/4] rounded-sm overflow-hidden bg-secondary">
-                                        <img
-                                            src={src}
-                                            alt={`Mariia ${index + 1}`}
-                                            className="w-full h-full object-cover"
-                                            loading="lazy"
-                                        />
-                                    </div>
-                                </CarouselItem>
-                            ))}
-                        </CarouselContent>
-                        <>
-                            <CarouselPrevious className="left-4 bg-background/60 backdrop-blur-md border-border/50 hover:bg-background" />
-                            <CarouselNext className="right-4 bg-background/60 backdrop-blur-md border-border/50 hover:bg-background" />
-                        </>
-                    </Carousel>
-                </motion.div>
+                        <Carousel
+                            opts={{
+                                align: "center",
+                                loop: true,
+                            }}
+                            className="w-full relative shadow-[0_8px_30px_rgba(179,139,77,0.1)] rounded-sm overflow-hidden"
+                        >
+                            <CarouselContent>
+                                {aboutImages.map((src, index) => (
+                                    <CarouselItem key={index}>
+                                        <div className="aspect-[3/4] rounded-sm overflow-hidden bg-secondary">
+                                            <img
+                                                src={src}
+                                                alt={`Mariia ${index + 1}`}
+                                                className="w-full h-full object-cover"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                            <>
+                                <CarouselPrevious className="left-4 bg-background/60 backdrop-blur-md border-border/50 hover:bg-background" />
+                                <CarouselNext className="right-4 bg-background/60 backdrop-blur-md border-border/50 hover:bg-background" />
+                            </>
+                        </Carousel>
+                    </motion.div>
 
-                {/* Introduction Text */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-12 lg:mb-16 text-foreground/80 leading-[1.8] font-body text-[13px] md:text-sm lg:text-[15px] space-y-4"
-                >
-                    <div>
-                        <span><T id="NEW_ABOUT_P1_HI" /></span>
-                        <span><T id="NEW_ABOUT_P1" /></span>
-                    </div>
-
-                    <p>
-                        <strong><T id="NEW_ABOUT_P2_1" /></strong><T id="NEW_ABOUT_P2_2" />
-                    </p>
-
-                    <p>
-                        <strong><T id="NEW_ABOUT_P3_1" /></strong><T id="NEW_ABOUT_P3_2" />
-                    </p>
-                    
-                    <p>
-                        <strong><T id="NEW_ABOUT_P4_1" /></strong><T id="NEW_ABOUT_P4_2" />
-                    </p>
-                    
-                    <p><T id="NEW_ABOUT_P5" /></p>
-                    
-                    <p><T id="NEW_ABOUT_P6" /></p>
-
-                    <div className="flex items-center justify-end mt-6 md:mt-8">
-                        <div className="text-right">
-                            <p className="font-display italic text-base md:text-lg text-[#B38B4D] leading-none mb-1">
-                                <T id="NEW_ABOUT_SIGN_1" />
-                            </p>
-                            <p className="font-script text-5xl md:text-6xl gold-text-strong leading-[1.1] pr-1">
-                                <T id="NEW_ABOUT_SIGN_2" />
-                            </p>
+                    {/* Right Column (Desktop): Introduction Text & Signature */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="lg:col-span-7 mb-12 lg:mb-16 text-foreground/85 font-body text-base md:text-base lg:text-[16px] xl:text-[17px] leading-[1.85] sm:leading-[1.9] space-y-5"
+                    >
+                        <div>
+                            <span><T id="NEW_ABOUT_P1_HI" /></span>
+                            <span><T id="NEW_ABOUT_P1" /></span>
                         </div>
-                    </div>
-                </motion.div>
+
+                        <p>
+                            <strong><T id="NEW_ABOUT_P2_1" /></strong><T id="NEW_ABOUT_P2_2" />
+                        </p>
+
+                        <p>
+                            <strong><T id="NEW_ABOUT_P3_1" /></strong><T id="NEW_ABOUT_P3_2" />
+                        </p>
+                        
+                        <p>
+                            <strong><T id="NEW_ABOUT_P4_1" /></strong><T id="NEW_ABOUT_P4_2" />
+                        </p>
+                        
+                        <p><T id="NEW_ABOUT_P5" /></p>
+                        
+                        <p><T id="NEW_ABOUT_P6" /></p>
+
+                        <div className="flex items-center justify-end mt-6 md:mt-8 pt-2">
+                            <div className="text-right">
+                                <p className="font-display italic text-base md:text-lg text-[#B38B4D] leading-none mb-1">
+                                    <T id="NEW_ABOUT_SIGN_1" />
+                                </p>
+                                <p className="font-script text-5xl md:text-6xl gold-text-strong leading-[1.1] pr-1">
+                                    <T id="NEW_ABOUT_SIGN_2" />
+                                </p>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
 
             {/* A few things about me — full-width dark band */}
@@ -156,7 +160,7 @@ export default function AboutSection() {
                                             {String(idx + 1).padStart(2, '0')}
                                         </span>
                                     </div>
-                                    <p className="text-background/80 font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">
+                                    <p className="text-background/90 font-body text-[15px] sm:text-base leading-[1.8]">
                                         <T id={item.textId} />
                                     </p>
                                 </div>

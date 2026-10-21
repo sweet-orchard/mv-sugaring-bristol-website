@@ -121,7 +121,7 @@ export default function HeroSection() {
 
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-screen pt-28 pb-6 lg:pb-20">
+                <div className="grid lg:grid-cols-2 gap-6 lg:gap-20 items-center min-h-screen pt-24 sm:pt-28 pb-6 lg:pb-20">
                     {/* Left — Text */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -146,18 +146,18 @@ export default function HeroSection() {
                                     <T id="HERO_QUOTE" />
                                 </p>
                             </blockquote>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl mb-3"><T id="HERO_PARAGRAPH_1" /></p>
-                            <p className="text-sm font-body text-foreground/70 leading-relaxed max-w-xl mb-10"><T id="HERO_PARAGRAPH_2" /></p>
+                            <p className="text-sm md:text-[15px] font-body text-muted-foreground leading-[1.85] max-w-xl mb-4"><T id="HERO_PARAGRAPH_1" /></p>
+                            <p className="text-sm md:text-[15px] font-body text-foreground/70 leading-[1.85] max-w-xl mb-10"><T id="HERO_PARAGRAPH_2" /></p>
                         </div>
 
                         {/* Mobile Text */}
-                        <div className="block lg:hidden mb-8 space-y-4">
+                        <div className="block lg:hidden mb-7 space-y-3.5">
                             <blockquote className="max-w-xl">
-                                <p className="font-display italic text-xl sm:text-2xl text-primary/90 leading-relaxed">
+                                <p className="font-display italic font-medium text-[22px] sm:text-2xl text-primary/95 leading-[1.3] tracking-tight">
                                     <T id="HERO_QUOTE" />
                                 </p>
                             </blockquote>
-                            <p className="text-sm font-body text-muted-foreground leading-relaxed max-w-xl">
+                            <p className="text-[15px] sm:text-base font-body text-muted-foreground leading-[1.8] max-w-xl">
                                 <T id="HERO_MOBILE_TEXT" />
                             </p>
                         </div>
