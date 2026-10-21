@@ -103,8 +103,8 @@ EN: Bristol
 UA: 
 
 [HERO_QUOTE]
-EN: A woman's body holds so much power and energy. I am the person who purifies the body, restoring its lightness, love, tenderness, and an incredible sense of confidence.
-UA: 
+EN: "A woman's body holds so much power and energy — I'm here to restore its lightness, tenderness and confidence."
+UA: «Жіноче тіло зберігає в собі стільки сили та енергії — я тут, щоб повернути йому легкість, ніжність і впевненість.»
 
 [HERO_PARAGRAPH_1]
 EN: I invite you to experience my sugaring treatments — it is a true spa experience because, alongside hair removal, it provides a delicate skin exfoliation. For me, every treatment is all about the woman herself: her transformation, her sensations, her individuality, and the unique beauty of her body, which I enhance through my craft.

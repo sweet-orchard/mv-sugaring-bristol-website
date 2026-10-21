@@ -121,10 +121,10 @@ export const getServicesData = (t) => ({
                     isPackages: true,
                     note: <T id="BODY_PACKAGE_NOTE" />,
                     items: [
-                        { name: <T id="BODY_PACKAGE_1_NAME" />, price: <T id="PRICE_BODY_PKG_1" />, duration: <T id="BODY_PACKAGE_1_DURATION" />, saveText: <T id="BODY_PACKAGE_1_SAVE" />, image: '/price-list/body/full-legs-and-bum.png' },
-                        { name: <T id="BODY_PACKAGE_2_NAME" />, price: <T id="PRICE_BODY_PKG_2" />, duration: <T id="BODY_PACKAGE_2_DURATION" />, saveText: <T id="BODY_PACKAGE_2_SAVE" />, image: '/price-list/body/full-legs-bum-and-lower-back.png' },
-                        { name: <T id="BODY_PACKAGE_3_NAME" />, price: <T id="PRICE_BODY_PKG_3" />, duration: <T id="BODY_PACKAGE_3_DURATION" />, saveText: <T id="BODY_PACKAGE_3_SAVE" />, image: '/price-list/body/full-arms-and-underarms.png' },
-                        { name: <T id="BODY_PACKAGE_4_NAME" />, price: <T id="PRICE_BODY_PKG_4" />, duration: <T id="BODY_PACKAGE_4_DURATION" />, saveText: <T id="BODY_PACKAGE_4_SAVE" />, image: '/price-list/body/full-legs-and-full-arms.png' },
+                        { name: <T id="BODY_PACKAGE_1_NAME" />, price: <T id="PRICE_BODY_PKG_1" />, duration: <T id="BODY_PACKAGE_1_DURATION" />, saveText: <T id="BODY_PACKAGE_1_SAVE" />, image: null },
+                        { name: <T id="BODY_PACKAGE_2_NAME" />, price: <T id="PRICE_BODY_PKG_2" />, duration: <T id="BODY_PACKAGE_2_DURATION" />, saveText: <T id="BODY_PACKAGE_2_SAVE" />, image: null },
+                        { name: <T id="BODY_PACKAGE_3_NAME" />, price: <T id="PRICE_BODY_PKG_3" />, duration: <T id="BODY_PACKAGE_3_DURATION" />, saveText: <T id="BODY_PACKAGE_3_SAVE" />, image: null },
+                        { name: <T id="BODY_PACKAGE_4_NAME" />, price: <T id="PRICE_BODY_PKG_4" />, duration: <T id="BODY_PACKAGE_4_DURATION" />, saveText: <T id="BODY_PACKAGE_4_SAVE" />, image: null },
                     ]
                 }
             ]
