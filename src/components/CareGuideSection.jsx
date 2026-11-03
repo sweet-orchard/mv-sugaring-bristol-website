@@ -52,7 +52,7 @@ export default function CareGuideSection() {
                         <div className="space-y-6">
                             {beforeRules.map((rule, idx) => (
                                 <div key={idx} className="flex gap-3 items-start group">
-                                    <MiniIllustration name={rule.icon} className="w-16 h-14 md:w-[4.5rem] md:h-16 -mt-2 -ml-2" />
+                                    <MiniIllustration name={rule.icon} className="w-20 h-20 md:w-[5.5rem] md:h-[5.5rem] -mt-4 -ml-4 -mb-3 -mr-1" />
                                     <div>
                                         <h4 className="text-sm md:text-[15px] font-medium text-foreground font-body mb-1">{rule.title}</h4>
                                         <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{rule.desc}</p>
@@ -72,7 +72,7 @@ export default function CareGuideSection() {
                         <div className="space-y-6">
                             {afterRules.map((rule, idx) => (
                                 <div key={idx} className="flex gap-3 items-start group">
-                                    <MiniIllustration name={rule.icon} className="w-16 h-14 md:w-[4.5rem] md:h-16 -mt-2 -ml-2" />
+                                    <MiniIllustration name={rule.icon} className="w-20 h-20 md:w-[5.5rem] md:h-[5.5rem] -mt-4 -ml-4 -mb-3 -mr-1" />
                                     <div>
                                         <h4 className="text-sm md:text-[15px] font-medium text-foreground font-body mb-1">{rule.title}</h4>
                                         <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{rule.desc}</p>
