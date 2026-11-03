@@ -1,15 +1,61 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import { useContent, T } from '../context/ContentContext';
 import ScrollButton from './ScrollButton';
 
 const benefits = [
-    { num: '01', titleId: 'NEW_WHY_BENEFIT_1_TITLE', descId: 'NEW_WHY_BENEFIT_1_DESC', image: '/why-sugaring/feather.webp' },
-    { num: '02', titleId: 'NEW_WHY_BENEFIT_2_TITLE', descId: 'NEW_WHY_BENEFIT_2_DESC', image: '/why-sugaring/drop.webp' },
-    { num: '03', titleId: 'NEW_WHY_BENEFIT_3_TITLE', descId: 'NEW_WHY_BENEFIT_3_DESC', image: '/why-sugaring/waves.webp' },
-    { num: '04', titleId: 'NEW_WHY_BENEFIT_4_TITLE', descId: 'NEW_WHY_BENEFIT_4_DESC', image: '/why-sugaring/follicle.webp' },
+    { num: '01', titleId: 'NEW_WHY_BENEFIT_1_TITLE', descId: 'NEW_WHY_BENEFIT_1_DESC', image: '/why-sugaring/feather.webp', motion: 'feather' },
+    { num: '02', titleId: 'NEW_WHY_BENEFIT_2_TITLE', descId: 'NEW_WHY_BENEFIT_2_DESC', image: '/why-sugaring/drop.webp', motion: 'drop' },
+    { num: '03', titleId: 'NEW_WHY_BENEFIT_3_TITLE', descId: 'NEW_WHY_BENEFIT_3_DESC', image: '/why-sugaring/waves.webp', motion: 'waves' },
+    { num: '04', titleId: 'NEW_WHY_BENEFIT_4_TITLE', descId: 'NEW_WHY_BENEFIT_4_DESC', image: '/why-sugaring/follicle.webp', motion: 'follicle' },
 ];
+
+// Each illustration has its own gentle motion: the feather sways, the drop bobs and sends out
+// ripples, the waves drift, the hair grows. Hover or tap makes it react; reduced-motion users get a still image.
+const LOOPS = {
+    feather: { animate: { rotate: [-4, 4, -4], y: [0, -6, 0] }, transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' } },
+    drop: { animate: { y: [0, -5, 0] }, transition: { duration: 4, repeat: Infinity, ease: 'easeInOut' } },
+    waves: { animate: { x: [-5, 5, -5], y: [0, -2, 0] }, transition: { duration: 7, repeat: Infinity, ease: 'easeInOut' } },
+    follicle: { animate: { scaleY: [0.96, 1.04, 0.96] }, transition: { duration: 5, repeat: Infinity, ease: 'easeInOut' }, style: { transformOrigin: '50% 80%' } },
+};
+
+function ReactiveIllustration({ src, kind, index }) {
+    const reduce = useReducedMotion();
+    const loop = LOOPS[kind];
+    return (
+        <motion.div
+            className="relative w-44 h-44 sm:w-32 sm:h-32 -mr-4 sm:-mr-3 -mt-10 -mb-10 sm:-mt-6 sm:-mb-6 shrink-0 cursor-pointer select-none"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.25 + index * 0.1, ease: 'easeOut' }}
+            whileHover={reduce ? undefined : { scale: 1.12, rotate: kind === 'feather' ? 6 : 0 }}
+            whileTap={reduce ? undefined : { scale: 1.12 }}
+        >
+            {kind === 'drop' && !reduce && [0, 1].map((r) => (
+                <motion.span
+                    key={r}
+                    aria-hidden="true"
+                    className="absolute left-1/2 top-[62%] w-[62%] h-[16%] -ml-[31%] rounded-[50%] border border-[#B38B4D]/60 pointer-events-none"
+                    initial={{ scale: 0.55, opacity: 0 }}
+                    animate={{ scale: [0.55, 1.35], opacity: [0.7, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, delay: r * 1.5, ease: 'easeOut' }}
+                />
+            ))}
+            <motion.img
+                src={src}
+                alt=""
+                aria-hidden="true"
+                className="w-full h-full object-contain pointer-events-none"
+                loading="lazy"
+                animate={reduce ? undefined : loop.animate}
+                transition={loop.transition}
+                style={loop.style}
+            />
+        </motion.div>
+    );
+}
 
 // Wraps the key phrases of the review in <mark>; the review text itself is never altered.
 function highlight(text, phrases) {
@@ -74,22 +120,16 @@ export default function WhySugaringSection() {
                             <div>
                                 <div className="flex items-center justify-between mb-5">
                                     <span
-                                        className="font-display font-light text-4xl lg:text-5xl text-[#B38B4D]/70 select-none leading-none"
-                                        style={{ WebkitTextStroke: '1px rgba(179,139,77,0.7)' }}
+                                        className="font-display font-semibold text-[40px] lg:text-5xl text-[#B38B4D] select-none leading-none"
+                                        style={{ fontVariantNumeric: 'lining-nums' }}
                                         aria-hidden="true"
                                     >
                                         {b.num}
                                     </span>
-                                    <img
-                                        src={b.image}
-                                        alt=""
-                                        aria-hidden="true"
-                                        className="w-44 h-44 sm:w-32 sm:h-32 -mr-4 sm:-mr-3 -mt-10 -mb-10 sm:-mt-6 sm:-mb-6 object-contain pointer-events-none select-none shrink-0"
-                                        loading="lazy"
-                                    />
+                                    <ReactiveIllustration src={b.image} kind={b.motion} index={i} />
                                 </div>
                                 <div className="h-[2px] w-10 bg-[#B38B4D]/60 mb-4 transition-all duration-300 group-hover:w-16" />
-                                <h3 className="font-display font-bold text-foreground mb-3 text-lg md:text-xl leading-snug">
+                                <h3 className="font-display font-bold text-foreground mb-3 text-[28px] sm:text-2xl lg:text-[22px] xl:text-2xl leading-[1.15]">
                                     <T id={b.titleId} />
                                 </h3>
                                 <p className="font-body text-foreground/80 text-[14px] sm:text-[15px] leading-[1.85]">
