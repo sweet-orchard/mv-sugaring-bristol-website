@@ -157,7 +157,7 @@ export default function MiniIllustration({ name, className = 'w-14 h-14 md:w-16 
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
-                className={`shrink-0 object-contain select-none pointer-events-none ${className}`}
+                className={`shrink-0 object-contain select-none pointer-events-none mix-blend-multiply ${className}`}
             />
         );
     }
