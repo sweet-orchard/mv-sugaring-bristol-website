@@ -10,7 +10,7 @@ export default function BeautySpaceSection() {
 
     const highlights = [
         { icon: 'shield', title: <T id="SPACE_HIGHLIGHT_1_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_1_DESC" /> },
-        { icon: 'nest',        title: <T id="SPACE_HIGHLIGHT_2_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_2_DESC" /> },
+        { icon: 'house',        title: <T id="SPACE_HIGHLIGHT_2_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_2_DESC" /> },
         { icon: 'jar',        title: <T id="SPACE_HIGHLIGHT_3_TITLE" />, desc: <T id="SPACE_HIGHLIGHT_3_DESC" /> },
     ];
 
@@ -67,7 +67,7 @@ export default function BeautySpaceSection() {
                                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                                     className="flex gap-3 md:gap-4 items-start"
                                 >
-                                    <MiniIllustration name={item.icon} className="w-[4.5rem] h-16 md:w-20 md:h-[4.5rem] -mt-2 -ml-2" />
+                                    <MiniIllustration name={item.icon} className="w-14 h-14 md:w-16 md:h-16 -mt-1" />
                                     <div>
                                         <h4 className="text-sm md:text-[15px] font-body font-medium text-foreground mb-1">{item.title}</h4>
                                         <p className="text-muted-foreground font-body text-[13px] md:text-sm lg:text-[15px] leading-[1.65]">{item.desc}</p>

@@ -147,7 +147,7 @@ const drawings = {
 };
 
 // Painted icons supplied as images; names not listed here fall back to the inline SVG drawings above.
-const IMAGE_ICONS = ['leaf', 'cloud', 'hourglass', 'ruler', 'scrub', 'drop', 'sun', 'tee', 'flame', 'bottle', 'glass'];
+const IMAGE_ICONS = ['shield', 'house', 'jar', 'leaf', 'cloud', 'hourglass', 'ruler', 'scrub', 'drop', 'sun', 'tee', 'flame', 'bottle', 'glass'];
 
 export default function MiniIllustration({ name, className = 'w-14 h-14 md:w-16 md:h-16' }) {
     if (IMAGE_ICONS.includes(name)) {
