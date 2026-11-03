@@ -32,8 +32,28 @@ export default function BeautySpaceSection() {
                         >
                             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4"><T id="SPACE_EYEBROW" /></p>
                             <h2 className="font-display font-semibold text-foreground mb-5 leading-tight text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="SPACE_HEADING" /></h2>
-                            <p className="font-body text-muted-foreground mb-6 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="SPACE_PARAGRAPH_1" /></p>
-                            <p className="font-body text-muted-foreground mb-8 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
+                            <p className="font-body mb-6 text-[15px] md:text-base leading-[1.65]">
+                                <T 
+                                    id="SPACE_PARAGRAPH_1" 
+                                    render={(text) => {
+                                        const dotIdx = text.indexOf('.');
+                                        if (dotIdx === -1) {
+                                            return <strong className="font-bold text-[#B38B4D]">{text}</strong>;
+                                        }
+                                        const lead = text.slice(0, dotIdx + 1);
+                                        const body = text.slice(dotIdx + 1);
+                                        return (
+                                            <>
+                                                <strong className="font-bold text-[#B38B4D]">{lead}</strong>
+                                                <span className="text-muted-foreground">{body}</span>
+                                            </>
+                                        );
+                                    }} 
+                                />
+                            </p>
+                            {getText(<T id="BEAUTY_SPACE_PARAGRAPH_2" />) ? (
+                                <p className="font-body text-muted-foreground mb-8 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="BEAUTY_SPACE_PARAGRAPH_2" /></p>
+                            ) : null}
                         </motion.div>
 
                         {/* Highlights list */}

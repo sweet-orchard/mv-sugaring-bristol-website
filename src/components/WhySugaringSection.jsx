@@ -88,57 +88,65 @@ export default function WhySugaringSection() {
             <div className="absolute -top-32 -left-32 w-[28rem] h-[28rem] rounded-full bg-[#B38B4D]/[0.07] blur-3xl pointer-events-none" />
 
             <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-                <div className="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-10 lg:gap-16 items-start">
-                    {/* Intro — sticks while the cards scroll on desktop */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
-                        className="lg:sticky lg:top-32 text-center lg:text-left"
-                    >
-                        <div className="flex items-center justify-center lg:justify-start gap-3 mb-5">
-                            <div className="h-px w-10 bg-[#B38B4D]/60" />
-                            <span className="text-[11px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#B38B4D] font-body font-semibold"><T id="NEW_WHY_EYEBROW" /></span>
-                            <div className="h-px w-10 bg-[#B38B4D]/60 lg:hidden" />
-                        </div>
-                        <h2 className="font-display font-semibold text-foreground mb-5 text-2xl md:text-4xl lg:text-5xl leading-[1.15]">
-                            <T id="NEW_WHY_HEADING" />
-                        </h2>
-                        <p className="max-w-xl mx-auto lg:mx-0 font-body text-foreground/80 text-[13px] md:text-sm lg:text-[15px] leading-[1.65]"><T id="NEW_WHY_SUBTEXT" /></p>
-                    </motion.div>
-
-                    {/* Benefit cards */}
-                    <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
-                        {benefits.map((b, i) => (
-                            <motion.div
-                                key={b.num}
-                                initial={{ opacity: 0, y: 24 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                className={`group relative overflow-hidden rounded-2xl border border-[#EAE0C5]/80 bg-white p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(179,139,77,0.15)] ${i % 2 === 1 ? 'sm:mt-8' : ''}`}
-                            >
-                                <svg
-                                    viewBox="0 0 120 110"
-                                    className="absolute top-4 right-4 md:top-6 md:right-6 w-24 h-[5.5rem] md:w-32 md:h-[7rem] pointer-events-none"
-                                    aria-hidden="true"
-                                >
-                                    {illustrations[i]()}
-                                </svg>
-                                <span
-                                    className="block font-display font-light leading-none text-6xl md:text-7xl text-transparent mb-6 select-none"
-                                    style={{ WebkitTextStroke: '1px rgba(179,139,77,0.7)' }}
-                                    aria-hidden="true"
-                                >
-                                    {b.num}
-                                </span>
-                                <div className="h-[2px] w-10 bg-[#B38B4D]/60 mb-5 transition-all duration-300 group-hover:w-16" />
-                                <h3 className="font-display font-bold text-foreground mb-3 text-lg md:text-xl lg:text-2xl leading-snug"><T id={b.titleId} /></h3>
-                                <p className="font-body text-foreground/80 text-xs md:text-[13px] lg:text-sm leading-[1.7]"><T id={b.descId} /></p>
-                            </motion.div>
-                        ))}
+                {/* Centered Section Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
+                >
+                    <div className="flex items-center justify-center gap-3 mb-4">
+                        <div className="h-px w-10 bg-[#B38B4D]/60" />
+                        <span className="text-[11px] md:text-xs tracking-[0.25em] md:tracking-[0.3em] uppercase text-[#B38B4D] font-body font-semibold">
+                            <T id="NEW_WHY_EYEBROW" />
+                        </span>
+                        <div className="h-px w-10 bg-[#B38B4D]/60" />
                     </div>
+                    <h2 className="font-display font-semibold text-foreground mb-4 text-3xl md:text-4xl lg:text-5xl leading-[1.15]">
+                        <T id="NEW_WHY_HEADING" />
+                    </h2>
+                    <p className="font-body text-foreground/80 text-[15px] sm:text-base md:text-[17px] leading-[1.9] max-w-2xl mx-auto">
+                        <T id="NEW_WHY_SUBTEXT" />
+                    </p>
+                </motion.div>
+
+                {/* 4 Benefit Cards Grid (4 columns on desktop, 2 on tablet, 1 on mobile) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {benefits.map((b, i) => (
+                        <motion.div
+                            key={b.num}
+                            initial={{ opacity: 0, y: 24 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            className="group relative flex flex-col justify-between rounded-2xl border border-[#EAE0C5]/80 bg-white p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#B38B4D]/60 hover:shadow-[0_12px_32px_rgba(179,139,77,0.12)]"
+                        >
+                            <div>
+                                <div className="flex items-center justify-between mb-5">
+                                    <span
+                                        className="font-display font-light text-4xl lg:text-5xl text-[#B38B4D]/70 select-none leading-none"
+                                        style={{ WebkitTextStroke: '1px rgba(179,139,77,0.7)' }}
+                                        aria-hidden="true"
+                                    >
+                                        {b.num}
+                                    </span>
+                                    <div className="w-14 h-14 rounded-xl bg-[#FAF5EB] border border-[#EAE0C5]/70 p-2 flex items-center justify-center shrink-0">
+                                        <svg viewBox="0 0 120 110" className="w-full h-full pointer-events-none" aria-hidden="true">
+                                            {illustrations[i]()}
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="h-[2px] w-10 bg-[#B38B4D]/60 mb-4 transition-all duration-300 group-hover:w-16" />
+                                <h3 className="font-display font-bold text-foreground mb-3 text-lg md:text-xl leading-snug">
+                                    <T id={b.titleId} />
+                                </h3>
+                                <p className="font-body text-foreground/80 text-[14px] sm:text-[15px] leading-[1.85]">
+                                    <T id={b.descId} />
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
 
                 {/* Closing review */}
@@ -157,8 +165,10 @@ export default function WhySugaringSection() {
                             <Star key={i} className="w-5 h-5 fill-transparent text-[#B38B4D]" strokeWidth={1.75} />
                         ))}
                     </div>
-                    <p className="font-display text-lg md:text-2xl italic text-foreground/80 max-w-3xl mx-auto leading-[1.6]">{highlight(t('NEW_WHY_CLOSING_QUOTE'), (t('NEW_WHY_CLOSING_HIGHLIGHTS') || '').split('|').filter(Boolean))}</p>
-                    <p className="mt-5 font-body text-xs tracking-[0.2em] uppercase text-[#B38B4D] font-semibold">
+                    <p className="font-display text-lg sm:text-xl md:text-2xl italic text-foreground/85 max-w-3xl mx-auto leading-[1.85]">
+                        {highlight(t('NEW_WHY_CLOSING_QUOTE'), (t('NEW_WHY_CLOSING_HIGHLIGHTS') || '').split('|').filter(Boolean))}
+                    </p>
+                    <p className="mt-5 font-body text-xs md:text-sm tracking-[0.2em] uppercase text-[#B38B4D] font-semibold">
                         <T id="NEW_WHY_CLOSING_AUTHOR" />
                         <span className="normal-case tracking-normal font-medium text-muted-foreground"> · <T id="NEW_WHY_CLOSING_SOURCE" /></span>
                     </p>

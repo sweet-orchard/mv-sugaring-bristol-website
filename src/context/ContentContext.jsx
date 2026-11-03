@@ -33,6 +33,12 @@ export function ContentProvider({ children }) {
         }
     }, []);
 
+    useEffect(() => {
+        if (!unsavedChanges) {
+            setLocalContent(siteContent);
+        }
+    }, [siteContent, unsavedChanges]);
+
     const updateContent = (key, val, editLang) => {
         setLocalContent(prev => ({
             ...prev,
