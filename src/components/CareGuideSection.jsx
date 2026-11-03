@@ -17,7 +17,7 @@ export default function CareGuideSection() {
         { icon: 'tee',      title: <T id="CARE_AFTER_1_TITLE" />, desc: <T id="CARE_AFTER_1_DESC" /> },
         { icon: 'flame',      title: <T id="CARE_AFTER_2_TITLE" />, desc: <T id="CARE_AFTER_2_DESC" /> },
         { icon: 'bottle',        title: <T id="CARE_AFTER_3_TITLE" />, desc: <T id="CARE_AFTER_3_DESC" /> },
-        { icon: 'glass', title: <T id="CARE_AFTER_4_TITLE" />, desc: <T id="CARE_AFTER_4_DESC" /> },
+        { icon: 'tube', title: <T id="CARE_AFTER_4_TITLE" />, desc: <T id="CARE_AFTER_4_DESC" /> },
     ];
 
     return (
