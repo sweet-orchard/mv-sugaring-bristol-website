@@ -74,7 +74,7 @@ export default function WhySugaringSection() {
                             <div>
                                 <div className="flex items-center justify-between mb-5">
                                     <span
-                                        className="font-display font-light text-4xl lg:text-5xl text-[#B38B4D]/70 select-none leading-none"
+                                        className="font-display font-light text-3xl lg:text-4xl text-[#B38B4D]/70 select-none leading-none"
                                         style={{ WebkitTextStroke: '1px rgba(179,139,77,0.7)' }}
                                         aria-hidden="true"
                                     >
@@ -89,7 +89,7 @@ export default function WhySugaringSection() {
                                     />
                                 </div>
                                 <div className="h-[2px] w-10 bg-[#B38B4D]/60 mb-4 transition-all duration-300 group-hover:w-16" />
-                                <h3 className="font-display font-bold text-foreground mb-3 text-lg md:text-xl leading-snug">
+                                <h3 className="font-display font-bold text-foreground mb-3 text-[28px] sm:text-2xl lg:text-[22px] xl:text-2xl leading-[1.15]">
                                     <T id={b.titleId} />
                                 </h3>
                                 <p className="font-body text-foreground/80 text-[14px] sm:text-[15px] leading-[1.85]">
