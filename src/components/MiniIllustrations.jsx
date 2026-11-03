@@ -146,7 +146,21 @@ const drawings = {
     ),
 };
 
+// Painted icons supplied as images; names not listed here fall back to the inline SVG drawings above.
+const IMAGE_ICONS = ['leaf', 'cloud', 'hourglass', 'ruler', 'scrub', 'drop', 'sun', 'tee', 'flame', 'bottle', 'glass'];
+
 export default function MiniIllustration({ name, className = 'w-14 h-14 md:w-16 md:h-16' }) {
+    if (IMAGE_ICONS.includes(name)) {
+        return (
+            <img
+                src={`/icons/${name}.webp`}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                className={`shrink-0 object-contain select-none pointer-events-none ${className}`}
+            />
+        );
+    }
     return (
         <svg viewBox="0 0 120 110" className={`shrink-0 ${className}`} aria-hidden="true">
             {drawings[name]}
