@@ -74,8 +74,8 @@ export default function WhySugaringSection() {
                             <div>
                                 <div className="flex items-center justify-between mb-5">
                                     <span
-                                        className="font-display font-light text-3xl lg:text-4xl text-[#B38B4D]/70 select-none leading-none"
-                                        style={{ WebkitTextStroke: '1px rgba(179,139,77,0.7)' }}
+                                        className="font-display font-semibold text-[40px] lg:text-5xl text-[#B38B4D] select-none leading-none"
+                                        style={{ fontVariantNumeric: 'lining-nums' }}
                                         aria-hidden="true"
                                     >
                                         {b.num}
