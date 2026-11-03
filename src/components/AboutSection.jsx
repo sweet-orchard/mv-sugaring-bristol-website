@@ -99,7 +99,7 @@ export default function AboutSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="lg:col-span-7 mb-12 lg:mb-16 text-foreground/85 font-body text-base md:text-base lg:text-[16px] xl:text-[17px] leading-[1.85] sm:leading-[1.9] space-y-5"
+                        className="lg:col-span-7 mb-12 lg:mb-16 text-foreground/85 font-body text-[14px] md:text-[15px] lg:text-[16px] xl:text-[17px] leading-[1.7] md:leading-[1.8] lg:leading-[1.9] space-y-4 md:space-y-5"
                     >
                         <div>
                             <span><T id="NEW_ABOUT_P1_HI" /></span>

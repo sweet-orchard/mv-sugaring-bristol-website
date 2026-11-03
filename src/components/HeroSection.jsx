@@ -151,13 +151,13 @@ export default function HeroSection() {
                         </div>
 
                         {/* Mobile Text */}
-                        <div className="block lg:hidden mb-7 space-y-3.5">
-                            <blockquote className="max-w-xl">
-                                <p className="font-display italic font-medium text-[22px] sm:text-2xl text-primary/95 leading-[1.3] tracking-tight">
+                        <div className="block lg:hidden mb-7 space-y-4 text-center">
+                            <blockquote className="max-w-xl mx-auto">
+                                <p className="font-display italic font-semibold text-[28px] sm:text-[32px] text-primary leading-[1.25] tracking-tight">
                                     <T id="HERO_QUOTE" />
                                 </p>
                             </blockquote>
-                            <p className="text-[15px] sm:text-base font-body text-muted-foreground leading-[1.8] max-w-xl">
+                            <p className="text-[14px] sm:text-[15px] font-body text-muted-foreground leading-[1.7] max-w-xl mx-auto">
                                 <T id="HERO_MOBILE_TEXT" />
                             </p>
                         </div>
