@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import {
     Accordion,
     AccordionContent,
@@ -8,16 +9,22 @@ import {
 } from "@/components/ui/accordion";
 import { useContent, T } from '../context/ContentContext';
 import { getFaqGroups } from '../content/faqItems';
+import FaqChat from './FaqChat';
 
 export default function FAQSection() {
     const { t, lang } = useContent();
     const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
     
-    const faqCategories = getFaqGroups(lang).map((g) => ({
-        category: <T id={g.nameKey} />,
-        items: g.items.map((it) => ({ q: <T id={it.q} />, a: <T id={it.a} /> })),
-    }));
+    const [showList, setShowList] = useState(false);
+
+    const faqCategories = getFaqGroups(lang)
+        .map((g) => ({
+            category: <T id={g.nameKey} />,
+            items: g.items
+                .map((it) => ({ id: it.id, q: <T id={it.q} />, a: <T id={it.a} /> })),
+        }))
+        ;
 
     return (
         <section id="faq" className="py-10 md:py-16 lg:py-24 bg-secondary/30">
@@ -37,11 +44,35 @@ export default function FAQSection() {
                     <h2 className="font-display font-semibold text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="FAQ_HEADING" /></h2>
                 </motion.div>
 
+                {/* The FAQ as a chat: pick a topic and a question, or type your own */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
+                >
+                    <FaqChat />
+                </motion.div>
+
+                {/* The complete list, for those who prefer to scan all the questions */}
+                <div className="mt-6 text-center">
+                    <button
+                        type="button"
+                        onClick={() => setShowList((v) => !v)}
+                        aria-expanded={showList}
+                        className="inline-flex items-center gap-2 text-[13px] font-body font-medium text-[#8a6a35] underline underline-offset-[6px] decoration-[#B38B4D]/50 hover:decoration-[#B38B4D] transition-colors"
+                    >
+                        {t(showList ? 'FAQ_HIDE_LIST' : 'FAQ_VIEW_LIST')}
+                        <ChevronDown className={`w-4 h-4 transition-transform ${showList ? 'rotate-180' : ''}`} />
+                    </button>
+                </div>
+
+                {showList && (
+                <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="mt-10"
                 >
                     <Accordion type="single" collapsible className="space-y-10">
                         {faqCategories.map((cat, catIdx) => (
@@ -49,7 +80,7 @@ export default function FAQSection() {
                                 <h3 className="font-display text-primary font-semibold mb-4 italic px-2 text-lg md:text-xl lg:text-2xl">{cat.category}</h3>
                                 <div className="space-y-3">
                                     {cat.items.map((faq, i) => (
-                                        <AccordionItem key={i} value={`faq-${catIdx}-${i}`} className="bg-background border border-border/50 rounded-sm px-6 data-[state=open]:border-primary/30 transition-colors">
+                                        <AccordionItem key={i} value={`faq-${faq.id}`} className="bg-background border border-border/50 rounded-sm px-6 data-[state=open]:border-primary/30 transition-colors">
                                             <AccordionTrigger className="text-sm font-body font-medium text-foreground hover:text-primary text-left py-5 hover:no-underline">
                                                 {faq.q}
                                             </AccordionTrigger>
@@ -63,6 +94,7 @@ export default function FAQSection() {
                         ))}
                     </Accordion>
                 </motion.div>
+                )}
             </div>
         </section>
     );

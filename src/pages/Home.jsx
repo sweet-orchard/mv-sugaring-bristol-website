@@ -14,7 +14,6 @@ import BlogSection from '../components/BlogSection';
 import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
-import ChatAssistant from '../components/ChatAssistant';
 
 
 export default function Home() {
@@ -35,7 +34,6 @@ export default function Home() {
             <FAQSection />
             <ContactSection />
             <Footer />
-            <ChatAssistant />
 
         </div>
     );
