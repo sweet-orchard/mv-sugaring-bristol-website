@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Send, ChevronRight, Check, ChevronDown } from 'lucide-react';
 import { useContent } from '../context/ContentContext';
 import { getFaqGroups, getFaqItems, POPULAR_IDS } from '../content/faqItems';
-import { buildEntries, rank } from '../lib/faqSearch';
+import { buildEntries, rank, suggest } from '../lib/faqSearch';
 
 const WHATSAPP_URL = 'https://wa.me/447448611080';
 
@@ -43,6 +43,8 @@ export default function FaqChat() {
         [items, lang]
     );
 
+    const live = useMemo(() => suggest(input, entries, 5), [input, entries]);
+
     useEffect(() => () => clearTimeout(timer.current), []);
     // The chat grows with the page (no scrolling box inside the page, which is hard to use on a phone).
     // When an answer arrives, the page scrolls so the START of the answer sits just below the menu bar.
@@ -69,6 +71,7 @@ export default function FaqChat() {
     const askItem = (id) => {
         if (typing) return;
         setBrowse(false);
+        setInput('');
         setMessages((m) => [...m, { role: 'user', kind: 'question', id }]);
         const others = items.filter((i) => i.id !== id && !askedIds.has(i.id));
         reply([{ role: 'bot', kind: 'answer', id }, { role: 'bot', kind: 'more', exclude: [id], others: others.length }]);
@@ -252,12 +255,20 @@ export default function FaqChat() {
                                 <ChevronDown className={`w-4 h-4 transition-transform ${browse ? 'rotate-180' : ''}`} />
                             </button>
                         )}
-                        {listOpen && <QuestionBrowser />}
+                        {listOpen && live.length === 0 && <QuestionBrowser />}
                         {last.kind !== 'greeting' && last.kind !== 'nomatch' && <div className="pt-1"><WhatsAppButton /></div>}
                     </div>
                 )}
                 <div ref={endRef} />
             </div>
+
+            {/* Live suggestions: the matching questions appear while typing */}
+            {live.length > 0 && !typing && (
+                <div className="border-t border-[#EAE0C5] bg-[#FDFBF7] px-5 md:px-7 pt-2 pb-1" role="listbox" aria-label={t('CHAT_SUGGESTIONS')}>
+                    <p className="text-[11px] tracking-[0.14em] uppercase font-body text-muted-foreground pt-1 pb-0.5">{t('CHAT_SUGGESTIONS')}</p>
+                    {live.map((r) => byId[r.id] && <Row key={r.id} id={r.id} />)}
+                </div>
+            )}
 
             {/* Input */}
             <form onSubmit={submit} className="border-t border-[#EAE0C5] bg-white px-4 md:px-6 py-4">
