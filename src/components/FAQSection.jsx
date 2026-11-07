@@ -7,45 +7,17 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useContent, T } from '../context/ContentContext';
+import { getFaqGroups } from '../content/faqItems';
 
 export default function FAQSection() {
     const { t, lang } = useContent();
     const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
     
-    const faqCategories = [
-        {
-            category: <T id="FAQ_CAT_1_NAME" />,
-            items: [
-                { q: <T id="FAQ_CAT1_Q1" />, a: <T id="FAQ_CAT1_A1" /> },
-                { q: <T id="FAQ_CAT1_Q2" />, a: <T id="FAQ_CAT1_A2" /> },
-                { q: <T id="FAQ_CAT1_Q3" />, a: <T id="FAQ_CAT1_A3" /> },
-                { q: <T id="FAQ_CAT1_Q4" />, a: <T id="FAQ_CAT1_A4" /> },
-                { q: <T id="FAQ_CAT1_Q5" />, a: <T id="FAQ_CAT1_A5" /> },
-            ]
-        },
-        {
-            category: <T id="FAQ_CAT_2_NAME" />,
-            items: [
-                { q: <T id="FAQ_CAT2_Q1" />, a: <T id="FAQ_CAT2_A1" /> },
-                { q: <T id="FAQ_CAT2_Q2" />, a: <T id="FAQ_CAT2_A2" /> },
-                { q: <T id="FAQ_CAT2_Q3" />, a: <T id="FAQ_CAT2_A3" /> },
-                { q: <T id="FAQ_CAT2_Q4" />, a: <T id="FAQ_CAT2_A4" /> },
-                { q: <T id="FAQ_CAT2_Q5" />, a: <T id="FAQ_CAT2_A5" /> },
-                { q: <T id="FAQ_CAT2_Q6" />, a: <T id="FAQ_CAT2_A6" /> },
-                { q: <T id="FAQ_CAT2_Q7" />, a: <T id="FAQ_CAT2_A7" /> },
-                { q: <T id="FAQ_CAT2_Q8" />, a: <T id="FAQ_CAT2_A8" /> },
-            ]
-        },
-        {
-            category: <T id="FAQ_CAT_3_NAME" />,
-            items: [
-                { q: <T id="FAQ_CAT3_Q1" />, a: <T id="FAQ_CAT3_A1" /> },
-                { q: <T id="FAQ_CAT3_Q2" />, a: <T id="FAQ_CAT3_A2" /> },
-                { q: <T id="FAQ_CAT3_Q3" />, a: <T id="FAQ_CAT3_A3" /> },
-            ]
-        }
-    ];
+    const faqCategories = getFaqGroups(lang).map((g) => ({
+        category: <T id={g.nameKey} />,
+        items: g.items.map((it) => ({ q: <T id={it.q} />, a: <T id={it.a} /> })),
+    }));
 
     return (
         <section id="faq" className="py-10 md:py-16 lg:py-24 bg-secondary/30">
