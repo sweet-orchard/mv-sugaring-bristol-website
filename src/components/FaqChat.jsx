@@ -225,13 +225,13 @@ export default function FaqChat() {
 
     return (
         <div className="bg-white border border-[#EAE0C5] rounded-2xl shadow-[0_10px_40px_rgba(179,139,77,0.10)] overflow-hidden">
-            {/* Header */}
-            <div className="flex items-center gap-3.5 px-5 md:px-7 py-4 border-b border-[#EAE0C5]">
-                <div className="w-11 h-11 rounded-full bg-[#B38B4D] flex items-center justify-center font-display font-semibold text-xl text-white shrink-0">M</div>
-                <div className="min-w-0">
-                    <p className="font-display font-semibold text-xl leading-tight text-foreground">{t('CHAT_TITLE')}</p>
-                    <p className="text-xs text-muted-foreground font-body truncate">{t('CHAT_SUBTITLE')}</p>
-                </div>
+            {/* Header: slim, tinted bar */}
+            <div className="flex items-center gap-3 px-5 md:px-7 py-3 bg-[#FAF5EB] border-b border-[#EAE0C5]">
+                <div className="w-8 h-8 rounded-full bg-[#B38B4D] flex items-center justify-center font-display font-semibold text-base text-white shrink-0">M</div>
+                <p className="min-w-0 truncate text-[13px] font-body text-foreground/80">
+                    <span className="font-semibold text-foreground">{t('CHAT_TITLE')}</span>
+                    <span className="hidden sm:inline text-muted-foreground"> · {t('CHAT_SUBTITLE')}</span>
+                </p>
             </div>
 
             {/* Conversation: grows with the content, scrolls inside only when an answer is long */}
