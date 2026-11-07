@@ -182,7 +182,7 @@ export default function FaqChat() {
     );
 
     const renderMessage = (m, idx) => {
-        if (m.kind === 'greeting') return <p key={idx} className="font-display italic text-[22px] md:text-2xl leading-[1.3] text-foreground/85 pb-1">{t('CHAT_GREETING')}</p>;
+        if (m.kind === 'greeting') return null; // no greeting text: the question list is shown straight away
         if (m.kind === 'question') return <Bubble key={idx} role="user">{t(byId[m.id]?.q)}</Bubble>;
         if (m.kind === 'text') return <Bubble key={idx} role="user">{m.text}</Bubble>;
         if (m.kind === 'answer') {
