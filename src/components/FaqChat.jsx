@@ -106,18 +106,18 @@ export default function FaqChat() {
     ];
     const activeTab = tabs.find((x) => x.id === tab) || tabs[0];
 
-    // Compact, menu-style row for a suggested question; a tick marks the ones already answered.
+    // Menu-style row for a suggested question; a tick marks the ones already answered.
     const Row = ({ id }) => (
         <button
             type="button"
             onClick={() => askItem(id)}
             disabled={typing}
-            className="group w-full flex items-center gap-3 px-4 py-3 text-left bg-white hover:bg-[#FBF6EA] transition-colors disabled:opacity-60"
+            className="group w-full flex items-center gap-3 py-3.5 text-left border-b border-[#EAE0C5]/80 last:border-b-0 transition-colors disabled:opacity-60"
         >
-            <span className="flex-1 text-[13.5px] leading-snug font-body text-foreground/90 group-hover:text-[#7a5c2a]">{t(byId[id].q)}</span>
+            <span className="flex-1 text-[15px] leading-snug font-body text-foreground/90 group-hover:text-[#8a6a35]">{t(byId[id].q)}</span>
             {askedIds.has(id)
                 ? <Check className="w-4 h-4 text-[#B38B4D] shrink-0" />
-                : <ChevronRight className="w-4 h-4 text-[#B38B4D]/60 group-hover:text-[#B38B4D] shrink-0" />}
+                : <ChevronRight className="w-4 h-4 text-[#B38B4D]/60 group-hover:text-[#B38B4D] group-hover:translate-x-0.5 transition-transform shrink-0" />}
         </button>
     );
 
@@ -133,8 +133,8 @@ export default function FaqChat() {
     );
 
     const QuestionBrowser = () => (
-        <div className="rounded-2xl border border-[#EAE0C5] bg-white overflow-hidden shadow-[0_2px_10px_rgba(179,139,77,0.08)]">
-            <div className="flex gap-1.5 overflow-x-auto px-3 pt-3 pb-2 border-b border-[#EAE0C5]/70 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label={t('CHAT_PICK')}>
+        <div>
+            <div className="flex gap-5 overflow-x-auto border-b border-[#EAE0C5] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="tablist" aria-label={t('CHAT_PICK')}>
                 {tabs.map((x) => (
                     <button
                         key={x.id}
@@ -142,15 +142,15 @@ export default function FaqChat() {
                         role="tab"
                         aria-selected={activeTab.id === x.id}
                         onClick={() => setTab(x.id)}
-                        className={`shrink-0 px-3 py-1.5 rounded-full text-[11px] tracking-[0.1em] uppercase font-body font-medium transition-colors ${
-                            activeTab.id === x.id ? 'bg-[#B38B4D] text-white' : 'bg-[#FAF5EB] text-[#7a5c2a] hover:bg-[#F1E7D0]'
+                        className={`shrink-0 -mb-px pb-3 text-[12px] tracking-[0.14em] uppercase font-body font-medium border-b-2 transition-colors ${
+                            activeTab.id === x.id ? 'border-[#B38B4D] text-[#8a6a35]' : 'border-transparent text-muted-foreground hover:text-foreground'
                         }`}
                     >
                         {t(x.label)}
                     </button>
                 ))}
             </div>
-            <div className="divide-y divide-[#EAE0C5]/60">
+            <div>
                 {activeTab.ids.filter((id) => byId[id]).map((id) => <Row key={id} id={id} />)}
             </div>
         </div>
@@ -159,7 +159,7 @@ export default function FaqChat() {
     const Bubble = ({ role, children }) => (
         <div className={`flex ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
             <div
-                className={`max-w-[88%] rounded-2xl px-4 py-2.5 text-[13.5px] leading-[1.6] font-body whitespace-pre-line ${
+                className={`max-w-[92%] rounded-2xl px-4 py-3 text-[14.5px] leading-[1.65] font-body whitespace-pre-line ${
                     role === 'user'
                         ? 'bg-[#B38B4D] text-white rounded-br-md'
                         : 'bg-white text-foreground/85 border border-[#EAE0C5] rounded-bl-md'
@@ -182,7 +182,7 @@ export default function FaqChat() {
     );
 
     const renderMessage = (m, idx) => {
-        if (m.kind === 'greeting') return <Bubble key={idx} role="bot">{t('CHAT_GREETING')}</Bubble>;
+        if (m.kind === 'greeting') return <p key={idx} className="font-display italic text-[22px] md:text-2xl leading-[1.3] text-foreground/85 pb-1">{t('CHAT_GREETING')}</p>;
         if (m.kind === 'question') return <Bubble key={idx} role="user">{t(byId[m.id]?.q)}</Bubble>;
         if (m.kind === 'text') return <Bubble key={idx} role="user">{m.text}</Bubble>;
         if (m.kind === 'answer') {
@@ -224,18 +224,18 @@ export default function FaqChat() {
     const listOpen = !afterAnswer || browse;
 
     return (
-        <div className="flex flex-col h-[600px] md:h-[640px] bg-[#FAF8F3] border border-[#EAE0C5] rounded-2xl shadow-[0_12px_40px_rgba(43,38,34,0.08)] overflow-hidden">
+        <div className="bg-white border border-[#EAE0C5] rounded-2xl shadow-[0_10px_40px_rgba(179,139,77,0.10)] overflow-hidden">
             {/* Header */}
-            <div className="flex items-center gap-3 px-4 py-3.5 bg-foreground text-background shrink-0">
-                <div className="w-9 h-9 rounded-full bg-[#B38B4D] flex items-center justify-center font-display font-semibold text-lg text-white">M</div>
-                <div className="flex-1 min-w-0">
-                    <p className="font-display font-semibold text-[17px] leading-tight">{t('CHAT_TITLE')}</p>
-                    <p className="text-[11px] text-background/60 font-body truncate">{t('CHAT_SUBTITLE')}</p>
+            <div className="flex items-center gap-3.5 px-5 md:px-7 py-4 border-b border-[#EAE0C5]">
+                <div className="w-11 h-11 rounded-full bg-[#B38B4D] flex items-center justify-center font-display font-semibold text-xl text-white shrink-0">M</div>
+                <div className="min-w-0">
+                    <p className="font-display font-semibold text-xl leading-tight text-foreground">{t('CHAT_TITLE')}</p>
+                    <p className="text-xs text-muted-foreground font-body truncate">{t('CHAT_SUBTITLE')}</p>
                 </div>
             </div>
 
-            {/* Conversation */}
-            <div ref={scrollRef} className="relative flex-1 overflow-y-auto overscroll-contain px-4 py-4 space-y-3">
+            {/* Conversation: grows with the content, scrolls inside only when an answer is long */}
+            <div ref={scrollRef} className="relative max-h-[520px] md:max-h-[560px] overflow-y-auto overscroll-contain px-5 md:px-7 py-5 space-y-4 bg-[#FDFBF7]">
                 {messages.map(renderMessage)}
                 {typing && (
                     <div className="flex justify-start">
@@ -243,16 +243,16 @@ export default function FaqChat() {
                     </div>
                 )}
                 {showSuggestions && (
-                    <div className="space-y-3 pt-1">
+                    <div className="space-y-3">
                         {afterAnswer && (
-                            <p className="text-[12px] text-muted-foreground font-body px-1">{t('CHAT_ANYTHING_ELSE')}</p>
+                            <p className="text-[13px] text-muted-foreground font-body pt-1">{t('CHAT_ANYTHING_ELSE')}</p>
                         )}
                         {afterAnswer && (
                             <button
                                 type="button"
                                 onClick={() => setBrowse((v) => !v)}
                                 aria-expanded={browse}
-                                className="w-full flex items-center justify-between gap-2 px-4 py-3 rounded-2xl bg-white border border-[#EAE0C5] hover:border-[#B38B4D] text-[13px] font-body font-medium text-[#7a5c2a] transition-colors"
+                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border border-[#EAE0C5] hover:border-[#B38B4D] text-[13px] font-body font-medium text-[#8a6a35] transition-colors"
                             >
                                 {t(browse ? 'CHAT_HIDE' : 'CHAT_BROWSE')}
                                 <ChevronDown className={`w-4 h-4 transition-transform ${browse ? 'rotate-180' : ''}`} />
@@ -266,8 +266,8 @@ export default function FaqChat() {
             </div>
 
             {/* Input */}
-            <form onSubmit={submit} className="shrink-0 border-t border-[#EAE0C5] bg-white px-3 pt-3 pb-2">
-                <div className="flex items-center gap-2">
+            <form onSubmit={submit} className="border-t border-[#EAE0C5] bg-white px-4 md:px-6 py-4">
+                <div className="flex items-center gap-2.5">
                     <input
                         type="text"
                         value={input}
@@ -275,18 +275,18 @@ export default function FaqChat() {
                         placeholder={t('CHAT_PLACEHOLDER')}
                         maxLength={200}
                         aria-label={t('CHAT_PLACEHOLDER')}
-                        className="flex-1 min-w-0 h-11 px-4 rounded-full bg-[#FAF8F3] border border-[#EAE0C5] text-[16px] sm:text-sm font-body text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-[#B38B4D]"
+                        className="flex-1 min-w-0 h-12 px-5 rounded-full bg-[#FAF8F3] border border-[#EAE0C5] text-[16px] font-body text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-[#B38B4D] transition-colors"
                     />
                     <button
                         type="submit"
                         disabled={!input.trim() || typing}
                         aria-label={t('CHAT_SEND')}
-                        className="w-11 h-11 shrink-0 rounded-full bg-[#B38B4D] hover:bg-[#9f7a41] text-white flex items-center justify-center transition-colors disabled:opacity-40"
+                        className="w-12 h-12 shrink-0 rounded-full bg-[#B38B4D] hover:bg-[#9f7a41] text-white flex items-center justify-center transition-colors disabled:opacity-40"
                     >
-                        <Send className="w-4 h-4" />
+                        <Send className="w-[18px] h-[18px]" />
                     </button>
                 </div>
-                <p className="text-[10px] text-muted-foreground/70 font-body text-center mt-2">{t('CHAT_DISCLAIMER')}</p>
+                <p className="text-[11px] text-muted-foreground/70 font-body text-center mt-3">{t('CHAT_DISCLAIMER')}</p>
             </form>
         </div>
     );

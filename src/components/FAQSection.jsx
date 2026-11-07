@@ -60,7 +60,7 @@ export default function FAQSection() {
                         type="button"
                         onClick={() => setShowList((v) => !v)}
                         aria-expanded={showList}
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border/70 bg-background text-xs tracking-[0.15em] uppercase font-body font-medium text-foreground hover:border-primary hover:text-primary transition-colors"
+                        className="inline-flex items-center gap-2 text-[13px] font-body font-medium text-[#8a6a35] underline underline-offset-[6px] decoration-[#B38B4D]/50 hover:decoration-[#B38B4D] transition-colors"
                     >
                         {t(showList ? 'FAQ_HIDE_LIST' : 'FAQ_VIEW_LIST')}
                         <ChevronDown className={`w-4 h-4 transition-transform ${showList ? 'rotate-180' : ''}`} />
