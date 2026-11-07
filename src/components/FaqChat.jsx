@@ -227,7 +227,7 @@ export default function FaqChat() {
         <div className="bg-white border border-[#EAE0C5] rounded-2xl shadow-[0_10px_40px_rgba(179,139,77,0.10)] overflow-hidden">
             {/* Header: slim, tinted bar */}
             <div className="flex items-center gap-3 px-5 md:px-7 py-3 bg-[#FAF5EB] border-b border-[#EAE0C5]">
-                <div className="w-8 h-8 rounded-full bg-[#B38B4D] flex items-center justify-center font-display font-semibold text-base text-white shrink-0">M</div>
+                <img src="/favicon-square.png" alt="" aria-hidden="true" className="w-9 h-9 object-contain shrink-0" />
                 <p className="min-w-0 truncate text-[13px] font-body text-foreground/80">
                     <span className="font-semibold text-foreground">{t('CHAT_TITLE')}</span>
                     <span className="hidden sm:inline text-muted-foreground"> · {t('CHAT_SUBTITLE')}</span>
