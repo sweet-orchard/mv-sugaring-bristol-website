@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
 import {
     Accordion,
     AccordionContent,
@@ -9,15 +8,12 @@ import {
 } from "@/components/ui/accordion";
 import { useContent, T } from '../context/ContentContext';
 import { getFaqGroups } from '../content/faqItems';
-import FaqChat from './FaqChat';
 
 export default function FAQSection() {
     const { t, lang } = useContent();
     const getText = (v) => v?.props?.id ? t(v.props.id) : v;
     
     
-    const [showList, setShowList] = useState(false);
-
     const faqCategories = getFaqGroups(lang)
         .map((g) => ({
             category: <T id={g.nameKey} />,
@@ -44,35 +40,11 @@ export default function FAQSection() {
                     <h2 className="font-display font-semibold text-foreground text-2xl md:text-4xl lg:text-5xl leading-[1.15]"><T id="FAQ_HEADING" /></h2>
                 </motion.div>
 
-                {/* The FAQ as a chat: pick a topic and a question, or type your own */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                >
-                    <FaqChat />
-                </motion.div>
-
-                {/* The complete list, for those who prefer to scan all the questions */}
-                <div className="mt-6 text-center">
-                    <button
-                        type="button"
-                        onClick={() => setShowList((v) => !v)}
-                        aria-expanded={showList}
-                        className="inline-flex items-center gap-2 text-[13px] font-body font-medium text-[#8a6a35] underline underline-offset-[6px] decoration-[#B38B4D]/50 hover:decoration-[#B38B4D] transition-colors"
-                    >
-                        {t(showList ? 'FAQ_HIDE_LIST' : 'FAQ_VIEW_LIST')}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${showList ? 'rotate-180' : ''}`} />
-                    </button>
-                </div>
-
-                {showList && (
-                <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="mt-10"
                 >
                     <Accordion type="single" collapsible className="space-y-10">
                         {faqCategories.map((cat, catIdx) => (
@@ -94,7 +66,6 @@ export default function FAQSection() {
                         ))}
                     </Accordion>
                 </motion.div>
-                )}
             </div>
         </section>
     );
