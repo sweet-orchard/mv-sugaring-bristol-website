@@ -20,7 +20,7 @@ export default function ContactSection() {
         const form = e.currentTarget;
         setStatus('sending');
         try {
-            const res = await fetch('https://formsubmit.co/ajax/marichka21.08.95@gmail.com', {
+            const res = await fetch('https://formsubmit.co/ajax/d387067809a06050a330a60265120bc8', {
                 method: 'POST',
                 headers: { Accept: 'application/json' },
                 body: new FormData(form),
